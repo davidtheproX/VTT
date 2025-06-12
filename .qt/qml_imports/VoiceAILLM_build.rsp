@@ -1,0 +1,14 @@
+-rootPath
+E:/VTT
+-cmake-output
+-output-file
+E:/VTT/.qt/qml_imports/VoiceAILLM_build.cmake
+-importPath
+E:/VTT/VoiceAILLM
+-importPath
+E:/VTT
+-importPath
+D:/msys64/mingw64/share/qt6/qml
+-qrcFiles
+E:/VTT/.qt/rcc/qmake_VoiceAILLM.qrc
+E:/VTT/.qt/rcc/VoiceAILLM_raw_qml_0.qrc

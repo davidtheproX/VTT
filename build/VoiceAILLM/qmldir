@@ -1,0 +1,23 @@
+module VoiceAILLM
+typeinfo VoiceAILLM.qmltypes
+prefer :/qt/qml/VoiceAILLM/
+Main 1.0 qml/Main.qml
+ChatWindow 1.0 qml/ChatWindow.qml
+MessageDelegate 1.0 qml/MessageDelegate.qml
+VoiceButton 1.0 qml/VoiceButton.qml
+SettingsDialog 1.0 qml/SettingsDialog.qml
+PromptManagerDialog 1.0 qml/PromptManagerDialog.qml
+OAuth2LoginDialog 1.0 qml/OAuth2LoginDialog.qml
+PDFDialog 1.0 qml/PDFDialog.qml
+PDFViewer 1.0 qml/PDFViewer.qml
+WebEnginePDFRenderer 1.0 qml/WebEnginePDFRenderer.qml
+CSVDialog 1.0 qml/CSVDialog.qml
+CSVViewer 1.0 qml/CSVViewer.qml
+CSVViewerComponent 1.0 qml/CSVViewerComponent.qml
+InteractiveChart 1.0 qml/InteractiveChart.qml
+DataSeriesControl 1.0 qml/DataSeriesControl.qml
+SeriesDelegate 1.0 qml/SeriesDelegate.qml
+SeriesControl 1.0 qml/SeriesControl.qml
+DataFilterControl 1.0 qml/DataFilterControl.qml
+RawDataViewer 1.0 qml/RawDataViewer.qml
+

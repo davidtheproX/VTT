@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document background -->
+  <rect x="4" y="2" width="14" height="20" rx="1" fill="#e53e3e" stroke="#c53030" stroke-width="1"/>
+  
+  <!-- Document corner fold -->
+  <path d="M15 2 L18 5 L15 5 Z" fill="#c53030"/>
+  
+  <!-- "P" letter -->
+  <text x="12" y="16" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">P</text>
+  
+  <!-- PDF text -->
+  <text x="12" y="20" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="3" font-weight="normal">PDF</text>
+</svg> 

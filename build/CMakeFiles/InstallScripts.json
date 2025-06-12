@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/VTT/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/VoiceAILLM">
+    <file alias="qmldir">E:/VTT/build/VoiceAILLM/qmldir</file>
+  </qresource>
+</RCC>
+

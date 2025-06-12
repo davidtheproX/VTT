@@ -1,0 +1,75 @@
+{
+    "classes": [
+        {
+            "className": "QRCodeGenerator",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "QRCodeGenerator",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "dataURI",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "qrCodeGenerated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "qrCodeError",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "size",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "generateQRCodeAsync",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "isCloned": true,
+                    "name": "generateQRCodeAsync",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "QRCodeGenerator.h",
+    "outputRevision": 69
+}

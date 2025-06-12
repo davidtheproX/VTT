@@ -1,0 +1,10 @@
+-I
+E:/VTT
+-I
+D:/msys64/mingw64/share/qt6/qml
+--resource
+E:/VTT/.qt/rcc/qmake_VoiceAILLM.qrc
+--resource
+E:/VTT/.qt/rcc/VoiceAILLM_raw_qml_0.qrc
+--module
+VoiceAILLM

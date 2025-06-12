@@ -1,0 +1,255 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
+            "className": "ChatManager",
+            "lineNumber": 29,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "isProcessing",
+                    "notify": "isProcessingChanged",
+                    "read": "isProcessing",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "messageCount",
+                    "notify": "messageCountChanged",
+                    "read": "messageCount",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "int",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "currentSystemPrompt",
+                    "notify": "currentSystemPromptChanged",
+                    "read": "currentSystemPrompt",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setCurrentSystemPrompt"
+                }
+            ],
+            "qualifiedClassName": "ChatManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "isProcessingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "messageCountChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "currentSystemPromptChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "messageId",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "messageAdded",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "messageId",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "messageUpdated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "errorMessage",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "error",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "text",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "processUserInput",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "clearChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 8,
+                    "name": "regenerateLastResponse",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "messageId",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "deleteMessage",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "messageId",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "newContent",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "editMessage",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "exportChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "importChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "content",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "writeTextFile",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "response",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "handleLLMResponse",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "partialResponse",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "handleStreamingUpdate",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "handleLLMError",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QAbstractListModel"
+                }
+            ]
+        }
+    ],
+    "inputFile": "ChatManager.h",
+    "outputRevision": 69
+}

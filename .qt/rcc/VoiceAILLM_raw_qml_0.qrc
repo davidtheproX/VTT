@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="/VoiceAILLM/">
+    <file alias="qml/Main.qml">E:/VTT/qml/Main.qml</file>
+    <file alias="qml/ChatWindow.qml">E:/VTT/qml/ChatWindow.qml</file>
+    <file alias="qml/MessageDelegate.qml">E:/VTT/qml/MessageDelegate.qml</file>
+    <file alias="qml/VoiceButton.qml">E:/VTT/qml/VoiceButton.qml</file>
+    <file alias="qml/SettingsDialog.qml">E:/VTT/qml/SettingsDialog.qml</file>
+    <file alias="qml/PromptManagerDialog.qml">E:/VTT/qml/PromptManagerDialog.qml</file>
+    <file alias="qml/OAuth2LoginDialog.qml">E:/VTT/qml/OAuth2LoginDialog.qml</file>
+    <file alias="data/voiceaillm.db">E:/VTT/data/voiceaillm.db</file>
+    <file alias="resources/icons/microphone.svg">E:/VTT/resources/icons/microphone.svg</file>
+    <file alias="resources/icons/settings.svg">E:/VTT/resources/icons/settings.svg</file>
+    <file alias="resources/icons/wechat.svg">E:/VTT/resources/icons/wechat.svg</file>
+    <file alias="resources/icons/dingtalk.svg">E:/VTT/resources/icons/dingtalk.svg</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,66 @@
+{
+    "classes": [
+        {
+            "className": "PDFGenerator",
+            "lineNumber": 13,
+            "object": true,
+            "qualifiedClassName": "PDFGenerator",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        },
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "pdfGenerated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "percentage",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "generationProgress",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "onGenerationFinished",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PDFGenerator.h",
+    "outputRevision": 69
+}

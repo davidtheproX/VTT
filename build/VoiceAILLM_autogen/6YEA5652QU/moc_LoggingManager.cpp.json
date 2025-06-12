@@ -1,0 +1,54 @@
+{
+    "classes": [
+        {
+            "className": "LoggingManager",
+            "enums": [
+                {
+                    "isClass": false,
+                    "isFlag": false,
+                    "name": "LogLevel",
+                    "values": [
+                        "Debug",
+                        "Info",
+                        "Warning",
+                        "Critical",
+                        "Fatal"
+                    ]
+                }
+            ],
+            "lineNumber": 17,
+            "object": true,
+            "qualifiedClassName": "LoggingManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "level",
+                            "type": "LogLevel"
+                        },
+                        {
+                            "name": "category",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "logMessageGenerated",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "LoggingManager.h",
+    "outputRevision": 69
+}

@@ -1,0 +1,463 @@
+{
+    "classes": [
+        {
+            "className": "PDFManager",
+            "lineNumber": 15,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "generatePdfFromJson",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "isCloned": true,
+                    "name": "generatePdfFromJson",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templatePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "generatePdfFromTemplate",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templatePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 13,
+                    "isCloned": true,
+                    "name": "generatePdfFromTemplate",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "generatePdfFromJsonWebEngine",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 15,
+                    "isCloned": true,
+                    "name": "generatePdfFromJsonWebEngine",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templatePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "generatePdfFromTemplateWebEngine",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templatePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 17,
+                    "isCloned": true,
+                    "name": "generatePdfFromTemplateWebEngine",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 18,
+                    "name": "generatePdfFromJsonQML",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonData",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 19,
+                    "isCloned": true,
+                    "name": "generatePdfFromJsonQML",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templateName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        },
+                        {
+                            "name": "outputPath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 20,
+                    "name": "generatePdfFromTemplateQML",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templateName",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 21,
+                    "isCloned": true,
+                    "name": "generatePdfFromTemplateQML",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 22,
+                    "isConst": true,
+                    "name": "isWebEngineAvailable",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 23,
+                    "name": "openPdfFile",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 24,
+                    "name": "openPdfFile",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 25,
+                    "name": "closePdfViewer",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templatePath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 26,
+                    "name": "loadTemplate",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "templateContent",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "data",
+                            "type": "QJsonObject"
+                        }
+                    ],
+                    "index": 27,
+                    "name": "fillTemplate",
+                    "returnType": "QString"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonString",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 28,
+                    "name": "isValidJson",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "jsonString",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 29,
+                    "name": "parseJsonString",
+                    "returnType": "QJsonObject"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "rows",
+                            "type": "QJsonArray"
+                        }
+                    ],
+                    "index": 30,
+                    "name": "formatTableRows",
+                    "returnType": "QString"
+                }
+            ],
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "isGenerating",
+                    "notify": "isGeneratingChanged",
+                    "read": "isGenerating",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "isViewerOpen",
+                    "notify": "isViewerOpenChanged",
+                    "read": "isViewerOpen",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "currentPdfPath",
+                    "notify": "currentPdfPathChanged",
+                    "read": "currentPdfPath",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "PDFManager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "isGeneratingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "isViewerOpenChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "currentPdfPathChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "pdfGenerated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "pdfGenerationFailed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "pdfOpened",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "pdfClosed",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "message",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "error",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "filePath",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "success",
+                            "type": "bool"
+                        },
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "onPdfGenerationFinished",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 9,
+                    "name": "onPdfViewerClosed",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "PDFManager.h",
+    "outputRevision": 69
+}

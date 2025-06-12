@@ -1,0 +1,11 @@
+--resource
+E:/VTT/.qt/rcc/qmake_VoiceAILLM.qrc
+--resource
+E:/VTT/.qt/rcc/VoiceAILLM_raw_qml_0.qrc
+/VoiceAILLM/qml/Main.qml
+/VoiceAILLM/qml/ChatWindow.qml
+/VoiceAILLM/qml/MessageDelegate.qml
+/VoiceAILLM/qml/VoiceButton.qml
+/VoiceAILLM/qml/SettingsDialog.qml
+/VoiceAILLM/qml/PromptManagerDialog.qml
+/VoiceAILLM/qml/OAuth2LoginDialog.qml

@@ -1,0 +1,452 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
+            "className": "OAuth2Manager",
+            "enums": [
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "Provider",
+                    "values": [
+                        "WeChat",
+                        "DingTalk"
+                    ]
+                },
+                {
+                    "isClass": true,
+                    "isFlag": false,
+                    "name": "AuthMethod",
+                    "values": [
+                        "QRCode",
+                        "OAuth2Flow"
+                    ]
+                }
+            ],
+            "lineNumber": 18,
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "isWeChatAuthenticated",
+                    "notify": "weChatAuthenticationChanged",
+                    "read": "isWeChatAuthenticated",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "isDingTalkAuthenticated",
+                    "notify": "dingTalkAuthenticationChanged",
+                    "read": "isDingTalkAuthenticated",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "weChatUserInfo",
+                    "notify": "weChatUserInfoChanged",
+                    "read": "weChatUserInfo",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "dingTalkUserInfo",
+                    "notify": "dingTalkUserInfoChanged",
+                    "read": "dingTalkUserInfo",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 4,
+                    "name": "weChatQRCode",
+                    "notify": "weChatQRCodeChanged",
+                    "read": "weChatQRCode",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 5,
+                    "name": "dingTalkQRCode",
+                    "notify": "dingTalkQRCodeChanged",
+                    "read": "dingTalkQRCode",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 6,
+                    "name": "isWeChatLoading",
+                    "notify": "weChatLoadingChanged",
+                    "read": "isWeChatLoading",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 7,
+                    "name": "isDingTalkLoading",
+                    "notify": "dingTalkLoadingChanged",
+                    "read": "isDingTalkLoading",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "bool",
+                    "user": false
+                }
+            ],
+            "qualifiedClassName": "OAuth2Manager",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "weChatAuthenticationChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 1,
+                    "name": "dingTalkAuthenticationChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 2,
+                    "name": "weChatUserInfoChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 3,
+                    "name": "dingTalkUserInfoChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "weChatQRCodeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 5,
+                    "name": "dingTalkQRCodeChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 6,
+                    "name": "weChatLoadingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "dingTalkLoadingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "provider",
+                            "type": "Provider"
+                        },
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "authenticationError",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "provider",
+                            "type": "Provider"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "authenticationSuccess",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "appId",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "appSecret",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "setWeChatCredentials",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "appId",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "appSecret",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 11,
+                    "name": "setDingTalkCredentials",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "method",
+                            "type": "AuthMethod"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "authenticateWeChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 13,
+                    "isCloned": true,
+                    "name": "authenticateWeChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "method",
+                            "type": "AuthMethod"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "authenticateDingTalk",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 15,
+                    "isCloned": true,
+                    "name": "authenticateDingTalk",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 16,
+                    "name": "refreshWeChatQRCode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 17,
+                    "name": "refreshDingTalkQRCode",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "provider",
+                            "type": "Provider"
+                        }
+                    ],
+                    "index": 18,
+                    "name": "checkQRCodeStatus",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 19,
+                    "name": "startWeChatOAuth",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 20,
+                    "name": "startDingTalkOAuth",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "provider",
+                            "type": "Provider"
+                        }
+                    ],
+                    "index": 21,
+                    "name": "refreshUserInfo",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 22,
+                    "name": "logoutWeChat",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 23,
+                    "name": "logoutDingTalk",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 24,
+                    "name": "logoutAll",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 25,
+                    "name": "onWeChatQRCodeReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 26,
+                    "name": "onDingTalkQRCodeReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 27,
+                    "name": "onWeChatAuthResult",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 28,
+                    "name": "onDingTalkAuthResult",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 29,
+                    "name": "onWeChatUserInfoReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "arguments": [
+                        {
+                            "name": "reply",
+                            "type": "QNetworkReply*"
+                        }
+                    ],
+                    "index": 30,
+                    "name": "onDingTalkUserInfoReceived",
+                    "returnType": "void"
+                },
+                {
+                    "access": "private",
+                    "index": 31,
+                    "name": "checkQRCodeStatusTimer",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "OAuth2Manager.h",
+    "outputRevision": 69
+}

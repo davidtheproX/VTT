@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <!-- WeChat simplified icon -->
+    <circle cx="8" cy="10" r="5" fill="#1AAD19"/>
+    <circle cx="16" cy="13" r="4" fill="#1AAD19"/>
+    <!-- Chat dots -->
+    <circle cx="6" cy="10" r="0.5" fill="white"/>
+    <circle cx="8" cy="10" r="0.5" fill="white"/>
+    <circle cx="10" cy="10" r="0.5" fill="white"/>
+    <circle cx="15" cy="13" r="0.4" fill="white"/>
+    <circle cx="17" cy="13" r="0.4" fill="white"/>
+</svg> 
