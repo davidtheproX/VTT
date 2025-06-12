@@ -3,7 +3,6 @@
 
 E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/bin/cmake.exe
- D:/msys64/ucrt64/include/GL/gl.h
  D:/msys64/ucrt64/include/_mingw.h
  D:/msys64/ucrt64/include/_mingw_mac.h
  D:/msys64/ucrt64/include/_mingw_off_t.h
@@ -201,7 +200,6 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/crtdefs.h
  D:/msys64/ucrt64/include/ctype.h
  D:/msys64/ucrt64/include/errno.h
- D:/msys64/ucrt64/include/float.h
  D:/msys64/ucrt64/include/limits.h
  D:/msys64/ucrt64/include/locale.h
  D:/msys64/ucrt64/include/malloc.h
@@ -216,7 +214,6 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtCore/QByteArray
  D:/msys64/ucrt64/include/qt6/QtCore/QDateTime
  D:/msys64/ucrt64/include/qt6/QtCore/QDeadlineTimer
- D:/msys64/ucrt64/include/qt6/QtCore/QEvent
  D:/msys64/ucrt64/include/qt6/QtCore/QFile
  D:/msys64/ucrt64/include/qt6/QtCore/QFlags
  D:/msys64/ucrt64/include/qt6/QtCore/QHash
@@ -227,12 +224,10 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtCore/QList
  D:/msys64/ucrt64/include/qt6/QtCore/QLoggingCategory
  D:/msys64/ucrt64/include/qt6/QtCore/QMap
- D:/msys64/ucrt64/include/qt6/QtCore/QMargins
  D:/msys64/ucrt64/include/qt6/QtCore/QMetaType
  D:/msys64/ucrt64/include/qt6/QtCore/QMutex
  D:/msys64/ucrt64/include/qt6/QtCore/QObject
  D:/msys64/ucrt64/include/qt6/QtCore/QRect
- D:/msys64/ucrt64/include/qt6/QtCore/QRectF
  D:/msys64/ucrt64/include/qt6/QtCore/QSet
  D:/msys64/ucrt64/include/qt6/QtCore/QSharedDataPointer
  D:/msys64/ucrt64/include/qt6/QtCore/QSize
@@ -240,6 +235,7 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtCore/QString
  D:/msys64/ucrt64/include/qt6/QtCore/QStringList
  D:/msys64/ucrt64/include/qt6/QtCore/QTextStream
+ D:/msys64/ucrt64/include/qt6/QtCore/QThread
  D:/msys64/ucrt64/include/qt6/QtCore/QTimer
  D:/msys64/ucrt64/include/qt6/QtCore/QUrl
  D:/msys64/ucrt64/include/qt6/QtCore/QVariant
@@ -520,44 +516,29 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h
  D:/msys64/ucrt64/include/qt6/QtGui/QColor
  D:/msys64/ucrt64/include/qt6/QtGui/QImage
- D:/msys64/ucrt64/include/qt6/QtGui/QMatrix4x4
- D:/msys64/ucrt64/include/qt6/QtGui/QOffscreenSurface
- D:/msys64/ucrt64/include/qt6/QtGui/QOpenGLContext
  D:/msys64/ucrt64/include/qt6/QtGui/QPageLayout
  D:/msys64/ucrt64/include/qt6/QtGui/QPainter
  D:/msys64/ucrt64/include/qt6/QtGui/QPdfWriter
  D:/msys64/ucrt64/include/qt6/QtGui/QPixmap
- D:/msys64/ucrt64/include/qt6/QtGui/QSurfaceFormat
  D:/msys64/ucrt64/include/qt6/QtGui/QTextDocument
  D:/msys64/ucrt64/include/qt6/QtGui/QTransform
  D:/msys64/ucrt64/include/qt6/QtGui/qaccessible.h
  D:/msys64/ucrt64/include/qt6/QtGui/qaccessible_base.h
- D:/msys64/ucrt64/include/qt6/QtGui/qbitmap.h
  D:/msys64/ucrt64/include/qt6/QtGui/qbrush.h
  D:/msys64/ucrt64/include/qt6/QtGui/qclipboard.h
  D:/msys64/ucrt64/include/qt6/QtGui/qcolor.h
- D:/msys64/ucrt64/include/qt6/QtGui/qcursor.h
  D:/msys64/ucrt64/include/qt6/QtGui/qevent.h
  D:/msys64/ucrt64/include/qt6/QtGui/qeventpoint.h
  D:/msys64/ucrt64/include/qt6/QtGui/qfont.h
  D:/msys64/ucrt64/include/qt6/QtGui/qfontinfo.h
  D:/msys64/ucrt64/include/qt6/QtGui/qfontmetrics.h
  D:/msys64/ucrt64/include/qt6/QtGui/qfontvariableaxis.h
- D:/msys64/ucrt64/include/qt6/QtGui/qgenericmatrix.h
  D:/msys64/ucrt64/include/qt6/QtGui/qguiapplication.h
  D:/msys64/ucrt64/include/qt6/QtGui/qguiapplication_platform.h
- D:/msys64/ucrt64/include/qt6/QtGui/qicon.h
  D:/msys64/ucrt64/include/qt6/QtGui/qimage.h
  D:/msys64/ucrt64/include/qt6/QtGui/qinputdevice.h
  D:/msys64/ucrt64/include/qt6/QtGui/qinputmethod.h
  D:/msys64/ucrt64/include/qt6/QtGui/qkeysequence.h
- D:/msys64/ucrt64/include/qt6/QtGui/qmatrix4x4.h
- D:/msys64/ucrt64/include/qt6/QtGui/qoffscreensurface.h
- D:/msys64/ucrt64/include/qt6/QtGui/qoffscreensurface_platform.h
- D:/msys64/ucrt64/include/qt6/QtGui/qopengl.h
- D:/msys64/ucrt64/include/qt6/QtGui/qopenglcontext.h
- D:/msys64/ucrt64/include/qt6/QtGui/qopenglcontext_platform.h
- D:/msys64/ucrt64/include/qt6/QtGui/qopenglext.h
  D:/msys64/ucrt64/include/qt6/QtGui/qpagedpaintdevice.h
  D:/msys64/ucrt64/include/qt6/QtGui/qpagelayout.h
  D:/msys64/ucrt64/include/qt6/QtGui/qpageranges.h
@@ -570,14 +551,11 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtGui/qpixmap.h
  D:/msys64/ucrt64/include/qt6/QtGui/qpointingdevice.h
  D:/msys64/ucrt64/include/qt6/QtGui/qpolygon.h
- D:/msys64/ucrt64/include/qt6/QtGui/qquaternion.h
  D:/msys64/ucrt64/include/qt6/QtGui/qregion.h
  D:/msys64/ucrt64/include/qt6/QtGui/qrgb.h
  D:/msys64/ucrt64/include/qt6/QtGui/qrgba64.h
  D:/msys64/ucrt64/include/qt6/QtGui/qscreen.h
  D:/msys64/ucrt64/include/qt6/QtGui/qscreen_platform.h
- D:/msys64/ucrt64/include/qt6/QtGui/qsurface.h
- D:/msys64/ucrt64/include/qt6/QtGui/qsurfaceformat.h
  D:/msys64/ucrt64/include/qt6/QtGui/qtextdocument.h
  D:/msys64/ucrt64/include/qt6/QtGui/qtextoption.h
  D:/msys64/ucrt64/include/qt6/QtGui/qtgui-config.h
@@ -585,10 +563,7 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtGui/qtguiglobal.h
  D:/msys64/ucrt64/include/qt6/QtGui/qtransform.h
  D:/msys64/ucrt64/include/qt6/QtGui/qvector2d.h
- D:/msys64/ucrt64/include/qt6/QtGui/qvector3d.h
- D:/msys64/ucrt64/include/qt6/QtGui/qvector4d.h
  D:/msys64/ucrt64/include/qt6/QtGui/qvectornd.h
- D:/msys64/ucrt64/include/qt6/QtGui/qwindow.h
  D:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs.h
  D:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs_win.h
  D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioDevice
@@ -640,10 +615,6 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtNetworkAuth/qoauthhttpserverreplyhandler.h
  D:/msys64/ucrt64/include/qt6/QtNetworkAuth/qoauthoobreplyhandler.h
  D:/msys64/ucrt64/include/qt6/QtNetworkAuth/qoauthurischemereplyhandler.h
- D:/msys64/ucrt64/include/qt6/QtOpenGL/QOpenGLFramebufferObject
- D:/msys64/ucrt64/include/qt6/QtOpenGL/qopenglframebufferobject.h
- D:/msys64/ucrt64/include/qt6/QtOpenGL/qtopenglexports.h
- D:/msys64/ucrt64/include/qt6/QtOpenGL/qtopenglglobal.h
  D:/msys64/ucrt64/include/qt6/QtPdf/QPdfDocument
  D:/msys64/ucrt64/include/qt6/QtPdf/QPdfPageRenderer
  D:/msys64/ucrt64/include/qt6/QtPdf/qpdfdocument.h
@@ -657,20 +628,12 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtPrintSupport/qtprintsupport-config.h
  D:/msys64/ucrt64/include/qt6/QtPrintSupport/qtprintsupportexports.h
  D:/msys64/ucrt64/include/qt6/QtPrintSupport/qtprintsupportglobal.h
- D:/msys64/ucrt64/include/qt6/QtQml/QQmlComponent
- D:/msys64/ucrt64/include/qt6/QtQml/QQmlEngine
- D:/msys64/ucrt64/include/qt6/QtQml/qjsengine.h
- D:/msys64/ucrt64/include/qt6/QtQml/qjsmanagedvalue.h
  D:/msys64/ucrt64/include/qt6/QtQml/qjsnumbercoercion.h
  D:/msys64/ucrt64/include/qt6/QtQml/qjsprimitivevalue.h
  D:/msys64/ucrt64/include/qt6/QtQml/qjsvalue.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqml.h
- D:/msys64/ucrt64/include/qt6/QtQml/qqmlabstracturlinterceptor.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqmlcomponent.h
- D:/msys64/ucrt64/include/qt6/QtQml/qqmldebug.h
- D:/msys64/ucrt64/include/qt6/QtQml/qqmlengine.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqmlerror.h
- D:/msys64/ucrt64/include/qt6/QtQml/qqmlinfo.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqmllist.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqmlparserstatus.h
  D:/msys64/ucrt64/include/qt6/QtQml/qqmlprivate.h
@@ -684,16 +647,7 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qqmlintegration.h
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qtqmlintegrationversion.h
  D:/msys64/ucrt64/include/qt6/QtQuick/QQuickItem
- D:/msys64/ucrt64/include/qt6/QtQuick/QQuickRenderControl
- D:/msys64/ucrt64/include/qt6/QtQuick/QQuickView
- D:/msys64/ucrt64/include/qt6/QtQuick/QQuickWindow
  D:/msys64/ucrt64/include/qt6/QtQuick/qquickitem.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qquickrendercontrol.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qquickview.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qquickwindow.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qsggeometry.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qsgnode.h
- D:/msys64/ucrt64/include/qt6/QtQuick/qsgrendererinterface.h
  D:/msys64/ucrt64/include/qt6/QtQuick/qtquick-config.h
  D:/msys64/ucrt64/include/qt6/QtQuick/qtquickexports.h
  D:/msys64/ucrt64/include/qt6/QtQuick/qtquickglobal.h
@@ -715,7 +669,6 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  D:/msys64/ucrt64/include/signal.h
  D:/msys64/ucrt64/include/stdarg.h
  D:/msys64/ucrt64/include/stddef.h
- D:/msys64/ucrt64/include/stdint.h
  D:/msys64/ucrt64/include/stdio.h
  D:/msys64/ucrt64/include/stdlib.h
  D:/msys64/ucrt64/include/string.h
@@ -1962,12 +1915,10 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  E:/VTT/include/PDFViewer.h
  E:/VTT/include/PlatformDetection.h
  E:/VTT/include/PromptManager.h
- E:/VTT/include/QMLPDFGenerator.h
  E:/VTT/include/QRCodeGenerator.h
  E:/VTT/include/SecureStorageManager.h
  E:/VTT/include/TTSManager.h
  E:/VTT/include/VoiceRecognitionManager.h
- E:/VTT/include/WebEnginePDFGenerator.h
  E:/VTT/main.cpp
  E:/VTT/src/CSVViewer.cpp
  E:/VTT/src/ChatManager.cpp
@@ -1978,11 +1929,10 @@ E:/VTT/build/VoiceAILLM_autogen/timestamp
  E:/VTT/src/PDFGenerator.cpp
  E:/VTT/src/PDFManager.cpp
  E:/VTT/src/PDFViewer.cpp
+ E:/VTT/src/PlatformSpeechRecognition.cpp
  E:/VTT/src/PromptManager.cpp
- E:/VTT/src/QMLPDFGenerator.cpp
  E:/VTT/src/QRCodeGenerator.cpp
  E:/VTT/src/SecureStorageManager.cpp
  E:/VTT/src/TTSManager.cpp
  E:/VTT/src/VoiceRecognitionManager.cpp
- E:/VTT/src/WebEnginePDFGenerator.cpp
 

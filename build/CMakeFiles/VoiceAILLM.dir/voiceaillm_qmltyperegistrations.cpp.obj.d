@@ -921,4 +921,5 @@ CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj: \
  D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiosource.h \
  D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiodevice.h \
  D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioFormat \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QThread

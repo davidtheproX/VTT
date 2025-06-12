@@ -44,13 +44,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/VTT/src/PDFGenerator.cpp" "CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj.d"
   "E:/VTT/src/PDFManager.cpp" "CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj.d"
   "E:/VTT/src/PDFViewer.cpp" "CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj.d"
+  "E:/VTT/src/PlatformSpeechRecognition.cpp" "CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj.d"
   "E:/VTT/src/PromptManager.cpp" "CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj.d"
   "E:/VTT/src/QMLPDFGenerator.cpp" "CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj.d"
   "E:/VTT/src/QRCodeGenerator.cpp" "CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj.d"
   "E:/VTT/src/SecureStorageManager.cpp" "CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj.d"
   "E:/VTT/src/TTSManager.cpp" "CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj.d"
   "E:/VTT/src/VoiceRecognitionManager.cpp" "CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj.d"
-  "E:/VTT/src/WebEnginePDFGenerator.cpp" "CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj.d"
   "E:/VTT/build/voiceaillm_qmltyperegistrations.cpp" "CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj" "gcc" "CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj.d"
   )
 

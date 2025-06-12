@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 456,
+                        "durationMicroseconds": 439,
                         "errorMessage": "Cannot access value for name voiceButton",
                         "functionName": "color",
                         "line": 20
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
                         "line": 29
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "height",
                         "line": 35
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
                         "line": 36
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 2,
+                        "durationMicroseconds": 3,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "centerIn",
                         "line": 33
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 88,
                         "errorMessage": "Cannot access value for name isListening",
                         "functionName": "color",
                         "line": 38
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "width",
                         "line": 39
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name isListening",
                         "functionName": "running",
                         "line": 43
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name Animation",
                         "functionName": "loops",
                         "line": 44
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "target",
                         "line": 47
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "target",
                         "line": 54
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name isListening",
                         "functionName": "visible",
                         "line": 65
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "width",
                         "line": 67
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "height",
                         "line": 68
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 70
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name isListening",
                         "functionName": "text",
                         "line": 89
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "pixelSize",
                         "line": 91
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 66,
                         "errorMessage": "Cannot find name pressAndHoldMode",
                         "functionName": "onTriggered",
                         "line": 141
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name Easing",
                         "functionName": "type",
                         "line": 174

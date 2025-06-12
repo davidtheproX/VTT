@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 136,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 15
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 30,
                         "errorMessage": "Cannot access value for name seriesList",
                         "functionName": "width",
                         "line": 70
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "seriesName",
                         "line": 71
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "seriesVisible",
                         "line": 72
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "seriesColor",
                         "line": 73
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "dataType",
                         "line": 75
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "maxValue",
                         "line": 77
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name model",
                         "functionName": "unit",
                         "line": 78
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "onToggled",
                         "line": 80
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "onColorChanged",
                         "line": 81
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 93

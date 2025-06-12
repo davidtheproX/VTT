@@ -89,16 +89,18 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     , m_audioLevel(0.0f)
     , m_currentMicrophone("")
     , m_isTesting(false)
+    , m_audioProcessingThread(nullptr)
+    , m_useLocalSpeechRecognition(true)
 {
     initializeAudio();
     loadAvailableMicrophones();
     
-    // Initialize network manager
+    // Initialize network manager for cloud fallback
     m_networkManager = new QNetworkAccessManager(this);
     connect(m_networkManager, &QNetworkAccessManager::finished,
             this, &VoiceRecognitionManager::onSpeechRecognitionFinished);
     
-    // Initialize timers
+    // Initialize timers with optimized intervals
     m_audioLevelTimer = std::make_unique<QTimer>(this);
     connect(m_audioLevelTimer.get(), &QTimer::timeout, this, &VoiceRecognitionManager::updateAudioLevel);
     
@@ -106,7 +108,13 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     m_recordingTimer->setSingleShot(true);
     connect(m_recordingTimer.get(), &QTimer::timeout, this, &VoiceRecognitionManager::processAudioData);
     
-    qDebug() << "VoiceRecognitionManager initialized with Qt6 audio capture support";
+    // Initialize platform-specific speech recognition
+    initializePlatformSpeechRecognition();
+    
+    // Setup audio processing thread for better performance
+    setupAudioProcessingThread();
+    
+    qDebug() << "VoiceRecognitionManager initialized with platform-specific speech recognition";
 }
 
 VoiceRecognitionManager::~VoiceRecognitionManager()

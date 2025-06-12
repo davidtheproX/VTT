@@ -1662,12 +1662,6 @@
 			"MU",
 			"6YEA5652QU/moc_VoiceRecognitionManager.cpp",
 			null
-		],
-		[
-			"E:/VTT/include/WebEnginePDFGenerator.h",
-			"MU",
-			"6YEA5652QU/moc_WebEnginePDFGenerator.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -1778,7 +1772,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"D:/msys64/ucrt64/bin/g++.exe",
+		"D:/msys64/ucrt64/bin/c++.exe",
 		"-std=gnu++17",
 		"-w",
 		"-dM",
@@ -1835,13 +1829,13 @@
 		[ "E:/VTT/src/PDFGenerator.cpp", "MU", null ],
 		[ "E:/VTT/src/PDFManager.cpp", "MU", null ],
 		[ "E:/VTT/src/PDFViewer.cpp", "MU", null ],
+		[ "E:/VTT/src/PlatformSpeechRecognition.cpp", "MU", null ],
 		[ "E:/VTT/src/PromptManager.cpp", "MU", null ],
 		[ "E:/VTT/src/QMLPDFGenerator.cpp", "MU", null ],
 		[ "E:/VTT/src/QRCodeGenerator.cpp", "MU", null ],
 		[ "E:/VTT/src/SecureStorageManager.cpp", "MU", null ],
 		[ "E:/VTT/src/TTSManager.cpp", "MU", null ],
-		[ "E:/VTT/src/VoiceRecognitionManager.cpp", "MU", null ],
-		[ "E:/VTT/src/WebEnginePDFGenerator.cpp", "MU", null ]
+		[ "E:/VTT/src/VoiceRecognitionManager.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

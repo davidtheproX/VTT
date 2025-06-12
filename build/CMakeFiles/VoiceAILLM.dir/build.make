@@ -466,653 +466,654 @@ CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj: CMakeFile
 CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj: VoiceAILLM_autogen/mocs_compilation.cpp
 CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.obj -c E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.obj -c E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp
 
 CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp > CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp > CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp -o CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\VoiceAILLM_autogen\mocs_compilation.cpp -o CMakeFiles\VoiceAILLM.dir\VoiceAILLM_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/main.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/main.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:/VTT/main.cpp
 CMakeFiles/VoiceAILLM.dir/main.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/VoiceAILLM.dir/main.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/main.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\main.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\main.cpp.obj -c E:\VTT\main.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/main.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\main.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\main.cpp.obj -c E:\VTT\main.cpp
 
 CMakeFiles/VoiceAILLM.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/main.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\main.cpp > CMakeFiles\VoiceAILLM.dir\main.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\main.cpp > CMakeFiles\VoiceAILLM.dir\main.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/main.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\main.cpp -o CMakeFiles\VoiceAILLM.dir\main.cpp.s
-
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: E:/VTT/src/ChatManager.cpp
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.obj -c E:\VTT\src\ChatManager.cpp
-
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\ChatManager.cpp > CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.i
-
-CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\ChatManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\main.cpp -o CMakeFiles\VoiceAILLM.dir\main.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj: E:/VTT/src/VoiceRecognitionManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.obj -c E:\VTT\src\VoiceRecognitionManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.obj -c E:\VTT\src\VoiceRecognitionManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\VoiceRecognitionManager.cpp > CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\VoiceRecognitionManager.cpp > CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\VoiceRecognitionManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\VoiceRecognitionManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\VoiceRecognitionManager.cpp.s
+
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj: E:/VTT/src/PlatformSpeechRecognition.cpp
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PlatformSpeechRecognition.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PlatformSpeechRecognition.cpp.obj -c E:\VTT\src\PlatformSpeechRecognition.cpp
+
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.i"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PlatformSpeechRecognition.cpp > CMakeFiles\VoiceAILLM.dir\src\PlatformSpeechRecognition.cpp.i
+
+CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.s"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PlatformSpeechRecognition.cpp -o CMakeFiles\VoiceAILLM.dir\src\PlatformSpeechRecognition.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj: E:/VTT/src/LLMConnectionManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.obj -c E:\VTT\src\LLMConnectionManager.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.obj -c E:\VTT\src\LLMConnectionManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\LLMConnectionManager.cpp > CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\LLMConnectionManager.cpp > CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\LLMConnectionManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\LLMConnectionManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\LLMConnectionManager.cpp.s
+
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: E:/VTT/src/ChatManager.cpp
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.obj -c E:\VTT\src\ChatManager.cpp
+
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.i"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\ChatManager.cpp > CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.i
+
+CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.s"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\ChatManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\ChatManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj: E:/VTT/src/DatabaseManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.obj -c E:\VTT\src\DatabaseManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.obj -c E:\VTT\src\DatabaseManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\DatabaseManager.cpp > CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\DatabaseManager.cpp > CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\DatabaseManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\DatabaseManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\DatabaseManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj: E:/VTT/src/PromptManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.obj -c E:\VTT\src\PromptManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.obj -c E:\VTT\src\PromptManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PromptManager.cpp > CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PromptManager.cpp > CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PromptManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PromptManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\PromptManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj: E:/VTT/src/TTSManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.obj -c E:\VTT\src\TTSManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.obj -c E:\VTT\src\TTSManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\TTSManager.cpp > CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\TTSManager.cpp > CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\TTSManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\TTSManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\TTSManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj: E:/VTT/src/SecureStorageManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.obj -c E:\VTT\src\SecureStorageManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.obj -c E:\VTT\src\SecureStorageManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\SecureStorageManager.cpp > CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\SecureStorageManager.cpp > CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/SecureStorageManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\SecureStorageManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\SecureStorageManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\SecureStorageManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj: E:/VTT/src/LoggingManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.obj -c E:\VTT\src\LoggingManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.obj -c E:\VTT\src\LoggingManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\LoggingManager.cpp > CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\LoggingManager.cpp > CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/LoggingManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\LoggingManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\LoggingManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\LoggingManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj: E:/VTT/src/OAuth2Manager.cpp
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.obj -c E:\VTT\src\OAuth2Manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.obj -c E:\VTT\src\OAuth2Manager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\OAuth2Manager.cpp > CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\OAuth2Manager.cpp > CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/OAuth2Manager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\OAuth2Manager.cpp -o CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\OAuth2Manager.cpp -o CMakeFiles\VoiceAILLM.dir\src\OAuth2Manager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj: E:/VTT/src/QRCodeGenerator.cpp
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.obj -c E:\VTT\src\QRCodeGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.obj -c E:\VTT\src\QRCodeGenerator.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\QRCodeGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\QRCodeGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/QRCodeGenerator.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\QRCodeGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\QRCodeGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\QRCodeGenerator.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj: E:/VTT/src/PDFManager.cpp
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.obj -c E:\VTT\src\PDFManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.obj -c E:\VTT\src\PDFManager.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFManager.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFManager.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFManager.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFManager.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj: E:/VTT/src/PDFGenerator.cpp
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.obj -c E:\VTT\src\PDFGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.obj -c E:\VTT\src\PDFGenerator.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFGenerator.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj: E:/VTT/src/QMLPDFGenerator.cpp
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.obj -c E:\VTT\src\QMLPDFGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.obj -c E:\VTT\src\QMLPDFGenerator.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\QMLPDFGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\QMLPDFGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\QMLPDFGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\QMLPDFGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\QMLPDFGenerator.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj: E:/VTT/src/PDFViewer.cpp
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.obj -c E:\VTT\src\PDFViewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj"
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.obj -c E:\VTT\src\PDFViewer.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFViewer.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\PDFViewer.cpp > CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFViewer.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.s
-
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj: E:/VTT/src/WebEnginePDFGenerator.cpp
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\WebEnginePDFGenerator.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\WebEnginePDFGenerator.cpp.obj -c E:\VTT\src\WebEnginePDFGenerator.cpp
-
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\WebEnginePDFGenerator.cpp > CMakeFiles\VoiceAILLM.dir\src\WebEnginePDFGenerator.cpp.i
-
-CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\WebEnginePDFGenerator.cpp -o CMakeFiles\VoiceAILLM.dir\src\WebEnginePDFGenerator.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\PDFViewer.cpp -o CMakeFiles\VoiceAILLM.dir\src\PDFViewer.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj: E:/VTT/src/CSVViewer.cpp
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.obj -c E:\VTT\src\CSVViewer.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.obj -c E:\VTT\src\CSVViewer.cpp
 
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\CSVViewer.cpp > CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\src\CSVViewer.cpp > CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\CSVViewer.cpp -o CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\src\CSVViewer.cpp -o CMakeFiles\VoiceAILLM.dir\src\CSVViewer.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj: voiceaillm_qmltyperegistrations.cpp
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -MD -MT CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.obj -c E:\VTT\build\voiceaillm_qmltyperegistrations.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -MD -MT CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.obj -c E:\VTT\build\voiceaillm_qmltyperegistrations.cpp
 
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -E E:\VTT\build\voiceaillm_qmltyperegistrations.cpp > CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -E E:\VTT\build\voiceaillm_qmltyperegistrations.cpp > CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -S E:\VTT\build\voiceaillm_qmltyperegistrations.cpp -o CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -Wa,-mbig-obj -S E:\VTT\build\voiceaillm_qmltyperegistrations.cpp -o CMakeFiles\VoiceAILLM.dir\voiceaillm_qmltyperegistrations.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj: .qt/rcc/qrc_qmake_VoiceAILLM.cpp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_qmake_VoiceAILLM.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj: .rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qmlcache_loader.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qmlcache_loader.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/Main_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\Main_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/ChatWindow_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\ChatWindow_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/MessageDelegate_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\MessageDelegate_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PromptManagerDialog_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PromptManagerDialog_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/OAuth2LoginDialog_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\OAuth2LoginDialog_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFDialog_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/PDFViewer_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\PDFViewer_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVDialog_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVDialog_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewer_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewer_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/CSVViewerComponent_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\CSVViewerComponent_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/InteractiveChart_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\InteractiveChart_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataSeriesControl_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataSeriesControl_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesDelegate_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\SeriesControl_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\DataFilterControl_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\RawDataViewer_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj: .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.obj -c E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp > CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp -o CMakeFiles\VoiceAILLM.dir\build\.rcc\qmlcache\VoiceAILLM_qml\pdf_templates\diagnostic_template_qml.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj: .qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0.cpp.s
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/VoiceAILLM.dir/flags.make
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/VoiceAILLM.dir/includes_CXX.rsp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj: .qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj: CMakeFiles/VoiceAILLM.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj -MF CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj.d -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.obj -c E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.i"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.i
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp > CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.i
 
 CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.s"
-	D:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.s
+	D:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\VTT\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp -o CMakeFiles\VoiceAILLM.dir\build\.qt\rcc\qrc_VoiceAILLM_raw_qml_0_extra_qmldirs.cpp.s
 
 # Object files for target VoiceAILLM
 VoiceAILLM_OBJECTS = \
 "CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/main.cpp.obj" \
-"CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj" \
+"CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj" \
+"CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj" \
@@ -1124,7 +1125,6 @@ VoiceAILLM_OBJECTS = \
 "CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj" \
-"CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj" \
 "CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj" \
@@ -1157,9 +1157,10 @@ VoiceAILLM_EXTERNAL_OBJECTS =
 
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/VoiceAILLM_autogen/mocs_compilation.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/main.cpp.obj
-VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj
+VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/LLMConnectionManager.cpp.obj
+VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/ChatManager.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/DatabaseManager.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/PromptManager.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/TTSManager.cpp.obj
@@ -1171,7 +1172,6 @@ VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/PDFManager.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/PDFGenerator.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/QMLPDFGenerator.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.obj
-VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/src/CSVViewer.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/voiceaillm_qmltyperegistrations.cpp.obj
 VoiceAILLM.exe: CMakeFiles/VoiceAILLM.dir/build/.qt/rcc/qrc_qmake_VoiceAILLM.cpp.obj

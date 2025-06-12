@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 210,
+                        "durationMicroseconds": 250,
                         "errorMessage": "",
                         "functionName": "pdfLoaded",
                         "line": 21
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot access value for name pdfFilePath",
                         "functionName": "source",
                         "line": 27
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 412,
+                        "durationMicroseconds": 419,
                         "errorMessage": "Cannot generate efficient code for Lookup of enum metatype",
                         "functionName": "onStatusChanged",
                         "line": 29
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 50
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot access value for name pdfFilePath",
                         "functionName": "text",
                         "line": 58
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 66
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 177,
+                        "durationMicroseconds": 183,
                         "errorMessage": "Cannot access value for name pdfLoaded",
                         "functionName": "text",
                         "line": 81
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name backgroundColor",
                         "functionName": "color",
                         "line": 122
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 121
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "document",
                         "line": 129
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 21,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 126
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 149
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 151
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 21,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 156
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 162
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 170
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 175
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 66,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 177
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name pdfFilePath",
                         "functionName": "visible",
                         "line": 191
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 28,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 184
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 189
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 194
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 199
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 201
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 207
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 209
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 212
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 25,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 213
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "from",
                         "line": 218
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "to",
                         "line": 219
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 221
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 233
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 82,
                         "errorMessage": "Cannot generate efficient code for Lookup of enum metatype",
                         "functionName": "visible",
                         "line": 237
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 20,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 230
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 18,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 240
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 246
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 24,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 254
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 46,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 261
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 266

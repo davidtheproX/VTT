@@ -883,6 +883,7 @@ CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.obj: \
  D:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qqmlintegration.h \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qtqmlintegrationversion.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QThread \
  D:/msys64/ucrt64/include/qt6/QtCore/QDebug \
  D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkRequest \
  D:/msys64/ucrt64/include/qt6/QtCore/QJsonArray \

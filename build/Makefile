@@ -1163,6 +1163,30 @@ src/PDFViewer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/PDFViewer.cpp.s
 .PHONY : src/PDFViewer.cpp.s
 
+src/PlatformSpeechRecognition.obj: src/PlatformSpeechRecognition.cpp.obj
+.PHONY : src/PlatformSpeechRecognition.obj
+
+# target to build an object file
+src/PlatformSpeechRecognition.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.obj
+.PHONY : src/PlatformSpeechRecognition.cpp.obj
+
+src/PlatformSpeechRecognition.i: src/PlatformSpeechRecognition.cpp.i
+.PHONY : src/PlatformSpeechRecognition.i
+
+# target to preprocess a source file
+src/PlatformSpeechRecognition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.i
+.PHONY : src/PlatformSpeechRecognition.cpp.i
+
+src/PlatformSpeechRecognition.s: src/PlatformSpeechRecognition.cpp.s
+.PHONY : src/PlatformSpeechRecognition.s
+
+# target to generate assembly for a file
+src/PlatformSpeechRecognition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/PlatformSpeechRecognition.cpp.s
+.PHONY : src/PlatformSpeechRecognition.cpp.s
+
 src/PromptManager.obj: src/PromptManager.cpp.obj
 .PHONY : src/PromptManager.obj
 
@@ -1306,30 +1330,6 @@ src/VoiceRecognitionManager.s: src/VoiceRecognitionManager.cpp.s
 src/VoiceRecognitionManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/VoiceRecognitionManager.cpp.s
 .PHONY : src/VoiceRecognitionManager.cpp.s
-
-src/WebEnginePDFGenerator.obj: src/WebEnginePDFGenerator.cpp.obj
-.PHONY : src/WebEnginePDFGenerator.obj
-
-# target to build an object file
-src/WebEnginePDFGenerator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.obj
-.PHONY : src/WebEnginePDFGenerator.cpp.obj
-
-src/WebEnginePDFGenerator.i: src/WebEnginePDFGenerator.cpp.i
-.PHONY : src/WebEnginePDFGenerator.i
-
-# target to preprocess a source file
-src/WebEnginePDFGenerator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.i
-.PHONY : src/WebEnginePDFGenerator.cpp.i
-
-src/WebEnginePDFGenerator.s: src/WebEnginePDFGenerator.cpp.s
-.PHONY : src/WebEnginePDFGenerator.s
-
-# target to generate assembly for a file
-src/WebEnginePDFGenerator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/src/WebEnginePDFGenerator.cpp.s
-.PHONY : src/WebEnginePDFGenerator.cpp.s
 
 voiceaillm_qmltyperegistrations.obj: voiceaillm_qmltyperegistrations.cpp.obj
 .PHONY : voiceaillm_qmltyperegistrations.obj
@@ -1484,6 +1484,9 @@ help:
 	@echo ... src/PDFViewer.obj
 	@echo ... src/PDFViewer.i
 	@echo ... src/PDFViewer.s
+	@echo ... src/PlatformSpeechRecognition.obj
+	@echo ... src/PlatformSpeechRecognition.i
+	@echo ... src/PlatformSpeechRecognition.s
 	@echo ... src/PromptManager.obj
 	@echo ... src/PromptManager.i
 	@echo ... src/PromptManager.s
@@ -1502,9 +1505,6 @@ help:
 	@echo ... src/VoiceRecognitionManager.obj
 	@echo ... src/VoiceRecognitionManager.i
 	@echo ... src/VoiceRecognitionManager.s
-	@echo ... src/WebEnginePDFGenerator.obj
-	@echo ... src/WebEnginePDFGenerator.i
-	@echo ... src/WebEnginePDFGenerator.s
 	@echo ... voiceaillm_qmltyperegistrations.obj
 	@echo ... voiceaillm_qmltyperegistrations.i
 	@echo ... voiceaillm_qmltyperegistrations.s

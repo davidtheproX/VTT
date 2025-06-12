@@ -3176,7 +3176,7 @@
                     }
                 ],
                 "className": "VoiceRecognitionManager",
-                "lineNumber": 22,
+                "lineNumber": 23,
                 "object": true,
                 "properties": [
                     {
@@ -3513,7 +3513,7 @@
             },
             {
                 "className": "AudioBuffer",
-                "lineNumber": 141,
+                "lineNumber": 182,
                 "object": true,
                 "qualifiedClassName": "AudioBuffer",
                 "signals": [
@@ -3539,120 +3539,6 @@
             }
         ],
         "inputFile": "VoiceRecognitionManager.h",
-        "outputRevision": 69
-    },
-    {
-        "classes": [
-            {
-                "className": "WebEnginePDFGenerator",
-                "lineNumber": 22,
-                "object": true,
-                "qualifiedClassName": "WebEnginePDFGenerator",
-                "signals": [
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "filePath",
-                                "type": "QString"
-                            },
-                            {
-                                "name": "success",
-                                "type": "bool"
-                            },
-                            {
-                                "name": "error",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 0,
-                        "name": "pdfGenerated",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "percentage",
-                                "type": "int"
-                            }
-                        ],
-                        "index": 1,
-                        "name": "generationProgress",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "renderedImage",
-                                "type": "QImage"
-                            }
-                        ],
-                        "index": 2,
-                        "name": "webEngineRenderCompleted",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "arguments": [
-                            {
-                                "name": "error",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 3,
-                        "name": "webEngineRenderFailed",
-                        "returnType": "void"
-                    }
-                ],
-                "slots": [
-                    {
-                        "access": "private",
-                        "arguments": [
-                            {
-                                "name": "imageData",
-                                "type": "QVariant"
-                            }
-                        ],
-                        "index": 4,
-                        "name": "onWebEngineRenderCompleted",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "private",
-                        "arguments": [
-                            {
-                                "name": "error",
-                                "type": "QString"
-                            }
-                        ],
-                        "index": 5,
-                        "name": "onWebEngineRenderFailed",
-                        "returnType": "void"
-                    },
-                    {
-                        "access": "private",
-                        "arguments": [
-                            {
-                                "name": "progress",
-                                "type": "qreal"
-                            }
-                        ],
-                        "index": 6,
-                        "name": "onWebEngineProgressChanged",
-                        "returnType": "void"
-                    }
-                ],
-                "superClasses": [
-                    {
-                        "access": "public",
-                        "name": "QObject"
-                    }
-                ]
-            }
-        ],
-        "inputFile": "WebEnginePDFGenerator.h",
         "outputRevision": 69
     }
 ]

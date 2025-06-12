@@ -915,6 +915,7 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qqmlintegration.h \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qtqmlintegrationversion.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QThread \
  E:/VTT/include/LLMConnectionManager.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QUrl E:/VTT/include/ChatManager.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QAbstractListModel \

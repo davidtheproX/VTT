@@ -2,37 +2,32 @@
 echo Starting Voice AI LLM build...
 echo.
 
-echo.
+REM Use CLEAN MSYS2 UCRT64 environment
 echo Using CLEAN MSYS2 UCRT64 environment...
-set "PATH=D:\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows"
-set "CMAKE_PREFIX_PATH=D:\msys64\ucrt64"
-set "Qt6_DIR=D:\msys64\ucrt64\lib\cmake\Qt6"
-set "PKG_CONFIG_PATH=D:\msys64\ucrt64\lib\pkgconfig"
-
+set PATH=D:\msys64\ucrt64\bin;C:\Windows\System32;C:\Windows
 echo PATH: %PATH%
-echo.
 
+echo.
 echo Tool versions:
 cmake --version
 echo.
-qmake --version 2>nul || echo 'qmake' not found but continuing with cmake...
-echo.
+where qmake >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo 'qmake' not found but continuing with cmake...
+) else (
+    qmake --version
+)
 
+echo.
 echo Creating build directory...
 if not exist build mkdir build
 
 echo.
 echo Configuring with CMake (Qt6 UCRT64 ONLY)...
 cd build
-cmake .. -G "MinGW Makefiles" ^
-    -DCMAKE_BUILD_TYPE=Release ^
-    -DCMAKE_PREFIX_PATH="D:\msys64\ucrt64" ^
-    -DQt6_DIR="D:\msys64\ucrt64\lib\cmake\Qt6" ^
-    -DCMAKE_C_COMPILER="D:\msys64\ucrt64\bin\gcc.exe" ^
-    -DCMAKE_CXX_COMPILER="D:\msys64\ucrt64\bin\g++.exe"
-
+cmake .. -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=D:\msys64\ucrt64 2>../build_errors.txt
 if %ERRORLEVEL% neq 0 (
-    echo Configuration failed!
+    echo CMake configuration failed! Check build_errors.txt
     cd ..
     pause
     exit /b 1
@@ -40,11 +35,11 @@ if %ERRORLEVEL% neq 0 (
 
 echo.
 echo Building project with maximum parallelism (48 threads)...
-cmake --build . --config Release --parallel 48
-
+mingw32-make -j48 2>>../build_errors.txt
 if %ERRORLEVEL% neq 0 (
     echo Build failed!
     cd ..
+    type build_errors.txt | tail -50
     pause
     exit /b 1
 )

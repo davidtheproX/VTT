@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 260,
+                        "durationMicroseconds": 195,
                         "errorMessage": "Cannot retrieve a non-object type by ID: webView",
                         "functionName": "captureRenderedContent",
                         "line": 143
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 51,
                         "errorMessage": "Cannot retrieve a non-object type by ID: webView",
                         "functionName": "cancelRendering",
                         "line": 171
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 59,
                         "errorMessage": "method captureRenderedContent cannot be resolved.",
                         "functionName": "onTriggered",
                         "line": 84
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 352,
+                        "durationMicroseconds": 307,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 97
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "onDestruction",
                         "line": 186

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "D:/msys64/ucrt64/bin/g++.exe")
+set(CMAKE_CXX_COMPILER "D:/msys64/ucrt64/bin/c++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "15.1.0")

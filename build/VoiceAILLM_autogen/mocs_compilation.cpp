@@ -14,4 +14,3 @@
 #include "6YEA5652QU/moc_SecureStorageManager.cpp"
 #include "6YEA5652QU/moc_TTSManager.cpp"
 #include "6YEA5652QU/moc_VoiceRecognitionManager.cpp"
-#include "6YEA5652QU/moc_WebEnginePDFGenerator.cpp"

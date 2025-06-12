@@ -16,6 +16,7 @@
 #include <QAudioFormat>
 #include <QtQmlIntegration>
 #include <memory>
+#include <QThread>
 
 class AudioBuffer;
 
@@ -96,6 +97,32 @@ private:
     void loadAvailableMicrophones();
     QAudioDevice findMicrophoneByName(const QString &name) const;
     QString getMicrophoneDisplayName(const QAudioDevice &device) const;
+    
+    // Platform-specific speech recognition
+    void initializePlatformSpeechRecognition();
+    void setupAudioProcessingThread();
+    void processVoiceToTextLocal(const QByteArray &audioData);
+    bool isLocalSpeechRecognitionAvailable() const;
+    
+#ifdef Q_OS_WIN
+    void initializeWindowsSAPI();
+    QString processWithWindowsSAPI(const QByteArray &audioData);
+#endif
+
+#ifdef Q_OS_ANDROID
+    void initializeAndroidSpeechRecognition();
+    QString processWithAndroidSpeechRecognition(const QByteArray &audioData);
+#endif
+
+#ifdef Q_OS_IOS
+    void initializeIOSSpeechRecognition();
+    QString processWithIOSSpeechRecognition(const QByteArray &audioData);
+#endif
+
+#ifdef Q_OS_LINUX
+    void initializeLinuxSpeechRecognition();
+    QString processWithLinuxSpeechRecognition(const QByteArray &audioData);
+#endif
 
     // Qt6 Audio recording components
     QMediaCaptureSession *m_captureSession;
@@ -135,6 +162,20 @@ private:
     bool m_isConfigured;
     QStringList m_availableDevices;
     QString m_currentDevice;
+    
+    // Performance optimization
+    QThread *m_audioProcessingThread;
+    bool m_useLocalSpeechRecognition;
+    
+    // Platform-specific speech recognition handles
+#ifdef Q_OS_WIN
+    void *m_windowsSAPIRecognizer; // ISpRecoContext*
+#endif
+
+#ifdef Q_OS_ANDROID
+    // Android specific handles would go here
+    void *m_androidRecognizer;
+#endif
 };
 
 // Custom audio buffer class to capture audio data

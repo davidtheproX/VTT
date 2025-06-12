@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 343,
+                        "durationMicroseconds": 280,
                         "errorMessage": "Cannot load property seriesData from (component in E:/VTT/qml/InteractiveChart.qml)::dataProvider with type QVariant.",
                         "functionName": "updateChart",
                         "line": 247
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 74,
+                        "durationMicroseconds": 58,
                         "errorMessage": "Cannot load property minTime from (component in E:/VTT/qml/InteractiveChart.qml)::dataProvider with type QVariant.",
                         "functionName": "updateAxes",
                         "line": 297
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "resetZoom",
                         "line": 311
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot load property minY from (component in E:/VTT/qml/InteractiveChart.qml)::dataProvider with type QVariant.",
                         "functionName": "autoScaleY",
                         "line": 318
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 17,
                         "errorMessage": "",
                         "functionName": "autoScaleAll",
                         "line": 326
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 148,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "emitZoomChanged",
                         "line": 330
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 5,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "hideTooltip",
                         "line": 365
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name dataProvider",
                         "functionName": "target",
                         "line": 56
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 38,
                         "errorMessage": "method updateChart cannot be resolved.",
                         "functionName": "onSeriesDataChanged",
                         "line": 57
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 23,
                         "errorMessage": "method updateAxes cannot be resolved.",
                         "functionName": "onRangeChanged",
                         "line": 60
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 217,
+                        "durationMicroseconds": 202,
                         "errorMessage": "Cannot access value for name allowPan",
                         "functionName": "onPressed",
                         "line": 75
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 75
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 100,
                         "errorMessage": "Type  does not have a property releaseMouse for calling",
                         "functionName": "onReleased",
                         "line": 83
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 16,
                         "errorMessage": "",
                         "functionName": "onReleased",
                         "line": 83
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 400,
+                        "durationMicroseconds": 387,
                         "errorMessage": "Cannot access value for name allowPan",
                         "functionName": "onPositionChanged",
                         "line": 90
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 364,
+                        "durationMicroseconds": 322,
                         "errorMessage": "Cannot access value for name allowZoom",
                         "functionName": "onWheel",
                         "line": 114
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 277,
+                        "durationMicroseconds": 243,
                         "errorMessage": "Cannot retrieve a non-object type by ID: contextMenu",
                         "functionName": "onClicked",
                         "line": 139
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 18,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 139
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 97,
                         "errorMessage": "method resetZoom cannot be resolved.",
                         "functionName": "onDoubleClicked",
                         "line": 150
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 48,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 188
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 192
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 32,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 193
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 203
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 73,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 211
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name timelinePosition",
                         "functionName": "visible",
                         "line": 214
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 12,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot access value for name timelinePosition",
                         "functionName": "x",
                         "line": 215
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 39,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 222
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 228
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 229
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 20,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 239
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 50,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 383

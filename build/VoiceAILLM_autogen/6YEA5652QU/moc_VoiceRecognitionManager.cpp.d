@@ -221,6 +221,7 @@ E:/VTT/build/VoiceAILLM_autogen/6YEA5652QU/moc_VoiceRecognitionManager.cpp: E:/V
   D:/msys64/ucrt64/include/qt6/QtCore/QSharedDataPointer \
   D:/msys64/ucrt64/include/qt6/QtCore/QString \
   D:/msys64/ucrt64/include/qt6/QtCore/QStringList \
+  D:/msys64/ucrt64/include/qt6/QtCore/QThread \
   D:/msys64/ucrt64/include/qt6/QtCore/QTimer \
   D:/msys64/ucrt64/include/qt6/QtCore/QUrl \
   D:/msys64/ucrt64/include/qt6/QtCore/QVariant \

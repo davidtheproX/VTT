@@ -236,6 +236,7 @@ VoiceAILLM_autogen/timestamp: \
 	D:/msys64/ucrt64/include/qt6/QtCore/QString \
 	D:/msys64/ucrt64/include/qt6/QtCore/QStringList \
 	D:/msys64/ucrt64/include/qt6/QtCore/QTextStream \
+	D:/msys64/ucrt64/include/qt6/QtCore/QThread \
 	D:/msys64/ucrt64/include/qt6/QtCore/QTimer \
 	D:/msys64/ucrt64/include/qt6/QtCore/QUrl \
 	D:/msys64/ucrt64/include/qt6/QtCore/QVariant \
@@ -681,11 +682,9 @@ VoiceAILLM_autogen/timestamp: \
 	D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qtqmlintegrationversion.h \
 	D:/msys64/ucrt64/include/qt6/QtQuick/QQuickItem \
 	D:/msys64/ucrt64/include/qt6/QtQuick/QQuickRenderControl \
-	D:/msys64/ucrt64/include/qt6/QtQuick/QQuickView \
 	D:/msys64/ucrt64/include/qt6/QtQuick/QQuickWindow \
 	D:/msys64/ucrt64/include/qt6/QtQuick/qquickitem.h \
 	D:/msys64/ucrt64/include/qt6/QtQuick/qquickrendercontrol.h \
-	D:/msys64/ucrt64/include/qt6/QtQuick/qquickview.h \
 	D:/msys64/ucrt64/include/qt6/QtQuick/qquickwindow.h \
 	D:/msys64/ucrt64/include/qt6/QtQuick/qsggeometry.h \
 	D:/msys64/ucrt64/include/qt6/QtQuick/qsgnode.h \
@@ -1963,7 +1962,6 @@ VoiceAILLM_autogen/timestamp: \
 	E:/VTT/include/SecureStorageManager.h \
 	E:/VTT/include/TTSManager.h \
 	E:/VTT/include/VoiceRecognitionManager.h \
-	E:/VTT/include/WebEnginePDFGenerator.h \
 	E:/VTT/main.cpp \
 	E:/VTT/src/CSVViewer.cpp \
 	E:/VTT/src/ChatManager.cpp \
@@ -1974,11 +1972,11 @@ VoiceAILLM_autogen/timestamp: \
 	E:/VTT/src/PDFGenerator.cpp \
 	E:/VTT/src/PDFManager.cpp \
 	E:/VTT/src/PDFViewer.cpp \
+	E:/VTT/src/PlatformSpeechRecognition.cpp \
 	E:/VTT/src/PromptManager.cpp \
 	E:/VTT/src/QMLPDFGenerator.cpp \
 	E:/VTT/src/QRCodeGenerator.cpp \
 	E:/VTT/src/SecureStorageManager.cpp \
 	E:/VTT/src/TTSManager.cpp \
 	E:/VTT/src/VoiceRecognitionManager.cpp \
-	E:/VTT/src/WebEnginePDFGenerator.cpp \
 	D:/msys64/ucrt64/bin/cmake.exe

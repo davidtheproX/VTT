@@ -242,9 +242,10 @@ qt_standard_project_setup()
 # Source files
 set(SOURCES 
     main.cpp
-    src/ChatManager.cpp
     src/VoiceRecognitionManager.cpp
+    src/PlatformSpeechRecognition.cpp
     src/LLMConnectionManager.cpp
+    src/ChatManager.cpp
     src/DatabaseManager.cpp
     src/PromptManager.cpp
     src/TTSManager.cpp
@@ -256,7 +257,6 @@ set(SOURCES
     src/PDFGenerator.cpp
     src/QMLPDFGenerator.cpp
     src/PDFViewer.cpp
-    src/WebEnginePDFGenerator.cpp
     src/CSVViewer.cpp
 )
 
@@ -277,7 +277,6 @@ set(HEADERS
     include/PDFGenerator.h
     include/QMLPDFGenerator.h
     include/PDFViewer.h
-    include/WebEnginePDFGenerator.h
     include/CSVViewer.h
 )
 
@@ -439,6 +438,12 @@ if(WIN32)
     if(MINGW)
         target_compile_options(VoiceAILLM PRIVATE -Wa,-mbig-obj)
     endif()
+    # Windows SAPI libraries
+    target_link_libraries(VoiceAILLM PRIVATE
+        ole32 
+        sapi
+    )
+    message(STATUS "Added Windows SAPI libraries for speech recognition")
 elseif(APPLE)
     if(IOS)
         target_compile_definitions(VoiceAILLM PRIVATE 
@@ -454,6 +459,8 @@ elseif(ANDROID)
         ANDROID
         __ANDROID__
     )
+    # Android would need JNI libraries
+    message(STATUS "Android speech recognition requires JNI implementation")
 elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_compile_definitions(VoiceAILLM PRIVATE
         LINUX
@@ -461,6 +468,19 @@ elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     )
     # Additional libraries for Linux
     target_link_libraries(VoiceAILLM PRIVATE pthread dl)
+    # Linux - check for speech recognition libraries
+    find_library(POCKETSPHINX_LIB pocketsphinx)
+    if(POCKETSPHINX_LIB)
+        target_link_libraries(VoiceAILLM PRIVATE ${POCKETSPHINX_LIB})
+        message(STATUS "Found PocketSphinx library for Linux speech recognition")
+    else()
+        message(WARNING "PocketSphinx not found - Linux speech recognition disabled")
+    endif()
+endif()
+
+if(APPLE AND NOT CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+    # iOS Speech Framework
+    message(STATUS "iOS speech recognition requires Speech Framework")
 endif()
 
 # Deployment configurations
