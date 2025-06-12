@@ -8,7 +8,7 @@
                 }
             ],
             "className": "VoiceRecognitionManager",
-            "lineNumber": 23,
+            "lineNumber": 26,
             "object": true,
             "properties": [
                 {
@@ -345,7 +345,7 @@
         },
         {
             "className": "AudioBuffer",
-            "lineNumber": 182,
+            "lineNumber": 196,
             "object": true,
             "qualifiedClassName": "AudioBuffer",
             "signals": [

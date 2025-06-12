@@ -442,6 +442,12 @@ Qt6QuickTools_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6QuickTools
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6Quick
 
+//The directory containing a CMake configuration file for Qt6SpeechRecognition.
+Qt6SpeechRecognition_DIR:PATH=Qt6SpeechRecognition_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt6SpeechToText.
+Qt6SpeechToText_DIR:PATH=Qt6SpeechToText_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt6SvgPrivate.
 Qt6SvgPrivate_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6SvgPrivate
 

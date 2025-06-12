@@ -395,6 +395,7 @@
 #define QT_CORE_LIB 1
 #define __SIZEOF_FLOAT128__ 16
 #define __BFLT16_MANT_DIG__ 8
+#define GOOGLE_SPEECH_API_VERSION "v1"
 #define __DEC64_MIN__ 1E-383DD
 #define __WINT_TYPE__ short unsigned int
 #define __UINT_LEAST32_TYPE__ unsigned int
@@ -431,6 +432,7 @@
 #define __FLT128_HAS_QUIET_NAN__ 1
 #define __INTMAX_MAX__ 0x7fffffffffffffffLL
 #define __SSE3__ 1
+#define USE_GOOGLE_SPEECH_API 1
 #define __INT_FAST8_TYPE__ signed char
 #define __fastcall __attribute__((__fastcall__))
 #define __FLT64X_MIN__ 3.36210314311209350626267781732175260e-4932F64x
