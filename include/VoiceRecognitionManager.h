@@ -18,6 +18,9 @@
 #include <memory>
 #include <QThread>
 
+// Note: Qt 6.9 does not have native speech recognition
+// We use Qt's cross-platform audio capture + Google Cloud Speech API
+
 class AudioBuffer;
 
 class VoiceRecognitionManager : public QObject
@@ -98,6 +101,12 @@ private:
     QAudioDevice findMicrophoneByName(const QString &name) const;
     QString getMicrophoneDisplayName(const QAudioDevice &device) const;
     
+    // Google Cloud Speech API integration (cross-platform)
+    void initializeGoogleSpeechAPI();
+    void processWithGoogleSpeechAPI(const QByteArray &audioData);
+    bool isGoogleSpeechAPIConfigured() const;
+    bool isGoogleSpeechAPIAvailable() const;
+    
     // Platform-specific speech recognition
     void initializePlatformSpeechRecognition();
     void setupAudioProcessingThread();
@@ -163,9 +172,15 @@ private:
     QStringList m_availableDevices;
     QString m_currentDevice;
     
-    // Performance optimization
+    // Performance optimization and threading
     QThread *m_audioProcessingThread;
     bool m_useLocalSpeechRecognition;
+    
+    // Google Cloud Speech API settings (cross-platform)
+    bool m_useGoogleSpeechAPI;
+    QString m_googleSpeechAPIRegion;
+    int m_audioSampleRate;
+    int m_audioChannels;
     
     // Platform-specific speech recognition handles
 #ifdef Q_OS_WIN
@@ -173,8 +188,7 @@ private:
 #endif
 
 #ifdef Q_OS_ANDROID
-    // Android specific handles would go here
-    void *m_androidRecognizer;
+    void *m_androidRecognizer; // Android specific handles
 #endif
 };
 

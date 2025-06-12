@@ -1,4 +1,4 @@
-#include "VoiceRecognitionManager.h"
+﻿#include "VoiceRecognitionManager.h"
 #include <QDebug>
 #include <QTimer>
 #include <QNetworkRequest>
@@ -86,16 +86,22 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     , m_networkManager(nullptr)
     , m_currentReply(nullptr)
     , m_isListening(false)
+    , m_isRecording(false)
     , m_audioLevel(0.0f)
     , m_currentMicrophone("")
     , m_isTesting(false)
     , m_audioProcessingThread(nullptr)
     , m_useLocalSpeechRecognition(true)
+    , m_useGoogleSpeechAPI(true)
+    , m_googleSpeechAPIRegion("us-central1")
+    , m_audioSampleRate(16000)
+    , m_audioChannels(1)
+    , m_isConfigured(false)
 {
     initializeAudio();
     loadAvailableMicrophones();
     
-    // Initialize network manager for cloud fallback
+    // Initialize network manager for Google Cloud Speech API
     m_networkManager = new QNetworkAccessManager(this);
     connect(m_networkManager, &QNetworkAccessManager::finished,
             this, &VoiceRecognitionManager::onSpeechRecognitionFinished);
@@ -108,13 +114,16 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     m_recordingTimer->setSingleShot(true);
     connect(m_recordingTimer.get(), &QTimer::timeout, this, &VoiceRecognitionManager::processAudioData);
     
-    // Initialize platform-specific speech recognition
+    // Initialize Google Cloud Speech API as primary method
+    initializeGoogleSpeechAPI();
+    
+    // Initialize platform-specific speech recognition as fallback
     initializePlatformSpeechRecognition();
     
     // Setup audio processing thread for better performance
     setupAudioProcessingThread();
     
-    qDebug() << "VoiceRecognitionManager initialized with platform-specific speech recognition";
+    qDebug() << "VoiceRecognitionManager initialized with Google Cloud Speech API and cross-platform fallbacks";
 }
 
 VoiceRecognitionManager::~VoiceRecognitionManager()
@@ -244,38 +253,65 @@ void VoiceRecognitionManager::stopMicrophoneTest()
 
 void VoiceRecognitionManager::initializeAudio()
 {
+    // Set up audio format following Google Cloud Speech API standards
+    m_audioFormat.setSampleRate(16000);        // Google's recommended sample rate
+    m_audioFormat.setChannelCount(1);          // Mono audio for better accuracy
+    m_audioFormat.setSampleFormat(QAudioFormat::Int16); // 16-bit PCM (LINEAR16)
+    
     // Get default audio input device
     m_audioDevice = QMediaDevices::defaultAudioInput();
     if (m_audioDevice.isNull()) {
         qWarning() << "No audio input device found";
+        m_isConfigured = false;
         return;
     }
     
+    // Verify the device supports our required format
+    if (!m_audioDevice.isFormatSupported(m_audioFormat)) {
+        qWarning() << "Audio device does not support required format";
+        qDebug() << "Required format:";
+        qDebug() << "  Sample rate:" << m_audioFormat.sampleRate();
+        qDebug() << "  Channels:" << m_audioFormat.channelCount();
+        qDebug() << "  Sample format:" << m_audioFormat.sampleFormat();
+        
+        // Try to find a supported format close to Google's requirements
+        QAudioFormat nearestFormat = m_audioDevice.preferredFormat();
+        qDebug() << "Device preferred format:";
+        qDebug() << "  Sample rate:" << nearestFormat.sampleRate();
+        qDebug() << "  Channels:" << nearestFormat.channelCount();
+        qDebug() << "  Sample format:" << nearestFormat.sampleFormat();
+        
+        // Adjust our format to the nearest supported format
+        if (nearestFormat.sampleRate() >= 8000 && nearestFormat.sampleRate() <= 48000) {
+            m_audioFormat.setSampleRate(nearestFormat.sampleRate());
+        }
+        if (nearestFormat.channelCount() >= 1) {
+            m_audioFormat.setChannelCount(qMin(nearestFormat.channelCount(), 2));
+        }
+        if (nearestFormat.sampleFormat() == QAudioFormat::Int16 || 
+            nearestFormat.sampleFormat() == QAudioFormat::Float) {
+            m_audioFormat.setSampleFormat(nearestFormat.sampleFormat());
+        }
+        
+        qDebug() << "Adjusted format for compatibility:";
+        qDebug() << "  Sample rate:" << m_audioFormat.sampleRate();
+        qDebug() << "  Channels:" << m_audioFormat.channelCount();
+        qDebug() << "  Sample format:" << m_audioFormat.sampleFormat();
+    }
+    
     setupAudioInput();
-    qDebug() << "Audio input initialized:" << m_audioDevice.description();
+    
+    qDebug() << "Audio initialized with Google-compatible format:";
+    qDebug() << "  Device:" << m_audioDevice.description();
+    qDebug() << "  Sample rate:" << m_audioFormat.sampleRate() << "Hz";
+    qDebug() << "  Channels:" << m_audioFormat.channelCount();
+    qDebug() << "  Bit depth:" << m_audioFormat.sampleFormat();
+    
+    m_isConfigured = true;
 }
 
 void VoiceRecognitionManager::setupAudioInput()
 {
-    // Setup audio format for voice recognition
-    m_audioFormat.setSampleRate(SAMPLE_RATE);
-    m_audioFormat.setChannelCount(1); // Mono
-    m_audioFormat.setSampleFormat(QAudioFormat::Int16);
-    
-    // Check if format is supported
-    if (!m_audioDevice.isFormatSupported(m_audioFormat)) {
-        qWarning() << "Audio format not supported, trying to use nearest";
-        m_audioFormat = m_audioDevice.preferredFormat();
-        // Adjust to our preferred settings if possible
-        m_audioFormat.setSampleRate(SAMPLE_RATE);
-        m_audioFormat.setChannelCount(1);
-        if (m_audioDevice.isFormatSupported(m_audioFormat)) {
-            qDebug() << "Using adjusted format:" << m_audioFormat;
-        } else {
-            qWarning() << "Could not configure optimal audio format";
-        }
-    }
-    
     // Create Qt6 audio components
     delete m_captureSession;
     delete m_audioInput;
@@ -318,7 +354,9 @@ void VoiceRecognitionManager::startListening()
         emit recognizedTextChanged();
         
         m_isListening = true;
+        m_isRecording = true;
         emit listeningChanged();
+        emit recordingChanged();
         
         // Clear previous recording
         m_audioBuffer->clearBuffer();
@@ -355,7 +393,9 @@ void VoiceRecognitionManager::stopListening()
     
     try {
         m_isListening = false;
+        m_isRecording = false;
         emit listeningChanged();
+        emit recordingChanged();
         
         // Stop Qt6 audio capture
         if (m_audioSource) {
@@ -408,70 +448,43 @@ void VoiceRecognitionManager::updateAudioLevel()
 
 void VoiceRecognitionManager::processAudioData()
 {
-    try {
-        // Get the real recorded audio data from the buffer
-        if (!m_audioBuffer) {
-            emit error("Audio buffer not available");
-            return;
-        }
-        
-        m_recordedAudio = m_audioBuffer->getRecordedData();
-        
-        if (m_recordedAudio.isEmpty()) {
-            emit error("No audio data recorded");
-            return;
-        }
-        
-        // Validate audio data
-        if (m_recordedAudio.size() < 1000) { // Less than ~0.03 seconds at 16kHz
-            emit error("Recorded audio too short - try speaking longer");
-            return;
-        }
-        
-        qDebug() << "Processing" << m_recordedAudio.size() << "bytes of real audio data";
-        
-        // Send to Google Speech API
-        sendToGoogleSpeechAPI(m_recordedAudio);
-        
-    } catch (const std::exception &e) {
-        emit error(QString("Error processing audio data: %1").arg(e.what()));
-    } catch (...) {
-        emit error("Unknown error occurred while processing audio data");
+    if (!m_audioBuffer) {
+        return;
     }
+    
+    // Get recorded audio data
+    QByteArray audioData = m_audioBuffer->getRecordedData();
+    
+    if (audioData.isEmpty()) {
+        qDebug() << "No audio data captured";
+        return;
+    }
+    
+    qDebug() << "Processing" << audioData.size() << "bytes of audio data";
+    
+    // Priority 1: Try Google Cloud Speech API first (cross-platform)
+    if (isGoogleSpeechAPIConfigured()) {
+        qDebug() << "Using Google Cloud Speech API";
+        processWithGoogleSpeechAPI(audioData);
+        return;
+    }
+    
+    // Priority 2: Try platform-specific speech recognition
+    if (isLocalSpeechRecognitionAvailable()) {
+        qDebug() << "Using platform-specific speech recognition";
+        processVoiceToTextLocal(audioData);
+        return;
+    }
+    
+    // Priority 3: Fallback - this should not happen if Google API is configured
+    qDebug() << "No speech recognition method available";
+    emit error("No speech recognition method configured");
 }
 
 void VoiceRecognitionManager::sendToGoogleSpeechAPI(const QByteArray &audioData)
 {
-    if (m_googleApiKey.isEmpty()) {
-        emit error("Google API key not configured");
-        return;
-    }
-    
-    // Cancel any existing request
-    if (m_currentReply) {
-        m_currentReply->abort();
-        m_currentReply->deleteLater();
-        m_currentReply = nullptr;
-    }
-    
-    // Google Cloud Speech-to-Text API endpoint
-    QString url = QString("https://speech.googleapis.com/v1/speech:recognize?key=%1").arg(m_googleApiKey);
-    
-    // Create request
-    QNetworkRequest request;
-    request.setUrl(QUrl(url));
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-    
-    // Create request JSON
-    QJsonObject requestJson = createGoogleSpeechRequest(audioData);
-    QJsonDocument requestDoc(requestJson);
-    
-    // Send POST request
-    m_currentReply = m_networkManager->post(request, requestDoc.toJson());
-    connect(m_currentReply, &QNetworkReply::errorOccurred,
-            this, &VoiceRecognitionManager::onNetworkError);
-    
-    qDebug() << "Sent speech recognition request to Google API";
+    // Delegate to the enhanced Google Speech API method
+    processWithGoogleSpeechAPI(audioData);
 }
 
 QJsonObject VoiceRecognitionManager::createGoogleSpeechRequest(const QByteArray &audioData)
@@ -636,3 +649,120 @@ QString VoiceRecognitionManager::getMicrophoneDisplayName(const QAudioDevice &de
     
     return description;
 }
+
+// ============================================================================
+// GOOGLE CLOUD SPEECH API IMPLEMENTATION
+// ============================================================================
+
+void VoiceRecognitionManager::initializeGoogleSpeechAPI()
+{
+    // Validate Google API configuration
+    if (m_googleApiKey.isEmpty()) {
+        qWarning() << "Google API key not configured - Google Speech API disabled";
+        m_useGoogleSpeechAPI = false;
+        return;
+    }
+    
+    // Configure Google Cloud Speech API settings following Google's standards
+    m_useGoogleSpeechAPI = true;
+    
+    // Set optimal audio format for Google Speech API
+    m_audioSampleRate = 16000;  // Google's recommended sample rate
+    m_audioChannels = 1;        // Mono audio for better accuracy
+    
+    qDebug() << "Google Cloud Speech API initialized with:";
+    qDebug() << "  Sample Rate:" << m_audioSampleRate << "Hz";
+    qDebug() << "  Channels:" << m_audioChannels;
+    qDebug() << "  Region:" << m_googleSpeechAPIRegion;
+    qDebug() << "  API Key configured:" << !m_googleApiKey.isEmpty();
+}
+
+void VoiceRecognitionManager::processWithGoogleSpeechAPI(const QByteArray &audioData)
+{
+    if (!m_useGoogleSpeechAPI || m_googleApiKey.isEmpty()) {
+        qWarning() << "Google Speech API not available, falling back to platform-specific";
+        processVoiceToTextLocal(audioData);
+        return;
+    }
+    
+    if (audioData.isEmpty()) {
+        emit error("No audio data to process");
+        return;
+    }
+    
+    // Validate audio data size (minimum for meaningful speech)
+    if (audioData.size() < 1000) { // ~0.03 seconds at 16kHz
+        emit error("Audio too short - please speak longer");
+        return;
+    }
+    
+    qDebug() << "Processing" << audioData.size() << "bytes with Google Cloud Speech API";
+    
+    // Cancel any existing request
+    if (m_currentReply) {
+        m_currentReply->abort();
+        m_currentReply->deleteLater();
+        m_currentReply = nullptr;
+    }
+    
+    // Prepare Google Cloud Speech-to-Text API request
+    QString url = QString("https://speech.googleapis.com/v1/speech:recognize?key=%1").arg(m_googleApiKey);
+    
+    QNetworkRequest request;
+    request.setUrl(QUrl(url));
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+    request.setRawHeader("User-Agent", "VoiceAILLM/1.0 (Qt6.9; Cross-platform)");
+    
+    // Create enhanced request JSON following Google's best practices
+    QJsonObject config;
+    config["encoding"] = "LINEAR16";
+    config["sampleRateHertz"] = m_audioSampleRate;
+    config["languageCode"] = "en-US";
+    
+    // Enhanced Google Speech API features
+    config["enableAutomaticPunctuation"] = true;
+    config["enableWordTimeOffsets"] = false; // Disabled for faster processing
+    config["enableWordConfidence"] = false;  // Disabled for faster processing
+    config["maxAlternatives"] = 1;           // Single best result
+    config["profanityFilter"] = false;       // Allow all words
+    config["useEnhanced"] = true;            // Use enhanced models when available
+    config["model"] = "latest_short";        // Optimized for short utterances
+    
+    // Audio metadata
+    config["metadata"] = QJsonObject{
+        {"interactionType", "VOICE_COMMAND"},
+        {"recordingDeviceType", "PC_APPLICATION"},
+        {"originalMediaType", "AUDIO"}
+    };
+    
+    QJsonObject audio;
+    audio["content"] = QString(audioData.toBase64());
+    
+    QJsonObject requestBody;
+    requestBody["config"] = config;
+    requestBody["audio"] = audio;
+    
+    QJsonDocument requestDoc(requestBody);
+    
+    // Send POST request to Google Cloud Speech API
+    m_currentReply = m_networkManager->post(request, requestDoc.toJson());
+    connect(m_currentReply, &QNetworkReply::errorOccurred,
+            this, &VoiceRecognitionManager::onNetworkError);
+    
+    qDebug() << "Sent enhanced speech recognition request to Google Cloud Speech API";
+}
+
+bool VoiceRecognitionManager::isGoogleSpeechAPIConfigured() const
+{
+    return m_useGoogleSpeechAPI && !m_googleApiKey.isEmpty();
+}
+
+bool VoiceRecognitionManager::isGoogleSpeechAPIAvailable() const
+{
+    return isGoogleSpeechAPIConfigured();
+}
+
+// ============================================================================
+// ENHANCED VOICE PROCESSING WITH QT 6.9 PRIORITY
+// ============================================================================
+

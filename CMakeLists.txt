@@ -396,6 +396,12 @@ else()
     message(WARNING "Qt6 TextToSpeech not found - using audio capture only")
 endif()
 
+# Google Cloud Speech API integration (cross-platform via Qt Network)
+target_compile_definitions(VoiceAILLM PRIVATE 
+    USE_GOOGLE_SPEECH_API=1
+    GOOGLE_SPEECH_API_VERSION="v1"
+)
+
 # Link Qt Keychain if available with proper method handling
 if(QTKEYCHAIN_FOUND)
     message(STATUS "Linking Qt Keychain using method: ${QTKEYCHAIN_METHOD}")
@@ -516,6 +522,13 @@ elseif(ANDROID)
         QT_ANDROID_TARGET_SDK_VERSION "33"
     )
 endif()
+
+# Note: Qt 6.9 does not have native speech recognition components
+# We use Google Cloud Speech API as primary method with Qt's cross-platform audio capture
+message(STATUS "Voice recognition strategy:")
+message(STATUS "  Primary: Google Cloud Speech-to-Text API (cross-platform)")
+message(STATUS "  Fallback: Platform-specific speech recognition")
+message(STATUS "  Audio capture: Qt6 Multimedia (cross-platform)")
 
 # Finalize target
 qt_finalize_target(VoiceAILLM) 
