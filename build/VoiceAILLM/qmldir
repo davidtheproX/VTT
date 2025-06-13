@@ -19,4 +19,6 @@ SeriesDelegate 1.0 qml/SeriesDelegate.qml
 SeriesControl 1.0 qml/SeriesControl.qml
 DataFilterControl 1.0 qml/DataFilterControl.qml
 RawDataViewer 1.0 qml/RawDataViewer.qml
+WebBrowser 1.0 qml/WebBrowser.qml
+SvgIcon 1.0 qml/SvgIcon.qml
 

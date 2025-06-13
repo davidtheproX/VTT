@@ -84,6 +84,8 @@ CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/SeriesDelegate.qml
 CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/SeriesControl.qml
 CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/DataFilterControl.qml
 CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/RawDataViewer.qml
+CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/WebBrowser.qml
+CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/SvgIcon.qml
 CMakeFiles/VoiceAILLM_qmllint_module: E:/VTT/qml/pdf_templates/diagnostic_template.qml
 CMakeFiles/VoiceAILLM_qmllint_module: .rcc/qmllint/VoiceAILLM_module.rsp
 	cd /d E:\VTT && call E:\VTT\build\.qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/bin/qmllint-qt6.exe @E:/VTT/build/.rcc/qmllint/VoiceAILLM_module.rsp

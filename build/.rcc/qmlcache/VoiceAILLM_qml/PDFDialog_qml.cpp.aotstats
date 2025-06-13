@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 126,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "backgroundColor",
                         "line": 64
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 34,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "surfaceColor",
                         "line": 65
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "primaryColor",
                         "line": 66
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "successColor",
                         "line": 67
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "errorColor",
                         "line": 68
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "textColor",
                         "line": 69
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "mutedTextColor",
                         "line": 70
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 119,
+                        "durationMicroseconds": 112,
                         "errorMessage": "",
                         "functionName": "nameFilters",
                         "line": 20
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 19,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 59,
                         "errorMessage": "",
                         "functionName": "fileMode",
                         "line": 21
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 427,
+                        "durationMicroseconds": 381,
                         "errorMessage": "Cannot access value for name pdfManager",
                         "functionName": "onAccepted",
                         "line": 22
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 78,
                         "errorMessage": "",
                         "functionName": "onRejected",
                         "line": 58
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name backgroundColor",
                         "functionName": "color",
                         "line": 73
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 126,
+                        "durationMicroseconds": 109,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 75
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 48,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 84
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 93
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 95
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 6,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 100
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 101
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 107
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 112
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 114
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 74,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 146
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 47,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 78,
                         "errorMessage": "Cannot access value for name jsonInput",
                         "functionName": "color",
                         "line": 147
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 365,
+                        "durationMicroseconds": 220,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 162
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 6,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 170
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 186,
+                        "durationMicroseconds": 155,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 171
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 172
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 81,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 173
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 174
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 190
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 313,
+                        "durationMicroseconds": 213,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 200
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 208
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 209
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 7,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 210
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 99,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 211
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 71,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 212
@@ -390,7 +390,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 225
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 228
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 265,
+                        "durationMicroseconds": 184,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 239
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 247
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 248
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 249
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 136,
+                        "durationMicroseconds": 97,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 250
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 102,
+                        "durationMicroseconds": 66,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 251
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 269
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 46,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 271
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 7,
+                        "durationMicroseconds": 4,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 276
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 277
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 283
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 288
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 196,
+                        "durationMicroseconds": 147,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 302
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 308
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 7,
+                        "durationMicroseconds": 4,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 310
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 131,
+                        "durationMicroseconds": 87,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 311
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 67,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 312
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 233,
+                        "durationMicroseconds": 194,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 326
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 334
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 335
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 4,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 336
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 83,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 337
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 65,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 338
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 353
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 355
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 359
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 364
@@ -670,7 +670,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 126,
                         "errorMessage": "Cannot access value for name pdfManager",
                         "functionName": "text",
                         "line": 370
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 378
@@ -686,7 +686,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 380
@@ -694,7 +694,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 9,
                         "errorMessage": "Cannot access value for name surfaceColor",
                         "functionName": "color",
                         "line": 394
@@ -702,7 +702,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 58,
                         "errorMessage": "Cannot access value for name Qt",
                         "functionName": "color",
                         "line": 396
@@ -710,7 +710,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 401
@@ -718,7 +718,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 402
@@ -726,7 +726,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 28,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 408
@@ -734,7 +734,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 413
@@ -750,7 +750,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 244,
+                        "durationMicroseconds": 135,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 427
@@ -758,7 +758,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 433
@@ -766,7 +766,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 7,
+                        "durationMicroseconds": 4,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 435
@@ -774,7 +774,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 135,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 436
@@ -782,7 +782,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 70,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 437
@@ -790,7 +790,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name pdfManager",
                         "functionName": "target",
                         "line": 520

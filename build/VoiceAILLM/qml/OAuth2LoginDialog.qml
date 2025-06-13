@@ -83,39 +83,13 @@ Dialog {
                     anchors.centerIn: parent
                     spacing: 10
                     
-                    Item {
+                    SvgIcon {
                         Layout.alignment: Qt.AlignHCenter
                         width: 48
                         height: 48
-                        
-                        Image {
-                            id: wechatDialogIcon
-                            anchors.fill: parent
-                            source: "qrc:/VoiceAILLM/resources/icons/wechat.svg"
-                            fillMode: Image.PreserveAspectFit
-                            sourceSize.width: 48
-                            sourceSize.height: 48
-                            cache: false
-                            visible: status === Image.Ready
-                        }
-                        
-                        // Fallback styled icon if SVG fails to load
-                        Rectangle {
-                            anchors.centerIn: parent
-                            width: 40
-                            height: 40
-                            radius: 20
-                            color: "#1AAD19"
-                            visible: wechatDialogIcon.status !== Image.Ready
-                            
-                            Text {
-                                anchors.centerIn: parent
-                                text: "W"
-                                color: "white"
-                                font.pixelSize: 24
-                                font.bold: true
-                            }
-                        }
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
+                        fallbackText: "W"
+                        fallbackColor: "#1AAD19"
                     }
                     
                     Text {
@@ -155,39 +129,13 @@ Dialog {
                     anchors.centerIn: parent
                     spacing: 10
                     
-                    Item {
+                    SvgIcon {
                         Layout.alignment: Qt.AlignHCenter
                         width: 48
                         height: 48
-                        
-                        Image {
-                            id: dingtalkDialogIcon
-                            anchors.fill: parent
-                            source: "qrc:/VoiceAILLM/resources/icons/dingtalk.svg"
-                            fillMode: Image.PreserveAspectFit
-                            sourceSize.width: 48
-                            sourceSize.height: 48
-                            cache: false
-                            visible: status === Image.Ready
-                        }
-                        
-                        // Fallback styled icon if SVG fails to load
-                        Rectangle {
-                            anchors.centerIn: parent
-                            width: 40
-                            height: 40
-                            radius: 20
-                            color: "#2B7CE6"
-                            visible: dingtalkDialogIcon.status !== Image.Ready
-                            
-                            Text {
-                                anchors.centerIn: parent
-                                text: "D"
-                                color: "white"
-                                font.pixelSize: 24
-                                font.bold: true
-                            }
-                        }
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
+                        fallbackText: "D"
+                        fallbackColor: "#2B7CE6"
                     }
                     
                     Text {

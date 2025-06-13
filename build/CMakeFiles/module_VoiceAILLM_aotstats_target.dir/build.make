@@ -85,6 +85,8 @@ CMakeFiles/module_VoiceAILLM_aotstats_target: .rcc/qmlcache/module_VoiceAILLM.ao
 .rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp.aotstats
 .rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/DataFilterControl_qml.cpp.aotstats
 .rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/RawDataViewer_qml.cpp.aotstats
+.rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.aotstats
+.rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.aotstats
 .rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats
 .rcc/qmlcache/module_VoiceAILLM.aotstats: .rcc/qmlcache/module_VoiceAILLM.aotstatslist
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating .rcc/qmlcache/module_VoiceAILLM.aotstats"
@@ -328,6 +330,20 @@ CMakeFiles/module_VoiceAILLM_aotstats_target: .rcc/qmlcache/module_VoiceAILLM.ao
 .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.aotstats: .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\VoiceAILLM_qml\SettingsDialog_qml.cpp.aotstats
 
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: E:/VTT/qml/SvgIcon.qml
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: .qt/rcc/qmake_VoiceAILLM.qrc
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0.qrc
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: VoiceAILLM/VoiceAILLM.qmltypes
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp: VoiceAILLM/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.aotstats"
+	D:\msys64\ucrt64\bin\cmake.exe -E make_directory E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml
+	call .qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe --bare --resource-path /qt/qml/VoiceAILLM/qml/SvgIcon.qml -I E:/VTT/build -I D:/msys64/ucrt64/share/qt6/qml -i E:/VTT/build/VoiceAILLM/qmldir --resource E:/VTT/build/.qt/rcc/qmake_VoiceAILLM.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=VoiceAILLM(VoiceAILLM) -o E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp E:/VTT/qml/SvgIcon.qml
+
+.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.aotstats: .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\VoiceAILLM_qml\SvgIcon_qml.cpp.aotstats
+
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: E:/VTT/qml/VoiceButton.qml
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: .qt/rcc/qmake_VoiceAILLM.qrc
@@ -335,12 +351,26 @@ CMakeFiles/module_VoiceAILLM_aotstats_target: .rcc/qmlcache/module_VoiceAILLM.ao
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: VoiceAILLM/VoiceAILLM.qmltypes
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp: VoiceAILLM/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats"
 	D:\msys64\ucrt64\bin\cmake.exe -E make_directory E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml
 	call .qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe --bare --resource-path /qt/qml/VoiceAILLM/qml/VoiceButton.qml -I E:/VTT/build -I D:/msys64/ucrt64/share/qt6/qml -i E:/VTT/build/VoiceAILLM/qmldir --resource E:/VTT/build/.qt/rcc/qmake_VoiceAILLM.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=VoiceAILLM(VoiceAILLM) -o E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp E:/VTT/qml/VoiceButton.qml
 
 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats: .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\VoiceAILLM_qml\VoiceButton_qml.cpp.aotstats
+
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: E:/VTT/qml/WebBrowser.qml
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: .qt/rcc/qmake_VoiceAILLM.qrc
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0.qrc
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: VoiceAILLM/VoiceAILLM.qmltypes
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp: VoiceAILLM/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.aotstats"
+	D:\msys64\ucrt64\bin\cmake.exe -E make_directory E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml
+	call .qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe --bare --resource-path /qt/qml/VoiceAILLM/qml/WebBrowser.qml -I E:/VTT/build -I D:/msys64/ucrt64/share/qt6/qml -i E:/VTT/build/VoiceAILLM/qmldir --resource E:/VTT/build/.qt/rcc/qmake_VoiceAILLM.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=VoiceAILLM(VoiceAILLM) -o E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp E:/VTT/qml/WebBrowser.qml
+
+.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.aotstats: .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate .rcc\qmlcache\VoiceAILLM_qml\WebBrowser_qml.cpp.aotstats
 
 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp: D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe
 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp: E:/VTT/qml/pdf_templates/diagnostic_template.qml
@@ -349,7 +379,7 @@ CMakeFiles/module_VoiceAILLM_aotstats_target: .rcc/qmlcache/module_VoiceAILLM.ao
 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp: .qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc
 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp: VoiceAILLM/VoiceAILLM.qmltypes
 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp: VoiceAILLM/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Generating .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp, .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats"
 	D:\msys64\ucrt64\bin\cmake.exe -E make_directory E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates
 	call .qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmlcachegen.exe --bare --resource-path /qt/qml/VoiceAILLM/qml/pdf_templates/diagnostic_template.qml -I E:/VTT/build -I D:/msys64/ucrt64/share/qt6/qml -i E:/VTT/build/VoiceAILLM/qmldir --resource E:/VTT/build/.qt/rcc/qmake_VoiceAILLM.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0.qrc --resource E:/VTT/build/.qt/rcc/VoiceAILLM_raw_qml_0_extra_qmldirs.qrc --dump-aot-stats --module-id=VoiceAILLM(VoiceAILLM) -o E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp E:/VTT/qml/pdf_templates/diagnostic_template.qml
 
@@ -393,8 +423,12 @@ module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_q
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.aotstats
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.aotstats
+module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp
+module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.aotstats
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats
+module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp
+module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.aotstats
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats
 module_VoiceAILLM_aotstats_target: .rcc/qmlcache/module_VoiceAILLM.aotstats

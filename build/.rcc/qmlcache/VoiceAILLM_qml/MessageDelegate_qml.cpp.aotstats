@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 29,
-                        "durationMicroseconds": 175,
+                        "durationMicroseconds": 163,
                         "errorMessage": "",
                         "functionName": "timestamp",
                         "line": 11
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 30
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 116,
+                        "durationMicroseconds": 104,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 31
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 12,
-                        "durationMicroseconds": 261,
+                        "durationMicroseconds": 248,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: conversion to QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 33
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 13,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 36
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 85,
+                        "durationMicroseconds": 90,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: call to method lighter, returning QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 34
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 114,
+                        "durationMicroseconds": 101,
                         "errorMessage": "",
                         "functionName": "leftMargin",
                         "line": 39
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 99,
+                        "durationMicroseconds": 94,
                         "errorMessage": "",
                         "functionName": "rightMargin",
                         "line": 40
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "spacing",
                         "line": 48
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 56,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 44
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 32,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 45
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 46
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "margins",
                         "line": 47
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 52
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 25,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 57,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 59
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name role",
                         "functionName": "color",
                         "line": 60
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name role",
                         "functionName": "text",
                         "line": 64
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 39,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 63
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name baseFont",
                         "functionName": "pixelSize",
                         "line": 66
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 38,
                         "errorMessage": "",
                         "functionName": "weight",
                         "line": 67
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "width",
                         "line": 72
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 76
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name baseFont",
                         "functionName": "pixelSize",
                         "line": 77
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "weight",
                         "line": 78
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot access value for name timestamp",
                         "functionName": "text",
                         "line": 85
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 41,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name baseFont",
                         "functionName": "pixelSize",
                         "line": 87
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name isStreaming",
                         "functionName": "visible",
                         "line": 92
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "width",
                         "line": 93
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "radius",
                         "line": 95
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name isStreaming",
                         "functionName": "running",
                         "line": 99
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "loops",
                         "line": 100
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 41,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "target",
                         "line": 103
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 41,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 38,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "target",
                         "line": 110
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 124
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot retrieve a non-object type by ID: messageText",
                         "functionName": "height",
                         "line": 125
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 38,
                         "errorMessage": "Cannot retrieve a non-object type by ID: messageText",
                         "functionName": "color",
                         "line": 126
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 134,
+                        "durationMicroseconds": 143,
                         "errorMessage": "Cannot access value for name content",
                         "functionName": "onPressed",
                         "line": 155
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 37,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 155
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "width",
                         "line": 180
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 140,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 183
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 176
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 33,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 177
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name scaleFactor",
                         "functionName": "margins",
                         "line": 178
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 21,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 187
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name baseFont",
                         "functionName": "pixelSize",
                         "line": 190
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot retrieve a non-object type by ID: actionsMenu",
                         "functionName": "onClicked",
                         "line": 198
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 30,
                         "errorMessage": "Cannot load property radius from (component in E:/VTT/qml/MessageDelegate.qml)::parent with type QQuickItem.",
                         "functionName": "radius",
                         "line": 248
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 244
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 66,
                         "errorMessage": "Cannot access value for name primaryColor",
                         "functionName": "color",
                         "line": 246
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 64,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "acceptedButtons",
                         "line": 261
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 259

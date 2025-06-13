@@ -435,84 +435,8 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/c++/15.1.0/bits/fs_dir.h \
  D:/msys64/ucrt64/include/c++/15.1.0/bits/fs_ops.h \
  D:/msys64/ucrt64/include/c++/15.1.0/iostream \
- E:/VTT/include/VoiceRecognitionManager.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QObject \
- D:/msys64/ucrt64/include/qt6/QtCore/qobject.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkAccessManager \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkaccessmanager.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkrequest.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qhttpheaders.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QSharedDataPointer \
- D:/msys64/ucrt64/include/qt6/QtCore/qshareddata.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QString \
- D:/msys64/ucrt64/include/qt6/QtCore/qstring.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QUrl \
- D:/msys64/ucrt64/include/qt6/QtCore/qurl.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QVariant \
- D:/msys64/ucrt64/include/qt6/QtCore/qvariant.h \
- D:/msys64/ucrt64/include/qt6/QtCore/q26numeric.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QList \
- D:/msys64/ucrt64/include/qt6/QtCore/qlist.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QObject \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QSslConfiguration \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qsslconfiguration.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qsslsocket.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qtcpsocket.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qabstractsocket.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qhostaddress.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qsslerror.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qsslcertificate.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qcryptographichash.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qssl.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QFlags \
- D:/msys64/ucrt64/include/qt6/QtCore/qflags.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QMetaType \
- D:/msys64/ucrt64/include/qt6/QtCore/qmetatype.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkReply \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkreply.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QIODevice \
- D:/msys64/ucrt64/include/qt6/QtCore/qiodevice.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkRequest \
- D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkrequest.h \
- D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkAccessManager \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioInput \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioinput.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimediaglobal.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimedia-config.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimediaexports.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qtaudio.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudio.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QMediaDevices \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qmediadevices.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioDevice \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiodevice.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QIODevice \
- D:/msys64/ucrt64/include/qt6/QtCore/QByteArray \
- D:/msys64/ucrt64/include/qt6/QtCore/qbytearray.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QJsonDocument \
- D:/msys64/ucrt64/include/qt6/QtCore/qjsondocument.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qjsonparseerror.h \
- D:/msys64/ucrt64/include/qt6/QtCore/QJsonObject \
- D:/msys64/ucrt64/include/qt6/QtCore/qjsonobject.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qjsonvalue.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qcborvalue.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qcborcommon.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qregularexpression.h \
- D:/msys64/ucrt64/include/qt6/QtCore/quuid.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qendian.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qjsondocument.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QMediaCaptureSession \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qmediacapturesession.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioSource \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiosource.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiodevice.h \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioFormat \
- D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h \
- D:/msys64/ucrt64/include/qt6/QtQmlIntegration/QtQmlIntegration \
- D:/msys64/ucrt64/include/qt6/QtQmlIntegration/QtQmlIntegrationDepends \
+ D:/msys64/ucrt64/include/qt6/QtWebView/QtWebView \
+ D:/msys64/ucrt64/include/qt6/QtWebView/QtWebViewDepends \
  D:/msys64/ucrt64/include/qt6/QtCore/QtCore \
  D:/msys64/ucrt64/include/qt6/QtCore/QtCoreDepends \
  D:/msys64/ucrt64/include/qt6/QtCore/qglobal.h \
@@ -557,6 +481,7 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qbindingstorage.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qbitarray.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qbuffer.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qbytearray.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qbytearrayalgorithms.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qbytearraylist.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qbytearraymatcher.h \
@@ -565,6 +490,11 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qcache.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qcalendar.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qcborarray.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qcborvalue.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qcborcommon.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qregularexpression.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/quuid.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qendian.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qcborcommon.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qcbormap.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qcborstream.h \
@@ -615,9 +545,12 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qfiledevice.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qfileinfo.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qfileselector.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QObject \
+ D:/msys64/ucrt64/include/qt6/QtCore/qobject.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QStringList \
  D:/msys64/ucrt64/include/qt6/QtCore/qstringlist.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qfilesystemwatcher.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qflags.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qforeach.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qfunctionpointer.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qfuture.h \
@@ -646,11 +579,17 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qhashfunctions.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qidentityproxymodel.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qabstractproxymodel.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qiodevice.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qiodevicebase.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qitemselectionmodel.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qiterable.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qiterator.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qjsonarray.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qjsonvalue.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qjsondocument.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qjsonparseerror.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qjsondocument.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qjsonobject.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qjsonparseerror.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qjsonvalue.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qlatin1stringmatcher.h \
@@ -658,6 +597,7 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qlibrary.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qlibraryinfo.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qline.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qlist.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qlocale.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qlockfile.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qloggingcategory.h \
@@ -666,8 +606,10 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qmargins.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmath.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmessageauthenticationcode.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qcryptographichash.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmetacontainer.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmetaobject.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qmetatype.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmimedata.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmimedatabase.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qmimetype.h \
@@ -727,6 +669,7 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qsequentialiterable.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qset.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qsettings.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qshareddata.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qsharedmemory.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qtipccommon.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qsharedpointer.h \
@@ -849,6 +792,7 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qlatin1stringmatcher.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qstdlibdetection.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qstorageinfo.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qstring.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qstringalgorithms.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qstringbuilder.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qstringconverter.h \
@@ -894,13 +838,18 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qtypeinfo.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qtyperevision.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qtypes.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qurl.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qurlquery.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qutf8stringview.h \
  D:/msys64/ucrt64/include/qt6/QtCore/quuid.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qvariant.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qvariantanimation.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qvarianthash.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QHash \
+ D:/msys64/ucrt64/include/qt6/QtCore/QVariant \
+ D:/msys64/ucrt64/include/qt6/QtCore/QString \
  D:/msys64/ucrt64/include/qt6/QtCore/qvariantlist.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QList \
  D:/msys64/ucrt64/include/qt6/QtCore/qvariantmap.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QMap \
  D:/msys64/ucrt64/include/qt6/QtCore/qvarlengtharray.h \
@@ -913,6 +862,253 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtCore/qxpfunctional.h \
  D:/msys64/ucrt64/include/qt6/QtCore/q23functional.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qyieldcpu.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QtGui \
+ D:/msys64/ucrt64/include/qt6/QtGui/QtGuiDepends \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtguiglobal.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qabstractfileiconprovider.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qicon.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpixmap.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpaintdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qrect.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcolor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrgb.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrgba64.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimage.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpixelformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtransform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpolygon.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qregion.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qline.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qabstracttextdocumentlayout.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextlayout.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qevent.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qeventpoint.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector2d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvectornd.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpointingdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qinputdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qscreen.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QRect \
+ D:/msys64/ucrt64/include/qt6/QtCore/QSize \
+ D:/msys64/ucrt64/include/qt6/QtCore/QSizeF \
+ D:/msys64/ucrt64/include/qt6/QtGui/QTransform \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtransform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qscreen_platform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qkeysequence.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qglyphrun.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrawfont.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfont.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontdatabase.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextcursor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextdocument.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qbrush.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpen.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextoption.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpalette.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessible.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessible_base.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessiblebridge.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qfactoryinterface.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessibleobject.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessible.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaccessibleplugin.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaction.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qactiongroup.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qaction.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qbackingstore.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qwindow.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QEvent \
+ D:/msys64/ucrt64/include/qt6/QtCore/QMargins \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsurface.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsurfaceformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcursor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qbitmap.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qbitmap.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qbrush.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qclipboard.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcolor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcolorspace.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcolortransform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcolortransform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qcursor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qdesktopservices.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qdrag.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qevent.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qeventpoint.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfilesystemmodel.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfont.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontdatabase.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontinfo.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontvariableaxis.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontmetrics.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontvariableaxis.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qgenericmatrix.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qgenericplugin.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qgenericpluginfactory.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qglyphrun.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qicon.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qiconengine.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qiconengineplugin.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimage.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimageiohandler.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimagereader.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimageiohandler.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimagewriter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qinputdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qinputmethod.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qkeysequence.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qmatrix4x4.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector3d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector4d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qquaternion.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qgenericmatrix.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qmovie.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qimagereader.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qoffscreensurface.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qoffscreensurface_platform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qoffscreensurface.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopengl.h \
+ D:/msys64/ucrt64/include/GL/gl.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglext.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglcontext.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QSurfaceFormat \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsurfaceformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopengl.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglcontext_platform.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglcontext.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglextrafunctions.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglfunctions.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qopenglfunctions.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagedpaintdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagelayout.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagesize.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpageranges.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagelayout.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpageranges.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagesize.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpaintdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpaintdevicewindow.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QWindow \
+ D:/msys64/ucrt64/include/qt6/QtGui/qwindow.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QPaintDevice \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpaintengine.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpainter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontinfo.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qfontmetrics.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpainter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpainterpath.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpainterstateguard.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpalette.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpdfoutputintent.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpdfwriter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpagedpaintdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpen.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpicture.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpixelformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpixmap.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpixmapcache.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpointingdevice.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qpolygon.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qquaternion.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrasterwindow.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QPaintDeviceWindow \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrawfont.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qregion.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrgb.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrgba64.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qrgbafloat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qscreen.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsessionmanager.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qshortcut.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qstandarditemmodel.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qstatictext.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qstylehints.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsurface.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qsyntaxhighlighter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextobject.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextcursor.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextdocument.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextdocumentfragment.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextdocumentwriter.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextformat.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextlayout.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextlist.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextobject.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtextoption.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtexttable.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qtguiversion.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qundogroup.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qundostack.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvalidator.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector2d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector3d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvector4d.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qvectornd.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qwindowdefs.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/qwindowsmimeconverter.h \
+ D:/msys64/ucrt64/include/qt6/QtWebView/qtwebviewfunctions.h \
+ D:/msys64/ucrt64/include/qt6/QtWebView/qwebview_global.h \
+ D:/msys64/ucrt64/include/qt6/QtWebView/qtwebviewversion.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QImageReader \
+ D:/msys64/ucrt64/include/qt6/QtSvg/QSvgRenderer \
+ D:/msys64/ucrt64/include/qt6/QtSvg/qsvgrenderer.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qxmlstream.h \
+ D:/msys64/ucrt64/include/qt6/QtSvg/qtsvgglobal.h \
+ D:/msys64/ucrt64/include/qt6/QtSvg/qtsvgexports.h \
+ E:/VTT/include/VoiceRecognitionManager.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QObject \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkAccessManager \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkaccessmanager.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkrequest.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qhttpheaders.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QSharedDataPointer \
+ D:/msys64/ucrt64/include/qt6/QtCore/QUrl \
+ D:/msys64/ucrt64/include/qt6/QtCore/q26numeric.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QSslConfiguration \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qsslconfiguration.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qsslsocket.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qtcpsocket.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qabstractsocket.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qhostaddress.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qsslerror.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qsslcertificate.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qssl.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QFlags \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QSslPreSharedKeyAuthenticator \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qsslpresharedkeyauthenticator.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QMetaType \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkReply \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkreply.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QIODevice \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkRequest \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/qnetworkrequest.h \
+ D:/msys64/ucrt64/include/qt6/QtNetwork/QNetworkAccessManager \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioInput \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioinput.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimediaglobal.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimedia-config.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qtmultimediaexports.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qtaudio.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudio.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QMediaDevices \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qmediadevices.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioDevice \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiodevice.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/QIODevice \
+ D:/msys64/ucrt64/include/qt6/QtCore/QByteArray \
+ D:/msys64/ucrt64/include/qt6/QtCore/QJsonDocument \
+ D:/msys64/ucrt64/include/qt6/QtCore/QJsonObject \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QMediaCaptureSession \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qmediacapturesession.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioSource \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiosource.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudiodevice.h \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/QAudioFormat \
+ D:/msys64/ucrt64/include/qt6/QtMultimedia/qaudioformat.h \
+ D:/msys64/ucrt64/include/qt6/QtQmlIntegration/QtQmlIntegration \
+ D:/msys64/ucrt64/include/qt6/QtQmlIntegration/QtQmlIntegrationDepends \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qqmlintegration.h \
  D:/msys64/ucrt64/include/qt6/QtQmlIntegration/qtqmlintegrationversion.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QThread \
@@ -951,25 +1147,11 @@ CMakeFiles/VoiceAILLM.dir/main.cpp.obj: E:\VTT\main.cpp \
  D:/msys64/ucrt64/include/qt6/QtNetworkAuth/qoauthurischemereplyhandler.h \
  E:/VTT/include/QRCodeGenerator.h \
  D:/msys64/ucrt64/include/qt6/QtGui/QPixmap \
- D:/msys64/ucrt64/include/qt6/QtGui/qpixmap.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qpaintdevice.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qrect.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qcolor.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qrgb.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qrgba64.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qimage.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qpixelformat.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qtransform.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qpolygon.h \
- D:/msys64/ucrt64/include/qt6/QtGui/qregion.h \
- D:/msys64/ucrt64/include/qt6/QtCore/qline.h \
- D:/msys64/ucrt64/include/qt6/QtGui/QImage \
- D:/msys64/ucrt64/include/qt6/QtGui/qimage.h E:/VTT/include/PDFManager.h \
+ D:/msys64/ucrt64/include/qt6/QtGui/QImage E:/VTT/include/PDFManager.h \
  E:/VTT/include/CSVViewer.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QAbstractTableModel \
  D:/msys64/ucrt64/include/qt6/QtCore/QVector \
  D:/msys64/ucrt64/include/qt6/QtGui/QColor \
- D:/msys64/ucrt64/include/qt6/QtGui/qcolor.h \
  D:/msys64/ucrt64/include/qt6/QtCore/QVariantList \
  D:/msys64/ucrt64/include/qt6/QtCore/QVariantMap \
  D:/msys64/ucrt64/include/qt6/QtCore/QSet \

@@ -86,7 +86,6 @@ voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6mul
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6texttospeech_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6concurrent_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6pdf_relwithdebinfo_metatypes.json
-voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6webview_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6webchannel_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6websockets_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6printsupport_relwithdebinfo_metatypes.json
@@ -94,6 +93,7 @@ voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6wid
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6svg_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6charts_relwithdebinfo_metatypes.json
 voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6openglwidgets_relwithdebinfo_metatypes.json
+voiceaillm_qmltyperegistrations.cpp: D:/msys64/ucrt64/share/qt6/metatypes/qt6webview_relwithdebinfo_metatypes.json
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target VoiceAILLM"
 	call .qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmltyperegistrar.exe --generate-qmltypes=E:/VTT/build/VoiceAILLM/VoiceAILLM.qmltypes --import-name=VoiceAILLM --major-version=1 --minor-version=0 @E:/VTT/build/qmltypes/VoiceAILLM_foreign_types.txt -o E:/VTT/build/voiceaillm_qmltyperegistrations.cpp E:/VTT/build/meta_types/qt6voiceaillm_release_metatypes.json
 	D:\msys64\ucrt64\bin\cmake.exe -E make_directory E:/VTT/build/.qt/qmltypes

@@ -442,12 +442,6 @@ Qt6QuickTools_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6QuickTools
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6Quick
 
-//The directory containing a CMake configuration file for Qt6SpeechRecognition.
-Qt6SpeechRecognition_DIR:PATH=Qt6SpeechRecognition_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt6SpeechToText.
-Qt6SpeechToText_DIR:PATH=Qt6SpeechToText_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt6SvgPrivate.
 Qt6SvgPrivate_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6SvgPrivate
 
@@ -466,8 +460,8 @@ Qt6WebChannelPrivate_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6WebChannelPrivate
 //The directory containing a CMake configuration file for Qt6WebChannel.
 Qt6WebChannel_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6WebChannel
 
-//The directory containing a CMake configuration file for Qt6WebEngineWidgets.
-Qt6WebEngineWidgets_DIR:PATH=Qt6WebEngineWidgets_DIR-NOTFOUND
+//The directory containing a CMake configuration file for Qt6WebEngine.
+Qt6WebEngine_DIR:PATH=Qt6WebEngine_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt6WebSocketsPrivate.
 Qt6WebSocketsPrivate_DIR:PATH=D:/msys64/ucrt64/lib/cmake/Qt6WebSocketsPrivate

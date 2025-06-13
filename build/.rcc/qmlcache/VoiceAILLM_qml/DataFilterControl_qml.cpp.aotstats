@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 103,
                         "errorMessage": "Cannot retrieve a non-object type by ID: minTimeSlider",
                         "functionName": "updateSliders",
                         "line": 272
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 96,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 19
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name value",
                         "functionName": "realValue",
                         "line": 96
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name value",
                         "functionName": "realValue",
                         "line": 128
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 181
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 232
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name chartProvider",
                         "functionName": "target",
                         "line": 258
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 189,
+                        "durationMicroseconds": 191,
                         "errorMessage": "Cannot access value for name chartProvider",
                         "functionName": "onRangeChanged",
                         "line": 259
@@ -374,7 +374,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 83,
                         "errorMessage": "Cannot retrieve a non-object type by ID: root",
                         "functionName": "onCompleted",
                         "line": 277

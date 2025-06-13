@@ -5,6 +5,9 @@
 #include <QFile>
 #include <iostream>
 #include <stdexcept>
+#include <QtWebView/QtWebView>
+#include <QImageReader>
+#include <QSvgRenderer>
 
 // Manager includes
 #include "VoiceRecognitionManager.h"
@@ -49,6 +52,10 @@ int main(int argc, char *argv[])
         std::cout << "=== Starting Voice AI LLM application ===" << std::endl;
         std::cout.flush();
         
+        // Initialize QtWebView before creating QGuiApplication (required by Qt WebView)
+        QtWebView::initialize();
+        std::cout << "=== QtWebView initialized ===" << std::endl;
+        
         // Enable high DPI scaling support before creating QGuiApplication
         QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
         // Note: Qt::AA_UseHighDpiPixmaps is deprecated in Qt6.9 - high DPI pixmaps are enabled by default
@@ -56,6 +63,19 @@ int main(int argc, char *argv[])
         QGuiApplication app(argc, argv);
         std::cout << "=== QGuiApplication created ===" << std::endl;
         std::cout.flush();
+        
+        // Check SVG support
+        std::cout << "=== Checking SVG support ===" << std::endl;
+        QList<QByteArray> supportedFormats = QImageReader::supportedImageFormats();
+        bool svgSupported = supportedFormats.contains("svg");
+        std::cout << "SVG support: " << (svgSupported ? "YES" : "NO") << std::endl;
+        
+        // List all supported formats for debugging
+        std::cout << "Supported image formats: ";
+        for (const QByteArray& format : supportedFormats) {
+            std::cout << format.data() << " ";
+        }
+        std::cout << std::endl;
         
         app.setApplicationName("Voice AI LLM");
         app.setOrganizationName("VoiceAILLM");

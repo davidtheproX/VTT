@@ -106,30 +106,12 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: Item {
+                contentItem: SvgIcon {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
-                    
-                    Image {
-                        id: wechatIcon
-                        anchors.fill: parent
-                        source: "qrc:/VoiceAILLM/resources/icons/wechat.svg"
-                        fillMode: Image.PreserveAspectFit
-                        sourceSize.width: 24 * scaleFactor
-                        sourceSize.height: 24 * scaleFactor
-                        cache: false
-                        visible: status === Image.Ready
-                    }
-                    
-                    // Fallback text icon if SVG fails to load
-                    Text {
-                        anchors.centerIn: parent
-                        text: "W"
-                        color: "#1AAD19"
-                        font.pixelSize: 16 * scaleFactor
-                        font.bold: true
-                        visible: wechatIcon.status !== Image.Ready
-                    }
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
+                    fallbackText: "W"
+                    fallbackColor: "#1AAD19"
                 }
                 
                 ToolTip.text: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? "WeChat (Authenticated)" : "WeChat Login"
@@ -164,30 +146,12 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: Item {
+                contentItem: SvgIcon {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
-                    
-                    Image {
-                        id: dingtalkIcon
-                        anchors.fill: parent
-                        source: "qrc:/VoiceAILLM/resources/icons/dingtalk.svg"
-                        fillMode: Image.PreserveAspectFit
-                        sourceSize.width: 24 * scaleFactor
-                        sourceSize.height: 24 * scaleFactor
-                        cache: false
-                        visible: status === Image.Ready
-                    }
-                    
-                    // Fallback text icon if SVG fails to load
-                    Text {
-                        anchors.centerIn: parent
-                        text: "D"
-                        color: "#2B7CE6"
-                        font.pixelSize: 16 * scaleFactor
-                        font.bold: true
-                        visible: dingtalkIcon.status !== Image.Ready
-                    }
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
+                    fallbackText: "D"
+                    fallbackColor: "#2B7CE6"
                 }
                 
                 ToolTip.text: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? "DingTalk (Authenticated)" : "DingTalk Login"
@@ -223,30 +187,12 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: Item {
+                contentItem: SvgIcon {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
-                    
-                    Image {
-                        id: pdfIcon
-                        anchors.fill: parent
-                        source: "qrc:/VoiceAILLM/resources/icons/pdf.svg"
-                        fillMode: Image.PreserveAspectFit
-                        sourceSize.width: 24 * scaleFactor
-                        sourceSize.height: 24 * scaleFactor
-                        cache: false
-                        visible: status === Image.Ready
-                    }
-                    
-                    // Fallback text icon if SVG fails to load
-                    Text {
-                        anchors.centerIn: parent
-                        text: "P"
-                        color: "#e53e3e"
-                        font.pixelSize: 16 * scaleFactor
-                        font.bold: true
-                        visible: pdfIcon.status !== Image.Ready
-                    }
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/pdf.svg"
+                    fallbackText: "P"
+                    fallbackColor: "#e53e3e"
                 }
                 
                 ToolTip.text: "PDF Tools"
@@ -254,6 +200,42 @@ ApplicationWindow {
                 
                 onClicked: {
                     pdfDialog.open()
+                }
+            }
+
+            // Web Browser Button
+            Button {
+                id: browserButton
+                width: 36 * scaleFactor
+                height: 36 * scaleFactor
+                flat: true
+                
+                background: Rectangle {
+                    color: browserButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                           browserButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+                
+                contentItem: Item {
+                    width: 24 * scaleFactor
+                    height: 24 * scaleFactor
+                    
+                    // Fallback text icon - show "B" for Browser
+                    Text {
+                        anchors.centerIn: parent
+                        text: "B"
+                        color: "#2196F3"
+                        font.pixelSize: 16 * scaleFactor
+                        font.bold: true
+                    }
+                }
+                
+                ToolTip.text: "Web Browser"
+                ToolTip.visible: hovered
+                
+                onClicked: {
+                    console.log("Browser button clicked")
+                    webBrowser.open()
                 }
             }
 
@@ -597,6 +579,17 @@ ApplicationWindow {
         errorColor: mainWindow.errorColor
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
+    }
+    
+    // Web Browser
+    WebBrowser {
+        id: webBrowser
+        
+        // Pass theme properties
+        scaleFactor: mainWindow.scaleFactor
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        textColor: mainWindow.textColor
     }
     
     // PDF viewer window

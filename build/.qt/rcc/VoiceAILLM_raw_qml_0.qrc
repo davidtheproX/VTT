@@ -18,6 +18,8 @@
     <file alias="qml/SeriesControl.qml">E:/VTT/qml/SeriesControl.qml</file>
     <file alias="qml/DataFilterControl.qml">E:/VTT/qml/DataFilterControl.qml</file>
     <file alias="qml/RawDataViewer.qml">E:/VTT/qml/RawDataViewer.qml</file>
+    <file alias="qml/WebBrowser.qml">E:/VTT/qml/WebBrowser.qml</file>
+    <file alias="qml/SvgIcon.qml">E:/VTT/qml/SvgIcon.qml</file>
     <file alias="qml/pdf_templates/diagnostic_template.qml">E:/VTT/qml/pdf_templates/diagnostic_template.qml</file>
     <file alias="data/voiceaillm.db">E:/VTT/data/voiceaillm.db</file>
     <file alias="resources/icons/microphone.svg">E:/VTT/resources/icons/microphone.svg</file>

@@ -93,13 +93,67 @@ find_package(Qt6 REQUIRED COMPONENTS
     TextToSpeech
     Concurrent
     Pdf
-    WebView
     WebChannel
     WebSockets
     PrintSupport
     Svg
     Charts
 )
+
+# Platform-specific web components
+set(WEB_COMPONENTS_AVAILABLE FALSE)
+set(WEB_BACKEND "None")
+
+# Try to find WebView first (preferred on mobile platforms)
+find_package(Qt6 QUIET COMPONENTS WebView)
+if(TARGET Qt6::WebView)
+    set(WEB_COMPONENTS_AVAILABLE TRUE)
+    set(WEB_BACKEND "WebView")
+    message(STATUS "✓ Qt6 WebView found - mobile-optimized web component available")
+    list(APPEND QT_WEB_COMPONENTS WebView)
+else()
+    message(STATUS "✗ Qt6 WebView not found")
+endif()
+
+# On Windows and Linux, WebView depends on WebEngine, so try to find WebEngine
+if(WIN32 OR CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    find_package(Qt6 QUIET COMPONENTS WebEngine WebEngineQuick)
+    if(TARGET Qt6::WebEngine AND TARGET Qt6::WebEngineQuick)
+        set(WEB_COMPONENTS_AVAILABLE TRUE)
+        if(WEB_BACKEND STREQUAL "None")
+            set(WEB_BACKEND "WebEngine")
+        else()
+            set(WEB_BACKEND "${WEB_BACKEND}+WebEngine")
+        endif()
+        message(STATUS "✓ Qt6 WebEngine found - full web browser backend available")
+        list(APPEND QT_WEB_COMPONENTS WebEngine WebEngineQuick)
+        add_compile_definitions(HAVE_WEBENGINE=1)
+    else()
+        message(WARNING "⚠ Qt6 WebEngine not found - web browser functionality will be limited on Windows/Linux")
+        message(WARNING "  On Windows/Linux, Qt WebView requires WebEngine as backend")
+        message(WARNING "  Install Qt WebEngine package for full web browser support")
+        add_compile_definitions(HAVE_WEBENGINE=0)
+    endif()
+else()
+    # On mobile platforms, WebView uses native APIs
+    add_compile_definitions(HAVE_WEBENGINE=0)
+endif()
+
+# Final web components status
+if(WEB_COMPONENTS_AVAILABLE)
+    message(STATUS "🌐 Web Browser Status: AVAILABLE (Backend: ${WEB_BACKEND})")
+    add_compile_definitions(HAVE_WEB_BROWSER=1)
+    if(QT_WEB_COMPONENTS)
+        list(APPEND CMAKE_FIND_ROOT_PATH ${Qt6_DIR})
+        foreach(component ${QT_WEB_COMPONENTS})
+            find_package(Qt6 REQUIRED COMPONENTS ${component})
+        endforeach()
+    endif()
+else()
+    message(WARNING "🌐 Web Browser Status: NOT AVAILABLE")
+    message(WARNING "  Install Qt WebView (mobile) or Qt WebEngine (desktop) for web browser functionality")
+    add_compile_definitions(HAVE_WEB_BROWSER=0)
+endif()
 
 # Platform-specific Qt components
 if(ANDROID)
@@ -318,6 +372,8 @@ qt_add_qml_module(VoiceAILLM
         qml/SeriesControl.qml
         qml/DataFilterControl.qml
         qml/RawDataViewer.qml
+        qml/WebBrowser.qml
+        qml/SvgIcon.qml
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -344,13 +400,22 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::TextToSpeech
     Qt6::Concurrent
     Qt6::Pdf
-    Qt6::WebView
     Qt6::WebChannel
     Qt6::WebSockets
     Qt6::PrintSupport
     Qt6::Svg
     Qt6::Charts
 )
+
+# Link web components conditionally based on availability
+if(QT_WEB_COMPONENTS)
+    foreach(component ${QT_WEB_COMPONENTS})
+        if(TARGET Qt6::${component})
+            target_link_libraries(VoiceAILLM PRIVATE Qt6::${component})
+            message(STATUS "✓ Linked Qt6::${component}")
+        endif()
+    endforeach()
+endif()
 
 # Platform-specific Qt libraries
 if(ANDROID AND TARGET Qt6::AndroidExtras)

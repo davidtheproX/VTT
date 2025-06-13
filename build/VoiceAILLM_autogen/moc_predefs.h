@@ -103,10 +103,12 @@
 #define __INT_LEAST64_MAX__ 0x7fffffffffffffffLL
 #define __FLT32X_MANT_DIG__ 53
 #define __GCC_ATOMIC_CHAR16_T_LOCK_FREE 2
+#define HAVE_WEB_BROWSER 1
 #define __cpp_aligned_new 201606L
 #define __FLT32_MAX_10_EXP__ 38
 #define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
 #define __STDC_HOSTED__ 1
+#define HAVE_WEBENGINE 0
 #define __DEC64_MIN_EXP__ (-382)
 #define __WIN64 1
 #define __cpp_decltype_auto 201304L

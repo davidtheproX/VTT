@@ -131,6 +131,20 @@ namespace _qt_qml_VoiceAILLM_qml_RawDataViewer_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_VoiceAILLM_qml_WebBrowser_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_VoiceAILLM_qml_SvgIcon_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 namespace _qt_qml_VoiceAILLM_qml_pdf_templates_diagnostic_template_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -170,6 +184,8 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/SeriesControl.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_SeriesControl_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/DataFilterControl.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_DataFilterControl_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/RawDataViewer.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_RawDataViewer_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/WebBrowser.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_WebBrowser_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/SvgIcon.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_SvgIcon_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/pdf_templates/diagnostic_template.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_pdf_templates_diagnostic_template_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;

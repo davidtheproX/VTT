@@ -1,5 +1,5 @@
-CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj: \
- E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\WebEnginePDFRenderer_qml.cpp \
+CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.obj: \
+ E:\VTT\build\.rcc\qmlcache\VoiceAILLM_qml\SvgIcon_qml.cpp \
  D:/msys64/ucrt64/include/qt6/QtQml/qqmlprivate.h \
  D:/msys64/ucrt64/include/qt6/QtQml/qjsprimitivevalue.h \
  D:/msys64/ucrt64/include/qt6/QtQml/qtqmlglobal.h \
@@ -363,6 +363,16 @@ CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRendere
  D:/msys64/ucrt64/include/qt6/QtCore/q20iterator.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qtyperevision.h \
  D:/msys64/ucrt64/include/qt6/QtCore/qloggingcategory.h \
+ D:/msys64/ucrt64/include/qt6/QtCore/qrandom.h \
+ D:/msys64/ucrt64/include/c++/15.1.0/random \
+ D:/msys64/ucrt64/include/c++/15.1.0/bits/random.h \
+ D:/msys64/ucrt64/include/c++/15.1.0/x86_64-w64-mingw32/bits/opt_random.h \
+ D:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/pmmintrin.h \
+ D:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/emmintrin.h \
+ D:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/xmmintrin.h \
+ D:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mmintrin.h \
+ D:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/mwaitintrin.h \
+ D:/msys64/ucrt64/include/c++/15.1.0/bits/random.tcc \
  D:/msys64/ucrt64/include/qt6/QtCore/qtimezone.h \
  D:/msys64/ucrt64/include/qt6/QtQml/qjsengine.h \
  D:/msys64/ucrt64/include/qt6/QtQml/qjsmanagedvalue.h \

@@ -827,6 +827,30 @@ build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.s
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.s
 
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.obj
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.obj
+
+# target to build an object file
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.obj
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.obj
+
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.i: build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.i
+
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.s: build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.s
+
 build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.obj
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.obj
 
@@ -850,6 +874,30 @@ build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.s: build/.rcc/qmlcache/VoiceA
 build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s
+
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.obj
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.obj
+
+# target to build an object file
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.obj
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.obj
+
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.i: build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.i
+
+# target to preprocess a source file
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.i
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.i
+
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.s: build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.s
+
+# target to generate assembly for a file
+build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.s
+.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp.s
 
 build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj
@@ -1418,9 +1466,15 @@ help:
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.obj
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.i
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.s
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.obj
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.i
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.s
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.obj
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.i
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.s
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.obj
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.i
+	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.s
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.i
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.s

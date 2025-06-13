@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 37,
-                        "durationMicroseconds": 188,
+                        "durationMicroseconds": 191,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "backgroundColor",
                         "line": 15
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 66,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "surfaceColor",
                         "line": 16
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 65,
+                        "durationMicroseconds": 61,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "primaryColor",
                         "line": 17
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 55,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "successColor",
                         "line": 18
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "errorColor",
                         "line": 19
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 50,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "textColor",
                         "line": 20
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 96,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "csvHeaders",
                         "line": 24
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "numericColumns",
                         "line": 25
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 33,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "visibleSeries",
                         "line": 26
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 152,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "seriesColors",
                         "line": 27
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "dataSeriesA",
                         "line": 39
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "dataSeriesB",
                         "line": 40
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "dataSeriesC",
                         "line": 41
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 1925,
+                        "durationMicroseconds": 2041,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "loadCSVData",
                         "line": 78
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot load property length from (component in E:/VTT/qml/CSVDialog.qml)::numericColumns with type QVariant.",
                         "functionName": "updateChart",
                         "line": 130
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 1772,
+                        "durationMicroseconds": 1781,
                         "errorMessage": "function without return type annotation returns QVariantList. This may prevent proper compilation to Cpp.",
                         "functionName": "getChartData",
                         "line": 135
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name backgroundColor",
                         "functionName": "color",
                         "line": 50
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 72,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "nameFilters",
                         "line": 60
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 70,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onAccepted",
                         "line": 61
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "target",
                         "line": 68
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 4,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 185
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 159,
+                        "durationMicroseconds": 156,
                         "errorMessage": "Cannot access value for name csvLoaded",
                         "functionName": "text",
                         "line": 189
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 121,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "color",
                         "line": 201
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 84,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 209
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 71,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 210
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 53,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 219
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 233
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 22,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 244
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
                         "line": 259
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 22,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 273
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name playMode",
                         "functionName": "color",
                         "line": 283
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 5,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 288
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 104,
+                        "durationMicroseconds": 98,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 291
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 82,
+                        "durationMicroseconds": 78,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 292
@@ -494,7 +494,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 212,
+                        "durationMicroseconds": 208,
                         "errorMessage": "Cannot access value for name playMode",
                         "functionName": "text",
                         "line": 319
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 335
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 345
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 377
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 415
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 416
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 434
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name numericColumns",
                         "functionName": "model",
                         "line": 438
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 120,
+                        "durationMicroseconds": 100,
                         "errorMessage": "Cannot access value for name seriesColors",
                         "functionName": "color",
                         "line": 467
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 51,
-                        "durationMicroseconds": 210,
+                        "durationMicroseconds": 211,
                         "errorMessage": "Cannot access value for name numericColumns",
                         "functionName": "text",
                         "line": 472
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 52,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 476
@@ -742,7 +742,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 39,
-                        "durationMicroseconds": 5,
+                        "durationMicroseconds": 6,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "font",
                         "line": 511
@@ -750,7 +750,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 54,
-                        "durationMicroseconds": 91,
+                        "durationMicroseconds": 83,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 512
@@ -758,7 +758,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 52,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 72,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 513
@@ -774,7 +774,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 534
@@ -790,7 +790,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 547
@@ -798,7 +798,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 59,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 25,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 544
@@ -822,7 +822,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 571
@@ -838,7 +838,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 44,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 582
@@ -854,7 +854,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 595
@@ -862,7 +862,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 59,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 20,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 592
@@ -894,7 +894,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 45,
+                        "durationMicroseconds": 44,
                         "errorMessage": "Cannot access value for name csvLoaded",
                         "functionName": "text",
                         "line": 623
@@ -902,7 +902,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
                         "line": 626
@@ -910,7 +910,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 62,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 627
@@ -918,7 +918,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 169,
+                        "durationMicroseconds": 167,
                         "errorMessage": "Cannot access value for name csvLoaded",
                         "functionName": "dataPoints",
                         "line": 646
@@ -926,7 +926,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 111,
                         "errorMessage": "Cannot access value for name csvLoaded",
                         "functionName": "onPaint",
                         "line": 648
@@ -950,7 +950,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 641
@@ -958,7 +958,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot access value for name isRunning",
                         "functionName": "running",
                         "line": 971
@@ -966,7 +966,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 432,
+                        "durationMicroseconds": 421,
                         "errorMessage": "Cannot access value for name csvLoaded",
                         "functionName": "onTriggered",
                         "line": 973

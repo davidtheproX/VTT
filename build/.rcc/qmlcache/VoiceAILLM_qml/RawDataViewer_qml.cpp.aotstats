@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 57,
+                        "durationMicroseconds": 78,
                         "errorMessage": "Cannot retrieve a non-object type by ID: root",
                         "functionName": "clearHighlight",
                         "line": 293
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 93,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 15
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 78,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "selectionBehavior",
                         "line": 72
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 468,
+                        "durationMicroseconds": 487,
                         "errorMessage": "Cannot retrieve a non-object type by ID: root",
                         "functionName": "color",
                         "line": 77
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 362,
+                        "durationMicroseconds": 354,
                         "errorMessage": "Cannot access value for name row",
                         "functionName": "onClicked",
                         "line": 91
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 144,
+                        "durationMicroseconds": 146,
                         "errorMessage": "Cannot access value for name display",
                         "functionName": "text",
                         "line": 120
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 79,
+                        "durationMicroseconds": 81,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "elide",
                         "line": 123
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 165,
+                        "durationMicroseconds": 180,
                         "errorMessage": "Cannot access value for name console",
                         "functionName": "onClicked",
                         "line": 128
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 85,
                         "errorMessage": "Cannot access value for name row",
                         "functionName": "text",
                         "line": 150
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 143,
+                        "durationMicroseconds": 149,
                         "errorMessage": "",
                         "functionName": "implicitWidth",
                         "line": 159
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 113,
+                        "durationMicroseconds": 104,
                         "errorMessage": "Cannot access value for name root",
                         "functionName": "color",
                         "line": 164
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 134,
                         "errorMessage": "Cannot access value for name display",
                         "functionName": "text",
                         "line": 180
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "left",
                         "line": 174
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 40,
-                        "durationMicroseconds": 37,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 175
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 49,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "verticalCenter",
                         "line": 176
@@ -222,7 +222,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 48,
-                        "durationMicroseconds": 137,
+                        "durationMicroseconds": 135,
                         "errorMessage": "Cannot access value for name display",
                         "functionName": "onCompleted",
                         "line": 185
@@ -230,7 +230,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 172,
+                        "durationMicroseconds": 195,
                         "errorMessage": "Cannot access value for name tableView",
                         "functionName": "onClicked",
                         "line": 195
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 42,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 74,
                         "errorMessage": "Cannot access value for name display",
                         "functionName": "onDoubleClicked",
                         "line": 202
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 193
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 880,
+                        "durationMicroseconds": 883,
                         "errorMessage": "Cannot load property rowCount from QQuickTableView::model with type QVariant.",
                         "functionName": "onPressed",
                         "line": 240
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "onPressed",
                         "line": 240
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot find name focus",
                         "functionName": "onCompleted",
                         "line": 298
