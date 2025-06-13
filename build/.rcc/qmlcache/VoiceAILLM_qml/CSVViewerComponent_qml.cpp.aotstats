@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 84,
+                        "durationMicroseconds": 69,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "isFileLoaded",
                         "line": 10
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 17,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "isLoading",
                         "line": 11
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "currentFileName",
                         "line": 12
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "statusMessage",
                         "line": 13
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "totalRows",
                         "line": 14
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "totalColumns",
                         "line": 15
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "exportData",
                         "line": 33
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "resetChart",
                         "line": 37
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "clearFilter",
                         "line": 53
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 159,
+                        "durationMicroseconds": 165,
                         "errorMessage": "",
                         "functionName": "nameFilters",
                         "line": 90
@@ -174,7 +174,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "onAccepted",
                         "line": 91
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "onFileLoaded",
                         "line": 98
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 9,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot retrieve a non-object type by ID: csvViewerBackend",
                         "functionName": "onStatusChanged",
                         "line": 107
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 130

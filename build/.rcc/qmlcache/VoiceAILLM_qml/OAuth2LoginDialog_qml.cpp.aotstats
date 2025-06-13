@@ -6,47 +6,47 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 106,
+                        "durationMicroseconds": 83,
                         "errorMessage": "function without return type annotation returns QString. This may prevent proper compilation to Cpp.",
                         "functionName": "getCurrentProviderTitle",
-                        "line": 422
+                        "line": 426
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 37,
                         "errorMessage": "function without return type annotation returns bool. This may prevent proper compilation to Cpp.",
                         "functionName": "getCurrentProviderLoading",
-                        "line": 428
+                        "line": 432
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 21,
                         "errorMessage": "function without return type annotation returns bool. This may prevent proper compilation to Cpp.",
                         "functionName": "getCurrentProviderAuthenticated",
-                        "line": 435
+                        "line": 439
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 19,
                         "errorMessage": "function without return type annotation returns QString. This may prevent proper compilation to Cpp.",
                         "functionName": "getCurrentQRCode",
-                        "line": 442
+                        "line": 446
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 29,
                         "errorMessage": "function without return type annotation returns QString. This may prevent proper compilation to Cpp.",
                         "functionName": "getStatusMessage",
-                        "line": 449
+                        "line": 453
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name backgroundColor",
                         "functionName": "color",
                         "line": 27
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 4,
+                        "durationMicroseconds": 3,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 31
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 90,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 40
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 47,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 51
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 26,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "weight",
                         "line": 49
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
                         "line": 59
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "wrapMode",
                         "line": 60
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name cardColor",
                         "functionName": "color",
                         "line": 72
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "color",
                         "line": 74
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "width",
                         "line": 75
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot find name currentProvider",
                         "functionName": "onClicked",
                         "line": 79
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 78
@@ -158,15 +158,23 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 22,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 83
                     },
                     {
                         "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 43,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 91
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 49,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 87
@@ -174,10 +182,10 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
-                        "line": 100
+                        "line": 102
                     },
                     {
                         "codegenSuccessfull": true,
@@ -185,7 +193,7 @@
                         "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 96
+                        "line": 98
                     },
                     {
                         "codegenSuccessfull": true,
@@ -193,31 +201,31 @@
                         "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "weight",
-                        "line": 99
+                        "line": 101
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 52,
                         "errorMessage": "Cannot access value for name oauthManager",
                         "functionName": "color",
-                        "line": 108
+                        "line": 110
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name oauthManager",
                         "functionName": "visible",
-                        "line": 109
+                        "line": 111
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 104
+                        "line": 106
                     },
                     {
                         "codegenSuccessfull": false,
@@ -225,7 +233,7 @@
                         "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name cardColor",
                         "functionName": "color",
-                        "line": 118
+                        "line": 120
                     },
                     {
                         "codegenSuccessfull": false,
@@ -233,159 +241,167 @@
                         "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "color",
-                        "line": 120
+                        "line": 122
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "width",
-                        "line": 121
+                        "line": 123
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot find name currentProvider",
                         "functionName": "onClicked",
-                        "line": 125
+                        "line": 127
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 124
+                        "line": 126
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 20,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 129
+                        "line": 131
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 39,
+                        "errorMessage": "",
+                        "functionName": "fillMode",
+                        "line": 139
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 133
+                        "line": 135
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
+                        "line": 150
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 43,
+                        "durationMicroseconds": 44,
+                        "errorMessage": "",
+                        "functionName": "alignment",
                         "line": 146
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 43,
-                        "durationMicroseconds": 27,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 142
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 38,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 28,
                         "errorMessage": "",
                         "functionName": "weight",
-                        "line": 145
+                        "line": 149
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 52,
                         "errorMessage": "Cannot access value for name oauthManager",
                         "functionName": "color",
-                        "line": 154
+                        "line": 158
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name oauthManager",
                         "functionName": "visible",
-                        "line": 155
+                        "line": 159
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 150
+                        "line": 154
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name cardColor",
                         "functionName": "color",
-                        "line": 165
+                        "line": 169
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "visible",
-                        "line": 169
+                        "line": 173
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 25,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 172
+                        "line": 176
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 268,
+                        "durationMicroseconds": 278,
                         "errorMessage": "method getCurrentProviderTitle cannot be resolved.",
                         "functionName": "text",
-                        "line": 178
+                        "line": 182
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
+                        "line": 185
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 39,
+                        "durationMicroseconds": 45,
+                        "errorMessage": "",
+                        "functionName": "alignment",
                         "line": 181
                     },
                     {
                         "codegenSuccessfull": true,
-                        "column": 39,
-                        "durationMicroseconds": 32,
-                        "errorMessage": "",
-                        "functionName": "alignment",
-                        "line": 177
-                    },
-                    {
-                        "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "weight",
-                        "line": 180
+                        "line": 184
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "alignment",
-                        "line": 186
+                        "line": 190
                     },
                     {
                         "codegenSuccessfull": false,
@@ -393,7 +409,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"running\".",
                         "functionName": "running",
-                        "line": 197
+                        "line": 201
                     },
                     {
                         "codegenSuccessfull": false,
@@ -401,7 +417,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"visible\".",
                         "functionName": "visible",
-                        "line": 198
+                        "line": 202
                     },
                     {
                         "codegenSuccessfull": false,
@@ -409,23 +425,23 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"centerIn\".",
                         "functionName": "centerIn",
-                        "line": 196
+                        "line": 200
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 164,
+                        "durationMicroseconds": 159,
                         "errorMessage": "method getCurrentQRCode cannot be resolved.",
                         "functionName": "source",
-                        "line": 206
+                        "line": 210
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 274,
+                        "durationMicroseconds": 286,
                         "errorMessage": "method getCurrentProviderLoading cannot be resolved.",
                         "functionName": "visible",
-                        "line": 207
+                        "line": 211
                     },
                     {
                         "codegenSuccessfull": true,
@@ -433,47 +449,47 @@
                         "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "fillMode",
-                        "line": 208
+                        "line": 212
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 203
+                        "line": 207
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
-                        "line": 215
+                        "line": 219
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 354,
+                        "durationMicroseconds": 389,
                         "errorMessage": "method getCurrentProviderLoading cannot be resolved.",
                         "functionName": "visible",
-                        "line": 217
+                        "line": 221
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 24,
                         "errorMessage": "",
                         "functionName": "centerIn",
-                        "line": 213
+                        "line": 217
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "text",
-                        "line": 223
+                        "line": 227
                     },
                     {
                         "codegenSuccessfull": false,
@@ -481,31 +497,31 @@
                         "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
-                        "line": 225
+                        "line": 229
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 42,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 31,
                         "errorMessage": "",
                         "functionName": "horizontalAlignment",
-                        "line": 226
+                        "line": 230
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 24,
                         "errorMessage": "",
                         "functionName": "wrapMode",
-                        "line": 227
+                        "line": 231
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 157,
                         "errorMessage": "method getCurrentQRCode cannot be resolved.",
                         "functionName": "visible",
-                        "line": 228
+                        "line": 232
                     },
                     {
                         "codegenSuccessfull": false,
@@ -513,23 +529,23 @@
                         "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name currentProvider",
                         "functionName": "visible",
-                        "line": 237
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 26,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"enabled\".",
-                        "functionName": "enabled",
                         "line": 241
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 26,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"enabled\".",
+                        "functionName": "enabled",
+                        "line": 245
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 28,
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 243
+                        "line": 247
                     },
                     {
                         "codegenSuccessfull": false,
@@ -537,7 +553,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"enabled\".",
                         "functionName": "enabled",
-                        "line": 254
+                        "line": 258
                     },
                     {
                         "codegenSuccessfull": false,
@@ -545,7 +561,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 256
+                        "line": 260
                     },
                     {
                         "codegenSuccessfull": false,
@@ -553,7 +569,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"enabled\".",
                         "functionName": "enabled",
-                        "line": 269
+                        "line": 273
                     },
                     {
                         "codegenSuccessfull": false,
@@ -561,7 +577,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 271
+                        "line": 275
                     },
                     {
                         "codegenSuccessfull": false,
@@ -569,55 +585,55 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 283
+                        "line": 287
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 178,
+                        "durationMicroseconds": 179,
                         "errorMessage": "method getCurrentProviderAuthenticated cannot be resolved.",
                         "functionName": "color",
-                        "line": 294
+                        "line": 298
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 86,
+                        "durationMicroseconds": 70,
                         "errorMessage": "",
                         "functionName": "visible",
-                        "line": 296
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 37,
-                        "durationMicroseconds": 82,
-                        "errorMessage": "",
-                        "functionName": "preferredHeight",
-                        "line": 293
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 23,
-                        "durationMicroseconds": 166,
-                        "errorMessage": "method getStatusMessage cannot be resolved.",
-                        "functionName": "text",
-                        "line": 301
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 35,
-                        "durationMicroseconds": 25,
-                        "errorMessage": "",
-                        "functionName": "centerIn",
                         "line": 300
                     },
                     {
                         "codegenSuccessfull": true,
+                        "column": 37,
+                        "durationMicroseconds": 64,
+                        "errorMessage": "",
+                        "functionName": "preferredHeight",
+                        "line": 297
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 164,
+                        "errorMessage": "method getStatusMessage cannot be resolved.",
+                        "functionName": "text",
+                        "line": 305
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 35,
+                        "durationMicroseconds": 24,
+                        "errorMessage": "",
+                        "functionName": "centerIn",
+                        "line": 304
+                    },
+                    {
+                        "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 48,
                         "errorMessage": "",
                         "functionName": "weight",
-                        "line": 304
+                        "line": 308
                     },
                     {
                         "codegenSuccessfull": false,
@@ -625,7 +641,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"title\".",
                         "functionName": "title",
-                        "line": 317
+                        "line": 321
                     },
                     {
                         "codegenSuccessfull": false,
@@ -633,31 +649,31 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"opened\".",
                         "functionName": "onOpened",
-                        "line": 403
+                        "line": 407
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 23,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 323
+                        "line": 327
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot retrieve a non-object type by ID: credentialsDialog",
                         "functionName": "text",
-                        "line": 328
+                        "line": 332
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
-                        "line": 330
+                        "line": 334
                     },
                     {
                         "codegenSuccessfull": false,
@@ -665,15 +681,15 @@
                         "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
-                        "line": 341
+                        "line": 345
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name textColor",
                         "functionName": "color",
-                        "line": 352
+                        "line": 356
                     },
                     {
                         "codegenSuccessfull": false,
@@ -681,31 +697,31 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"echoMode\".",
                         "functionName": "echoMode",
-                        "line": 359
+                        "line": 363
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot retrieve a non-object type by ID: credentialsDialog",
                         "functionName": "text",
-                        "line": 365
+                        "line": 369
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 10,
                         "errorMessage": "Cannot access value for name mutedTextColor",
                         "functionName": "color",
-                        "line": 369
+                        "line": 373
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "wrapMode",
-                        "line": 370
+                        "line": 374
                     },
                     {
                         "codegenSuccessfull": false,
@@ -713,7 +729,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 382
+                        "line": 386
                     },
                     {
                         "codegenSuccessfull": false,
@@ -721,7 +737,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"enabled\".",
                         "functionName": "enabled",
-                        "line": 387
+                        "line": 391
                     },
                     {
                         "codegenSuccessfull": false,
@@ -729,7 +745,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 389
+                        "line": 393
                     },
                     {
                         "codegenSuccessfull": false,
@@ -737,15 +753,15 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 417
+                        "line": 421
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name oauthManager",
                         "functionName": "target",
-                        "line": 461
+                        "line": 465
                     },
                     {
                         "codegenSuccessfull": false,
@@ -753,7 +769,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "onAuthenticationSuccess",
-                        "line": 463
+                        "line": 467
                     },
                     {
                         "codegenSuccessfull": false,
@@ -761,7 +777,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Functions without type annotations won't be compiled",
                         "functionName": "onAuthenticationError",
-                        "line": 470
+                        "line": 474
                     }
                 ],
                 "filepath": "E:/VTT/qml/OAuth2LoginDialog.qml"

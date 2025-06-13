@@ -33,8 +33,6 @@ file(REMOVE_RECURSE
   ".rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.aotstats"
   ".rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp"
   ".rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.aotstats"
-  ".rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp"
-  ".rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp.aotstats"
   ".rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp"
   ".rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats"
   ".rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp"

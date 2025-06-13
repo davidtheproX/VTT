@@ -22,7 +22,6 @@ af171880c594da97879b1f417351746e .rcc/qmlcache/VoiceAILLM_qml/PDFDialog_qml.cpp
 f006bbbdff33bb0dc5da78470ecfd952 .rcc/qmlcache/VoiceAILLM_qml/SeriesControl_qml.cpp
 af14782399e4796a55060808ea07c26b .rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp
 47b645699ccb4c94eef76a03239bef3c .rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp
-055b473e09e630b48d9423dc4800059d .rcc/qmlcache/VoiceAILLM_qml/SvgIcon_qml.cpp
 9418b72a1a4bf19b5ee1cba52bb02c92 .rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp
 a1079d3018c7757ac4642da8dd7949fe .rcc/qmlcache/VoiceAILLM_qml/WebBrowser_qml.cpp
 819613c1d76a980778a1f7a298dfd231 .rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp

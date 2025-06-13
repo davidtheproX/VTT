@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
+import QtSvg
 import VoiceAILLM 1.0
 
 ApplicationWindow {
@@ -106,12 +107,14 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: SvgIcon {
+                contentItem: Image {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
                     source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
-                    fallbackText: "W"
-                    fallbackColor: "#1AAD19"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
                 }
                 
                 ToolTip.text: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? "WeChat (Authenticated)" : "WeChat Login"
@@ -146,12 +149,14 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: SvgIcon {
+                contentItem: Image {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
                     source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
-                    fallbackText: "D"
-                    fallbackColor: "#2B7CE6"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
                 }
                 
                 ToolTip.text: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? "DingTalk (Authenticated)" : "DingTalk Login"
@@ -187,12 +192,14 @@ ApplicationWindow {
                     }
                 }
                 
-                contentItem: SvgIcon {
+                contentItem: Image {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
                     source: "qrc:/qt/qml/VoiceAILLM/resources/icons/pdf.svg"
-                    fallbackText: "P"
-                    fallbackColor: "#e53e3e"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
                 }
                 
                 ToolTip.text: "PDF Tools"
@@ -216,18 +223,14 @@ ApplicationWindow {
                     radius: 4
                 }
                 
-                contentItem: Item {
+                contentItem: Image {
                     width: 24 * scaleFactor
                     height: 24 * scaleFactor
-                    
-                    // Fallback text icon - show "B" for Browser
-                    Text {
-                        anchors.centerIn: parent
-                        text: "B"
-                        color: "#2196F3"
-                        font.pixelSize: 16 * scaleFactor
-                        font.bold: true
-                    }
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/browser.svg"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
                 }
                 
                 ToolTip.text: "Web Browser"

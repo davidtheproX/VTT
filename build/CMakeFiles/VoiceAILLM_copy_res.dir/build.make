@@ -74,6 +74,7 @@ CMakeFiles/VoiceAILLM_copy_res: .qt/VoiceAILLM_res.txt
 .qt/VoiceAILLM_res.txt: E:/VTT/resources/icons/wechat.svg
 .qt/VoiceAILLM_res.txt: E:/VTT/resources/icons/dingtalk.svg
 .qt/VoiceAILLM_res.txt: E:/VTT/resources/icons/pdf.svg
+.qt/VoiceAILLM_res.txt: E:/VTT/resources/icons/browser.svg
 .qt/VoiceAILLM_res.txt: E:/VTT/resources/templates/diagnostic_template.html
 .qt/VoiceAILLM_res.txt: E:/VTT/resources/templates/diagnostic_example.json
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying VoiceAILLM qml resources into build dir"

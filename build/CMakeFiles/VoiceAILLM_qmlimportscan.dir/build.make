@@ -90,7 +90,6 @@ CMakeFiles/VoiceAILLM_qmlimportscan: .qt/qml_imports/VoiceAILLM_build.cmake
 .qt/qml_imports/VoiceAILLM_build.cmake: E:/VTT/qml/DataFilterControl.qml
 .qt/qml_imports/VoiceAILLM_build.cmake: E:/VTT/qml/RawDataViewer.qml
 .qt/qml_imports/VoiceAILLM_build.cmake: E:/VTT/qml/WebBrowser.qml
-.qt/qml_imports/VoiceAILLM_build.cmake: E:/VTT/qml/SvgIcon.qml
 .qt/qml_imports/VoiceAILLM_build.cmake: E:/VTT/qml/pdf_templates/diagnostic_template.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for VoiceAILLM"
 	cd /d E:\VTT && call E:\VTT\build\.qt\bin\qt_setup_tool_path.bat D:/msys64/ucrt64/share/qt6/bin/qmlimportscanner.exe @E:/VTT/build/.qt/qml_imports/VoiceAILLM_build.rsp

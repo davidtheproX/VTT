@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 291,
+                        "durationMicroseconds": 313,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 18
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 22
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 27,
                         "errorMessage": "Cannot access value for name seriesColor",
                         "functionName": "color",
                         "line": 42
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 111,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 49
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 47,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 48
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name seriesName",
                         "functionName": "text",
                         "line": 55
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 72,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 58
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot retrieve a non-object type by ID: visibilityCheckbox",
                         "functionName": "onClicked",
                         "line": 66
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 43,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 64
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 34,
                         "errorMessage": "",
                         "functionName": "open",
                         "line": 83
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 9,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 35,
                         "errorMessage": "",
                         "functionName": "close",
                         "line": 87
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 32,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 81
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 41,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 92
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 29,
                         "errorMessage": "Cannot access value for name seriesName",
                         "functionName": "text",
                         "line": 96
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 205,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 105
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 128,
+                        "durationMicroseconds": 176,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "color",
                         "line": 110
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 220,
+                        "durationMicroseconds": 332,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "onClicked",
                         "line": 116
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 115

@@ -14,6 +14,8 @@ set(src_and_dest_list
     "E:/VTT/build/VoiceAILLM/resources/icons/dingtalk.svg"
     "E:/VTT/resources/icons/pdf.svg"
     "E:/VTT/build/VoiceAILLM/resources/icons/pdf.svg"
+    "E:/VTT/resources/icons/browser.svg"
+    "E:/VTT/build/VoiceAILLM/resources/icons/browser.svg"
     "E:/VTT/resources/templates/diagnostic_template.html"
     "E:/VTT/build/VoiceAILLM/resources/templates/diagnostic_template.html"
     "E:/VTT/resources/templates/diagnostic_example.json"

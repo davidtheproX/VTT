@@ -28,7 +28,6 @@ E:/VTT/qml/SeriesControl.qml
 E:/VTT/qml/DataFilterControl.qml
 E:/VTT/qml/RawDataViewer.qml
 E:/VTT/qml/WebBrowser.qml
-E:/VTT/qml/SvgIcon.qml
 E:/VTT/qml/pdf_templates/diagnostic_template.qml
 --json
 E:/VTT/build/VoiceAILLM_qmllint.json

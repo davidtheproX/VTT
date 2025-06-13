@@ -87,7 +87,6 @@ CMakeFiles/VoiceAILLM_copy_qml: .qt/VoiceAILLM_qml.txt
 .qt/VoiceAILLM_qml.txt: E:/VTT/qml/DataFilterControl.qml
 .qt/VoiceAILLM_qml.txt: E:/VTT/qml/RawDataViewer.qml
 .qt/VoiceAILLM_qml.txt: E:/VTT/qml/WebBrowser.qml
-.qt/VoiceAILLM_qml.txt: E:/VTT/qml/SvgIcon.qml
 .qt/VoiceAILLM_qml.txt: E:/VTT/qml/pdf_templates/diagnostic_template.qml
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\VTT\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying VoiceAILLM qml sources into build dir"
 	D:\msys64\ucrt64\bin\cmake.exe -DFILES_INFO_PATH=E:/VTT/build/.qt/VoiceAILLM_qml.cmake -P D:/msys64/ucrt64/lib/cmake/Qt6Qml/Qt6QmlCopyFiles.cmake

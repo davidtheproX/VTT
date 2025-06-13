@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <!-- Browser window frame -->
+    <rect x="2" y="4" width="20" height="16" rx="2" ry="2" stroke="#4A90E2" stroke-width="1.5" fill="#f8f9fa"/>
+    
+    <!-- Browser title bar -->
+    <rect x="2" y="4" width="20" height="4" rx="2" ry="2" fill="#4A90E2"/>
+    
+    <!-- Window controls (dots) -->
+    <circle cx="4.5" cy="6" r="0.8" fill="#ff5f57"/>
+    <circle cx="6.5" cy="6" r="0.8" fill="#ffbd2e"/>
+    <circle cx="8.5" cy="6" r="0.8" fill="#28ca42"/>
+    
+    <!-- Address bar -->
+    <rect x="4" y="10" width="16" height="2" rx="1" fill="#e9ecef" stroke="#dee2e6" stroke-width="0.5"/>
+    
+    <!-- Content area with simple webpage representation -->
+    <rect x="4" y="13" width="6" height="1.5" rx="0.5" fill="#6c757d"/>
+    <rect x="4" y="15" width="8" height="1" rx="0.5" fill="#adb5bd"/>
+    <rect x="4" y="16.5" width="5" height="1" rx="0.5" fill="#adb5bd"/>
+    
+    <!-- Globe/world icon in content area -->
+    <circle cx="17" cy="15.5" r="2.5" stroke="#4A90E2" stroke-width="1" fill="none"/>
+    <path d="M15 15.5 Q17 13.5 19 15.5 Q17 17.5 15 15.5" stroke="#4A90E2" stroke-width="0.8" fill="none"/>
+    <line x1="17" y1="13" x2="17" y2="18" stroke="#4A90E2" stroke-width="0.8"/>
+</svg> 

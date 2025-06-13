@@ -19,7 +19,6 @@
     <file alias="qml/DataFilterControl.qml">E:/VTT/qml/DataFilterControl.qml</file>
     <file alias="qml/RawDataViewer.qml">E:/VTT/qml/RawDataViewer.qml</file>
     <file alias="qml/WebBrowser.qml">E:/VTT/qml/WebBrowser.qml</file>
-    <file alias="qml/SvgIcon.qml">E:/VTT/qml/SvgIcon.qml</file>
     <file alias="qml/pdf_templates/diagnostic_template.qml">E:/VTT/qml/pdf_templates/diagnostic_template.qml</file>
     <file alias="data/voiceaillm.db">E:/VTT/data/voiceaillm.db</file>
     <file alias="resources/icons/microphone.svg">E:/VTT/resources/icons/microphone.svg</file>
@@ -27,6 +26,7 @@
     <file alias="resources/icons/wechat.svg">E:/VTT/resources/icons/wechat.svg</file>
     <file alias="resources/icons/dingtalk.svg">E:/VTT/resources/icons/dingtalk.svg</file>
     <file alias="resources/icons/pdf.svg">E:/VTT/resources/icons/pdf.svg</file>
+    <file alias="resources/icons/browser.svg">E:/VTT/resources/icons/browser.svg</file>
     <file alias="resources/templates/diagnostic_template.html">E:/VTT/resources/templates/diagnostic_template.html</file>
     <file alias="resources/templates/diagnostic_example.json">E:/VTT/resources/templates/diagnostic_example.json</file>
   </qresource>

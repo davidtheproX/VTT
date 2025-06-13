@@ -373,7 +373,6 @@ qt_add_qml_module(VoiceAILLM
         qml/DataFilterControl.qml
         qml/RawDataViewer.qml
         qml/WebBrowser.qml
-        qml/SvgIcon.qml
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -382,6 +381,7 @@ qt_add_qml_module(VoiceAILLM
         resources/icons/wechat.svg
         resources/icons/dingtalk.svg
         resources/icons/pdf.svg
+        resources/icons/browser.svg
         resources/templates/diagnostic_template.html
         resources/templates/diagnostic_example.json
 )

@@ -83,13 +83,15 @@ Dialog {
                     anchors.centerIn: parent
                     spacing: 10
                     
-                    SvgIcon {
+                    Image {
                         Layout.alignment: Qt.AlignHCenter
                         width: 48
                         height: 48
                         source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
-                        fallbackText: "W"
-                        fallbackColor: "#1AAD19"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 48
+                        sourceSize.height: 48
+                        smooth: true
                     }
                     
                     Text {
@@ -129,13 +131,15 @@ Dialog {
                     anchors.centerIn: parent
                     spacing: 10
                     
-                    SvgIcon {
+                    Image {
                         Layout.alignment: Qt.AlignHCenter
                         width: 48
                         height: 48
                         source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
-                        fallbackText: "D"
-                        fallbackColor: "#2B7CE6"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 48
+                        sourceSize.height: 48
+                        smooth: true
                     }
                     
                     Text {

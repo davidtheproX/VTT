@@ -40,8 +40,6 @@ set(src_and_dest_list
     "E:/VTT/build/VoiceAILLM/qml/RawDataViewer.qml"
     "E:/VTT/qml/WebBrowser.qml"
     "E:/VTT/build/VoiceAILLM/qml/WebBrowser.qml"
-    "E:/VTT/qml/SvgIcon.qml"
-    "E:/VTT/build/VoiceAILLM/qml/SvgIcon.qml"
     "E:/VTT/qml/pdf_templates/diagnostic_template.qml"
     "E:/VTT/build/VoiceAILLM/qml/pdf_templates/diagnostic_template.qml"
 
