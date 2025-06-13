@@ -35,8 +35,6 @@ file(REMOVE_RECURSE
   ".rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.aotstats"
   ".rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp"
   ".rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats"
-  ".rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp"
-  ".rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.aotstats"
   ".rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp"
   ".rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats"
   ".rcc/qmlcache/module_VoiceAILLM.aotstats"

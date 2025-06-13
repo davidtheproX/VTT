@@ -9,7 +9,6 @@
     <file alias="qml/OAuth2LoginDialog.qml">E:/VTT/qml/OAuth2LoginDialog.qml</file>
     <file alias="qml/PDFDialog.qml">E:/VTT/qml/PDFDialog.qml</file>
     <file alias="qml/PDFViewer.qml">E:/VTT/qml/PDFViewer.qml</file>
-    <file alias="qml/WebEnginePDFRenderer.qml">E:/VTT/qml/WebEnginePDFRenderer.qml</file>
     <file alias="qml/CSVDialog.qml">E:/VTT/qml/CSVDialog.qml</file>
     <file alias="qml/CSVViewer.qml">E:/VTT/qml/CSVViewer.qml</file>
     <file alias="qml/CSVViewerComponent.qml">E:/VTT/qml/CSVViewerComponent.qml</file>

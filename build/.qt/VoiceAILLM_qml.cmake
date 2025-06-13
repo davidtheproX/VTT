@@ -20,8 +20,6 @@ set(src_and_dest_list
     "E:/VTT/build/VoiceAILLM/qml/PDFDialog.qml"
     "E:/VTT/qml/PDFViewer.qml"
     "E:/VTT/build/VoiceAILLM/qml/PDFViewer.qml"
-    "E:/VTT/qml/WebEnginePDFRenderer.qml"
-    "E:/VTT/build/VoiceAILLM/qml/WebEnginePDFRenderer.qml"
     "E:/VTT/qml/CSVDialog.qml"
     "E:/VTT/build/VoiceAILLM/qml/CSVDialog.qml"
     "E:/VTT/qml/CSVViewer.qml"

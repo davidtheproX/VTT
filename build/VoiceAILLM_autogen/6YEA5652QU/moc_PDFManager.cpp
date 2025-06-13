@@ -59,12 +59,9 @@ template <> constexpr inline auto PDFManager::qt_create_metaobjectdata<qt_meta_t
         "generatePdfFromTemplate",
         "templatePath",
         "data",
-        "generatePdfFromJsonWebEngine",
-        "generatePdfFromTemplateWebEngine",
         "generatePdfFromJsonQML",
         "generatePdfFromTemplateQML",
         "templateName",
-        "isWebEngineAvailable",
         "openPdfFile",
         "closePdfViewer",
         "loadTemplate",
@@ -127,76 +124,58 @@ template <> constexpr inline auto PDFManager::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::MethodData<void(const QString &, const QJsonObject &)>(18, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
             { QMetaType::QString, 19 }, { QMetaType::QJsonObject, 20 },
         }}),
-        // Method 'generatePdfFromJsonWebEngine'
+        // Method 'generatePdfFromJsonQML'
         QtMocHelpers::MethodData<void(const QString &, const QString &)>(21, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 16 }, { QMetaType::QString, 17 },
         }}),
-        // Method 'generatePdfFromJsonWebEngine'
+        // Method 'generatePdfFromJsonQML'
         QtMocHelpers::MethodData<void(const QString &)>(21, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
             { QMetaType::QString, 16 },
         }}),
-        // Method 'generatePdfFromTemplateWebEngine'
+        // Method 'generatePdfFromTemplateQML'
         QtMocHelpers::MethodData<void(const QString &, const QJsonObject &, const QString &)>(22, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 19 }, { QMetaType::QJsonObject, 20 }, { QMetaType::QString, 17 },
+            { QMetaType::QString, 23 }, { QMetaType::QJsonObject, 20 }, { QMetaType::QString, 17 },
         }}),
-        // Method 'generatePdfFromTemplateWebEngine'
+        // Method 'generatePdfFromTemplateQML'
         QtMocHelpers::MethodData<void(const QString &, const QJsonObject &)>(22, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
-            { QMetaType::QString, 19 }, { QMetaType::QJsonObject, 20 },
+            { QMetaType::QString, 23 }, { QMetaType::QJsonObject, 20 },
         }}),
-        // Method 'generatePdfFromJsonQML'
-        QtMocHelpers::MethodData<void(const QString &, const QString &)>(23, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 16 }, { QMetaType::QString, 17 },
-        }}),
-        // Method 'generatePdfFromJsonQML'
-        QtMocHelpers::MethodData<void(const QString &)>(23, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
-            { QMetaType::QString, 16 },
-        }}),
-        // Method 'generatePdfFromTemplateQML'
-        QtMocHelpers::MethodData<void(const QString &, const QJsonObject &, const QString &)>(24, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 25 }, { QMetaType::QJsonObject, 20 }, { QMetaType::QString, 17 },
-        }}),
-        // Method 'generatePdfFromTemplateQML'
-        QtMocHelpers::MethodData<void(const QString &, const QJsonObject &)>(24, 2, QMC::AccessPublic | QMC::MethodCloned, QMetaType::Void, {{
-            { QMetaType::QString, 25 }, { QMetaType::QJsonObject, 20 },
-        }}),
-        // Method 'isWebEngineAvailable'
-        QtMocHelpers::MethodData<bool() const>(26, 2, QMC::AccessPublic, QMetaType::Bool),
         // Method 'openPdfFile'
-        QtMocHelpers::MethodData<void()>(27, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(24, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'openPdfFile'
-        QtMocHelpers::MethodData<void(const QString &)>(27, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::MethodData<void(const QString &)>(24, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 6 },
         }}),
         // Method 'closePdfViewer'
-        QtMocHelpers::MethodData<void()>(28, 2, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::MethodData<void()>(25, 2, QMC::AccessPublic, QMetaType::Void),
         // Method 'loadTemplate'
-        QtMocHelpers::MethodData<QString(const QString &)>(29, 2, QMC::AccessPublic, QMetaType::QString, {{
+        QtMocHelpers::MethodData<QString(const QString &)>(26, 2, QMC::AccessPublic, QMetaType::QString, {{
             { QMetaType::QString, 19 },
         }}),
         // Method 'fillTemplate'
-        QtMocHelpers::MethodData<QString(const QString &, const QJsonObject &)>(30, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QString, 31 }, { QMetaType::QJsonObject, 20 },
+        QtMocHelpers::MethodData<QString(const QString &, const QJsonObject &)>(27, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QString, 28 }, { QMetaType::QJsonObject, 20 },
         }}),
         // Method 'isValidJson'
-        QtMocHelpers::MethodData<bool(const QString &)>(32, 2, QMC::AccessPublic, QMetaType::Bool, {{
-            { QMetaType::QString, 33 },
+        QtMocHelpers::MethodData<bool(const QString &)>(29, 2, QMC::AccessPublic, QMetaType::Bool, {{
+            { QMetaType::QString, 30 },
         }}),
         // Method 'parseJsonString'
-        QtMocHelpers::MethodData<QJsonObject(const QString &)>(34, 2, QMC::AccessPublic, QMetaType::QJsonObject, {{
-            { QMetaType::QString, 33 },
+        QtMocHelpers::MethodData<QJsonObject(const QString &)>(31, 2, QMC::AccessPublic, QMetaType::QJsonObject, {{
+            { QMetaType::QString, 30 },
         }}),
         // Method 'formatTableRows'
-        QtMocHelpers::MethodData<QString(const QJsonArray &)>(35, 2, QMC::AccessPublic, QMetaType::QString, {{
-            { QMetaType::QJsonArray, 36 },
+        QtMocHelpers::MethodData<QString(const QJsonArray &)>(32, 2, QMC::AccessPublic, QMetaType::QString, {{
+            { QMetaType::QJsonArray, 33 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'isGenerating'
-        QtMocHelpers::PropertyData<bool>(37, QMetaType::Bool, QMC::DefaultPropertyFlags, 0),
+        QtMocHelpers::PropertyData<bool>(34, QMetaType::Bool, QMC::DefaultPropertyFlags, 0),
         // property 'isViewerOpen'
-        QtMocHelpers::PropertyData<bool>(38, QMetaType::Bool, QMC::DefaultPropertyFlags, 1),
+        QtMocHelpers::PropertyData<bool>(35, QMetaType::Bool, QMC::DefaultPropertyFlags, 1),
         // property 'currentPdfPath'
-        QtMocHelpers::PropertyData<QString>(39, QMetaType::QString, QMC::DefaultPropertyFlags, 2),
+        QtMocHelpers::PropertyData<QString>(36, QMetaType::QString, QMC::DefaultPropertyFlags, 2),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -232,28 +211,22 @@ void PDFManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->generatePdfFromJson((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 12: _t->generatePdfFromTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         case 13: _t->generatePdfFromTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2]))); break;
-        case 14: _t->generatePdfFromJsonWebEngine((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 15: _t->generatePdfFromJsonWebEngine((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 16: _t->generatePdfFromTemplateWebEngine((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 17: _t->generatePdfFromTemplateWebEngine((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2]))); break;
-        case 18: _t->generatePdfFromJsonQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 19: _t->generatePdfFromJsonQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 20: _t->generatePdfFromTemplateQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 21: _t->generatePdfFromTemplateQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2]))); break;
-        case 22: { bool _r = _t->isWebEngineAvailable();
-            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 23: _t->openPdfFile(); break;
-        case 24: _t->openPdfFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 25: _t->closePdfViewer(); break;
-        case 26: { QString _r = _t->loadTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 14: _t->generatePdfFromJsonQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 15: _t->generatePdfFromJsonQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 16: _t->generatePdfFromTemplateQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 17: _t->generatePdfFromTemplateQML((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2]))); break;
+        case 18: _t->openPdfFile(); break;
+        case 19: _t->openPdfFile((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 20: _t->closePdfViewer(); break;
+        case 21: { QString _r = _t->loadTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 27: { QString _r = _t->fillTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])));
+        case 22: { QString _r = _t->fillTemplate((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QJsonObject>>(_a[2])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
-        case 28: { bool _r = _t->isValidJson((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 23: { bool _r = _t->isValidJson((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 29: { QJsonObject _r = _t->parseJsonString((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 24: { QJsonObject _r = _t->parseJsonString((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QJsonObject*>(_a[0]) = std::move(_r); }  break;
-        case 30: { QString _r = _t->formatTableRows((*reinterpret_cast< std::add_pointer_t<QJsonArray>>(_a[1])));
+        case 25: { QString _r = _t->formatTableRows((*reinterpret_cast< std::add_pointer_t<QJsonArray>>(_a[1])));
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -306,14 +279,14 @@ int PDFManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 31)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 31;
+        _id -= 26;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 31)
+        if (_id < 26)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 31;
+        _id -= 26;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

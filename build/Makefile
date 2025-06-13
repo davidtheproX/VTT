@@ -851,30 +851,6 @@ build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.s
 
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.obj
-
-# target to build an object file
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.obj
-
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.i: build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.i
-
-# target to preprocess a source file
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.i
-
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.s: build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.s
-
-# target to generate assembly for a file
-build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\VoiceAILLM.dir\build.make CMakeFiles/VoiceAILLM.dir/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s
-.PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.s
-
 build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj: build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.obj
 .PHONY : build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj
 
@@ -1445,9 +1421,6 @@ help:
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.obj
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.i
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.s
-	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.obj
-	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.i
-	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.s
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.obj
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.i
 	@echo ... build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.s

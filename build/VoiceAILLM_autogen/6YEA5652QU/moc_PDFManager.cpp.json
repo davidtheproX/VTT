@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "PDFManager",
-            "lineNumber": 15,
+            "lineNumber": 14,
             "methods": [
                 {
                     "access": "public",
@@ -83,7 +83,7 @@
                         }
                     ],
                     "index": 14,
-                    "name": "generatePdfFromJsonWebEngine",
+                    "name": "generatePdfFromJsonQML",
                     "returnType": "void"
                 },
                 {
@@ -96,14 +96,14 @@
                     ],
                     "index": 15,
                     "isCloned": true,
-                    "name": "generatePdfFromJsonWebEngine",
+                    "name": "generatePdfFromJsonQML",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "templatePath",
+                            "name": "templateName",
                             "type": "QString"
                         },
                         {
@@ -116,14 +116,14 @@
                         }
                     ],
                     "index": 16,
-                    "name": "generatePdfFromTemplateWebEngine",
+                    "name": "generatePdfFromTemplateQML",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "templatePath",
+                            "name": "templateName",
                             "type": "QString"
                         },
                         {
@@ -133,85 +133,12 @@
                     ],
                     "index": 17,
                     "isCloned": true,
-                    "name": "generatePdfFromTemplateWebEngine",
+                    "name": "generatePdfFromTemplateQML",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "arguments": [
-                        {
-                            "name": "jsonData",
-                            "type": "QString"
-                        },
-                        {
-                            "name": "outputPath",
-                            "type": "QString"
-                        }
-                    ],
                     "index": 18,
-                    "name": "generatePdfFromJsonQML",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "jsonData",
-                            "type": "QString"
-                        }
-                    ],
-                    "index": 19,
-                    "isCloned": true,
-                    "name": "generatePdfFromJsonQML",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "templateName",
-                            "type": "QString"
-                        },
-                        {
-                            "name": "data",
-                            "type": "QJsonObject"
-                        },
-                        {
-                            "name": "outputPath",
-                            "type": "QString"
-                        }
-                    ],
-                    "index": 20,
-                    "name": "generatePdfFromTemplateQML",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "templateName",
-                            "type": "QString"
-                        },
-                        {
-                            "name": "data",
-                            "type": "QJsonObject"
-                        }
-                    ],
-                    "index": 21,
-                    "isCloned": true,
-                    "name": "generatePdfFromTemplateQML",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "index": 22,
-                    "isConst": true,
-                    "name": "isWebEngineAvailable",
-                    "returnType": "bool"
-                },
-                {
-                    "access": "public",
-                    "index": 23,
                     "name": "openPdfFile",
                     "returnType": "void"
                 },
@@ -223,13 +150,13 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 24,
+                    "index": 19,
                     "name": "openPdfFile",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 25,
+                    "index": 20,
                     "name": "closePdfViewer",
                     "returnType": "void"
                 },
@@ -241,7 +168,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 26,
+                    "index": 21,
                     "name": "loadTemplate",
                     "returnType": "QString"
                 },
@@ -257,7 +184,7 @@
                             "type": "QJsonObject"
                         }
                     ],
-                    "index": 27,
+                    "index": 22,
                     "name": "fillTemplate",
                     "returnType": "QString"
                 },
@@ -269,7 +196,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 28,
+                    "index": 23,
                     "name": "isValidJson",
                     "returnType": "bool"
                 },
@@ -281,7 +208,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 29,
+                    "index": 24,
                     "name": "parseJsonString",
                     "returnType": "QJsonObject"
                 },
@@ -293,7 +220,7 @@
                             "type": "QJsonArray"
                         }
                     ],
-                    "index": 30,
+                    "index": 25,
                     "name": "formatTableRows",
                     "returnType": "QString"
                 }

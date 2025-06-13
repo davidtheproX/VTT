@@ -10,7 +10,6 @@ PromptManagerDialog 1.0 qml/PromptManagerDialog.qml
 OAuth2LoginDialog 1.0 qml/OAuth2LoginDialog.qml
 PDFDialog 1.0 qml/PDFDialog.qml
 PDFViewer 1.0 qml/PDFViewer.qml
-WebEnginePDFRenderer 1.0 qml/WebEnginePDFRenderer.qml
 CSVDialog 1.0 qml/CSVDialog.qml
 CSVViewer 1.0 qml/CSVViewer.qml
 CSVViewerComponent 1.0 qml/CSVViewerComponent.qml

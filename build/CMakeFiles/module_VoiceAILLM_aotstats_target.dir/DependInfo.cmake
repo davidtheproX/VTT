@@ -30,7 +30,6 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp.aotstats" "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/SeriesDelegate_qml.cpp"
   "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp.aotstats" "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/SettingsDialog_qml.cpp"
   "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp.aotstats" "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/VoiceButton_qml.cpp"
-  "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp.aotstats" "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/WebEnginePDFRenderer_qml.cpp"
   "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp.aotstats" "E:/VTT/build/.rcc/qmlcache/VoiceAILLM_qml/pdf_templates/diagnostic_template_qml.cpp"
   )
 

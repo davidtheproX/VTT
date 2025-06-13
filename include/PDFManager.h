@@ -9,7 +9,6 @@
 // Forward declarations
 class PDFGenerator;
 class PDFViewer;
-class WebEnginePDFGenerator;
 class QMLPDFGenerator;
 
 class PDFManager : public QObject
@@ -32,16 +31,9 @@ public:
     Q_INVOKABLE void generatePdfFromJson(const QString &jsonData, const QString &outputPath = QString());
     Q_INVOKABLE void generatePdfFromTemplate(const QString &templatePath, const QJsonObject &data, const QString &outputPath = QString());
     
-    // WebEngine-enhanced PDF Generation (when available)
-    Q_INVOKABLE void generatePdfFromJsonWebEngine(const QString &jsonData, const QString &outputPath = QString());
-    Q_INVOKABLE void generatePdfFromTemplateWebEngine(const QString &templatePath, const QJsonObject &data, const QString &outputPath = QString());
-    
     // QML-based PDF Generation (new alternative method)
     Q_INVOKABLE void generatePdfFromJsonQML(const QString &jsonData, const QString &outputPath = QString());
     Q_INVOKABLE void generatePdfFromTemplateQML(const QString &templateName, const QJsonObject &data, const QString &outputPath = QString());
-    
-    // Check if WebEngine is available for enhanced rendering
-    Q_INVOKABLE bool isWebEngineAvailable() const;
     
     // PDF Viewing
     Q_INVOKABLE void openPdfFile();
@@ -88,9 +80,6 @@ private:
     QString processBatteryTest(const QString &templateContent, const QJsonObject &batteryData);
     
     std::unique_ptr<PDFGenerator> m_generator;
-#ifdef HAVE_WEBENGINE_QML
-    std::unique_ptr<WebEnginePDFGenerator> m_webEngineGenerator;
-#endif
     std::unique_ptr<QMLPDFGenerator> m_qmlGenerator;
     std::unique_ptr<PDFViewer> m_viewer;
     

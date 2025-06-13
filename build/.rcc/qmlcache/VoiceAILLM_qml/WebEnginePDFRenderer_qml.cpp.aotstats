@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 5,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 222,
                         "errorMessage": "Cannot retrieve a non-object type by ID: webView",
                         "functionName": "captureRenderedContent",
                         "line": 143
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 62,
+                        "durationMicroseconds": 69,
                         "errorMessage": "method captureRenderedContent cannot be resolved.",
                         "functionName": "onTriggered",
                         "line": 84
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 289,
+                        "durationMicroseconds": 322,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 97
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 31,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "onDestruction",
                         "line": 186

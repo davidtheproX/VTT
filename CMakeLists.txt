@@ -101,22 +101,6 @@ find_package(Qt6 REQUIRED COMPONENTS
     Charts
 )
 
-# Try to find WebEngine for better HTML rendering (QML and Widgets versions)
-find_package(Qt6 QUIET COMPONENTS WebEngineWidgets WebEngineCore WebEngineQuick)
-if(TARGET Qt6::WebEngineQuick AND TARGET Qt6::WebEngineCore)
-    message(STATUS "Qt6 WebEngine QML found - enabling enhanced PDF rendering")
-    set(HAVE_WEBENGINE TRUE)
-    set(HAVE_WEBENGINE_QML TRUE)
-elseif(TARGET Qt6::WebEngineWidgets AND TARGET Qt6::WebEngineCore)
-    message(STATUS "Qt6 WebEngine Widgets found - enabling basic enhanced PDF rendering")  
-    set(HAVE_WEBENGINE TRUE)
-    set(HAVE_WEBENGINE_QML FALSE)
-else()
-    message(STATUS "Qt6 WebEngine not found - using standard PDF rendering only")
-    set(HAVE_WEBENGINE FALSE)
-    set(HAVE_WEBENGINE_QML FALSE)
-endif()
-
 # Platform-specific Qt components
 if(ANDROID)
     find_package(Qt6 QUIET COMPONENTS AndroidExtras)
@@ -325,7 +309,6 @@ qt_add_qml_module(VoiceAILLM
         qml/OAuth2LoginDialog.qml
         qml/PDFDialog.qml
         qml/PDFViewer.qml
-        qml/WebEnginePDFRenderer.qml
         qml/CSVDialog.qml
         qml/CSVViewer.qml
         qml/CSVViewerComponent.qml
@@ -368,19 +351,6 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::Svg
     Qt6::Charts
 )
-
-# Link WebEngine if available
-if(HAVE_WEBENGINE)
-    if(HAVE_WEBENGINE_QML)
-        target_link_libraries(VoiceAILLM PRIVATE Qt6::WebEngineQuick Qt6::WebEngineCore)
-        target_compile_definitions(VoiceAILLM PRIVATE HAVE_WEBENGINE HAVE_WEBENGINE_QML)
-        message(STATUS "Linking Qt6 WebEngine QML components")
-    else()
-        target_link_libraries(VoiceAILLM PRIVATE Qt6::WebEngineWidgets Qt6::WebEngineCore)
-        target_compile_definitions(VoiceAILLM PRIVATE HAVE_WEBENGINE)
-        message(STATUS "Linking Qt6 WebEngine Widgets components")
-    endif()
-endif()
 
 # Platform-specific Qt libraries
 if(ANDROID AND TARGET Qt6::AndroidExtras)

@@ -68,13 +68,6 @@ namespace _qt_qml_VoiceAILLM_qml_PDFViewer_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
-namespace _qt_qml_VoiceAILLM_qml_WebEnginePDFRenderer_qml { 
-    extern const unsigned char qmlData[];
-    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
-    const QQmlPrivate::CachedQmlUnit unit = {
-        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
-    };
-}
 namespace _qt_qml_VoiceAILLM_qml_CSVDialog_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -168,7 +161,6 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/OAuth2LoginDialog.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_OAuth2LoginDialog_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/PDFDialog.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_PDFDialog_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/PDFViewer.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_PDFViewer_qml::unit);
-    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/WebEnginePDFRenderer.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_WebEnginePDFRenderer_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/CSVDialog.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_CSVDialog_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/CSVViewer.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_CSVViewer_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/VoiceAILLM/qml/CSVViewerComponent.qml"), &QmlCacheGeneratedCode::_qt_qml_VoiceAILLM_qml_CSVViewerComponent_qml::unit);

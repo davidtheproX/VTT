@@ -4,10 +4,6 @@
 #include "QMLPDFGenerator.h"
 #include "LoggingManager.h"
 #include "PlatformDetection.h"
-
-#ifdef HAVE_WEBENGINE_QML
-#include "WebEnginePDFGenerator.h"
-#endif
 #include <QJsonDocument>
 #include <QJsonParseError>
 #include <QFileDialog>
@@ -34,15 +30,7 @@ PDFManager::PDFManager(QObject *parent)
     connect(m_qmlGenerator.get(), &QMLPDFGenerator::pdfGenerated,
             this, &PDFManager::onPdfGenerationFinished);
     
-    // Initialize WebEngine PDF generator if available
-#ifdef HAVE_WEBENGINE_QML
-    m_webEngineGenerator = std::make_unique<WebEnginePDFGenerator>(this);
-    connect(m_webEngineGenerator.get(), &WebEnginePDFGenerator::pdfGenerated,
-            this, &PDFManager::onPdfGenerationFinished);
-    LoggingManager::instance()->debugGeneral("WebEngine PDF generator initialized");
-#else
-    LoggingManager::instance()->debugGeneral("WebEngine PDF generator not available");
-#endif
+
     
     // Connect PDF viewer signals
     connect(m_viewer.get(), &PDFViewer::pdfClosed,
@@ -128,84 +116,7 @@ void PDFManager::generatePdfFromTemplate(const QString &templatePath, const QJso
     LoggingManager::instance()->debugGeneral(QString("Started PDF generation to: %1").arg(finalOutputPath));
 }
 
-void PDFManager::generatePdfFromJsonWebEngine(const QString &jsonData, const QString &outputPath)
-{
-#ifdef HAVE_WEBENGINE_QML
-    if (m_isGenerating) {
-        emit error("PDF generation already in progress");
-        return;
-    }
-    
-    if (!m_webEngineGenerator) {
-        emit error("WebEngine PDF generator not available");
-        return;
-    }
-    
-    if (jsonData.isEmpty()) {
-        emit error("JSON data is empty");
-        return;
-    }
-    
-    LoggingManager::instance()->debugGeneral("=== WebEngine PDF Generation Started ===");
-    LoggingManager::instance()->debugGeneral(QString("JSON data length: %1").arg(jsonData.length()));
-    
-    // Validate JSON
-    QJsonParseError parseError;
-    QJsonDocument doc = QJsonDocument::fromJson(jsonData.toUtf8(), &parseError);
-    if (parseError.error != QJsonParseError::NoError) {
-        emit error(QString("Invalid JSON: %1").arg(parseError.errorString()));
-        return;
-    }
-    
-    QJsonObject jsonObj = doc.object();
-    QString templatePath = ":/qt/qml/VoiceAILLM/resources/templates/diagnostic_template.html";
-    
-    generatePdfFromTemplateWebEngine(templatePath, jsonObj, outputPath);
-#else
-    emit error("WebEngine PDF generation not available - compiled without WebEngine support");
-#endif
-}
 
-void PDFManager::generatePdfFromTemplateWebEngine(const QString &templatePath, const QJsonObject &data, const QString &outputPath)
-{
-#ifdef HAVE_WEBENGINE_QML
-    if (m_isGenerating) {
-        emit error("PDF generation already in progress");
-        return;
-    }
-    
-    if (!m_webEngineGenerator) {
-        emit error("WebEngine PDF generator not available");
-        return;
-    }
-    
-    setIsGenerating(true);
-    
-    // Generate output path if not provided
-    QString finalOutputPath = outputPath;
-    if (finalOutputPath.isEmpty()) {
-        finalOutputPath = generateOutputPath("webengine_document");
-    }
-    
-    LoggingManager::instance()->debugGeneral(QString("Using WebEngine PDF generator for: %1").arg(templatePath));
-    
-    // Use WebEngine generator for enhanced HTML/CSS support
-    m_webEngineGenerator->generateFromTemplate(templatePath, data, finalOutputPath);
-    
-    LoggingManager::instance()->debugGeneral(QString("Started WebEngine PDF generation to: %1").arg(finalOutputPath));
-#else
-    emit error("WebEngine PDF generation not available - compiled without WebEngine support");
-#endif
-}
-
-bool PDFManager::isWebEngineAvailable() const
-{
-#ifdef HAVE_WEBENGINE_QML
-    return m_webEngineGenerator != nullptr && m_webEngineGenerator->isWebEngineAvailable();
-#else
-    return false;
-#endif
-}
 
 void PDFManager::generatePdfFromJsonQML(const QString &jsonData, const QString &outputPath)
 {

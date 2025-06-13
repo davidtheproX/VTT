@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 21,
-                        "durationMicroseconds": 173,
+                        "durationMicroseconds": 157,
                         "errorMessage": "",
                         "functionName": "theme",
                         "line": 18
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "primary",
                         "line": 19
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 35,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onTriggered",
                         "line": 32
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "enabled",
                         "line": 37
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 87,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 38
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onTriggered",
                         "line": 43
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 47,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 49
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 12,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onTriggered",
                         "line": 57
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 137,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 63
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "enabled",
                         "line": 76
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 51,
+                        "durationMicroseconds": 56,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 77
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 26,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "enabled",
                         "line": 81
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 82
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 29,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 88
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 24,
-                        "durationMicroseconds": 76,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 101
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 39,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 26,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 110
@@ -158,7 +158,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "text",
                         "line": 113
@@ -166,7 +166,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "elide",
                         "line": 115
@@ -182,7 +182,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 22,
                         "errorMessage": "No matching override found. Candidates:\ntype Color for argument 0 cannot be resolved\nFunction expects 2 arguments, but 1 were provided",
                         "functionName": "color",
                         "line": 123
@@ -190,7 +190,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "model",
                         "line": 133
@@ -198,7 +198,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 28,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onSeriesToggled",
                         "line": 135
@@ -206,7 +206,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 43,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onSeriesColorChanged",
                         "line": 136
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "chartProvider",
                         "line": 143
@@ -238,7 +238,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 13,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "dataProvider",
                         "line": 166
@@ -246,7 +246,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 41,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 47,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onDataPointHovered",
                         "line": 168
@@ -254,7 +254,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 44,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onZoomChanged",
                         "line": 169
@@ -262,7 +262,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 31,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onTimeHighlighted",
                         "line": 170
@@ -270,7 +270,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 165
@@ -278,7 +278,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 34,
-                        "durationMicroseconds": 40,
+                        "durationMicroseconds": 58,
                         "errorMessage": "",
                         "functionName": "top",
                         "line": 175
@@ -286,7 +286,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 33,
                         "errorMessage": "",
                         "functionName": "right",
                         "line": 176
@@ -294,7 +294,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onClicked",
                         "line": 183
@@ -302,7 +302,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 58,
+                        "durationMicroseconds": 63,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 189
@@ -310,7 +310,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 195
@@ -318,7 +318,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 52,
+                        "durationMicroseconds": 46,
                         "errorMessage": "Cannot generate efficient code for internal conversion with incompatible or ambiguous types: QQuickMaterialStyle::background with type QVariant -> QColor stored as QVariant",
                         "functionName": "color",
                         "line": 202
@@ -326,7 +326,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 21,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "opacity",
                         "line": 203
@@ -334,7 +334,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 53,
                         "errorMessage": "",
                         "functionName": "visible",
                         "line": 204
@@ -342,7 +342,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 23,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 201
@@ -350,7 +350,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 43,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 211
@@ -358,7 +358,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 38,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "running",
                         "line": 216
@@ -366,7 +366,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 36,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 215
@@ -382,7 +382,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 47,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 29,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 221
@@ -398,7 +398,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onRowSelected",
                         "line": 235
@@ -406,7 +406,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 70,
+                        "durationMicroseconds": 117,
                         "errorMessage": "",
                         "functionName": "nameFilters",
                         "line": 244
@@ -414,7 +414,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 127,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onAccepted",
                         "line": 245
@@ -422,7 +422,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 252
@@ -430,7 +430,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 23,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 256
@@ -438,7 +438,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 66,
+                        "durationMicroseconds": 80,
                         "errorMessage": "Cannot generate efficient code for storing an array in a non-sequence type",
                         "functionName": "model",
                         "line": 266
@@ -446,7 +446,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 274
@@ -454,7 +454,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onClicked",
                         "line": 280
@@ -462,7 +462,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 293
@@ -470,7 +470,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 20,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 297
@@ -478,7 +478,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 32,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 65,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 315
@@ -486,7 +486,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 30,
-                        "durationMicroseconds": 97,
+                        "durationMicroseconds": 80,
                         "errorMessage": "",
                         "functionName": "enabled",
                         "line": 321
@@ -502,7 +502,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 28,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 336
@@ -510,7 +510,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 21,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 340
@@ -518,7 +518,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "model",
                         "line": 351
@@ -526,7 +526,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name presetsList",
                         "functionName": "width",
                         "line": 354
@@ -534,7 +534,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 216,
+                        "durationMicroseconds": 220,
                         "errorMessage": "Cannot access value for name modelData",
                         "functionName": "text",
                         "line": 355
@@ -542,7 +542,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 507,
+                        "durationMicroseconds": 165,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onClicked",
                         "line": 357
@@ -550,7 +550,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "onClicked",
                         "line": 367
@@ -558,7 +558,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 40,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 366
@@ -566,7 +566,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 68,
+                        "durationMicroseconds": 86,
                         "errorMessage": "",
                         "functionName": "width",
                         "line": 375
@@ -574,7 +574,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 17,
-                        "durationMicroseconds": 50,
+                        "durationMicroseconds": 46,
                         "errorMessage": "",
                         "functionName": "height",
                         "line": 376
@@ -582,7 +582,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 53,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 377
@@ -590,7 +590,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "dataProvider",
                         "line": 381
@@ -598,7 +598,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 33,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 52,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onDataPointHovered",
                         "line": 383
@@ -606,7 +606,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 38,
+                        "durationMicroseconds": 62,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onZoomChanged",
                         "line": 384
@@ -614,7 +614,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onTimeHighlighted",
                         "line": 385
@@ -622,7 +622,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 37,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 380
@@ -630,7 +630,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "visible",
                         "line": 392
@@ -638,7 +638,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 30,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 391
@@ -646,7 +646,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 31,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 27,
                         "errorMessage": "",
                         "functionName": "centerIn",
                         "line": 395
@@ -654,7 +654,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 42,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 400
@@ -662,7 +662,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 26,
+                        "durationMicroseconds": 44,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 410
@@ -670,7 +670,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 24,
                         "errorMessage": "No matching override found. Candidates:\ntype Color for argument 0 cannot be resolved\nFunction expects 2 arguments, but 1 were provided",
                         "functionName": "color",
                         "line": 416
@@ -678,7 +678,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 83,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 417
@@ -686,7 +686,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onClicked",
                         "line": 424
@@ -694,7 +694,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 35,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 49,
                         "errorMessage": "",
                         "functionName": "alignment",
                         "line": 423
@@ -702,7 +702,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 27,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 25,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 432
@@ -710,7 +710,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "text",
                         "line": 436
@@ -718,7 +718,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 59,
+                        "durationMicroseconds": 73,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "text",
                         "line": 441
@@ -726,7 +726,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 23,
                         "errorMessage": "Cannot access value for name csvViewer",
                         "functionName": "onActivated",
                         "line": 451
@@ -734,7 +734,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 186,
                         "errorMessage": "",
                         "functionName": "onActivated",
                         "line": 456
@@ -742,7 +742,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 112,
+                        "durationMicroseconds": 147,
                         "errorMessage": "",
                         "functionName": "onActivated",
                         "line": 467
