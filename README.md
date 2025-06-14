@@ -31,25 +31,52 @@ A modern, cross-platform Qt6 application that provides voice-to-text capabilitie
 - JSON-based prompt database
 - Import/export prompt collections
 
+### 🌐 Web Browser Integration
+- **Integrated web browser** with WebView/WebEngine backend
+- **Adaptive backend selection**: Uses QtWebView on mobile, QtWebEngine on desktop
+- **Graceful fallback**: Continues working even if web components are unavailable
+- Full navigation controls (back, forward, reload, home)
+- Address bar with URL validation and keyboard shortcuts
+- Progress indicators and loading status
+
+### 📊 Data Visualization & Analysis
+- **Interactive Charts**: Real-time data visualization with Qt Charts
+- **CSV Data Viewer**: Import, filter, and analyze CSV files
+- **Raw Data Display**: Tabular data viewing with sorting and filtering
+- **Series Control**: Manage multiple data series in charts
+- **Export Capabilities**: Export charts and processed data
+
+### 📄 PDF Generation & Viewing
+- **QML-based PDF generation**: Template-driven PDF creation
+- **PDF Viewer**: Built-in PDF viewing capabilities
+- **Template System**: Customizable PDF templates
+- **No WebEngine dependency**: Uses pure Qt components for PDF functionality
+
+### 🔒 Secure Storage (Optional)
+- **Qt Keychain integration** when available
+- **Cross-platform secure storage** for API keys and sensitive data
+- **Automatic fallback** to application settings when keychain unavailable
+- **Enhanced security** on platforms with native keychain support
+
 ### ⚙️ Comprehensive Settings
 - Provider-specific configuration
-- API key management (with secure input)
+- API key management (with secure storage when available)
 - Voice recognition settings
 - UI customization options
 - Theme and font size controls
 
 ### 🔄 Cross-Platform Support
-- Windows
-- Linux
-- iOS
-- Android
-- HarmonyOS
+- **Windows** (Full support)
+- **Linux** (Full support)
+- **Android** (Mobile-optimized)
+- **iOS** (Mobile-optimized)
+- **HarmonyOS** (Basic detection - Linux-based)
 
 ## Requirements
 
-- Qt 6.9 or later
-- C++17 compatible compiler
-- qmake (included with Qt)
+- **Qt 6.9 or later** (Required)
+- **C++17 compatible compiler** (Required)
+- **CMake 3.16+** (Required - Only supported build system)
 
 ### Qt Modules Required
 - Qt6::Core
@@ -58,54 +85,133 @@ A modern, cross-platform Qt6 application that provides voice-to-text capabilitie
 - Qt6::Quick
 - Qt6::QuickControls2
 - Qt6::Network
+- Qt6::NetworkAuth
+- Qt6::Multimedia
+- Qt6::TextToSpeech
+- Qt6::Concurrent
+- Qt6::Pdf
+- Qt6::WebChannel
+- Qt6::WebSockets
+- Qt6::PrintSupport
+- Qt6::Svg
+- Qt6::Charts
+
+### Optional Qt Modules (Enhanced Features)
+- **Qt6::WebView** - For mobile web browser functionality
+- **Qt6::WebEngine + Qt6::WebEngineQuick** - For desktop web browser functionality
+- **Qt6Keychain** - For secure API key storage
 
 ## Building
 
+### ⚠️ Important: CMake Only
+**This project uses CMake as the ONLY supported build system.** QMake support has been removed.
+
 ### Quick Start (Windows)
 ```cmd
-# Use the provided build script
+# Use the provided build script (calls CMake internally)
 build.bat
 
 # Run the application
 run.bat
 ```
 
-### Manual Build
+### Manual Build (All Platforms)
 ```bash
-# Generate Makefile
-qmake VoiceAILLM.pro
+# Create build directory
+mkdir build && cd build
 
-# Build the project
-make
+# Configure with CMake
+cmake .. -DCMAKE_PREFIX_PATH=/path/to/qt6
+
+# Build (parallel compilation enabled)
+cmake --build . --parallel
 ```
 
 ### Prerequisites
-1. Install Qt 6.9+ with QML and QuickControls2 modules
-2. Ensure MSYS2/MinGW64 is properly configured for Windows
-3. C++17 compatible compiler
+1. **Install Qt 6.9+** with required modules
+2. **CMake 3.16+** installed and in PATH
+3. **C++17 compatible compiler**
+4. Platform-specific toolchain (see below)
 
-### Platform-Specific Notes
+### Platform-Specific Build Instructions
 
-#### Windows (MSYS2/MinGW64)
+#### Windows (MSYS2/MinGW64 UCRT64)
 ```bash
-# Ensure proper environment
-export PATH="/d/msys64/mingw64/bin:$PATH"
-qmake -spec win32-g++ VoiceAILLM.pro
-mingw32-make
+# Ensure proper MSYS2 UCRT64 environment
+export PATH="/d/msys64/ucrt64/bin:$PATH"
+
+# Build with MinGW Makefiles
+mkdir build && cd build
+cmake .. -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=D:/msys64/ucrt64
+mingw32-make -j$(nproc)
 ```
 
 #### Linux
 ```bash
 # Install Qt6 development packages
-sudo apt install qt6-base-dev qt6-declarative-dev qt6-controls2-dev
-qmake VoiceAILLM.pro
+sudo apt install qt6-base-dev qt6-declarative-dev qt6-controls2-dev \
+                 qt6-multimedia-dev qt6-charts-dev qt6-svg-dev
+
+# Optional: Install web components for browser functionality
+sudo apt install qt6-webengine-dev qt6-webview-dev
+
+# Optional: Install keychain for secure storage
+sudo apt install libqt6keychain1-dev
+
+# Build
+mkdir build && cd build
+cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/qt6
 make -j$(nproc)
 ```
 
-#### Qt Creator
-- Open `VoiceAILLM.pro` in Qt Creator
-- Configure with Qt 6.9+ kit
-- Build and run directly from IDE
+#### Android
+```bash
+# Requires Android SDK, NDK, and Qt for Android
+mkdir build && cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake \
+         -DANDROID_ABI=arm64-v8a \
+         -DCMAKE_PREFIX_PATH=/path/to/qt6/android_arm64_v8a
+make -j$(nproc)
+```
+
+#### iOS
+```bash
+# Requires Xcode and Qt for iOS
+mkdir build && cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=/path/to/qt6/ios/lib/cmake/Qt6/qt.toolchain.cmake \
+         -DCMAKE_PREFIX_PATH=/path/to/qt6/ios
+make -j$(nproc)
+```
+
+#### HarmonyOS
+**Note**: HarmonyOS support is currently limited to basic platform detection. Full HarmonyOS development requires:
+1. HarmonyOS SDK installed
+2. DevEco Studio configured
+3. Qt6 compiled for HarmonyOS (if available)
+
+*HarmonyOS support is experimental and not fully implemented yet.*
+
+### Optional Features Configuration
+
+The build system automatically detects and configures optional features:
+
+#### Web Browser Support
+- **✓ Available**: When Qt WebView (mobile) or Qt WebEngine (desktop) is installed
+- **⚠ Limited**: When only one backend is available
+- **✗ Unavailable**: When neither backend is installed
+- Application continues to work without web browser functionality
+
+#### Secure Storage Support
+- **✓ Available**: When Qt Keychain is installed and detected
+- **✗ Unavailable**: Falls back to application settings storage
+- API keys and sensitive data stored in plain text when keychain unavailable
+
+#### Platform Detection
+Build system automatically detects and optimizes for:
+- Architecture (32-bit/64-bit)
+- Platform-specific features
+- Available Qt modules
+- Optional dependencies
 
 ## Usage
 
@@ -123,6 +229,24 @@ make -j$(nproc)
 - Press and hold for continuous recording (releases when button is released)
 - Audio level is visualized in real-time
 - Recognized text appears in the input field and is automatically sent
+
+### Web Browser
+- Click the "B" button next to the PDF button to open the integrated browser
+- Navigate using standard browser controls
+- Keyboard shortcuts: Ctrl+L (address bar), F5 (reload), Alt+arrows (navigation)
+- Automatically uses the best available web backend for your platform
+
+### Data Visualization
+- Import CSV files through the CSV viewer
+- Create interactive charts from your data
+- Filter and analyze data with built-in tools
+- Export processed data and visualizations
+
+### PDF Generation
+- Generate PDFs using QML-based templates
+- Customize PDF content and formatting
+- View generated PDFs in the integrated viewer
+- No external dependencies required
 
 ### Custom Prompts
 - Select from built-in prompts via the dropdown
@@ -143,7 +267,7 @@ make -j$(nproc)
 ```
 VTT/
 ├── src/                    # C++ source files
-│   ├── main.cpp           # Application entry point
+│   ├── main.cpp           # Application entry point + QtWebView::initialize()
 │   ├── VoiceRecognitionManager.cpp    # Voice-to-text handling
 │   ├── LLMConnectionManager.cpp       # LLM provider connections
 │   ├── ChatManager.cpp               # Chat conversation management
@@ -155,10 +279,16 @@ VTT/
 │   ├── ChatWindow.qml    # Chat interface
 │   ├── MessageDelegate.qml  # Individual message display
 │   ├── VoiceButton.qml   # Voice input button
-│   └── SettingsDialog.qml   # Settings configuration
+│   ├── SettingsDialog.qml   # Settings configuration
+│   ├── WebBrowser.qml    # Integrated web browser
+│   ├── PDFDialog.qml     # PDF generation & viewing
+│   ├── CSVDialog.qml     # CSV data viewer
+│   ├── InteractiveChart.qml  # Data visualization
+│   └── PromptManagerDialog.qml  # Prompt management
 ├── data/                 # Database and resources
 │   └── voiceaillm.db     # JSON database file
-└── resources/            # Icons and assets
+├── resources/            # Icons and assets
+└── CMakeLists.txt        # CMake build configuration (ONLY build system)
 ```
 
 ### Key Classes
@@ -294,26 +424,14 @@ The application now provides **COMPLETE** platform-specific voice recognition im
 - **Thread-Safe Communication**: Proper synchronization between audio and UI threads
 - **Priority Management**: High-priority audio threads for real-time performance
 
-### Build System - CMake Only 🛠️
+### Build System Features 🛠️
 
-The project uses **ONLY CMAKE** for building across all platforms:
-
-#### Windows (MSYS2 UCRT64)
-```bash
-# Using build.bat (which calls CMake)
-./build.bat
-
-# Or directly with CMake
-mkdir build && cd build
-cmake .. -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=D:\msys64\ucrt64
-mingw32-make -j48
-```
-
-#### Cross-Platform CMake Configuration
-- **Qt6.9+ Support**: Full Qt6 integration with modern CMake
-- **Platform Detection**: Automatic platform-specific library linking
-- **Dependency Management**: Automatic Qt module detection and linking
-- **Parallel Building**: Optimized for multi-core compilation (48 threads)
+CMake configuration includes:
+- **Automatic Parallel Compilation**: Detects CPU cores and optimizes build speed
+- **Platform-Specific Optimizations**: Windows/Linux/Android/iOS/HarmonyOS detection
+- **Optional Feature Detection**: Automatically detects and configures WebView/WebEngine/Keychain
+- **Qt6 Integration**: Modern CMake-based Qt6 module linking
+- **Cross-Compilation Support**: Android and iOS toolchain integration
 
 ### Speech Recognition Accuracy & Performance
 
@@ -334,10 +452,22 @@ mingw32-make -j48
 
 ## Security Considerations
 
-- API keys are stored in application settings (consider encryption for production)
-- Voice data is processed locally when possible
-- Network communications use HTTPS where supported
-- Database file is stored in user's application data directory
+### API Key Storage
+- **Secure Storage**: Uses Qt Keychain when available for encrypted API key storage
+- **Fallback Storage**: Falls back to application settings when keychain unavailable
+- **Platform Native**: Integrates with Windows Credential Manager, macOS Keychain, Linux Secret Service
+- **Automatic Detection**: Build system automatically detects and configures keychain support
+
+### Privacy & Data Protection
+- **Local Voice Processing**: Voice data processed locally when possible
+- **Secure Communications**: All network communications use HTTPS/TLS
+- **Local Database**: User data stored locally in JSON format
+- **No Telemetry**: Application does not collect or transmit usage data
+
+### Web Browser Security
+- **Sandboxed Browsing**: Web components run in isolated environment
+- **Platform Security**: Inherits security model from QtWebView/QtWebEngine
+- **Local Resources**: No external resource loading without user consent
 
 ## Contributing
 
@@ -355,21 +485,56 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ### Common Issues
 
-1. **Build Errors**: Ensure Qt 6.9+ is installed with all required modules
-2. **Voice Not Working**: Check microphone permissions and audio device availability
-3. **LLM Connection Failed**: Verify API keys and network connectivity
-4. **High DPI Issues**: Enable Qt high DPI scaling in your environment
+1. **Build Errors**: 
+   - Ensure Qt 6.9+ is installed with all required modules
+   - Verify CMake 3.16+ is available and in PATH
+   - Check that Qt path is correctly set in CMAKE_PREFIX_PATH
+
+2. **Voice Not Working**: 
+   - Check microphone permissions and audio device availability
+   - Verify Qt Multimedia module is properly installed
+
+3. **LLM Connection Failed**: 
+   - Verify API keys and network connectivity
+   - Check if Qt Keychain is working for secure storage
+   - Try regenerating API keys if stored securely
+
+4. **Web Browser Not Available**:
+   - Install Qt WebEngine (desktop) or Qt WebView (mobile)
+   - Application will show fallback message if web components unavailable
+   - Browser button will be disabled if no web backend available
+
+5. **High DPI Issues**: 
+   - Enable Qt high DPI scaling in your environment
+   - Check scaling factor calculation in Main.qml
 
 ### Platform-Specific Issues
 
-#### Windows
-- Ensure Visual C++ Redistributable is installed
-- Check Windows Defender firewall settings
+#### Windows (MSYS2 UCRT64)
+- Ensure proper MSYS2 UCRT64 environment (not MinGW64)
+- Check Visual C++ Redistributable installation
+- Verify Windows Defender firewall settings
+- Use `build.bat` script for proper environment setup
 
 #### Linux
-- Install required audio libraries: `sudo apt install libasound2-dev`
-- Check PulseAudio configuration
+- Install required packages: `sudo apt install qt6-base-dev qt6-declarative-dev`
+- For web browser: `sudo apt install qt6-webengine-dev qt6-webview-dev`  
+- For secure storage: `sudo apt install libqt6keychain1-dev`
+- Check PulseAudio/ALSA configuration for audio
 
-#### Mobile Platforms
-- Request appropriate permissions for microphone access
-- Test on device rather than emulator for voice features 
+#### Android/iOS
+- Ensure appropriate permissions for microphone access in manifest
+- Test on physical device rather than emulator for voice features
+- Qt WebView should be available on mobile platforms
+
+#### HarmonyOS
+- **Limited Support**: Only basic platform detection implemented
+- Requires HarmonyOS SDK and Qt6 compiled for HarmonyOS
+- Most features will fallback to Linux-compatible implementations
+
+### Feature Availability Check
+
+The application logs feature availability at startup:
+- Look for "✓" (available) or "✗" (unavailable) messages in console
+- Web browser status shows backend availability
+- Keychain availability affects secure storage functionality 
