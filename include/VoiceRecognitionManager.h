@@ -120,6 +120,7 @@ private:
 
 #ifdef Q_OS_ANDROID
     void initializeAndroidSpeechRecognition();
+    void setupAndroidRecognitionIntent();
     QString processWithAndroidSpeechRecognition(const QByteArray &audioData);
 #endif
 
@@ -189,6 +190,10 @@ private:
 
 #ifdef Q_OS_ANDROID
     void *m_androidRecognizer; // Android specific handles
+    QJniObject m_androidRecognitionIntent;
+    QString m_lastAndroidRecognitionResult;
+    class AndroidPermissionManager *m_permissionManager;
+    bool m_audioPermissionGranted;
 #endif
 };
 

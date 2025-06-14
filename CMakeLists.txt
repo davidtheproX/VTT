@@ -323,6 +323,9 @@ set(HEADERS
     include/SvgHandler.h
     include/DeviceDiscoveryManager.h
     include/QPing.h
+    # Android-specific headers
+    include/AndroidPermissionManager.h
+    include/AndroidKeystoreManager.h
 )
 
 # Create the executable with platform-specific properties
@@ -384,6 +387,7 @@ qt_add_qml_module(VoiceAILLM
         qml/SvgViewerDialog.qml
         qml/SvgHandler.qml
         qml/CommTestDialog.qml
+        qml/PermissionDialog.qml
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -515,9 +519,18 @@ elseif(ANDROID)
     target_compile_definitions(VoiceAILLM PRIVATE
         ANDROID
         __ANDROID__
+        HAVE_ANDROID_PERMISSIONS=1
+        HAVE_ANDROID_KEYSTORE=1
     )
-    # Android would need JNI libraries
-    message(STATUS "Android speech recognition requires JNI implementation")
+    # Add Android-specific sources
+    target_sources(VoiceAILLM PRIVATE
+        src/AndroidPermissionManager.cpp
+        src/AndroidKeystoreManager.cpp
+    )
+    # Android JNI libraries and permissions
+    target_link_libraries(VoiceAILLM PRIVATE log)
+    message(STATUS "Android platform enabled with permission management and JNI support")
+    message(STATUS "Android Keystore integration enabled for secure storage")
 elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux")
     target_compile_definitions(VoiceAILLM PRIVATE
         LINUX
@@ -571,7 +584,26 @@ elseif(ANDROID)
         QT_ANDROID_VERSION_CODE "1"
         QT_ANDROID_MIN_SDK_VERSION "23"
         QT_ANDROID_TARGET_SDK_VERSION "33"
+        QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android"
+        QT_ANDROID_PACKAGE_NAME "com.voiceaillm.app"
+        QT_ANDROID_APPLICATION_LABEL "Voice AI LLM"
     )
+    
+    # Ensure Android manifest and resources are included
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/android/AndroidManifest.xml")
+        message(STATUS "✓ Android manifest found")
+    else()
+        message(WARNING "✗ Android manifest not found at ${CMAKE_CURRENT_SOURCE_DIR}/android/AndroidManifest.xml")
+    endif()
+    
+    # Android permissions and features summary
+    message(STATUS "Android configuration:")
+    message(STATUS "  - Runtime permissions: ENABLED")
+    message(STATUS "  - Android Keystore: ENABLED") 
+    message(STATUS "  - Material Design: ENABLED")
+    message(STATUS "  - JNI integration: ENABLED")
+    message(STATUS "  - Package: com.voiceaillm.app")
+    message(STATUS "  - Target SDK: 33 (Android 13)")
 endif()
 
 # Note: Qt 6.9 does not have native speech recognition components

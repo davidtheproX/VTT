@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Material
 import QtQuick.Layouts
 import QtQuick.Window
 import QtSvg
@@ -9,35 +10,47 @@ ApplicationWindow {
     id: mainWindow
     title: "Voice AI LLM Assistant"
     
-    // Base size 1280x800 with scaling support
-    width: 1280
-    height: 800
-    minimumWidth: 800
-    minimumHeight: 600
+    // Material Design configuration
+    Material.theme: Qt.platform.os === "android" || Qt.platform.os === "ios" ? Material.Light : Material.System
+    Material.accent: Material.Blue
+    Material.primary: Material.Blue
+    Material.foreground: Material.Grey
     
-    visibility: Window.Windowed
+    // Responsive sizing - mobile-first approach
+    property bool isMobile: Qt.platform.os === "android" || Qt.platform.os === "ios"
+    property bool isTablet: isMobile && Math.min(width, height) > 600
+    
+    // Adaptive dimensions
+    width: isMobile ? (isTablet ? 1024 : 375) : 1280
+    height: isMobile ? (isTablet ? 768 : 812) : 800
+    minimumWidth: isMobile ? 320 : 800
+    minimumHeight: isMobile ? 568 : 600
+    
+    visibility: isMobile ? Window.FullScreen : Window.Windowed
     visible: true
     
-    // High DPI scaling support
-    property real scaleFactor: Math.min(width / 1280, height / 800)
-    property real baseFontSize: 14  // Can be changed by settings
+    // Adaptive scaling
+    property real scaleFactor: isMobile ? 
+        (isTablet ? Math.min(width / 1024, height / 768) : Math.min(width / 375, height / 812)) :
+        Math.min(width / 1280, height / 800)
+    property real baseFontSize: isMobile ? (isTablet ? 16 : 14) : 14
     property real baseFont: baseFontSize * scaleFactor
     
-    // Color scheme
-    property color primaryColor: "#2196F3"
-    property color secondaryColor: "#FFC107"
-    property color backgroundColor: "#FAFAFA"
-    property color surfaceColor: "#FFFFFF"
-    property color textColor: "#212121"
-    property color mutedTextColor: "#757575"
-    property color errorColor: "#F44336"
-    property color successColor: "#4CAF50"
-    property color warningColor: "#FF9800"
+    // Material Design colors with platform adaptation
+    property color primaryColor: Material.color(Material.Blue)
+    property color secondaryColor: Material.color(Material.Amber)
+    property color backgroundColor: Material.backgroundColor
+    property color surfaceColor: Material.backgroundColor
+    property color textColor: Material.foreground
+    property color mutedTextColor: Material.hintTextColor
+    property color errorColor: Material.color(Material.Red)
+    property color successColor: Material.color(Material.Green)
+    property color warningColor: Material.color(Material.Orange)
     
     color: backgroundColor
     
-    // Global font settings
-    font.family: "Segoe UI, Roboto, Arial, sans-serif"
+    // Platform-adaptive font
+    font.family: isMobile ? "Roboto" : (Qt.platform.os === "windows" ? "Segoe UI" : "System")
     font.pixelSize: baseFont
     
     header: ToolBar {

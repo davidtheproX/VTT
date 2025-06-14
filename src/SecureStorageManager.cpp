@@ -15,6 +15,11 @@
     #include <qt6keychain/keychain.h>
 #endif
 
+#ifdef PLATFORM_ANDROID
+    #include <QJniObject>
+    #include <QJniEnvironment>
+#endif
+
 SecureStorageManager::SecureStorageManager(QObject *parent)
     : QObject(parent)
     , m_secureStorageAvailable(false)
@@ -26,7 +31,17 @@ SecureStorageManager::~SecureStorageManager() = default;
 
 void SecureStorageManager::initializeSecureStorage()
 {
-#if HAVE_QTKEYCHAIN
+#ifdef PLATFORM_ANDROID
+    // On Android, use Android Keystore directly via JNI
+    m_secureStorageAvailable = initializeAndroidKeystore();
+    if (m_secureStorageAvailable) {
+        qDebug() << "SecureStorageManager: Android Keystore available - using hardware-backed security";
+    } else {
+        qDebug() << "SecureStorageManager: Android Keystore failed - falling back to encryption";
+        initializeFallbackStorage();
+    }
+    qDebug() << "SecureStorageManager: Platform: Android";
+#elif HAVE_QTKEYCHAIN
     m_secureStorageAvailable = true;
     qDebug() << "SecureStorageManager: Qt Keychain available - using secure storage";
     #ifdef QTKEYCHAIN_METHOD
@@ -37,7 +52,172 @@ void SecureStorageManager::initializeSecureStorage()
     m_secureStorageAvailable = false;
     qDebug() << "SecureStorageManager: Qt Keychain not available - using fallback encryption";
     qDebug() << "SecureStorageManager: Platform:" << PLATFORM_NAME;
+    initializeFallbackStorage();
+#endif
+}
+
+#ifdef PLATFORM_ANDROID
+bool SecureStorageManager::initializeAndroidKeystore()
+{
+    try {
+        // Get Android context
+        QJniObject activity = QJniObject::callStaticObjectMethod(
+            "org/qtproject/qt/android/QtNative", "activity", "()Landroid/app/Activity;");
+        
+        if (!activity.isValid()) {
+            qWarning() << "SecureStorageManager: Cannot get Android activity";
+            return false;
+        }
+
+        // Initialize KeyStore
+        QJniObject keyStore = QJniObject::callStaticObjectMethod(
+            "java/security/KeyStore", "getInstance", "(Ljava/lang/String;)Ljava/security/KeyStore;",
+            QJniObject::fromString("AndroidKeyStore").object<jstring>());
+        
+        if (!keyStore.isValid()) {
+            qWarning() << "SecureStorageManager: Cannot get AndroidKeyStore instance";
+            return false;
+        }
+
+        // Load the keystore
+        keyStore.callMethod<void>("load", "(Ljava/security/KeyStore$LoadStoreParameter;)V", nullptr);
+        
+        m_androidKeyStore = keyStore;
+        qDebug() << "SecureStorageManager: Android Keystore initialized successfully";
+        return true;
+        
+    } catch (...) {
+        qWarning() << "SecureStorageManager: Exception during Android Keystore initialization";
+        return false;
+    }
+}
+
+bool SecureStorageManager::storeInAndroidKeystore(const QString &key, const QString &value)
+{
+    if (!m_androidKeyStore.isValid()) {
+        return false;
+    }
     
+    try {
+        // Generate or get existing key
+        if (!generateAndroidKey(key)) {
+            qWarning() << "SecureStorageManager: Failed to generate Android key for" << key;
+            return false;
+        }
+        
+        // Encrypt and store the value
+        QByteArray encrypted = encryptWithAndroidKey(key, value.toUtf8());
+        if (encrypted.isEmpty()) {
+            qWarning() << "SecureStorageManager: Failed to encrypt value for" << key;
+            return false;
+        }
+        
+        // Store encrypted data in SharedPreferences
+        return storeEncryptedInPreferences(key, encrypted);
+        
+    } catch (...) {
+        qWarning() << "SecureStorageManager: Exception storing in Android Keystore";
+        return false;
+    }
+}
+
+QString SecureStorageManager::retrieveFromAndroidKeystore(const QString &key)
+{
+    if (!m_androidKeyStore.isValid()) {
+        return QString();
+    }
+    
+    try {
+        // Retrieve encrypted data from SharedPreferences
+        QByteArray encrypted = retrieveEncryptedFromPreferences(key);
+        if (encrypted.isEmpty()) {
+            return QString();
+        }
+        
+        // Decrypt the data
+        QByteArray decrypted = decryptWithAndroidKey(key, encrypted);
+        return QString::fromUtf8(decrypted);
+        
+    } catch (...) {
+        qWarning() << "SecureStorageManager: Exception retrieving from Android Keystore";
+        return QString();
+    }
+}
+
+bool SecureStorageManager::generateAndroidKey(const QString &alias)
+{
+    try {
+        // Check if key already exists
+        if (m_androidKeyStore.callMethod<jboolean>("containsAlias", "(Ljava/lang/String;)Z",
+                                                   QJniObject::fromString(alias).object<jstring>())) {
+            return true; // Key already exists
+        }
+        
+        // Generate new key
+        QJniObject keyGenerator = QJniObject::callStaticObjectMethod(
+            "javax/crypto/KeyGenerator", "getInstance", 
+            "(Ljava/lang/String;Ljava/lang/String;)Ljavax/crypto/KeyGenerator;",
+            QJniObject::fromString("AES").object<jstring>(),
+            QJniObject::fromString("AndroidKeyStore").object<jstring>());
+        
+        if (!keyGenerator.isValid()) {
+            return false;
+        }
+        
+        // Initialize key generator
+        QJniObject keyGenParameterSpec = createKeyGenParameterSpec(alias);
+        keyGenerator.callMethod<void>("init", "(Ljava/security/spec/AlgorithmParameterSpec;)V",
+                                     keyGenParameterSpec.object());
+        
+        // Generate the key
+        keyGenerator.callMethod<jobject>("generateKey", "()Ljavax/crypto/SecretKey;");
+        
+        return true;
+        
+    } catch (...) {
+        qWarning() << "SecureStorageManager: Exception generating Android key";
+        return false;
+    }
+}
+
+QJniObject SecureStorageManager::createKeyGenParameterSpec(const QString &alias)
+{
+    // Create KeyGenParameterSpec.Builder
+    QJniObject builder = QJniObject("android/security/keystore/KeyGenParameterSpec$Builder",
+                                   "(Ljava/lang/String;I)V",
+                                   QJniObject::fromString(alias).object<jstring>(),
+                                   3); // KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT
+    
+    // Set block modes and encryption paddings
+    QJniObject blockModes = QJniObject::fromString("GCM");
+    QJniObject encryptionPaddings = QJniObject::fromString("NoPadding");
+    
+    builder.callObjectMethod("setBlockModes", "([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;",
+                            createStringArray(QStringList() << "GCM").object());
+    
+    builder.callObjectMethod("setEncryptionPaddings", "([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;",
+                            createStringArray(QStringList() << "NoPadding").object());
+    
+    // Build the spec
+    return builder.callObjectMethod("build", "()Landroid/security/keystore/KeyGenParameterSpec;");
+}
+
+QJniObject SecureStorageManager::createStringArray(const QStringList &strings)
+{
+    QJniEnvironment env;
+    jobjectArray array = env->NewObjectArray(strings.size(), env->FindClass("java/lang/String"), nullptr);
+    
+    for (int i = 0; i < strings.size(); ++i) {
+        QJniObject javaString = QJniObject::fromString(strings[i]);
+        env->SetObjectArrayElement(array, i, javaString.object<jstring>());
+    }
+    
+    return QJniObject(array);
+}
+#endif
+
+void SecureStorageManager::initializeFallbackStorage()
+{
     // Initialize fallback storage path
     QString dataDir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir().mkpath(dataDir);
@@ -52,7 +232,6 @@ void SecureStorageManager::initializeSecureStorage()
         }
         file.close();
     }
-#endif
 }
 
 bool SecureStorageManager::isSecureStorageAvailable() const

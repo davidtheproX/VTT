@@ -97,9 +97,33 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     , m_audioSampleRate(16000)
     , m_audioChannels(1)
     , m_isConfigured(false)
+    , m_permissionManager(nullptr)
+    , m_audioPermissionGranted(false)
 {
-    initializeAudio();
-    loadAvailableMicrophones();
+#ifdef PLATFORM_ANDROID
+    // Initialize permission manager for Android
+    m_permissionManager = new AndroidPermissionManager(this);
+    connect(m_permissionManager, &AndroidPermissionManager::audioPermissionChanged,
+            this, &VoiceRecognitionManager::onAudioPermissionChanged);
+    connect(m_permissionManager, &AndroidPermissionManager::permissionDenied,
+            this, &VoiceRecognitionManager::onPermissionDenied);
+    
+    // Check initial permission status
+    m_audioPermissionGranted = m_permissionManager->audioPermissionGranted();
+    qDebug() << "VoiceRecognitionManager: Initial audio permission status:" << m_audioPermissionGranted;
+#else
+    // Non-Android platforms don't need runtime permissions
+    m_audioPermissionGranted = true;
+    qDebug() << "VoiceRecognitionManager: Non-Android platform, audio permission auto-granted";
+#endif
+
+    // Only initialize audio if permissions are granted
+    if (m_audioPermissionGranted) {
+        initializeAudio();
+        loadAvailableMicrophones();
+    } else {
+        qDebug() << "VoiceRecognitionManager: Audio permission not granted, deferring audio initialization";
+    }
     
     // Initialize network manager for Google Cloud Speech API
     m_networkManager = new QNetworkAccessManager(this);
