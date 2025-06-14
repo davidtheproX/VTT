@@ -11,7 +11,7 @@ CMake Warning at CMakeLists.txt:135 (message):
     Install Qt WebEngine package for full web browser support
 
 
-CMake Warning at CMakeLists.txt:484 (message):
+CMake Warning at CMakeLists.txt:509 (message):
   Qt Keychain not found - using basic storage (less secure)
 
 
@@ -24,3 +24,10 @@ Call Stack (most recent call first):
   CMakeLists.txt:DEFERRED
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
+E:\VTT\src\TTSManager.cpp: In member function 'void TTSManager::onErrorOccurred(QTextToSpeech::ErrorReason, const QString&)':
+E:\VTT\src\TTSManager.cpp:790:32: warning: capture of variable 'errorCountPtr' with non-automatic storage duration
+  790 |     QTimer::singleShot(10000, [errorCountPtr]() {
+      |                                ^~~~~~~~~~~~~
+E:\VTT\src\TTSManager.cpp:789:17: note: 'int* errorCountPtr' declared here
+  789 |     static int *errorCountPtr = &errorCount;
+      |                 ^~~~~~~~~~~~~

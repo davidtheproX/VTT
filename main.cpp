@@ -60,14 +60,16 @@ int main(int argc, char *argv[])
             logger->criticalDatabase("Database initialization exception");
         }
     
-        logger->infoVoice("Initializing voice recognition manager");
-        VoiceRecognitionManager voiceManager;
+        // COMMENTED OUT FOR ANDROID TESTING - Voice Recognition Manager
+        // logger->infoVoice("Initializing voice recognition manager");
+        // VoiceRecognitionManager voiceManager;
         
         logger->infoLLM("Initializing LLM connection manager");
         LLMConnectionManager llmManager;
         
-        logger->infoGeneral("Initializing TTS manager");
-        TTSManager ttsManager;
+        // COMMENTED OUT FOR ANDROID TESTING - TTS Manager  
+        // logger->infoGeneral("Initializing TTS manager");
+        // TTSManager ttsManager;
         
         logger->infoGeneral("Initializing OAuth2 manager");
         OAuth2Manager oauth2Manager;
@@ -84,7 +86,8 @@ int main(int argc, char *argv[])
         logger->infoGeneral("Initializing chat manager");
         ChatManager chatManager(&llmManager);
         chatManager.setDatabaseManager(&dbManager);
-        chatManager.setTTSManager(&ttsManager);
+        // COMMENTED OUT FOR ANDROID TESTING - TTS Manager connection
+        // chatManager.setTTSManager(&ttsManager);
         
         logger->infoDatabase("Initializing prompt manager");
         PromptManager promptManager(&dbManager);
@@ -130,6 +133,8 @@ int main(int argc, char *argv[])
             }
         }
         
+        // COMMENTED OUT FOR ANDROID TESTING - Voice settings
+        /*
         // Apply voice settings with secure storage
         if (settings.contains("voice")) {
             QJsonObject voiceSettings = settings["voice"].toObject();
@@ -149,7 +154,10 @@ int main(int argc, char *argv[])
                 }
             }
         }
+        */
         
+        // COMMENTED OUT FOR ANDROID TESTING - TTS settings
+        /*
         // Apply TTS settings
         if (settings.contains("tts")) {
             QJsonObject ttsSettings = settings["tts"].toObject();
@@ -169,20 +177,25 @@ int main(int argc, char *argv[])
                 ttsManager.setVolume(ttsSettings["volume"].toDouble());
             }
         }
+        */
 
+        // COMMENTED OUT FOR ANDROID TESTING - Voice signal connections
+        /*
         // Connect signals
         logger->infoGeneral("Connecting manager signals");
         QObject::connect(&voiceManager, &VoiceRecognitionManager::textRecognized,
                          &chatManager, &ChatManager::processUserInput);
+        */
 
         QQmlApplicationEngine engine;
         logger->infoUI("QML application engine created");
         
         // Set context properties for QML
-        engine.rootContext()->setContextProperty("voiceManager", &voiceManager);
+        // COMMENTED OUT FOR ANDROID TESTING - Voice and TTS managers
+        // engine.rootContext()->setContextProperty("voiceManager", &voiceManager);
         engine.rootContext()->setContextProperty("chatManager", &chatManager);
         engine.rootContext()->setContextProperty("llmManager", &llmManager);
-        engine.rootContext()->setContextProperty("ttsManager", &ttsManager);
+        // engine.rootContext()->setContextProperty("ttsManager", &ttsManager);
         engine.rootContext()->setContextProperty("promptManager", &promptManager);
         engine.rootContext()->setContextProperty("databaseManager", &dbManager);
         engine.rootContext()->setContextProperty("oauth2Manager", &oauth2Manager);
