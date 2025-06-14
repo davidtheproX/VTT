@@ -83,6 +83,70 @@ ApplicationWindow {
                 }
             }
             
+            // QML Viewer Button
+            Button {
+                id: qmlViewerButton
+                width: 36 * scaleFactor
+                height: 36 * scaleFactor
+                flat: true
+                
+                background: Rectangle {
+                    color: qmlViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                           qmlViewerButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+                
+                contentItem: Image {
+                    width: 24 * scaleFactor
+                    height: 24 * scaleFactor
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/qml-viewer.svg"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
+                }
+                
+                ToolTip.text: "QML UI Viewer (Qt Design Studio)"
+                ToolTip.visible: hovered
+                
+                onClicked: {
+                    console.log("QML Viewer button clicked")
+                    qmlViewerDialogLoader.openQmlViewer()
+                }
+            }
+
+            // SVG Viewer Button
+            Button {
+                id: svgViewerButton
+                width: 36 * scaleFactor
+                height: 36 * scaleFactor
+                flat: true
+                
+                background: Rectangle {
+                    color: svgViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                           svgViewerButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+                
+                contentItem: Image {
+                    width: 24 * scaleFactor
+                    height: 24 * scaleFactor
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/svg-viewer.svg"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
+                }
+                
+                ToolTip.text: "SVG Life Data Viewer"
+                ToolTip.visible: hovered
+                
+                onClicked: {
+                    console.log("SVG Viewer button clicked")
+                    svgViewerDialogLoader.openSvgViewer()
+                }
+            }
+
             // OAuth2 Login buttons
             Button {
                 id: wechatButton
@@ -606,6 +670,58 @@ ApplicationWindow {
         primaryColor: mainWindow.primaryColor
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
+    }
+    
+    // QML Viewer Dialog - loaded only when needed
+    Loader {
+        id: qmlViewerDialogLoader
+        active: false
+        
+        sourceComponent: Component {
+            QmlViewerDialog {
+                onVisibleChanged: {
+                    if (!visible) {
+                        // Unload the dialog when closed to save memory
+                        Qt.callLater(function() {
+                            qmlViewerDialogLoader.active = false;
+                        });
+                    }
+                }
+            }
+        }
+        
+        function openQmlViewer() {
+            active = true;
+            if (item) {
+                item.visible = true;
+            }
+        }
+    }
+
+    // SVG Viewer Dialog - loaded only when needed
+    Loader {
+        id: svgViewerDialogLoader
+        active: false
+        
+        sourceComponent: Component {
+            SvgViewerDialog {
+                onVisibleChanged: {
+                    if (!visible) {
+                        // Unload the dialog when closed to save memory
+                        Qt.callLater(function() {
+                            svgViewerDialogLoader.active = false;
+                        });
+                    }
+                }
+            }
+        }
+        
+        function openSvgViewer() {
+            active = true;
+            if (item) {
+                item.visible = true;
+            }
+        }
     }
     
     // Functions

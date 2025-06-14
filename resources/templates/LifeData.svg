@@ -1,0 +1,411 @@
+<svg id="CUMMINS_DPF_EN" xmlns="http://www.w3.org/2000/svg" width="1920" height="958" viewBox="0 0 1920 958">
+  <g id="CumminsBk-3">
+    <g id="Group-16">
+      <rect id="Rectangular" width="1920" height="958" fill="#dfe2e6"/>
+      <rect id="Rectangular-2" data-name="Rectangular" width="400" height="937" rx="14" transform="translate(1510 10)" fill="#fff"/>
+      <rect id="RectangularBk-2" width="1490" height="937" rx="14" transform="translate(10 10)" fill="#fff"/>
+      <text id="PromptTitle" transform="translate(1518 64)" fill="#333" font-size="30" font-family="SimSun"><tspan x="0" y="0">Prompt Information:</tspan></text>
+      <text id="PromptText" transform="translate(1518 113)" fill="#333" font-size="25" font-family="SimSun"><tspan x="0" y="0">...</tspan></text>
+      <path id="DOC_Color" d="M644.065,685.579h40.417v63.7H561.816v-63.7Z" transform="translate(33.556 10.085)" fill="#ffc941" stroke="#000" stroke-width="2" fill-rule="evenodd"/>
+      <rect id="DPF_Color" width="60.689" height="63.7" transform="translate(829.787 693.583)" fill="#ffc941" stroke="#000" stroke-width="2"/>
+      <rect id="SCR_UP_Color" width="174" height="63.7" transform="translate(1025.301 693.583)" fill="#ffc941" stroke="#000" stroke-width="2"/>
+      <rect id="SCR_Down_Color" width="112" height="63.7" transform="translate(1363.959 694.673)" fill="#84ebff" stroke="#000" stroke-width="2"/>
+      <path id="DOC_DPF_Color" d="M737.5,762.714l-26-13.65v-63.7l26-13.65h59l26,13.65v63.7l-26,13.65Z" transform="translate(6.539 9.509)" fill="#ffc941" stroke="#000" stroke-width="2" fill-rule="evenodd"/>
+      <path id="DPF_DIFF_Color" d="M896.5,762.714l-26-13.65v-63.7l26-13.65h87l26,13.65v63.7l-26,13.65Z" transform="translate(19.976 9.509)" fill="#ffc941" stroke="#000" stroke-width="2" fill-rule="evenodd"/>
+      <path id="SCR_UP_DOWN_Color" d="M1217.5,762.714l-26-13.65v-63.7l26-13.65h112l26,13.65v63.7l-26,13.65Z" transform="translate(7.81 8.219)" fill="#ffc941" stroke="#000" stroke-width="2" fill-rule="evenodd"/>
+      <path id="Route-10Backup-4" d="M896.427,696.8,871.87,663.968a6,6,0,0,1-1.2-3.594V638.412a6,6,0,0,1,6-6h51.772a6,6,0,0,0,6-6V612.906h0" transform="translate(15.449 8.589)" fill="none" stroke="#f80" stroke-width="4" fill-rule="evenodd"/>
+      <path id="Route-10Backup-5" d="M25.757,0,1.2,32.832A6,6,0,0,0,0,36.426V58.388a6,6,0,0,0,6,6H61.665a6,6,0,0,1,6,6V83.894h0" transform="translate(1029.665 705.119) rotate(180)" fill="none" stroke="#f80" stroke-width="4" fill-rule="evenodd"/>
+      <g id="Group-8Backup-13" transform="translate(1037.546 647.926)">
+        <rect id="RectangularBk-25" width="1.626" height="10.323" rx="0.813" transform="translate(7.783)"/>
+        <path id="RectangularBk-64" d="M10.825,7.736a1.213,1.213,0,0,1,1.213,1.213V31.067H5.962V8.949A1.213,1.213,0,0,1,7.175,7.736Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <rect id="RectangularBk-66" width="17.191" height="4.745" rx="1.617" transform="translate(0 31.157)" fill="#b3b3b3" stroke="#000" stroke-width="0.809"/>
+        <path id="RectangularBk-67" d="M15.152,35.965v7.1a2.022,2.022,0,0,1-2.021,2.021H4.869a2.022,2.022,0,0,1-2.022-2.021v-7.1Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <path id="RectangularBk-68" d="M12.038,45.162v16.71a1.6,1.6,0,0,1-1.6,1.6H7.557a1.6,1.6,0,0,1-1.6-1.6V45.162Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-8Backup-14" transform="translate(1370.663 647.926)">
+        <rect id="RectangularBk-25-2" data-name="RectangularBk-25" width="1.626" height="10.323" rx="0.813" transform="translate(7.783)"/>
+        <path id="RectangularBk-64-2" data-name="RectangularBk-64" d="M10.825,7.736a1.213,1.213,0,0,1,1.213,1.213V31.067H5.962V8.949A1.213,1.213,0,0,1,7.175,7.736Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <rect id="RectangularBk-66-2" data-name="RectangularBk-66" width="17.191" height="4.745" rx="1.617" transform="translate(0 31.157)" fill="#b3b3b3" stroke="#000" stroke-width="0.809"/>
+        <path id="RectangularBk-67-2" data-name="RectangularBk-67" d="M15.152,35.965v7.1a2.022,2.022,0,0,1-2.021,2.021H4.869a2.022,2.022,0,0,1-2.022-2.021v-7.1Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <path id="RectangularBk-68-2" data-name="RectangularBk-68" d="M12.038,45.162v16.71a1.6,1.6,0,0,1-1.6,1.6H7.557a1.6,1.6,0,0,1-1.6-1.6V45.162Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-8Backup-15" transform="translate(669.029 648.197)">
+        <rect id="RectangularBk-25-3" data-name="RectangularBk-25" width="1.626" height="10.323" rx="0.813" transform="translate(7.783)"/>
+        <path id="RectangularBk-64-3" data-name="RectangularBk-64" d="M10.825,7.736a1.213,1.213,0,0,1,1.213,1.213V31.067H5.962V8.949A1.213,1.213,0,0,1,7.175,7.736Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <rect id="RectangularBk-66-3" data-name="RectangularBk-66" width="17.191" height="4.745" rx="1.617" transform="translate(0 31.157)" fill="#b3b3b3" stroke="#000" stroke-width="0.809"/>
+        <path id="RectangularBk-67-3" data-name="RectangularBk-67" d="M15.152,35.965v7.1a2.022,2.022,0,0,1-2.021,2.021H4.869a2.022,2.022,0,0,1-2.022-2.021v-7.1Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <path id="RectangularBk-68-3" data-name="RectangularBk-68" d="M12.038,45.162v16.71a1.6,1.6,0,0,1-1.6,1.6H7.557a1.6,1.6,0,0,1-1.6-1.6V45.162Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-8Backup-16" transform="translate(837.109 647.926)">
+        <rect id="RectangularBk-25-4" data-name="RectangularBk-25" width="1.626" height="10.323" rx="0.813" transform="translate(7.783)"/>
+        <path id="RectangularBk-64-4" data-name="RectangularBk-64" d="M10.825,7.736a1.213,1.213,0,0,1,1.213,1.213V31.067H5.962V8.949A1.213,1.213,0,0,1,7.175,7.736Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <rect id="RectangularBk-66-4" data-name="RectangularBk-66" width="17.191" height="4.745" rx="1.617" transform="translate(0 31.157)" fill="#b3b3b3" stroke="#000" stroke-width="0.809"/>
+        <path id="RectangularBk-67-4" data-name="RectangularBk-67" d="M15.152,35.965v7.1a2.022,2.022,0,0,1-2.021,2.021H4.869a2.022,2.022,0,0,1-2.022-2.021v-7.1Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+        <path id="RectangularBk-68-4" data-name="RectangularBk-68" d="M12.038,45.162v16.71a1.6,1.6,0,0,1-1.6,1.6H7.557a1.6,1.6,0,0,1-1.6-1.6V45.162Z" transform="translate(-0.404)" fill="#b3b3b3" stroke="#000" stroke-width="0.809" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-9Backup-4" transform="translate(1434.862 628.187)">
+        <path id="Rectangular-3" data-name="Rectangular" d="M17.063,23.379l.412,32.111H4.671V23.79Z" transform="translate(-0.412 -0.412)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+        <path id="RectangularBk-72" d="M14.8,63.756l.412,23.475a2.356,2.356,0,0,1-2.356,2.356H9.29a2.356,2.356,0,0,1-2.356-2.356V64.168Z" transform="translate(-0.412 -0.412)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+        <rect id="RectangularBk-70" width="21.322" height="8.888" rx="1.648" transform="translate(0 54.735)" fill="#b3b3b3" stroke="#000" stroke-width="0.824"/>
+        <rect id="RectangularBk-71" width="1.061" height="15.248" rx="0.53" transform="translate(10.13)" stroke="#000" stroke-width="0.824"/>
+        <path id="RectangularBk-69" d="M15.125-15.106v-7.771l-7.692-.412-.412,8.182Z" transform="translate(-0.412 37.982)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-13Backup-2" transform="translate(911.344 571.72)">
+        <path id="RectangularBk-26" d="M4.5,14.6V.672A.666.666,0,0,0,4.3.2.665.665,0,0,0,3.832,0H.672A.665.665,0,0,0,.2.2.666.666,0,0,0,0,.672V14.6Z" transform="translate(42.075 49.505) rotate(180)" fill="#b3b3b3" stroke="#000" stroke-width="0.5" fill-rule="evenodd"/>
+        <path id="RectangularBk-27" d="M4.5,14.6V.672A.665.665,0,0,0,4.3.2.665.665,0,0,0,3.832,0H.672A.665.665,0,0,0,.2.2.665.665,0,0,0,0,.672V14.6Z" transform="translate(53.213 49.505) rotate(180)" fill="#b3b3b3" stroke="#000" stroke-width="0.5" fill-rule="evenodd"/>
+        <path id="ShapeComb" d="M49.44.25a5.043,5.043,0,0,1,4.175,2.21,8.283,8.283,0,0,1,.6.6l6.215,7.018v3.489l7.131,5.623a6.658,6.658,0,0,1,.721.66A5.3,5.3,0,0,1,70.4,21.771a5.049,5.049,0,0,1-2.043,7.172,9.733,9.733,0,0,1-.795.714l-6.967,5.5H21.9V13.7H38.452V10.08l6.215-7.018a6.366,6.366,0,0,1,.546-.546A5.115,5.115,0,0,1,49.44.25ZM66.1,21.02a3.4,3.4,0,1,0,2.408,1A3.4,3.4,0,0,0,66.1,21.02ZM49.44,1.87a3.428,3.428,0,1,0,2.424,1,3.428,3.428,0,0,0-2.424-1Z" transform="translate(-0.252 -0.25)" fill="#b3b3b3" stroke="#000" stroke-width="0.5" fill-rule="evenodd"/>
+        <rect id="Rectangular-4" data-name="Rectangular" width="33.813" height="16.692" rx="3.67" transform="translate(57.907 32.521) rotate(180)" fill="#b3b3b3" stroke="#000" stroke-width="0.5"/>
+        <path id="RectangularBk-24" d="M18.519,21.45a3.414,3.414,0,0,0,3.418-3.418V3.418A3.414,3.414,0,0,0,18.519,0H0V21.45Z" transform="translate(21.937 34.9) rotate(180)" fill="#b3b3b3" stroke="#000" stroke-width="0.5" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-10Backup-10" transform="translate(574.254 711.974)">
+        <path id="ShapeComb-2" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-9Backup-5" transform="translate(605.448 628.187)">
+        <path id="Rectangular-5" data-name="Rectangular" d="M17.063,23.379l.412,32.111H4.671V23.79Z" transform="translate(-0.412 -0.412)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+        <path id="RectangularBk-72-2" data-name="RectangularBk-72" d="M14.8,63.756l.412,23.475a2.356,2.356,0,0,1-2.356,2.356H9.29a2.356,2.356,0,0,1-2.356-2.356V64.168Z" transform="translate(-0.412 -0.412)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+        <rect id="RectangularBk-70-2" data-name="RectangularBk-70" width="21.322" height="8.888" rx="1.648" transform="translate(0 54.735)" fill="#b3b3b3" stroke="#000" stroke-width="0.824"/>
+        <rect id="RectangularBk-71-2" data-name="RectangularBk-71" width="1.061" height="15.248" rx="0.53" transform="translate(10.13)" stroke="#000" stroke-width="0.824"/>
+        <path id="RectangularBk-69-2" data-name="RectangularBk-69" d="M15.125-15.106v-7.771l-7.692-.412-.412,8.182Z" transform="translate(-0.412 37.982)" fill="#b3b3b3" stroke="#000" stroke-width="0.824" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-10Backup-11" transform="translate(841.485 710.346)">
+        <path id="ShapeComb-3" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-14Backup-8" transform="translate(753.477 688.503)">
+        <g id="Group-10Backup-6" transform="translate(0 43.686)">
+          <path id="ShapeComb-4" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+        <g id="Group-10Backup-7">
+          <path id="ShapeComb-5" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+      </g>
+      <g id="Group-14Backup-9" transform="translate(937.754 685.642)">
+        <g id="Group-10Backup-6-2" data-name="Group-10Backup-6" transform="translate(0 43.686)">
+          <path id="ShapeComb-6" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+        <g id="Group-10Backup-7-2" data-name="Group-10Backup-7">
+          <path id="ShapeComb-7" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+      </g>
+      <g id="Group-14Backup-10" transform="translate(1264.106 685.642)">
+        <g id="Group-10Backup-6-3" data-name="Group-10Backup-6" transform="translate(0 43.686)">
+          <path id="ShapeComb-8" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+        <g id="Group-10Backup-7-3" data-name="Group-10Backup-7">
+          <path id="ShapeComb-9" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        </g>
+      </g>
+      <g id="Group-10Backup-12" transform="translate(1123 707.552)">
+        <path id="ShapeComb-10" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-10Backup-13" transform="translate(1454.672 707.552)">
+        <path id="ShapeComb-11" data-name="ShapeComb" d="M24.257.5a1.5,1.5,0,0,1,.865.275L44.357,14.363a1.5,1.5,0,0,1,0,2.45L25.123,30.4a1.5,1.5,0,0,1-2.365-1.225V23.051H2a1.5,1.5,0,0,1-1.5-1.5V9.624A1.5,1.5,0,0,1,2,8.124H22.757V2A1.5,1.5,0,0,1,24.257.5Z" transform="translate(-0.5 -0.5)" fill="#fe0" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+      <g id="Group-4" transform="translate(1068.306 602.782)">
+        <path id="Fill-1" d="M69.839,116.738H55.92c-4.308,0-7.8-7.352-7.8-16.422V89.621H77.639v10.695c0,9.07-3.492,16.422-7.8,16.422" transform="translate(-38.39 -21.775)" fill="#939ead" fill-rule="evenodd"/>
+        <path id="ShapeComb-12" data-name="ShapeComb" d="M1.4,46.194s.268-9.051.614-20.756C2.277,16.566,3.2,7.63,3.639,3.826c.129-1.135.631-1.973,1.238-2.07C7.8,1.291,16.344,0,21.087,0c1.885,0,4.581.163,7.358.382l.7.056v3.7a8.3,8.3,0,0,1,7.926.366V1.183c1.936.2,3.213.347,3.213.347s1.258,7.1,2.234,14.49l.093.716c.278,2.15.527,4.307.711,6.3.167,1.819.316,3.837.447,5.9l.046.73.022.366.043.733c.447,7.7.651,15.424.651,15.424h.9c.48,0,.869.742.869,1.657v4.871H0V47.851c0-.915.389-1.657.869-1.657Z" transform="translate(0.007)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-11" d="M39.667,52.722v1.866a3.267,3.267,0,0,1-.561,2.029l-.953,1.073v6.537a2.8,2.8,0,0,1-.445,1.666l-.433.525v4.967l2.04,9.3H45.3c.727,0,1.317,1.312,1.317,2.93v6.629c0,1.618-.59,2.93-1.317,2.93H41.768a4.015,4.015,0,0,1-2.53-.992h0A5.177,5.177,0,0,0,35.977,90.9h-18.9a4.8,4.8,0,0,0-2.478.729l-1.632.977a3.72,3.72,0,0,1-1.922.565H3.425c-.727,0-1.316-1.312-1.316-2.93V80.68l-.414-2.341V57.69L.6,56.591A3.151,3.151,0,0,1,0,54.519v-1.8Z" transform="translate(0.007 -18.8)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="ShapeComb-13" data-name="ShapeComb" d="M74.02,19.5a3.949,3.949,0,0,1,3.949,3.949v17.1h.758a.961.961,0,0,1,.923.893l.006.118a.973.973,0,0,1-.929,1.011h-.758V59.783h-7.9V42.575h-.756a.961.961,0,0,1-.923-.893l-.006-.118a.973.973,0,0,1,.929-1.011h.756V23.445A3.949,3.949,0,0,1,73.817,19.5Z" transform="translate(-42.24 -8.545)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-13" d="M74.02,77.452h0a6.812,6.812,0,0,1-6.812-6.812V61.1a1.317,1.317,0,0,1,1.317-1.317h10.99A1.317,1.317,0,0,1,80.832,61.1v9.54a6.812,6.812,0,0,1-6.812,6.812" transform="translate(-42.598 -14.418)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="ShapeComb-14" data-name="ShapeComb" d="M36.118,23.328a3,3,0,0,1,3,3V44.384h.933a1.011,1.011,0,0,1,1.005.9l.006.11a1.011,1.011,0,0,1-1.011,1.011h-.933v17.21h-6.5V46.406h-.932a1.011,1.011,0,0,1-1.005-.9l-.006-.11a1.011,1.011,0,0,1,1.011-1.011h.932V26.328a3,3,0,0,1,2.824-3l.176,0Z" transform="translate(-18.764 -7.493)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-7" d="M61.425,8.462H59.19V1.331A1.117,1.117,0,0,1,60.307.213h0a1.117,1.117,0,0,1,1.118,1.118Z" transform="translate(-33.305)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-9" d="M67.279,8.462H65.044V1.331a1.118,1.118,0,1,1,2.235,0Z" transform="translate(-36.6)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-15" d="M35.868,89.621h0A12.252,12.252,0,0,1,23.616,77.369v-11.8a2.557,2.557,0,0,1,2.557-2.557h19.39a2.557,2.557,0,0,1,2.557,2.557v11.8A12.252,12.252,0,0,1,35.868,89.621" transform="translate(-17.019 -22.148)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-22" d="M45.474,77.354a9.606,9.606,0,1,1-9.606-9.606,9.606,9.606,0,0,1,9.606,9.606" transform="translate(-17.742 -14.362)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-24" d="M78.064,71.635a4.044,4.044,0,1,1-4.044-4.044,4.044,4.044,0,0,1,4.044,4.044" transform="translate(-41.785 -14.742)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <rect id="Rectangular-6" data-name="Rectangular" width="11.231" height="2.622" transform="translate(22.201 8.015)" fill="#939ead"/>
+      </g>
+      <line id="Route-14Backup-35" x1="58.484" y2="130.634" transform="translate(616.5 716.866)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <g id="Group-10" transform="translate(519.827 571.928)">
+        <line id="Route-14Backup-36" y2="33" transform="translate(96.623 31.786)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <g id="Group-25Backup-5" transform="translate(-9 2.286)">
+          <rect id="RectangularBk-30" width="334.152" height="46" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="FrontNoxDsName1" transform="translate(8 30)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Pre-NOx concentration:</tspan></text>
+          <text id="FrontNoxDsValue1" transform="translate(249.173 32.786)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <circle id="OvalBk-53" cx="4" cy="4" r="4" transform="translate(93.173 63.072)" fill="#0770eb"/>
+      </g>
+      <line id="Route-14Backup-37" x2="0.935" y2="112.555" transform="translate(845.565 715.945)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <line id="Route-14Backup-38" x2="28" y2="161" transform="translate(1046.5 715.5)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <line id="Route-14Backup-39" x1="3.76" y2="100.022" transform="translate(1375.5 716.478)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <line id="Route-14Backup-42" x1="42" y1="30" transform="translate(895.5 554.5)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <g id="Group-13" transform="translate(788.021 293.695)">
+        <g id="Group-14Backup-11">
+          <rect id="RectangularBk-30-2" data-name="RectangularBk-30" width="278.039" height="123.413" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="UreaNozzle" transform="translate(27 34)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Urea nozzle</tspan></text>
+          <circle id="Oval" cx="4" cy="4" r="4" transform="translate(15 21.327)" fill="#333"/>
+          <text id="UreaNozzleDsValue1" transform="translate(173.978 106.564)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaNozzleDsName1" transform="translate(9 105.564)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">injection rate:</tspan></text>
+          <text id="UreaPumpDsName1" transform="translate(9 69.707)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">urea pressure:</tspan></text>
+          <text id="UreaPumpDsValue1" transform="translate(163.978 71.305)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+      </g>
+      <g id="Group-14" transform="translate(1134.853 584.937)">
+        <line id="Route-14Backup-44" x1="41.177" y1="21.729" transform="translate(264.47 48.467)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <g id="Group-25Backup-4">
+          <rect id="RectangularBk-30-3" data-name="RectangularBk-30" width="353.143" height="48" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="RearNoxDsName1" transform="translate(9 32)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Post NOx concentration:</tspan></text>
+          <text id="RearNoxDsValue1" transform="translate(260.147 36)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <circle id="OvalBk-61" cx="4" cy="4" r="4" transform="translate(297.214 66.26)" fill="#0770eb"/>
+      </g>
+      <g id="Set_8" data-name="Set 8" transform="translate(453.488 847.282)">
+        <rect id="RectangularBk-91" width="378.466" height="41" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+        <text id="DOC_TemperatureSensorDsName1" transform="translate(11.022 29)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">DOC upstream temperature:</tspan></text>
+        <text id="DOC_TemperatureSensorDsValue1" transform="translate(284.512 32.718)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+      </g>
+      <g id="Set_9" data-name="Set 9" transform="translate(643.014 796)">
+        <rect id="RectangularBk-92" width="382.286" height="41" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+        <text id="DPF_InTemperatureSensorDsName1" transform="translate(11.022 29)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">DPF upstream temperature:</tspan></text>
+        <text id="DPF_InTemperatureSensorDsValue1" transform="translate(284.986 31)" fill="#0770eb" font-size="22" font-family="SimSun" opacity="0.9"><tspan x="0" y="0">---</tspan></text>
+      </g>
+      <g id="Set_10" data-name="Set 10" transform="translate(918.977 876.641)">
+        <rect id="RectangularBk-93" width="390.312" height="41.262" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+        <text id="SCR_InTemperatureSensorDsName1" transform="translate(11.022 29.262)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">SCR upstream temperature:</tspan></text>
+        <text id="SCR_InTemperatureSensorDsValue1" transform="translate(286.023 30.359)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+      </g>
+      <g id="Group-6" transform="translate(1123 814.832)">
+        <rect id="RectangularBk-94" width="401.417" height="40" rx="10" transform="translate(-33)" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+        <text id="SCR_OutTemperatureSensorDsName1" transform="translate(-25.978 28)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">SCR downstream temperature:</tspan></text>
+        <text id="SCR_OutTemperatureSensorDsValue1" transform="translate(272 29.168)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+      </g>
+      <g id="Group-31Backup-2" transform="translate(612.681 431.461)">
+        <rect id="RectangularBk-30-4" data-name="RectangularBk-30" width="395.497" height="123.413" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+        <text id="DifPressureSensor" transform="translate(27 30)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Differential pressure sensor</tspan></text>
+        <circle id="Oval-2" data-name="Oval" cx="4" cy="4" r="4" transform="translate(15 21.198)" fill="#333"/>
+        <text id="DifPressureSensorDsName1" transform="translate(15 70.914)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">DPF differential pressure:</tspan></text>
+        <text id="DifPressureSensorDsValue1" transform="translate(301.768 72.046)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        <text id="DifPressureSensorDsValue2" transform="translate(192.266 113.046)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        <text id="DifPressureSensorDsName2" transform="translate(15 111.413)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">DPF carbon load:</tspan></text>
+      </g>
+      <circle id="OvalBk-52" cx="4" cy="4" r="4" transform="translate(672 708)" fill="#0770eb"/>
+      <circle id="OvalBk-54" cx="4" cy="4" r="4" transform="translate(841.565 710.178)" fill="#0770eb"/>
+      <circle id="OvalBk-55" cx="4" cy="4" r="4" transform="translate(1042.06 710.178)" fill="#0770eb"/>
+      <circle id="OvalBk-56" cx="4" cy="4" r="4" transform="translate(1375.26 711.974)" fill="#0770eb"/>
+      <path id="OvalBk-59" d="M4,0A4,4,0,0,1,4,8,4.141,4.141,0,0,1,0,4,4.141,4.141,0,0,1,4,0Z" transform="translate(935 578)" fill="#0770eb"/>
+      <g id="Group-5" transform="translate(1387.259 144.582)">
+        <path id="Fill-13-2" data-name="Fill-13" d="M21.588,70.708H12.93v-.234a.651.651,0,0,0-1.3,0v.234H5.306a1.617,1.617,0,0,0-1.672,1.556v.119a1.617,1.617,0,0,0,1.672,1.556H11.63v.234a.651.651,0,0,0,1.3,0v-.234h8.658Z" transform="translate(0)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-1-2" data-name="Fill-1" d="M50.332,139.737H33.445v12.1a1.644,1.644,0,0,0,.9,1.464L38.3,155.32a1.649,1.649,0,0,0,.748.18H49.937a1.648,1.648,0,0,0,.748-.18l3.961-2.024a1.644,1.644,0,0,0,.9-1.464v-12.1Z" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-3" d="M31.115,0H43.667a6.643,6.643,0,0,1,4.382,1.65l8.5,7.462a4.354,4.354,0,0,1,1.483,3.273v1.554l11.12,10.387a5.354,5.354,0,0,1,1.7,3.913V53.968h1.524a1.48,1.48,0,0,1,1.48,1.48v2.6h-60V55.085a1.48,1.48,0,0,1,1.48-1.48h.612V35.3h-9.2a3.835,3.835,0,0,1-3.835-3.835V22.133A3.835,3.835,0,0,1,6.761,18.3h10.08a1.609,1.609,0,0,1,1.609-1.609h5.739l1.287-1.717V8.535a7.242,7.242,0,0,1,1.448-4.346h0A4.191,4.191,0,0,1,31.114,0" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <circle id="Oval-3" data-name="Oval" cx="6.817" cy="6.817" r="6.817" transform="translate(41.288 8.291)" fill="#939ead" stroke="#000" stroke-width="1"/>
+        <path id="Fill-5" d="M55.943,146.656h-22.9a9.012,9.012,0,0,1-9.012-9.012V87.665H64.955v49.979a9.012,9.012,0,0,1-9.012,9.012" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-7-2" data-name="Fill-7" d="M73.859,58.051h-60v1.872a2.589,2.589,0,0,0,2.589,2.589h2.708V85.339a2.327,2.327,0,0,0,2.327,2.327H67.5a2.327,2.327,0,0,0,2.327-2.327V62.512H71.27a2.589,2.589,0,0,0,2.589-2.589Z" transform="translate(0)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-9-2" data-name="Fill-9" d="M94.146,76.013,88.7,75.986l-4.77-2.177H69.83V86.071h14.1l4.77-2.178,5.446-.027a2.406,2.406,0,0,0,2.406-2.406V78.42a2.406,2.406,0,0,0-2.406-2.406" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-14" d="M20.019,74.381H10.365V74.1a.724.724,0,1,0-1.449,0v.281H1.864A1.864,1.864,0,0,0,0,76.245v.142a1.864,1.864,0,0,0,1.864,1.865H8.916v.281a.724.724,0,1,0,1.449,0v-.281h9.654Z" transform="translate(0)" fill="#b8c5d9" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-15-2" data-name="Fill-15" d="M41.354,59.922c2.709-.644,15.134-2.6,16.306,4.827,1.126,7.137-4.716,21.992-9.709,21.992-5.793,0-13.638-8.039-16.267-16.355-2.256-7.137,6-9.594,9.669-10.464" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="Fill-11-2" data-name="Fill-11" d="M19.161,79.312h2.427V67.082H19.161Z" transform="translate(0)" fill="#939ead" stroke="#000" stroke-width="1" fill-rule="evenodd"/>
+        <path id="ShapeCombBackup" d="M44.79,75.587l.31,2.686a.883.883,0,0,1-1.222.913L41.419,78.14a.882.882,0,0,1-.19-1.513l2.149-1.64a.883.883,0,0,1,1.412.6Zm2.063-.336a.882.882,0,0,1,1.226-.922L50.56,75.4a.883.883,0,0,1,.18,1.515L48.6,78.524a.883.883,0,0,1-1.406-.592ZM39.375,70.8l2.494,1.042a.882.882,0,0,1,.186,1.523l-2.171,1.611a.883.883,0,0,1-1.4-.6l-.324-2.653a.883.883,0,0,1,1.215-.923Zm5.97-.719a2.025,2.025,0,1,1-2.025,2.025,2.025,2.025,0,0,1,2.025-2.025Zm6.862-.243.324,2.653a.883.883,0,0,1-1.216.921l-2.5-1.039a.882.882,0,0,1-.186-1.523l2.171-1.611a.883.883,0,0,1,1.4.6ZM42.085,65.693a.883.883,0,0,1,1.406.593l.345,2.681a.882.882,0,0,1-1.226.922l-2.48-1.075a.883.883,0,0,1-.18-1.515Zm4.727-.661,2.459,1.046a.882.882,0,0,1,.19,1.514l-2.15,1.64a.883.883,0,0,1-1.412-.6l-.31-2.685a.883.883,0,0,1,1.223-.915Z" transform="translate(0)" fill="#b8c5d9" stroke="#000" stroke-width="0.5" fill-rule="evenodd"/>
+        <g id="Group-3" transform="translate(37.637 102.507)" opacity="0.3">
+          <rect id="Rectangular-7" data-name="Rectangular" width="1.285" height="39.839"/>
+          <rect id="RectangularBk-4" width="1.285" height="39.839" transform="translate(12.428)"/>
+        </g>
+    </g>
+      <g id="Group-23" transform="translate(44 34)">
+        <g id="Set_6" data-name="Set 6" transform="translate(540)">
+          <rect id="RectangularBk-22" width="246" height="98" rx="14" fill="#f0f7ff" stroke="#adbacc" stroke-width="2"/>
+          <text id="AcceleratorPedalStatus" transform="translate(72 40)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">Accelerator</tspan></text>
+          <text id="AcceleratorPedalStatusValue" transform="translate(72 79)" fill="#666" font-size="26" font-family="SimSun"><tspan x="0" y="0">step on</tspan></text>
+          <g id="Group-21" transform="translate(7 19)">
+            <rect id="Rectangular-8" data-name="Rectangular" width="59" height="51" transform="translate(0 0)" fill="none"/>
+            <g id="GroupBackup-3" transform="translate(0.499)">
+              <g id="Group">
+                <path id="AcceleratorPedalColor" d="M3.917,22.667a1.919,1.919,0,0,1,2.809.6L23.258,43.65l.184.231a2.637,2.637,0,0,1,.476,1.53,2.545,2.545,0,0,1-.921,2l-2.073,2.361A2.744,2.744,0,0,1,18.7,51H3.976a2.645,2.645,0,0,1-1.863-.8l-.278-.308L.665,48.56l-.147-.152-.066-.094A2.758,2.758,0,0,1,.4,45.37c.009-.01.014-.028.021-.036l.073-.076L7.683,36.7,1.014,29.1a2.666,2.666,0,0,1,0-3.783L3.6,22.966ZM53.464,0a2.305,2.305,0,0,1,2.108,2.445v.1l2.4,17.517h-.037q.034.335.051.669a12.254,12.254,0,0,1-.009,1.4l-.015.264-.04.425-.029.323-.051.351-.059.359q-.049.344-.131.68c-.012.085-.035.17-.053.248l-.1.416a1.527,1.527,0,0,0-.048.192c-.051.149-.089.3-.14.444l-.046.125c-.056.17-.1.331-.168.492h.053l-.266.53a14.206,14.206,0,0,1-.7,1.416L54.414,31.96a1.739,1.739,0,0,1-.124.244.982.982,0,0,1-.666.466.9.9,0,0,1-.752-.233l-.162-.183-.021-.02-2.562-2.959L47.744,33.4l.514.59.68.786c.6.687-.405,4.122-1.191,5.5-.536.928-3.637,5.023-5.572,7.558a2.088,2.088,0,0,1-1.62,1.086,1.992,1.992,0,0,1-1.733-.819l-7.057-7.127-.212-.212a1.262,1.262,0,0,1-.2-1.19l.1-.212c.186-.456.463-1.062.79-1.841-.195-1.139-6.553-4.574-7.149-4.12s-4.374-1.149-5.964-2.753C17.971,29.472,12.1,23.365,9.054,20.194a2.524,2.524,0,0,1-.845-1.748A2.645,2.645,0,0,1,8.8,16.561l.244-.241c1.725-1.743,4.219-3.969,5.326-3.544,1.784.687,5.76,4.582,8.348,5.5a42.479,42.479,0,0,0,7.622,1.076L31,19.4c1.975.149,3.891.247,5.28.275a14.418,14.418,0,0,0,1.935-.034c1.584-.229,3.575-2.746,3.575-2.746l-1.553-1.793-.186-.207a1.3,1.3,0,0,1-.21-.715,1.275,1.275,0,0,1,.444-.97L43.952,9.3,51.771.983A2.009,2.009,0,0,1,53.464,0Z" transform="translate(0.001 0)" fill="#adbacc" fill-rule="evenodd"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Set_7" data-name="Set 7" transform="translate(833)">
+          <rect id="Rectangular-9" data-name="Rectangular" width="362" height="98" rx="14" transform="translate(246)" fill="#f0f7ff" stroke="#adbacc" stroke-width="2"/>
+          <rect id="Rectangular-10" data-name="Rectangular" width="246" height="98" rx="14" transform="translate(-24)" fill="#f0f7ff" stroke="#adbacc" stroke-width="2"/>
+          <text id="NeutralSwitchStatusValue" transform="translate(51 79)" fill="#666" font-size="26" font-family="SimSun"><tspan x="0" y="0">engage</tspan></text>
+          <text id="NeutralSwitchStatus" transform="translate(47 40)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">parking brake</tspan></text>
+          <path id="NeutralSwitchColor" d="M28.2,0A28.351,28.351,0,0,1,56.4,28.5,28.351,28.351,0,0,1,28.2,57,28.351,28.351,0,0,1,0,28.5,28.351,28.351,0,0,1,28.2,0Zm0,4.886a23.616,23.616,0,0,0,0,47.229,23.616,23.616,0,0,0,0-47.229Zm-4.028,11.4L33.839,34.2V16.286h4.834V40.714H32.228L22.56,22.8V40.714H17.725V16.286Z" transform="translate(-15 20.5)" fill="#adbacc"/>
+          <text id="DPF_Status" transform="translate(262 40)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">DPF regeneration status</tspan></text>
+          <text id="DPF_StatusValue" transform="translate(262 79)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <g id="Set_5" data-name="Set 5" transform="translate(261)">
+          <rect id="RectangularBk-28" width="256" height="98" rx="14" fill="#f0f7ff" stroke="#adbacc" stroke-width="2"/>
+          <text id="ClutchSwitchStatus" transform="translate(72 40)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">clutch switch</tspan></text>
+          <text id="ClutchSwitchStatusValue" transform="translate(66 79)" fill="#666" font-size="26" font-family="SimSun"><tspan x="0" y="0">not stepped on</tspan></text>
+          <g id="Group-21-2" data-name="Group-21" transform="translate(7 19)">
+            <rect id="Rectangular-11" data-name="Rectangular" width="59" height="51" transform="translate(0 0)" fill="none"/>
+            <g id="GroupBackup-3-2" data-name="GroupBackup-3" transform="translate(0.499)">
+              <g id="Group-2" data-name="Group">
+                <path id="ClutchSwitchColor" d="M3.917,22.667a1.919,1.919,0,0,1,2.809.6L23.258,43.65l.184.231a2.637,2.637,0,0,1,.476,1.53,2.545,2.545,0,0,1-.921,2l-2.073,2.361A2.744,2.744,0,0,1,18.7,51H3.976a2.645,2.645,0,0,1-1.863-.8l-.278-.308L.665,48.56l-.147-.152-.066-.094A2.758,2.758,0,0,1,.4,45.37c.009-.01.014-.028.021-.036l.073-.076L7.683,36.7,1.014,29.1a2.666,2.666,0,0,1,0-3.783L3.6,22.966ZM53.464,0a2.305,2.305,0,0,1,2.108,2.445v.1l2.4,17.517h-.037q.034.335.051.669a12.254,12.254,0,0,1-.009,1.4l-.015.264-.04.425-.029.323-.051.351-.059.359q-.049.344-.131.68c-.012.085-.035.17-.053.248l-.1.416a1.527,1.527,0,0,0-.048.192c-.051.149-.089.3-.14.444l-.046.125c-.056.17-.1.331-.168.492h.053l-.266.53a14.206,14.206,0,0,1-.7,1.416L54.414,31.96a1.739,1.739,0,0,1-.124.244.982.982,0,0,1-.666.466.9.9,0,0,1-.752-.233l-.162-.183-.021-.02-2.562-2.959L47.744,33.4l.514.59.68.786c.6.687-.405,4.122-1.191,5.5-.536.928-3.637,5.023-5.572,7.558a2.088,2.088,0,0,1-1.62,1.086,1.992,1.992,0,0,1-1.733-.819l-7.057-7.127-.212-.212a1.262,1.262,0,0,1-.2-1.19l.1-.212c.186-.456.463-1.062.79-1.841-.195-1.139-6.553-4.574-7.149-4.12s-4.374-1.149-5.964-2.753C17.971,29.472,12.1,23.365,9.054,20.194a2.524,2.524,0,0,1-.845-1.748A2.645,2.645,0,0,1,8.8,16.561l.244-.241c1.725-1.743,4.219-3.969,5.326-3.544,1.784.687,5.76,4.582,8.348,5.5a42.479,42.479,0,0,0,7.622,1.076L31,19.4c1.975.149,3.891.247,5.28.275a14.418,14.418,0,0,0,1.935-.034c1.584-.229,3.575-2.746,3.575-2.746l-1.553-1.793-.186-.207a1.3,1.3,0,0,1-.21-.715,1.275,1.275,0,0,1,.444-.97L43.952,9.3,51.771.983A2.009,2.009,0,0,1,53.464,0Z" transform="translate(0.001 0)" fill="#adbacc" fill-rule="evenodd"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Set_4" data-name="Set 4" transform="translate(-18)">
+          <rect id="RectangularBk-29" width="256" height="98" rx="14" fill="#f0f7ff" stroke="#adbacc" stroke-width="2"/>
+          <text id="BrakeSwitchStatus" transform="translate(81 40)" fill="#333" font-size="26" font-family="SimSun"><tspan x="0" y="0">brake switch</tspan></text>
+          <text id="BrakeSwitchStatusValue" transform="translate(66 79)" fill="#666" font-size="26" font-family="SimSun"><tspan x="0" y="0">not stepped on</tspan></text>
+          <g id="Group-21-3" data-name="Group-21" transform="translate(7 19)">
+            <rect id="Rectangular-12" data-name="Rectangular" width="59" height="51" transform="translate(0 0)" fill="none"/>
+            <g id="Group-3-2" data-name="Group" transform="translate(0.499)">
+              <path id="BrakeSwitchColor" d="M3.919,22.667a1.92,1.92,0,0,1,2.81.6l16.54,20.38.184.231a2.636,2.636,0,0,1,.476,1.53,2.545,2.545,0,0,1-.921,2l-2.074,2.361A2.746,2.746,0,0,1,18.7,51H3.978a2.647,2.647,0,0,1-1.864-.8L1.836,49.9.665,48.561l-.147-.152-.066-.094A2.757,2.757,0,0,1,.4,45.37c.009-.01.014-.028.021-.036l.073-.077L7.687,36.7,1.015,29.1a2.665,2.665,0,0,1,0-3.783L3.6,22.966ZM53.49,0A2.306,2.306,0,0,1,55.6,2.445v.1L58,20.06h-.037q.034.335.051.669a12.248,12.248,0,0,1-.009,1.4l-.015.264-.04.425-.029.323-.051.351-.059.359q-.049.344-.131.68c-.012.085-.035.17-.053.248l-.1.416a1.527,1.527,0,0,0-.048.192c-.051.149-.089.3-.14.444l-.046.125c-.056.17-.1.331-.168.492h.053l-.266.53a14.2,14.2,0,0,1-.7,1.416L54.44,31.96a1.74,1.74,0,0,1-.124.244.983.983,0,0,1-.667.466.9.9,0,0,1-.752-.233l-.162-.183-.021-.02-2.563-2.959L47.767,33.4l.514.59.68.786c.6.687-.405,4.123-1.191,5.5-.536.928-3.639,5.023-5.574,7.558a2.089,2.089,0,0,1-1.621,1.086,1.993,1.993,0,0,1-1.734-.819l-7.06-7.127-.212-.213a1.262,1.262,0,0,1-.2-1.19l.1-.212c.186-.456.463-1.062.79-1.841-.195-1.139-6.556-4.574-7.153-4.12s-4.376-1.149-5.967-2.753c-1.163-1.177-7.036-7.285-10.084-10.455a2.523,2.523,0,0,1-.846-1.748A2.645,2.645,0,0,1,8.8,16.561l.244-.241c1.725-1.743,4.221-3.969,5.328-3.544,1.785.687,5.762,4.582,8.352,5.5a42.52,42.52,0,0,0,7.626,1.076l.661.051c1.976.149,3.893.247,5.282.275a14.432,14.432,0,0,0,1.936-.034c1.585-.229,3.577-2.746,3.577-2.746l-1.554-1.793-.186-.207a1.3,1.3,0,0,1-.21-.715,1.275,1.275,0,0,1,.444-.97L43.974,9.3,51.8.983A2.01,2.01,0,0,1,53.49,0Z" transform="translate(0.001 0)" fill="#adbacc" fill-rule="evenodd"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group-32" transform="translate(22.508 161.321)">
+        <g id="Group-12" transform="translate(25.464 523.802)">
+          <path id="ShapeComb-15" data-name="ShapeComb" d="M18.123,32.753l.137.007c1.12.129,1.861,1.779,1.875,3.722.012,1.733,0,3.468,0,5.2v82.584c-.009,1.756-.588,3.354-1.6,3.694-.922.309-1.587-.556-2.188-1.693a30.928,30.928,0,0,1-1.656-3.835,63.344,63.344,0,0,1-2.445-8.887A79.064,79.064,0,0,1,10.788,94.84a81.542,81.542,0,0,1,.958-9.745,31.328,31.328,0,0,0,.718-4.564,25.831,25.831,0,0,0-.673-4.56c-2.058-12.432-1.1-26.417,2.818-37.38a32.927,32.927,0,0,1,1.6-3.8c.551-1.087,1.171-2.137,2.053-2.035Z" transform="translate(0 -9.379)" fill-rule="evenodd"/>
+          <path id="Rectangular-13" data-name="Rectangular" d="M42.779,34.716H329.526a4.87,4.87,0,0,1,4.87,4.87V127.5H42.779a10.957,10.957,0,0,1-10.957-10.957V45.673A10.958,10.958,0,0,1,42.778,34.716Z" transform="translate(0 -3.07)" fill-rule="evenodd"/>
+          <rect id="RectangularBk-43" width="271.929" height="75.153" transform="translate(43.759 49.346)" fill="#a8a8b3" stroke="#000" stroke-width="2.435"/>
+          <rect id="RectangularBk-57" width="273.147" height="3.134" transform="translate(43.15 35.609)" fill="#a8a8b3" stroke="#000" stroke-width="1.217"/>
+          <path id="RectangularBk-58" d="M43.759,22.092H315.688a1.217,1.217,0,0,1,1.217,1.218V31.5H42.541V23.309A1.218,1.218,0,0,1,43.759,22.092Z" transform="translate(0)" fill-rule="evenodd"/>
+          <path id="RectangularBk-61" d="M7.938,72.451H42.144V88.326H7.938a7.938,7.938,0,1,1,0-15.876Z" transform="translate(0 -3.421)" fill-rule="evenodd"/>
+          <path id="RectangularBk-62" d="M56.1,172.473H68.7v5.992a2.435,2.435,0,0,1-2.435,2.435H58.54a2.435,2.435,0,0,1-2.435-2.435v-5.992Z" transform="translate(0 -7.792)" fill-rule="evenodd"/>
+          <path id="RectangularBk-63" d="M341.774,65.972a7.914,7.914,0,0,1,7.914,7.914v43.447a7.914,7.914,0,0,1-7.913,7.913h-8.36V65.972Z" transform="translate(0 -4.227)" fill="#909499" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-60" d="M63.94,0h22.7a3.652,3.652,0,0,1,3.652,3.652v6.706H60.287V3.652A3.653,3.653,0,0,1,63.94,0Z" transform="translate(0)" fill-rule="evenodd"/>
+          <path id="RectangularBk-59" d="M308.638,8a4.26,4.26,0,0,1,4.092,3.074l3.37,11.583H43.352l3.365-11.585A4.261,4.261,0,0,1,50.809,8Z" transform="translate(0)" fill="#565a61" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <rect id="RectangularBk-43-2" data-name="RectangularBk-43" width="12.614" height="69.902" transform="translate(268.35 66.298)" fill="#5f6164" stroke="#000" stroke-width="1.217"/>
+          <rect id="RectangularBk-46" width="12.614" height="69.902" transform="translate(221.402 66.298)" fill="#5f6164" stroke="#000" stroke-width="1.217"/>
+          <path id="RectangularBk-51" d="M278.325,35.325a5.212,5.212,0,0,1,5.113,6.243L279.594,60.7h-12.98l3.8-18.9a8.072,8.072,0,0,1,7.915-6.483Z" transform="translate(0 -1.77)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-54" d="M11.71,25.378a5.217,5.217,0,0,0,5.114-6.243L12.98,0H0L3.8,18.9a8.074,8.074,0,0,0,7.915,6.483Z" transform="translate(154.647 58.933) rotate(180)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-52" d="M245.5,35.325a5.217,5.217,0,0,1,5.114,6.243L246.772,60.7H233.791l3.8-18.9a8.072,8.072,0,0,1,7.915-6.483Z" transform="translate(0 -1.77)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-55" d="M11.711,25.378a5.212,5.212,0,0,0,5.113-6.243L12.98,0H0L3.8,18.9a8.072,8.072,0,0,0,7.915,6.483Z" transform="translate(121.824 58.933) rotate(180)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-53" d="M213.227,35.325a5.217,5.217,0,0,1,5.114,6.243L214.5,60.7H201.52l3.795-18.9a8.074,8.074,0,0,1,7.915-6.483Z" transform="translate(0 -1.77)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <path id="RectangularBk-56" d="M11.711,25.378a5.216,5.216,0,0,0,5.114-6.243L12.981,0H0L3.8,18.9a8.073,8.073,0,0,0,7.915,6.483Z" transform="translate(89.55 58.933) rotate(180)" fill="#ff8000" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+          <rect id="RectangularBk-47" width="12.614" height="69.902" transform="translate(174.454 66.298)" fill="#5f6164" stroke="#000" stroke-width="1.217"/>
+          <rect id="RectangularBk-48" width="12.614" height="69.902" transform="translate(127.506 66.298)" fill="#5f6164" stroke="#000" stroke-width="1.217"/>
+          <rect id="RectangularBk-49" width="12.614" height="69.902" transform="translate(80.558 66.298)" fill="#5f6164" stroke="#000" stroke-width="1.217"/>
+          <rect id="RectangularBk-50" width="216.635" height="13.476" rx="6.738" transform="translate(71.337 57.636)" fill="#ff8000" stroke="#000" stroke-width="1.217"/>
+          <path id="RectangularBk-44" d="M139.02,141.922V162.55a9.741,9.741,0,0,1-9.739,9.74H53.5a9.74,9.74,0,0,1-9.74-9.74V141.922Z" transform="translate(0 -7.792)" fill="#565a61" stroke="#000" stroke-width="2.435" fill-rule="evenodd"/>
+          <rect id="RectangularBk-45" width="177.663" height="11.041" transform="translate(139.74 138.683)" fill="#909499" stroke="#000" stroke-width="3.652"/>
+          <path id="Rectangular-14" data-name="Rectangular" d="M316.9,34.716h12.621c2.689,0,4.87,2.469,4.87,5.515V172.174c0,3.046-2.181,5.515-4.87,5.515H321.77c-2.689,0-4.87-2.469-4.87-5.515Z" transform="translate(0 -24.52)" fill-rule="evenodd"/>
+          <path id="Rectangular-15" data-name="Rectangular" d="M329.526,35.325a4.014,4.014,0,0,1,3.013,1.415,5.159,5.159,0,0,1,1.248,3.416V172.249a5.163,5.163,0,0,1-1.248,3.417,4.014,4.014,0,0,1-3.013,1.415h-6.085V35.325Z" transform="translate(0 -24.52)" fill="#909499" stroke="#000" stroke-width="1.217" fill-rule="evenodd"/>
+        </g>
+        <path id="Route-5" d="M254.327,653.367v47.1c0,9.763-6.489,17.676-14.5,17.676H33.43c-8.005,0-14.5-7.913-14.5-17.676V307.137c0-9.763,6.49-17.676,14.5-17.676h31.2" transform="translate(-0.591 16.795)" fill="none" stroke="#ff8000" stroke-width="20" fill-rule="evenodd"/>
+        <g id="Group-3-3" data-name="Group-3" transform="translate(-0.005 324.719)">
+          <path id="RectangularBk-4-2" data-name="RectangularBk-4" d="M11.969,2.593,35.721,5.5a1.773,1.773,0,0,1,1.558,1.76V18.016a1.773,1.773,0,0,1-1.558,1.76L11.969,22.684Z" transform="translate(-0.591 -0.591)" fill="#aaa" stroke="#000" stroke-width="1.182" fill-rule="evenodd"/>
+          <rect id="Rectangular-16" data-name="Rectangular" width="11.79" height="24.094" rx="2.364" fill="#aaa" stroke="#000" stroke-width="1.182"/>
+        </g>
+        <path id="Route-6" d="M108.813,548.578H80.4V55.117A18.626,18.626,0,0,1,98.913,36.381H483.071a18.624,18.624,0,0,1,18.513,18.736V575.861h0" transform="translate(-23.855 -11)" fill="none" stroke="#20bddb" stroke-width="20" fill-rule="evenodd"/>
+        <g id="Group-6-2" data-name="Group-6" transform="translate(180.909)">
+          <rect id="Rectangular-17" data-name="Rectangular" width="154.599" height="44.016" transform="translate(1.5 1.5)" fill="#5fd992" stroke="#000" stroke-width="3"/>
+          <g id="Group-5-2" data-name="Group-5" transform="translate(10.784 9.824)">
+            <line id="Route-7" x2="136.031" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup" x2="136.031" transform="translate(0 7.607)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-2" x2="136.031" transform="translate(0 7.391)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-5" x2="136.031" transform="translate(0 11.086)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-7" x2="136.031" transform="translate(0 14.782)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-8" x2="136.031" transform="translate(0 18.477)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-9" x2="136.031" transform="translate(0 18.261)" fill="none" stroke="#000" stroke-width="1"/>
+            <line id="Route-7Backup-10" x2="136.031" transform="translate(0 25.868)" fill="none" stroke="#000" stroke-width="1"/>
+          </g>
+          <rect id="Rectangular-18" data-name="Rectangular" width="5.253" height="45.516"/>
+          <rect id="RectangularBk-5" width="5.253" height="45.516" transform="translate(152.345)"/>
+        </g>
+        <g id="Group-19" transform="translate(68.536 707.436)">
+          <rect id="Rectangular-19" data-name="Rectangular" width="149" height="55" rx="10" fill="#b3b3b3" stroke="#000" stroke-width="1"/>
+          <text id="EGR_Cooler" transform="translate(20 35.5)" font-size="22" font-family="SimSun"><tspan x="0" y="0">EGR cooler</tspan></text>
+        </g>
+        <path id="Route-8" d="M546.837,493.366v108.9c0,8.837-8.743,16-19.527,16h-277c-10.784,0-19.527-7.163-19.527-16v-82.38h0" transform="translate(-24.345 54.54)" fill="none" stroke="#ff8000" stroke-width="20" fill-rule="evenodd"/>
+        <g id="Group-20" transform="translate(441.492 527.802)">
+          <rect id="Rectangular-20" data-name="Rectangular" width="108.413" height="30.897" rx="6" transform="translate(0 20.028)" fill="#b3b3b3" stroke="#000" stroke-width="1"/>
+          <rect id="Rectangular-21" data-name="Rectangular" width="38.763" height="30.897" rx="6" transform="translate(0 20.028)" fill="#20bddb" stroke="#000" stroke-width="1"/>
+          <rect id="Rectangular-22" data-name="Rectangular" width="30.541" height="70.953" rx="11" transform="translate(21.366)" fill="#20bddb" stroke="#000" stroke-width="1"/>
+          <rect id="RectangularBk-6" width="30.541" height="70.953" rx="11" transform="translate(66.706)" fill="#ff8000" stroke="#000" stroke-width="1"/>
+        </g>
+        <path id="Route-14Backup" d="M0,255.174l14.553-93.2L36.526,21.265,39.846,0" transform="translate(36.683 81.592)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <line id="Route-14Backup-2" y1="117.685" x2="16.75" transform="translate(99.992 410.494)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <g id="Set_12" data-name="Set 12" transform="translate(267.492 730.679)">
+          <rect id="Rectangular-23" data-name="Rectangular" width="391" height="45" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="OuttakeThrottleValveDsName1" transform="translate(9 31)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">exhaust throttle position:</tspan></text>
+          <text id="OuttakeThrottleValveDsValue1" transform="translate(295 34)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <g id="Set_11" data-name="Set 11" transform="translate(68.492 63.679)">
+          <rect id="RectangularBk-30-5" data-name="RectangularBk-30" width="346" height="44" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="EGR_ValveDsName1" transform="translate(10 32)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">EGR valve opening:</tspan></text>
+          <text id="EGR_ValveDsValue1" transform="translate(209 36)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <text id="Booster" transform="translate(411.492 517.679)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">supercharger</tspan></text>
+        <g id="Set_14" data-name="Set 14" transform="translate(71.492 136.679)">
+          <rect id="RectangularBk-30-6" data-name="RectangularBk-30" width="392" height="362" rx="10" transform="translate(-3)" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="EngineData" transform="translate(24 40)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Engine</tspan></text>
+          <circle id="Oval-4" data-name="Oval" cx="4" cy="4" r="4" transform="translate(7 28)" fill="#333"/>
+          <text id="EngineDataDsName1" transform="translate(1 79)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">engine status:</tspan></text>
+          <text id="EngineDataDsValue1" transform="translate(156 82)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName2" transform="translate(1 122)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">engine speed:</tspan></text>
+          <text id="EngineDataDsValue2" transform="translate(144 124)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName3" transform="translate(1 167)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">coolant temperature:</tspan></text>
+          <text id="EngineDataDsValue3" transform="translate(221 169)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName4" transform="translate(1 209)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">ambient temperature:</tspan></text>
+          <text id="EngineDataDsValue4" transform="translate(222 211)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName5" transform="translate(1 256)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">battery voltage:</tspan></text>
+          <text id="EngineDataDsValue5" transform="translate(179 259)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName6" transform="translate(1 302)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">intake manifold pressure:</tspan></text>
+          <text id="EngineDataDsValue6" transform="translate(276 304)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="EngineDataDsName7" transform="translate(1 342)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">intake manifold temperature:</tspan></text>
+          <text id="EngineDataDsValue7" transform="translate(308 345)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+        <circle id="OvalBk" cx="4" cy="4" r="4" transform="translate(33.492 328.679)" fill="#0770eb"/>
+        <circle id="OvalBk-2" cx="4" cy="4" r="4" transform="translate(92.35 523.802)" fill="#0770eb"/>
+        <g id="Group-4-2" data-name="Group-4" transform="translate(341.926 701.417) rotate(-90.974)">
+          <path id="RectangularBk-4-3" data-name="RectangularBk-4" d="M18.2,0a4.138,4.138,0,0,1,4.137,4.136v5.3A4.138,4.138,0,0,1,18.2,13.575H0V0Z" transform="translate(8.566 5.26)" fill="#aaa" stroke="#000" stroke-width="1.182" fill-rule="evenodd"/>
+          <rect id="Rectangular-24" data-name="Rectangular" width="11.79" height="24.094" rx="2.364" fill="#aaa" stroke="#000" stroke-width="1.182"/>
+          <rect id="Rectangular-25" data-name="Rectangular" width="11.79" height="24.094" rx="2.364" fill="#aaa" stroke="#000" stroke-width="1.182"/>
+        </g>
+      </g>
+      <path id="UreaTubeColor1" d="M1299.86,209.994l-10.219-12.6a13.84,13.84,0,0,0-10.761-4.939H908.863" transform="translate(100.637 7.936)" fill="none" stroke="#3b63ad" stroke-width="6" fill-rule="evenodd"/>
+      <path id="UreaTubeColor2" d="M1363.82,219.8h-271.4c-8.636,0-15.649,8.221-15.649,18.363V623.126h0" transform="translate(24.03 2.809)" fill="none" stroke="#3b63ad" stroke-width="5" fill-rule="evenodd"/>
+      <path id="UreaTubeColor3" d="M989.028,704.8V324.664c0-13.385-2.628-24.235-5.872-24.235H916.028" transform="translate(93.472 -78.868)" fill="none" stroke="#3b63ad" stroke-width="5" fill-rule="evenodd"/>
+      <g id="Group-29" transform="translate(1008.178 293.695) rotate(180)">
+        <g id="Group-15">
+          <path id="Rectangular-26" data-name="Rectangular" d="M18.057,13.823V2.486A2.486,2.486,0,0,0,15.571,0H2.486A2.486,2.486,0,0,0,0,2.486V13.823Z" transform="translate(76.433)" fill="#d8d8d8" stroke="#000" stroke-width="1.658" fill-rule="evenodd"/>
+          <path id="ShapeComb-16" data-name="ShapeComb" d="M89.6,141.255a4.98,4.98,0,0,0,4.976-4.971v-3.837h2.057A15.74,15.74,0,0,0,112.371,116.7V15.748A15.75,15.75,0,0,0,96.623,0H15.748A15.75,15.75,0,0,0,0,15.748V116.7a15.746,15.746,0,0,0,15.748,15.748H63.605v3.837a4.971,4.971,0,0,0,4.974,4.971Z" transform="translate(0 6.087)" fill="#e6e6e6" stroke="#000" stroke-width="1.658" fill-rule="evenodd"/>
+          <path id="Rectangular-27" data-name="Rectangular" d="M112.371,98.965V15.748A15.75,15.75,0,0,0,96.623,0H15.748A15.75,15.75,0,0,0,0,15.748V98.965Z" transform="translate(0 6.087)" fill="#6ba3ff" stroke="#000" stroke-width="1.658" fill-rule="evenodd"/>
+        </g>
+        <g id="Group-18" transform="translate(0.399 17.002)">
+          <line id="Route-15" x2="111.94" transform="translate(0 77.135)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 6.649"/>
+          <line id="Route-15Backup-3" x2="111.94" transform="translate(0 48.222)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 6.649"/>
+          <line id="Route-15Backup" x2="111.94" transform="translate(0 67.497)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 4.749"/>
+          <line id="Route-15Backup-4" x2="111.94" transform="translate(0 38.584)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 4.749"/>
+          <line id="Route-15Backup-2" x2="111.94" transform="translate(0 57.86)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="4.749 3.799"/>
+          <line id="Route-15Backup-5" x2="111.94" transform="translate(0 28.946)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="4.749 3.799"/>
+          <line id="Route-15Backup-8" x2="111.94" transform="translate(0 19.276)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 6.649"/>
+          <line id="Route-15Backup-7" x2="111.94" transform="translate(0 9.638)" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="8.549 4.749"/>
+          <line id="Route-15Backup-6" x2="111.94" fill="none" stroke="#000" stroke-width="0.95" stroke-dasharray="4.749 3.799"/>
+        </g>
+    </g>
+      <g id="Group-8" transform="translate(1134.853 229.2)">
+        <line id="Route-14Backup-45" x1="110.509" y2="69.132" transform="translate(158.138 6.118)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <circle id="OvalBk-62" cx="4" cy="4" r="4" transform="translate(266.865)" fill="#0770eb"/>
+        <g id="Group-25Backup-6" transform="translate(0 76.5)">
+          <rect id="RectangularBk-30-7" data-name="RectangularBk-30" width="335" height="243.762" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="UreaPump" transform="translate(27 31)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">Urea pump</tspan></text>
+          <circle id="Oval-5" data-name="Oval" cx="4" cy="4" r="4" transform="translate(15 15)" fill="#333"/>
+          <text id="UreaPumpDsName2" transform="translate(27 71.913)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">feeding capacity:</tspan></text>
+          <text id="UreaPumpDsValue2" transform="translate(215.147 73.3)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaPumpDsName3" transform="translate(26.997 146.061)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">test pre-time:</tspan></text>
+          <text id="UreaPumpDsName4" transform="translate(26.997 183.136)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">test timer:</tspan></text>
+          <text id="UreaPumpDsName5" transform="translate(26.997 108.987)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">feeding rate:</tspan></text>
+          <text id="UreaPumpDsValue3" transform="translate(180.147 147.3)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaPumpDsValue4" transform="translate(148.147 185.3)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaPumpDsValue5" transform="translate(170.147 111.3)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaPumpDsName6" transform="translate(28 224.132)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">test status:</tspan></text>
+          <text id="UreaPumpDsValue6" transform="translate(160.147 228.3)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+        </g>
+      </g>
+      <g id="Group-9" transform="translate(568.232 165.43)">
+        <line id="Route-14Backup-41" x1="62.666" transform="translate(260.909 44.428)" fill="none" stroke="#0770eb" stroke-width="2"/>
+        <circle id="OvalBk-58" cx="4" cy="4" r="4" transform="translate(319.575 40.428)" fill="#0770eb"/>
+        <g id="Group-30Backup-2">
+          <rect id="RectangularBk-30-8" data-name="RectangularBk-30" width="291.242" height="105" rx="10" fill="#f2f6fa" stroke="#adbacc" stroke-width="2"/>
+          <text id="UreaTankDsName1" transform="translate(15 29)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">urea tank level:</tspan></text>
+          <text id="UreaTankDsValue1" transform="translate(191.768 31.57)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaTankDsValue2" transform="translate(201.768 63.57)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaTankDsValue3" transform="translate(156.768 95.57)" fill="#0770eb" font-size="22" font-family="SimSun"><tspan x="0" y="0">---</tspan></text>
+          <text id="UreaTankDsName2" transform="translate(15 61)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">urea temperature:</tspan></text>
+          <text id="UreaTankDsName3" transform="translate(15 93)" fill="#333" font-size="22" font-family="SimSun"><tspan x="0" y="0">urea quality:</tspan></text>
+        </g>
+      </g>
+      <line id="Route-14Backup-38-2" data-name="Route-14Backup-38" x2="22" y2="199.152" transform="translate(1046.5 417.5)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <circle id="OvalBk-55-2" data-name="OvalBk-55" cx="4" cy="4" r="4" transform="translate(1066.06 617.495)" fill="#0770eb"/>
+      <line id="Route-14Backup-38-3" data-name="Route-14Backup-38" x2="29.246" y2="23.718" transform="translate(379.254 864.782)" fill="none" stroke="#0770eb" stroke-width="2"/>
+      <circle id="OvalBk-55-3" data-name="OvalBk-55" cx="4" cy="4" r="4" transform="translate(374.254 859.782)" fill="#0770eb"/>
+    </g>
+  </g>
+  <path id="UreaInjectionState" d="M13,0,26,32H0Z" transform="translate(1081 698.279)" fill="#6ba3ff" opacity="0.65"/>
+</svg>+

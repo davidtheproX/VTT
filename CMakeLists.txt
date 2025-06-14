@@ -296,6 +296,7 @@ set(SOURCES
     src/QMLPDFGenerator.cpp
     src/PDFViewer.cpp
     src/CSVViewer.cpp
+    src/SvgHandler.cpp
 )
 
 # Header files
@@ -316,6 +317,7 @@ set(HEADERS
     include/QMLPDFGenerator.h
     include/PDFViewer.h
     include/CSVViewer.h
+    include/SvgHandler.h
 )
 
 # Create the executable with platform-specific properties
@@ -373,6 +375,9 @@ qt_add_qml_module(VoiceAILLM
         qml/DataFilterControl.qml
         qml/RawDataViewer.qml
         qml/WebBrowser.qml
+        qml/QmlViewerDialog.qml
+        qml/SvgViewerDialog.qml
+        qml/SvgHandler.qml
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -382,8 +387,12 @@ qt_add_qml_module(VoiceAILLM
         resources/icons/dingtalk.svg
         resources/icons/pdf.svg
         resources/icons/browser.svg
+        resources/icons/qml-viewer.svg
+        resources/icons/svg-viewer.svg
         resources/templates/diagnostic_template.html
         resources/templates/diagnostic_example.json
+        resources/templates/LifeData.svg
+        resources/templates/Lifedata.ui.qml
 )
 
 # Link Qt libraries

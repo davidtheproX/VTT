@@ -6,8 +6,6 @@
 #include <iostream>
 #include <stdexcept>
 #include <QtWebView/QtWebView>
-#include <QImageReader>
-#include <QSvgRenderer>
 
 // Manager includes
 #include "VoiceRecognitionManager.h"
@@ -22,6 +20,7 @@
 #include "QRCodeGenerator.h"
 #include "PDFManager.h"
 #include "CSVViewer.h"
+#include "SvgHandler.h"
 
 
 
@@ -66,57 +65,7 @@ int main(int argc, char *argv[])
         std::cout << "=== QGuiApplication created ===" << std::endl;
         std::cout.flush();
         
-        // Check SVG support
-        std::cout << "=== Checking SVG support ===" << std::endl;
-        QList<QByteArray> supportedFormats = QImageReader::supportedImageFormats();
-        bool svgSupported = supportedFormats.contains("svg");
-        std::cout << "SVG support: " << (svgSupported ? "YES" : "NO") << std::endl;
-        
-        // List all supported formats for debugging
-        std::cout << "Supported image formats: ";
-        for (const QByteArray& format : supportedFormats) {
-            std::cout << format.data() << " ";
-        }
-        std::cout << std::endl;
-        
-        // Test SVG files using QSvgRenderer directly
-        std::cout << "\n=== Testing SVG files with QSvgRenderer ===" << std::endl;
-        QStringList svgFiles = {
-            "qrc:/qt/qml/VoiceAILLM/resources/icons/microphone.svg",
-            "qrc:/qt/qml/VoiceAILLM/resources/icons/settings.svg", 
-            "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg",
-            "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg",
-            "qrc:/qt/qml/VoiceAILLM/resources/icons/pdf.svg"
-        };
-        
-        int svgSuccessCount = 0;
-        for (const QString &svgFile : svgFiles) {
-            std::cout << "Testing: " << svgFile.toStdString() << std::endl;
-            
-            QSvgRenderer renderer;
-            bool loaded = renderer.load(svgFile);
-            bool valid = loaded && renderer.isValid();
-            
-            std::cout << "  Loaded: " << (loaded ? "YES" : "NO") << std::endl;
-            std::cout << "  Valid: " << (valid ? "YES" : "NO") << std::endl;
-            
-            if (valid) {
-                QSize size = renderer.defaultSize();
-                std::cout << "  Size: " << size.width() << "x" << size.height() << std::endl;
-                std::cout << "  Animated: " << (renderer.animated() ? "YES" : "NO") << std::endl;
-                QRectF viewBox = renderer.viewBoxF();
-                std::cout << "  ViewBox: " << viewBox.x() << "," << viewBox.y() 
-                         << " " << viewBox.width() << "x" << viewBox.height() << std::endl;
-                svgSuccessCount++;
-            } else {
-                std::cout << "  ERROR: Failed to load or invalid SVG" << std::endl;
-            }
-            std::cout << std::endl;
-        }
-        
-        std::cout << "SVG Test Results: " << svgSuccessCount << "/" << svgFiles.size() 
-                  << " SVG files loaded successfully" << std::endl;
-        std::cout << "=== End SVG Testing ===" << std::endl;
+
         
         app.setApplicationName("Voice AI LLM");
         app.setOrganizationName("VoiceAILLM");
@@ -282,6 +231,9 @@ int main(int argc, char *argv[])
         
         // Register QML types for CSV viewer
         qmlRegisterType<CSVViewer>("VoiceAILLM", 1, 0, "CSVViewerBackend");
+        
+        // Register SVG Handler for QML
+        qmlRegisterType<SvgHandler>("SvgViewer", 1, 0, "SvgHandler");
         
         // Register SVG module for QML (critical for SVG support)
         qmlRegisterModule("QtSvg", 6, 9);
