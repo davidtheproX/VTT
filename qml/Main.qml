@@ -32,6 +32,7 @@ ApplicationWindow {
     property color mutedTextColor: "#757575"
     property color errorColor: "#F44336"
     property color successColor: "#4CAF50"
+    property color warningColor: "#FF9800"
     
     color: backgroundColor
     
@@ -112,6 +113,35 @@ ApplicationWindow {
                 onClicked: {
                     console.log("QML Viewer button clicked")
                     qmlViewerDialogLoader.openQmlViewer()
+                }
+            }
+
+            // Comm Test Button
+            Button {
+                id: commTestButton
+                width: 36 * scaleFactor
+                height: 36 * scaleFactor
+                flat: true
+                
+                background: Rectangle {
+                    color: commTestButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                           commTestButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: "📡"
+                    font.pixelSize: 20 * scaleFactor
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                ToolTip.text: "Communication Test - Device Discovery"
+                ToolTip.visible: hovered
+                
+                onClicked: {
+                    console.log("Comm Test button clicked")
+                    commTestDialog.open()
                 }
             }
 
@@ -646,6 +676,22 @@ ApplicationWindow {
         errorColor: mainWindow.errorColor
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
+    }
+    
+    // Communication Test dialog
+    CommTestDialog {
+        id: commTestDialog
+        
+        // Pass theme properties
+        scaleFactor: mainWindow.scaleFactor
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
+        successColor: mainWindow.successColor
+        warningColor: mainWindow.warningColor
+        errorColor: mainWindow.errorColor
     }
     
     // Web Browser

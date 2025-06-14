@@ -89,6 +89,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     QuickControls2 
     Network 
     NetworkAuth
+    SerialPort
     Multimedia 
     TextToSpeech
     Concurrent
@@ -297,6 +298,8 @@ set(SOURCES
     src/PDFViewer.cpp
     src/CSVViewer.cpp
     src/SvgHandler.cpp
+    src/DeviceDiscoveryManager.cpp
+    src/QPing.cpp
 )
 
 # Header files
@@ -318,6 +321,8 @@ set(HEADERS
     include/PDFViewer.h
     include/CSVViewer.h
     include/SvgHandler.h
+    include/DeviceDiscoveryManager.h
+    include/QPing.h
 )
 
 # Create the executable with platform-specific properties
@@ -378,6 +383,7 @@ qt_add_qml_module(VoiceAILLM
         qml/QmlViewerDialog.qml
         qml/SvgViewerDialog.qml
         qml/SvgHandler.qml
+        qml/CommTestDialog.qml
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -405,6 +411,7 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::QuickControls2
     Qt6::Network
     Qt6::NetworkAuth
+    Qt6::SerialPort
     Qt6::Multimedia
     Qt6::TextToSpeech
     Qt6::Concurrent

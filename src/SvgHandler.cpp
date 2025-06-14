@@ -120,7 +120,7 @@ void SvgHandler::loadSvg()
     for (const QString &path : pathsToTry) {
         qDebug() << "SvgHandler: Trying path:" << path;
         m_renderer->load(path);
-        if (m_renderer->isValid()) {
+    if (m_renderer->isValid()) {
             qDebug() << "SvgHandler: SVG loaded successfully from:" << path;
             loaded = true;
             break;

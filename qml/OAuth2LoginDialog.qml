@@ -88,9 +88,9 @@ Dialog {
                         width: 48
                         height: 48
                         source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
-                        fillMode: Image.PreserveAspectFit
-                        sourceSize.width: 48
-                        sourceSize.height: 48
+                            fillMode: Image.PreserveAspectFit
+                            sourceSize.width: 48
+                            sourceSize.height: 48
                         smooth: true
                     }
                     
@@ -136,9 +136,9 @@ Dialog {
                         width: 48
                         height: 48
                         source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
-                        fillMode: Image.PreserveAspectFit
-                        sourceSize.width: 48
-                        sourceSize.height: 48
+                            fillMode: Image.PreserveAspectFit
+                            sourceSize.width: 48
+                            sourceSize.height: 48
                         smooth: true
                     }
                     

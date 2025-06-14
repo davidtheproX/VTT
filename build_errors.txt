@@ -1,17 +1,17 @@
-CMake Warning at CMakeLists.txt:132 (message):
+CMake Warning at CMakeLists.txt:133 (message):
   ⚠ Qt6 WebEngine not found - web browser functionality will be limited on
   Windows/Linux
 
 
-CMake Warning at CMakeLists.txt:133 (message):
+CMake Warning at CMakeLists.txt:134 (message):
     On Windows/Linux, Qt WebView requires WebEngine as backend
 
 
-CMake Warning at CMakeLists.txt:134 (message):
+CMake Warning at CMakeLists.txt:135 (message):
     Install Qt WebEngine package for full web browser support
 
 
-CMake Warning at CMakeLists.txt:477 (message):
+CMake Warning at CMakeLists.txt:484 (message):
   Qt Keychain not found - using basic storage (less secure)
 
 

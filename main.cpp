@@ -1,10 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QTimer>
 #include <QFile>
-#include <iostream>
-#include <stdexcept>
+#include <QUrl>
+#include <QCoreApplication>
 #include <QtWebView/QtWebView>
 
 // Manager includes
@@ -21,83 +20,44 @@
 #include "PDFManager.h"
 #include "CSVViewer.h"
 #include "SvgHandler.h"
-
-
-
-#ifdef _WIN32
-#include <Windows.h>
-#include <io.h>
-#include <fcntl.h>
-#include <cstdio>
-#endif
+#include "DeviceDiscoveryManager.h"
 
 int main(int argc, char *argv[])
 {
-#ifdef _WIN32
-    // Allocate a console for this GUI application
-    AllocConsole();
-    
-    // Redirect stdout, stdin, stderr to console
-    freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
-    freopen_s((FILE**)stderr, "CONOUT$", "w", stderr);
-    freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
-    
-    // Make cout, wcout, cin, wcin, wcerr, cerr, wclog and clog point to console as well
-    std::ios::sync_with_stdio(true);
-    
-    // Set console title
-    SetConsoleTitle(L"VoiceAI LLM Debug Console");
-#endif
-
     try {
-        std::cout << "=== Starting Voice AI LLM application ===" << std::endl;
-        std::cout.flush();
-        
         // Initialize QtWebView before creating QGuiApplication (required by Qt WebView)
         QtWebView::initialize();
-        std::cout << "=== QtWebView initialized ===" << std::endl;
         
         // Enable high DPI scaling support before creating QGuiApplication
         QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
-        // Note: Qt::AA_UseHighDpiPixmaps is deprecated in Qt6.9 - high DPI pixmaps are enabled by default
         
         QGuiApplication app(argc, argv);
-        std::cout << "=== QGuiApplication created ===" << std::endl;
-        std::cout.flush();
-        
-
         
         app.setApplicationName("Voice AI LLM");
         app.setOrganizationName("VoiceAILLM");
         app.setApplicationDisplayName("Voice AI LLM Assistant");
-        std::cout << "=== App properties set ===" << std::endl;
 
         // Initialize logging first
-        std::cout << "=== Initializing logging ===" << std::endl;
         LoggingManager* logger = LoggingManager::instance();
         logger->initializeLogging();
         logger->infoGeneral("Application starting up");
 
         // Initialize secure storage
-        std::cout << "=== Initializing secure storage ===" << std::endl;
         SecureStorageManager secureStorage;
         logger->infoSecurity(QString("Secure storage available: %1")
                            .arg(secureStorage.isSecureStorageAvailable() ? "Yes" : "No (using fallback)"));
 
-        // Initialize managers (DatabaseManager fixed for post-QApplication initialization)
-        std::cout << "=== Initializing managers ===" << std::endl;
+        // Initialize managers
         logger->infoDatabase("Initializing database manager");
         DatabaseManager dbManager;
         try {
             if (!dbManager.initialize()) {
-                std::cout << "WARNING: Failed to initialize database" << std::endl;
                 logger->criticalDatabase("Failed to initialize database");
             } else {
                 logger->infoDatabase("Database manager initialized successfully");
             }
-        } catch (const std::exception &e) {
-            std::cout << "ERROR: Database initialization exception: " << e.what() << std::endl;
-            logger->criticalDatabase(QString("Database exception: %1").arg(e.what()));
+        } catch (...) {
+            logger->criticalDatabase("Database initialization exception");
         }
     
         logger->infoVoice("Initializing voice recognition manager");
@@ -118,6 +78,9 @@ int main(int argc, char *argv[])
         logger->infoGeneral("Initializing CSV viewer");
         CSVViewer csvViewer;
         
+        logger->infoGeneral("Initializing device discovery manager");
+        DeviceDiscoveryManager deviceDiscoveryManager;
+        
         logger->infoGeneral("Initializing chat manager");
         ChatManager chatManager(&llmManager);
         chatManager.setDatabaseManager(&dbManager);
@@ -125,11 +88,9 @@ int main(int argc, char *argv[])
         
         logger->infoDatabase("Initializing prompt manager");
         PromptManager promptManager(&dbManager);
-        std::cout << "=== All managers created ===" << std::endl;
         logger->infoGeneral("All managers initialized successfully");
     
         // Load and apply saved settings with secure storage
-        std::cout << "=== Loading saved settings ===" << std::endl;
         logger->infoSecurity("Loading settings with secure credential handling");
         
         QJsonObject settings = dbManager.getSettings();
@@ -215,7 +176,6 @@ int main(int argc, char *argv[])
                          &chatManager, &ChatManager::processUserInput);
 
         QQmlApplicationEngine engine;
-        std::cout << "=== QQmlApplicationEngine created ===" << std::endl;
         logger->infoUI("QML application engine created");
         
         // Set context properties for QML
@@ -228,60 +188,39 @@ int main(int argc, char *argv[])
         engine.rootContext()->setContextProperty("oauth2Manager", &oauth2Manager);
         engine.rootContext()->setContextProperty("pdfManager", &pdfManager);
         engine.rootContext()->setContextProperty("csvViewer", &csvViewer);
+        engine.rootContext()->setContextProperty("deviceDiscoveryManager", &deviceDiscoveryManager);
         
-        // Register QML types for CSV viewer
+        // Register QML types
         qmlRegisterType<CSVViewer>("VoiceAILLM", 1, 0, "CSVViewerBackend");
-        
-        // Register SVG Handler for QML
         qmlRegisterType<SvgHandler>("SvgViewer", 1, 0, "SvgHandler");
-        
-        // Register SVG module for QML (critical for SVG support)
         qmlRegisterModule("QtSvg", 6, 9);
-        
-        std::cout << "=== Context properties set ===" << std::endl;
 
-        // Load the main QML file - try both resource and file system
+        // Load the main QML file
         QUrl url(QStringLiteral("qrc:/VoiceAILLM/qml/Main.qml"));
-        std::cout << "=== Trying QML resource: " << url.toString().toStdString() << " ===" << std::endl;
-        
-        // Fallback to file system if resource doesn't exist
         if (!QFile::exists(":/VoiceAILLM/qml/Main.qml")) {
-            std::cout << "=== QML resource not found, trying file system ===" << std::endl;
             url = QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + "/../qml/Main.qml");
-            std::cout << "=== Using file: " << url.toString().toStdString() << " ===" << std::endl;
         }
         
         QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                          &app, [url](QObject *obj, const QUrl &objUrl) {
             if (!obj && url == objUrl) {
-                std::cout << "ERROR: Failed to load QML file!" << std::endl;
                 QCoreApplication::exit(-1);
             }
         }, Qt::QueuedConnection);
         
-        std::cout << "=== Loading QML file: " << url.toString().toStdString() << " ===" << std::endl;
         engine.load(url);
 
         if (engine.rootObjects().isEmpty()) {
-            std::cout << "=== ERROR: No root objects found ===" << std::endl;
             return -1;
         }
 
-        std::cout << "=== Application loaded successfully, starting event loop ===" << std::endl;
         logger->infoGeneral("Application initialization complete, starting main event loop");
         
         return app.exec();
         
-    } catch (const std::exception &e) {
-        std::cerr << "ERROR: Application failed to start: " << e.what() << std::endl;
-        if (LoggingManager::instance()) {
-            LoggingManager::instance()->criticalGeneral(QString("Application startup failed: %1").arg(e.what()));
-        }
-        return -1;
     } catch (...) {
-        std::cerr << "ERROR: Unknown error occurred during application startup" << std::endl;
         if (LoggingManager::instance()) {
-            LoggingManager::instance()->criticalGeneral("Unknown error during application startup");
+            LoggingManager::instance()->criticalGeneral("Application startup failed");
         }
         return -1;
     }
