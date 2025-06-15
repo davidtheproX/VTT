@@ -534,10 +534,14 @@ QByteArray AndroidKeystoreManager::decryptData(const QString &alias, const QByte
         }
         
         // Create GCMParameterSpec with IV
+        QJniEnvironment env;
+        jbyteArray jIv = env->NewByteArray(iv.size());
+        env->SetByteArrayRegion(jIv, 0, iv.size(), reinterpret_cast<const jbyte*>(iv.constData()));
+        
         QJniObject gcmParams = QJniObject("javax/crypto/spec/GCMParameterSpec",
                                          "(I[B)V",
                                          128, // 128-bit tag length
-                                         iv.constData());
+                                         jIv);
         
         // Initialize cipher for decryption
         m_cipher.callMethod<void>("init",
@@ -547,7 +551,6 @@ QByteArray AndroidKeystoreManager::decryptData(const QString &alias, const QByte
                                  gcmParams.object());
         
         // Convert cipher text to Java byte array
-        QJniEnvironment env;
         jbyteArray jCipherText = env->NewByteArray(cipherText.size());
         env->SetByteArrayRegion(jCipherText, 0, cipherText.size(),
                                reinterpret_cast<const jbyte*>(cipherText.constData()));
@@ -563,6 +566,7 @@ QByteArray AndroidKeystoreManager::decryptData(const QString &alias, const QByte
         QByteArray result(reinterpret_cast<const char*>(decryptedBytes), decryptedSize);
         
         env->ReleaseByteArrayElements(decryptedData, decryptedBytes, 0);
+        env->DeleteLocalRef(jIv);
         env->DeleteLocalRef(jCipherText);
         env->DeleteLocalRef(decryptedData);
         
@@ -698,5 +702,26 @@ void AndroidKeystoreManager::deleteEncryptedFromPreferences(const QString &alias
     } catch (...) {
         qWarning() << "AndroidKeystoreManager: Exception deleting encrypted data from SharedPreferences";
     }
+}
+
+// JNI callback implementation
+extern "C" JNIEXPORT void JNICALL Java_com_voiceaillm_app_KeystoreHelper_onKeystoreResult(
+    JNIEnv *env, jobject thiz, jstring operation, jstring alias, jboolean success, jstring error)
+{
+    Q_UNUSED(thiz)
+    
+    QString operationStr = QJniObject(operation).toString();
+    QString aliasStr = QJniObject(alias).toString();
+    QString errorStr = error ? QJniObject(error).toString() : QString();
+    
+    qDebug() << "AndroidKeystoreManager JNI callback:"
+             << "Operation:" << operationStr
+             << "Alias:" << aliasStr
+             << "Success:" << (success ? "true" : "false")
+             << "Error:" << errorStr;
+             
+    // Note: In a real implementation, you would find the appropriate 
+    // AndroidKeystoreManager instance and emit the corresponding signals
+    // For now, we just log the callback
 }
 #endif 

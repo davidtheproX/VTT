@@ -49,6 +49,11 @@ private:
     bool generateKeyPair(const QString &alias);
     QByteArray encryptData(const QString &alias, const QByteArray &data);
     QByteArray decryptData(const QString &alias, const QByteArray &encryptedData);
+    
+    // SharedPreferences operations
+    bool storeEncryptedInPreferences(const QString &alias, const QByteArray &data);
+    QByteArray retrieveEncryptedFromPreferences(const QString &alias);
+    void deleteEncryptedFromPreferences(const QString &alias);
 
     // Android specific members
 #ifdef PLATFORM_ANDROID
