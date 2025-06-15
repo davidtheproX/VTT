@@ -493,6 +493,8 @@ else()
     message(STATUS "✗ Qt6::WebChannel not linked - not available")
 endif()
 
+
+
 # Link web components conditionally based on availability
 if(QT_WEB_COMPONENTS)
     foreach(component ${QT_WEB_COMPONENTS})

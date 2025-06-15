@@ -89,6 +89,29 @@ private:
     QString getVoiceDisplayName(const QVoice &voice) const;
     bool containsChinese(const QString &text);
     bool findChineseVoice();
+    
+#ifdef Q_OS_ANDROID
+    // Comprehensive Android TTS service methods
+    void initializeAndroidTTSService();
+    bool checkAndroidTTSSystemAvailability();
+    QStringList getPreferredTTSEngines();
+    bool initializeTTSWithEngine(const QStringList &engineNames);
+    bool createTTSWithEngine(const QString &engineName);
+    bool initializeTTSWithDefaultEngine();
+    void setupAndroidTTSRetryMechanism();
+    void checkAndroidTTSServiceBinding(int attempt);
+    void validateAndroidTTSConfiguration();
+    void testAndroidTTSFunctionality();
+    void handleAndroidTTSInitializationFailure();
+    
+    // Legacy methods (now delegate to comprehensive service)
+    bool checkAndroidTTSAvailability();
+    void initializeAndroidTTS();
+    void checkAndRetryAndroidTTS(int attempt);
+    
+    // Member variables for Android TTS
+    QString m_preferredEngine;
+#endif
 
 
 

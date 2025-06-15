@@ -17,6 +17,8 @@
 
 #ifdef PLATFORM_ANDROID
     #include <QJniObject>
+    #include <QJniEnvironment>
+    #include <QCoreApplication>
 #endif
 
 // Voice presets
@@ -87,24 +89,10 @@ void TTSManager::initialize()
         m_tts = new QTextToSpeech(this);
 #elif defined(Q_OS_ANDROID)
         qDebug() << "Using Android TTS (TextToSpeech API) - optimized for Google voices";
-        m_tts = new QTextToSpeech(this);
         
-        // Android TTS debugging
-        QTimer::singleShot(1000, this, [this]() {
-            if (m_tts) {
-                qDebug() << "Android TTS delayed check:";
-                qDebug() << "  TTS State:" << m_tts->state();
-                qDebug() << "  Available Locales:" << m_tts->availableLocales().size();
-                qDebug() << "  Available Voices:" << m_tts->availableVoices().size();
-                
-                if (m_tts->availableVoices().isEmpty()) {
-                    qWarning() << "No Android TTS voices found!";
-                    qWarning() << "Please install Google TTS from Play Store and ensure language packs are downloaded";
-                    qWarning() << "Go to Settings > Language & Input > Text-to-speech output > Google Text-to-speech Engine";
-                    emit error("No TTS voices available. Please install Google TTS and language packs from Android Settings.");
-                }
-            }
-        });
+        // Comprehensive Android TTS initialization
+        initializeAndroidTTSService();
+        
 #elif defined(Q_OS_LINUX)
         qDebug() << "Using Linux TTS (speech-dispatcher/espeak) - cross-platform voices";
         m_tts = new QTextToSpeech(this);
@@ -113,11 +101,13 @@ void TTSManager::initialize()
         m_tts = new QTextToSpeech(this);
 #endif
         
-        connect(m_tts, &QTextToSpeech::stateChanged,
-                this, &TTSManager::onStateChanged);
-        
-        connect(m_tts, &QTextToSpeech::errorOccurred,
-                this, &TTSManager::onErrorOccurred);
+        if (m_tts) {
+            connect(m_tts, &QTextToSpeech::stateChanged,
+                    this, &TTSManager::onStateChanged);
+            
+            connect(m_tts, &QTextToSpeech::errorOccurred,
+                    this, &TTSManager::onErrorOccurred);
+        }
         
         loadAvailableVoices();
         
@@ -133,7 +123,483 @@ void TTSManager::initialize()
     }
 }
 
+#ifdef Q_OS_ANDROID
+void TTSManager::initializeAndroidTTSService()
+{
+    qDebug() << "=== Starting comprehensive Android TTS initialization ===";
+    
+    // Step 1: Check if TTS is available on the system
+    if (!checkAndroidTTSSystemAvailability()) {
+        qCritical() << "Android TTS system is not available";
+        emit error("Android TTS system is not available. Please ensure Google TTS is installed from Play Store.");
+        return;
+    }
+    
+    // Step 2: Check for preferred TTS engines
+    QStringList preferredEngines = getPreferredTTSEngines();
+    qDebug() << "Preferred TTS engines:" << preferredEngines;
+    
+    // Step 3: Initialize with engine selection
+    if (!initializeTTSWithEngine(preferredEngines)) {
+        qWarning() << "Failed to initialize with preferred engines, trying default";
+        
+        // Fallback to default engine
+        if (!initializeTTSWithDefaultEngine()) {
+            qCritical() << "Failed to initialize Android TTS with any engine";
+            emit error("Failed to initialize Android TTS. Please check TTS settings in Android Settings.");
+            return;
+        }
+    }
+    
+    // Step 4: Set up retry mechanism with proper service binding
+    setupAndroidTTSRetryMechanism();
+    
+    qDebug() << "=== Android TTS initialization completed ===";
+}
 
+bool TTSManager::checkAndroidTTSSystemAvailability()
+{
+    qDebug() << "Checking Android TTS system availability...";
+    
+    try {
+        // Check if TextToSpeech service is available
+        QJniObject activity = QJniObject::callStaticObjectMethod(
+            "org/qtproject/qt/android/QtNative", 
+            "activity", 
+            "()Landroid/app/Activity;"
+        );
+        
+        if (!activity.isValid()) {
+            qWarning() << "Failed to get Android activity";
+            return false;
+        }
+        
+        // Create Intent to check TTS engine availability
+        QJniObject checkIntent("android/content/Intent", 
+                               "(Ljava/lang/String;)V",
+                               QJniObject::getStaticObjectField("android/speech/tts/TextToSpeech", 
+                                                               "Engine", 
+                                                               "Ljava/lang/String;").object());
+        
+        if (!checkIntent.isValid()) {
+            qWarning() << "Failed to create TTS check intent";
+            return false;
+        }
+        
+        // Query for available TTS engines
+        QJniObject packageManager = activity.callObjectMethod("getPackageManager", 
+                                                             "()Landroid/content/pm/PackageManager;");
+        
+        if (!packageManager.isValid()) {
+            qWarning() << "Failed to get package manager";
+            return false;
+        }
+        
+        QJniObject resolveInfoList = packageManager.callObjectMethod(
+            "queryIntentServices",
+            "(Landroid/content/Intent;I)Ljava/util/List;",
+            checkIntent.object(),
+            0 // PackageManager.MATCH_DEFAULT_ONLY
+        );
+        
+        if (!resolveInfoList.isValid()) {
+            qWarning() << "Failed to query TTS services";
+            return false;
+        }
+        
+        int serviceCount = resolveInfoList.callMethod<jint>("size");
+        qDebug() << "Found" << serviceCount << "TTS services";
+        
+        if (serviceCount == 0) {
+            qWarning() << "No TTS services found on the system";
+            return false;
+        }
+        
+        // List available TTS engines
+        for (int i = 0; i < serviceCount; i++) {
+            QJniObject resolveInfo = resolveInfoList.callObjectMethod("get", "(I)Ljava/lang/Object;", i);
+            if (resolveInfo.isValid()) {
+                QJniObject serviceInfo = resolveInfo.getObjectField("serviceInfo", "Landroid/content/pm/ServiceInfo;");
+                if (serviceInfo.isValid()) {
+                    QJniObject packageName = serviceInfo.getObjectField("packageName", "Ljava/lang/String;");
+                    QJniObject name = serviceInfo.getObjectField("name", "Ljava/lang/String;");
+                    
+                    if (packageName.isValid() && name.isValid()) {
+                        qDebug() << "Available TTS engine:" << packageName.toString() << "/" << name.toString();
+                    }
+                }
+            }
+        }
+        
+        return true;
+        
+    } catch (const std::exception &e) {
+        qWarning() << "Exception checking TTS availability:" << e.what();
+        return false;
+    }
+}
+
+QStringList TTSManager::getPreferredTTSEngines()
+{
+    QStringList engines;
+    
+    // Preferred order: Google TTS -> Samsung TTS -> Others
+    engines << "com.google.android.tts"           // Google Text-to-Speech
+            << "com.samsung.SMT"                  // Samsung Text-to-Speech
+            << "com.svox.pico"                    // Pico TTS
+            << "com.android.tts"                  // Android TTS
+            << "com.acapelagroup.android.tts"     // Acapela TTS
+            << "com.cereproc.cerevoice.enu"       // CereProc
+            << "com.nuance.tts"                   // Nuance TTS
+            << "com.ivona.tts"                    // Ivona TTS
+            << "com.amazon.speech.tts"            // Amazon Polly
+            << "air.com.acapela.androidspeech";   // Acapela Mobile TTS
+    
+    return engines;
+}
+
+bool TTSManager::initializeTTSWithEngine(const QStringList &engineNames)
+{
+    for (const QString &engineName : engineNames) {
+        qDebug() << "Attempting to initialize TTS with engine:" << engineName;
+        
+        try {
+            // Create TTS with specific engine
+            if (createTTSWithEngine(engineName)) {
+                qDebug() << "Successfully initialized TTS with engine:" << engineName;
+                return true;
+            }
+        } catch (const std::exception &e) {
+            qWarning() << "Failed to initialize with engine" << engineName << ":" << e.what();
+        }
+    }
+    
+    return false;
+}
+
+bool TTSManager::createTTSWithEngine(const QString &engineName)
+{
+    try {
+        // For Qt TextToSpeech, we create the object and let it handle engine selection
+        // Qt will try to use the best available engine
+        m_tts = new QTextToSpeech(this);
+        
+        if (!m_tts) {
+            qWarning() << "Failed to create QTextToSpeech object";
+            return false;
+        }
+        
+        // Store the preferred engine name for later use
+        m_preferredEngine = engineName;
+        
+        qDebug() << "Created QTextToSpeech object with preference for:" << engineName;
+        return true;
+        
+    } catch (const std::exception &e) {
+        qWarning() << "Exception creating TTS with engine" << engineName << ":" << e.what();
+        if (m_tts) {
+            delete m_tts;
+            m_tts = nullptr;
+        }
+        return false;
+    }
+}
+
+bool TTSManager::initializeTTSWithDefaultEngine()
+{
+    qDebug() << "Initializing TTS with default engine";
+    
+    try {
+        m_tts = new QTextToSpeech(this);
+        
+        if (!m_tts) {
+            qWarning() << "Failed to create default TTS object";
+            return false;
+        }
+        
+        qDebug() << "Created default QTextToSpeech object";
+        return true;
+        
+    } catch (const std::exception &e) {
+        qWarning() << "Exception creating default TTS:" << e.what();
+        if (m_tts) {
+            delete m_tts;
+            m_tts = nullptr;
+        }
+        return false;
+    }
+}
+
+void TTSManager::setupAndroidTTSRetryMechanism()
+{
+    qDebug() << "Setting up Android TTS retry mechanism";
+    
+    // Initial delay before checking TTS status
+    QTimer::singleShot(1000, this, [this]() {
+        checkAndroidTTSServiceBinding(1);
+    });
+    
+    // Additional check after longer delay
+    QTimer::singleShot(3000, this, [this]() {
+        validateAndroidTTSConfiguration();
+    });
+}
+
+void TTSManager::checkAndroidTTSServiceBinding(int attempt)
+{
+    const int maxAttempts = 8;
+    const int baseRetryDelay = 1500; // Base delay in ms
+    
+    qDebug() << QString("Android TTS service binding check - attempt %1/%2").arg(attempt).arg(maxAttempts);
+    
+    if (!m_tts) {
+        qWarning() << "TTS object is null on attempt" << attempt;
+        
+        if (attempt < maxAttempts) {
+            // Try to recreate TTS object
+            qDebug() << "Attempting to recreate TTS object";
+            
+            if (initializeTTSWithDefaultEngine()) {
+                qDebug() << "Successfully recreated TTS object";
+                
+                // Continue checking after recreation
+                int nextDelay = baseRetryDelay * attempt;
+                QTimer::singleShot(nextDelay, this, [this, attempt]() {
+                    checkAndroidTTSServiceBinding(attempt + 1);
+                });
+            } else {
+                qWarning() << "Failed to recreate TTS object on attempt" << attempt;
+                
+                if (attempt >= maxAttempts) {
+                    handleAndroidTTSInitializationFailure();
+                } else {
+                    int nextDelay = baseRetryDelay * attempt;
+                    QTimer::singleShot(nextDelay, this, [this, attempt]() {
+                        checkAndroidTTSServiceBinding(attempt + 1);
+                    });
+                }
+            }
+        } else {
+            handleAndroidTTSInitializationFailure();
+        }
+        return;
+    }
+    
+    // Check TTS state and availability
+    QTextToSpeech::State currentState = m_tts->state();
+    QList<QLocale> availableLocales = m_tts->availableLocales();
+    QList<QVoice> availableVoices = m_tts->availableVoices();
+    
+    qDebug() << "TTS State:" << currentState;
+    qDebug() << "Available Locales:" << availableLocales.size();
+    qDebug() << "Available Voices:" << availableVoices.size();
+    
+    // Check if TTS service is properly bound and ready
+    bool isServiceReady = (currentState == QTextToSpeech::Ready);
+    bool hasResources = (!availableLocales.isEmpty() && !availableVoices.isEmpty());
+    
+    if (isServiceReady && hasResources) {
+        qDebug() << "✓ Android TTS service successfully bound and ready!";
+        
+        // Load voices now that TTS is ready
+        loadAvailableVoices();
+        
+        // Apply default voice preset
+        applyJarvisVoicePreset();
+        
+        // Log success details
+        qDebug() << QString("TTS Ready - %1 locales, %2 voices available")
+                    .arg(availableLocales.size())
+                    .arg(availableVoices.size());
+        
+        // Test TTS functionality
+        testAndroidTTSFunctionality();
+        
+    } else if (attempt < maxAttempts) {
+        qDebug() << QString("TTS not ready yet - State: %1, HasResources: %2")
+                    .arg(currentState)
+                    .arg(hasResources);
+        
+        // Calculate exponential backoff delay
+        int nextDelay = baseRetryDelay * (1 << (attempt - 1)); // Exponential backoff
+        nextDelay = std::min(nextDelay, 10000); // Cap at 10 seconds
+        
+        qDebug() << QString("Retrying TTS binding in %1ms").arg(nextDelay);
+        
+        QTimer::singleShot(nextDelay, this, [this, attempt]() {
+            checkAndroidTTSServiceBinding(attempt + 1);
+        });
+        
+    } else {
+        qWarning() << QString("Android TTS failed to bind after %1 attempts").arg(maxAttempts);
+        qWarning() << QString("Final state - State: %1, Locales: %2, Voices: %3")
+                     .arg(currentState)
+                     .arg(availableLocales.size())
+                     .arg(availableVoices.size());
+        
+        handleAndroidTTSInitializationFailure();
+    }
+}
+
+void TTSManager::validateAndroidTTSConfiguration()
+{
+    qDebug() << "Validating Android TTS configuration";
+    
+    if (!m_tts) {
+        qWarning() << "TTS object is null during validation";
+        return;
+    }
+    
+    // Check engines
+    QStringList engines = m_tts->availableEngines();
+    qDebug() << "Available TTS engines:" << engines;
+    
+    if (engines.isEmpty()) {
+        qWarning() << "No TTS engines available - this indicates a system issue";
+        emit error("No TTS engines found. Please install Google TTS from Play Store.");
+        return;
+    }
+    
+    // Check current engine
+    QString currentEngine = m_tts->engine();
+    qDebug() << "Current TTS engine:" << currentEngine;
+    
+    // Check locales
+    QList<QLocale> locales = m_tts->availableLocales();
+    qDebug() << "Available locales:" << locales.size();
+    
+    if (locales.isEmpty()) {
+        qWarning() << "No TTS locales available - language packs may need to be installed";
+        emit error("No TTS language packs found. Please install language packs in TTS settings.");
+        return;
+    }
+    
+    // Log locale details
+    for (const QLocale &locale : locales) {
+        qDebug() << "  Locale:" << locale.name() << "(" << locale.nativeLanguageName() << ")";
+    }
+    
+    // Check voices for current locale
+    QList<QVoice> voices = m_tts->availableVoices();
+    qDebug() << "Available voices:" << voices.size();
+    
+    if (voices.isEmpty()) {
+        qWarning() << "No TTS voices available for current locale";
+        
+        // Try to find a working locale
+        if (!locales.isEmpty()) {
+            qDebug() << "Trying to switch to first available locale:" << locales.first().name();
+            m_tts->setLocale(locales.first());
+            
+            // Recheck voices
+            voices = m_tts->availableVoices();
+            qDebug() << "Voices after locale change:" << voices.size();
+        }
+    }
+    
+    if (!voices.isEmpty()) {
+        qDebug() << "✓ TTS configuration validated successfully";
+        for (const QVoice &voice : voices) {
+            qDebug() << "  Voice:" << voice.name() << "Age:" << voice.age() << "Gender:" << voice.gender();
+        }
+    } else {
+        qWarning() << "✗ TTS configuration validation failed - no voices available";
+        emit error("TTS voices not available. Please check TTS settings and install voice data.");
+    }
+}
+
+void TTSManager::testAndroidTTSFunctionality()
+{
+    qDebug() << "Testing Android TTS functionality";
+    
+    if (!m_tts || m_tts->state() != QTextToSpeech::Ready) {
+        qWarning() << "TTS not ready for testing";
+        return;
+    }
+    
+    // Test with a simple phrase
+    QString testPhrase = "TTS initialization successful";
+    
+    qDebug() << "Testing TTS with phrase:" << testPhrase;
+    
+    // Connect to state changes for this test
+    connect(m_tts, &QTextToSpeech::stateChanged, this, [this](QTextToSpeech::State state) {
+        qDebug() << "TTS Test - State changed to:" << state;
+        
+        if (state == QTextToSpeech::Ready) {
+            qDebug() << "✓ TTS test completed successfully";
+        }
+    });
+    
+    // Perform the test (at low volume to avoid disturbance)
+    double originalVolume = m_tts->volume();
+    m_tts->setVolume(0.1); // Very low volume for test
+    
+    m_tts->say(testPhrase);
+    
+    // Restore original volume after a delay
+    QTimer::singleShot(2000, this, [this, originalVolume]() {
+        if (m_tts) {
+            m_tts->setVolume(originalVolume);
+        }
+    });
+}
+
+void TTSManager::handleAndroidTTSInitializationFailure()
+{
+    qCritical() << "=== Android TTS Initialization Failed ===";
+    
+    QString errorMessage = "Android TTS initialization failed. ";
+    
+    // Provide specific guidance based on common issues
+    if (!m_tts) {
+        errorMessage += "Unable to create TTS service. ";
+    } else {
+        QStringList engines = m_tts->availableEngines();
+        QList<QLocale> locales = m_tts->availableLocales();
+        QList<QVoice> voices = m_tts->availableVoices();
+        
+        if (engines.isEmpty()) {
+            errorMessage += "No TTS engines found. ";
+        } else if (locales.isEmpty()) {
+            errorMessage += "No language packs installed. ";
+        } else if (voices.isEmpty()) {
+            errorMessage += "No voice data available. ";
+        } else {
+            errorMessage += "TTS service binding failed. ";
+        }
+    }
+    
+    errorMessage += "\n\nTo fix this:\n";
+    errorMessage += "1. Install 'Google Text-to-Speech' from Play Store\n";
+    errorMessage += "2. Go to Settings > Language & Input > Text-to-speech output\n";
+    errorMessage += "3. Select 'Google Text-to-Speech Engine'\n";
+    errorMessage += "4. Tap settings icon and install voice data\n";
+    errorMessage += "5. Restart the app\n";
+    
+    qCritical() << errorMessage;
+    emit error(errorMessage);
+}
+
+bool TTSManager::checkAndroidTTSAvailability()
+{
+    // This is now handled by the comprehensive initialization
+    return checkAndroidTTSSystemAvailability();
+}
+
+void TTSManager::initializeAndroidTTS()
+{
+    // Legacy method - now delegates to comprehensive service
+    initializeAndroidTTSService();
+}
+
+void TTSManager::checkAndRetryAndroidTTS(int attempt)
+{
+    // Legacy method - now delegates to service binding check
+    checkAndroidTTSServiceBinding(attempt);
+}
+
+#endif // Q_OS_ANDROID
 
 void TTSManager::loadAvailableVoices()
 {

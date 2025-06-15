@@ -217,11 +217,11 @@ void VoiceRecognitionManager::initializeAndroidSpeechRecognition()
         }
         
         // Check if SpeechRecognizer is available
-        QJniObject speechRecognizer = QJniObject::callStaticObjectMethod(
+        bool isAvailable = QJniObject::callStaticMethod<jboolean>(
             "android/speech/SpeechRecognizer", "isRecognitionAvailable",
             "(Landroid/content/Context;)Z", activity.object<jobject>());
         
-        if (!speechRecognizer.isValid()) {
+        if (!isAvailable) {
             qWarning() << "SpeechRecognizer not available on this Android device";
             m_useLocalSpeechRecognition = false;
             return;

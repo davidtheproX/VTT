@@ -9,6 +9,9 @@ Button {
     property color primaryColor: "#2196F3"
     property color errorColor: "#F44336"
     
+    // Mobile touch optimizations
+    property bool enableHoverEffects: Qt.platform.os !== "android" && Qt.platform.os !== "ios"
+    
     // Voice state properties
     property bool isListening: false
     property real audioLevel: 0.0
@@ -17,18 +20,10 @@ Button {
     height: 50 * scaleFactor
     
     background: Rectangle {
-        color: {
-            if (voiceButton.isListening) {
-                return voiceButton.pressed ? Qt.darker(errorColor, 1.2) : 
-                       voiceButton.hovered ? Qt.lighter(errorColor, 1.1) : errorColor;
-            } else {
-                return voiceButton.pressed ? Qt.darker(primaryColor, 1.2) : 
-                       voiceButton.hovered ? Qt.lighter(primaryColor, 1.1) : primaryColor;
-            }
-        }
+        color: currentBackgroundColor
         radius: width / 2
         
-        // Animated border when listening
+        // Animated border when listening (simplified for Android)
         Rectangle {
             anchors.centerIn: parent
             width: parent.width + 8 * scaleFactor
@@ -39,23 +34,11 @@ Button {
             border.width: 2 * scaleFactor
             opacity: isListening ? 0.6 : 0
             
-            SequentialAnimation {
-                running: isListening
-                loops: Animation.Infinite
-                
-                NumberAnimation {
-                    target: parent
-                    property: "scale"
-                    from: 1.0
-                    to: 1.1
-                    duration: 1000
-                }
-                NumberAnimation {
-                    target: parent
-                    property: "scale"
-                    from: 1.1
-                    to: 1.0
-                    duration: 1000
+            // Simplified opacity animation instead of scale to prevent jumping
+            Behavior on opacity {
+                NumberAnimation { 
+                    duration: 300
+                    easing.type: Easing.InOutQuad
                 }
             }
         }
@@ -90,24 +73,11 @@ Button {
             color: "white"
             font.pixelSize: 18 * scaleFactor
             
-            // Pulse animation when listening
-            SequentialAnimation {
-                running: isListening
-                loops: Animation.Infinite
-                
-                NumberAnimation {
-                    target: micIcon
-                    property: "scale"
-                    from: 1.0
-                    to: 1.2
-                    duration: 600
-                }
-                NumberAnimation {
-                    target: micIcon
-                    property: "scale"
-                    from: 1.2
-                    to: 1.0
-                    duration: 600
+            // Simplified color animation instead of scale to prevent jumping
+            Behavior on color {
+                ColorAnimation { 
+                    duration: 200
+                    easing.type: Easing.InOutQuad
                 }
             }
         }
@@ -146,33 +116,23 @@ Button {
         }
     }
     
-    // Visual feedback for different states
-    states: [
-        State {
-            name: "listening"
-            when: isListening
-            PropertyChanges {
-                target: voiceButton
-                scale: 1.05
-            }
-        },
-        State {
-            name: "pressed"
-            when: voiceButton.pressed
-            PropertyChanges {
-                target: voiceButton
-                scale: 0.95
-            }
+    // Simplified visual feedback without scale changes to prevent jumping on Android
+    // Use color changes instead of scale for better mobile experience
+    property color currentBackgroundColor: {
+        if (isListening) {
+            return pressed ? Qt.darker(errorColor, 1.2) : 
+                   (enableHoverEffects && hovered) ? Qt.lighter(errorColor, 1.1) : errorColor;
+        } else {
+            return pressed ? Qt.darker(primaryColor, 1.2) : 
+                   (enableHoverEffects && hovered) ? Qt.lighter(primaryColor, 1.1) : primaryColor;
         }
-    ]
+    }
     
-    transitions: [
-        Transition {
-            NumberAnimation {
-                property: "scale"
-                duration: 150
-                easing.type: Easing.OutQuad
-            }
+    // Smooth color transitions
+    Behavior on currentBackgroundColor {
+        ColorAnimation { 
+            duration: 150
+            easing.type: Easing.OutQuad
         }
-    ]
+    }
 } 
