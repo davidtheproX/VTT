@@ -31,11 +31,13 @@ ApplicationWindow {
     // Mobile touch optimizations
     property bool enableHoverEffects: !isMobile
     
-    // Adaptive dimensions with keyboard awareness
-    width: isMobile ? (isTablet ? 1024 : 375) : 1280
+    // Fixed desktop dimensions with mobile fullscreen
+    width: isMobile ? (isTablet ? 1024 : 375) : 1200
     height: isMobile ? (isTablet ? 768 : 812) : 800
-    minimumWidth: isMobile ? 320 : 800
-    minimumHeight: isMobile ? 568 : 600
+    minimumWidth: isMobile ? 320 : 1200
+    minimumHeight: isMobile ? 568 : 800
+    maximumWidth: isMobile ? Screen.width : 1200
+    maximumHeight: isMobile ? Screen.height : 800
     
     visibility: isMobile ? Window.FullScreen : Window.Windowed
     visible: true
@@ -58,7 +60,7 @@ ApplicationWindow {
     
 
     
-    // Adaptive scaling with platform and keyboard awareness
+    // Zoom-to-fit scaling with fixed desktop resolution
     property real scaleFactor: {
         if (isMobile) {
             if (keyboardVisible) {
@@ -66,14 +68,19 @@ ApplicationWindow {
                 if (isIOS) return isTablet ? 1.1 : 0.9;  // iOS keyboards need different scaling
                 return isTablet ? 1.0 : 0.85;           // Android scaling
             } else {
-                // Platform-specific mobile scaling
+                // Platform-specific mobile scaling  
                 if (isIOS) return isTablet ? 1.3 : 1.1;  // iOS prefers slightly larger UI
                 return isTablet ? 1.2 : 1.0;             // Android scaling
             }
         } else {
-            // Desktop scaling - responsive to window size
-            var baseScale = Math.min(width / 1280, height / 800);
-            return Math.max(0.8, Math.min(baseScale, 2.0)); // Clamp between 0.8x and 2.0x
+            // Desktop: Fixed 1200x800 with zoom-to-fit scaling
+            // Calculate scale to fit content in fixed window size
+            var contentWidth = 1200;
+            var contentHeight = 800;
+            var scaleX = width / contentWidth;
+            var scaleY = height / contentHeight;
+            var scale = Math.min(scaleX, scaleY); // Use smaller scale to ensure everything fits
+            return Math.max(0.5, Math.min(scale, 1.5)); // Clamp between 0.5x and 1.5x
         }
     }
     property real baseFontSize: isMobile ? (isTablet ? 16 : 14) : 14
@@ -678,6 +685,35 @@ ApplicationWindow {
                 onClicked: voiceManager.toggleListening()
             }
             
+            // Debug button for keyboard testing (only on mobile)
+            Button {
+                visible: needsKeyboardHandling
+                Layout.preferredWidth: 40 * scaleFactor
+                Layout.preferredHeight: 40 * scaleFactor
+                text: "⌨"
+                
+                background: Rectangle {
+                    color: parent.pressed ? "darkgreen" : "green"
+                    radius: 8
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    color: "white"
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    font.pixelSize: 18 * scaleFactor
+                }
+                
+                ToolTip.text: "Force show keyboard"
+                ToolTip.visible: hovered
+                
+                onClicked: {
+                    console.log("Debug: Force keyboard button clicked");
+                    forceShowKeyboard();
+                }
+            }
+            
             // Text input with keyboard optimization
             ScrollView {
                 Layout.fillWidth: true
@@ -691,27 +727,49 @@ ApplicationWindow {
                     id: textInput
                     placeholderText: keyboardVisible ? "Type message..." : "Type your message or use voice input..."
                     wrapMode: TextArea.Wrap
-                    selectByMouse: true
+                    selectByMouse: !isMobile  // Disable selectByMouse on mobile for better touch handling
+                    selectByKeyboard: true
+                    
+                    // Android-specific input properties
+                    inputMethodHints: Qt.ImhPreferLowercase | Qt.ImhNoPredictiveText
+                    
+                    // Ensure text input is focusable and accepts input
+                    activeFocusOnTab: true
+                    activeFocusOnPress: true
+                    focus: false  // Don't auto-focus to prevent unwanted keyboard
                     
                     font.pixelSize: baseFont
                     color: textColor
                     
-                                         // Enhanced focus handling for keyboard on mobile platforms
-                     onActiveFocusChanged: {
-                         if (activeFocus && needsKeyboardHandling) {
-                             // Ensure input is visible when keyboard appears
-                             Qt.callLater(function() {
-                                 if (keyboardVisible) {
-                                     // Scroll to make input visible on mobile
-                                     var contentArea = parent.parent.parent;
-                                     if (contentArea && contentArea.contentY !== undefined) {
-                                         contentArea.contentY = Math.max(0, 
-                                             contentArea.contentHeight - contentArea.height);
-                                     }
-                                 }
-                             });
-                         }
-                     }
+                    // Enhanced focus and click handling for mobile platforms
+                    onActiveFocusChanged: {
+                        console.log("TextInput focus changed:", activeFocus);
+                        if (activeFocus && needsKeyboardHandling) {
+                            console.log("Mobile text input focused - ensuring keyboard appears");
+                            // Force text input to be editable and focusable
+                            Qt.callLater(function() {
+                                if (needsKeyboardHandling) {
+                                    // Explicitly request keyboard on Android
+                                    Qt.inputMethod.show();
+                                    console.log("Requested input method show");
+                                }
+                            });
+                        }
+                    }
+                    
+                    // Handle mouse/touch press to ensure focus
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            console.log("TextInput area clicked");
+                            textInput.forceActiveFocus();
+                            if (needsKeyboardHandling) {
+                                console.log("Mobile platform - requesting keyboard");
+                                Qt.inputMethod.show();
+                            }
+                            mouse.accepted = false; // Let the TextArea handle the click too
+                        }
+                    }
                     
                     background: Rectangle {
                         color: surfaceColor
@@ -1029,11 +1087,29 @@ ApplicationWindow {
         console.log("Font size changed to:", newSize);
     }
     
+    // Functions for keyboard and input management
+    function forceShowKeyboard() {
+        if (needsKeyboardHandling) {
+            console.log("Force showing keyboard");
+            textInput.forceActiveFocus();
+            Qt.inputMethod.show();
+        }
+    }
+    
+    function hideKeyboard() {
+        if (needsKeyboardHandling) {
+            console.log("Hiding keyboard");
+            Qt.inputMethod.hide();
+            textInput.focus = false;
+        }
+    }
+    
     // Load settings on startup
     Component.onCompleted: {
         // Initialize mobile-specific properties for keyboard handling
         if (needsKeyboardHandling) {
             originalHeight = height;
+            console.log("Mobile platform detected - keyboard handling enabled");
         }
         
         show()
@@ -1049,6 +1125,16 @@ ApplicationWindow {
             if (settings.interface && settings.interface.fontSize) {
                 applyFontSize(settings.interface.fontSize);
             }
+        }
+        
+        // Setup input method connections for Android
+        if (needsKeyboardHandling) {
+            Qt.inputMethod.visibleChanged.connect(function() {
+                console.log("Input method visibility changed:", Qt.inputMethod.visible);
+                if (Qt.inputMethod.visible !== keyboardVisible) {
+                    keyboardVisible = Qt.inputMethod.visible;
+                }
+            });
         }
     }
 } 
