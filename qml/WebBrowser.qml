@@ -129,7 +129,7 @@ Dialog {
             Button {
                 id: backButton
                 text: "◀"
-                enabled: webView.canGoBack
+                enabled: root.canGoBack
                 implicitWidth: 36 * scaleFactor
                 implicitHeight: 36 * scaleFactor
                 flat: true
@@ -158,7 +158,7 @@ Dialog {
             Button {
                 id: forwardButton
                 text: "▶"
-                enabled: webView.canGoForward
+                enabled: root.canGoForward
                 implicitWidth: 36 * scaleFactor
                 implicitHeight: 36 * scaleFactor
                 flat: true
@@ -186,7 +186,7 @@ Dialog {
             // Reload/Stop button
             Button {
                 id: reloadButton
-                text: webView.loading ? "⏹" : "🔄"
+                text: root.isLoading ? "⏹" : "🔄"
                 implicitWidth: 36 * scaleFactor
                 implicitHeight: 36 * scaleFactor
                 flat: true
@@ -205,10 +205,10 @@ Dialog {
                     verticalAlignment: Text.AlignVCenter
                 }
                 
-                ToolTip.text: webView.loading ? "Stop Loading" : "Reload Page"
+                ToolTip.text: root.isLoading ? "Stop Loading" : "Reload Page"
                 ToolTip.visible: hovered
                 
-                onClicked: webView.loading ? stop() : reload()
+                onClicked: root.isLoading ? stop() : reload()
             }
             
             // Address bar
@@ -231,7 +231,7 @@ Dialog {
                 }
                 
                 Keys.onEscapePressed: {
-                    text = webView.url
+                    text = root.currentUrl
                     focus = false
                 }
             }
@@ -277,8 +277,8 @@ Dialog {
             height: 2 * scaleFactor
             from: 0
             to: 100
-            value: webView.loadProgress
-            visible: webView.loading
+            value: root.loadProgress
+            visible: root.isLoading
             
             background: Rectangle {
                 color: backgroundColor
@@ -476,7 +476,7 @@ Dialog {
     Shortcut {
         sequence: "Escape"
         onActivated: {
-            if (webView.loading) {
+            if (root.isLoading) {
                 stop()
             }
         }
@@ -500,6 +500,18 @@ Dialog {
     // Initialize web backend detection when dialog opens
     Component.onCompleted: {
         console.log("=== Web Browser Dialog Opened ===")
+        
+        // Initialize WebView for mobile platforms
+        if (Qt.platform.os === "android" || Qt.platform.os === "ios") {
+            console.log("Initializing WebView for mobile platform...")
+            try {
+                // WebView initialization is handled automatically by Qt6.9
+                console.log("✓ WebView will be initialized when component is created")
+            } catch (e) {
+                console.error("✗ Failed to initialize WebView:", e.message)
+            }
+        }
+        
         detectWebBackends()
     }
 } 
