@@ -2,73 +2,62 @@
 
 #include <QObject>
 #include <QString>
-#include <QVariant>
-#include <QJsonObject>
-#include <memory>
+#include <QStringList>
+#include <QtQmlIntegration>
 
-#if HAVE_QTKEYCHAIN
-// Forward declaration to avoid including the header in this file
-namespace QKeychain {
-    class Job;
-    class ReadPasswordJob;
-    class WritePasswordJob;
-    class DeletePasswordJob;
-}
-#endif
+// Forward declaration
+class SecureStorage;
 
+/**
+ * Cross-Platform Secure Storage Manager using Qt6.9
+ * 
+ * Simplified wrapper around SecureStorage that provides
+ * credential management for the VoiceAI LLM application.
+ * Works on Windows, macOS, iOS, Android, Linux, and HarmonyOS.
+ */
 class SecureStorageManager : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit SecureStorageManager(QObject *parent = nullptr);
     ~SecureStorageManager();
 
-    // Secure credential storage
-    void storeCredential(const QString &key, const QString &value);
-    QString getCredential(const QString &key) const;
-    void deleteCredential(const QString &key);
-    bool hasCredential(const QString &key) const;
+    // Core credential operations
+    Q_INVOKABLE void storeCredential(const QString &key, const QString &value);
+    Q_INVOKABLE QString retrieveCredential(const QString &key);
+    Q_INVOKABLE void deleteCredential(const QString &key);
+    Q_INVOKABLE bool hasCredential(const QString &key);
+    Q_INVOKABLE void clearAllCredentials();
 
-    // Check if secure storage is available
-    bool isSecureStorageAvailable() const;
+    // Status
+    Q_INVOKABLE bool isSecureStorageAvailable() const;
+    Q_INVOKABLE QStringList getAllStoredKeys();
 
-    // Store/retrieve non-sensitive settings
-    void storeSettings(const QString &key, const QVariant &value);
-    QVariant getSettings(const QString &key, const QVariant &defaultValue = QVariant()) const;
+    // OAuth Token Management
+    Q_INVOKABLE void storeOAuthToken(const QString &service, const QString &token);
+    Q_INVOKABLE QString retrieveOAuthToken(const QString &service);
+    Q_INVOKABLE void deleteOAuthToken(const QString &service);
+
+    // API Key Management
+    Q_INVOKABLE void storeApiKey(const QString &apiName, const QString &apiKey);
+    Q_INVOKABLE QString retrieveApiKey(const QString &apiName);
+    Q_INVOKABLE void deleteApiKey(const QString &apiName);
+
+    // Convenience methods for common APIs
+    Q_INVOKABLE void storeGoogleCloudApiKey(const QString &apiKey);
+    Q_INVOKABLE QString retrieveGoogleCloudApiKey();
+    Q_INVOKABLE void storeOpenAIApiKey(const QString &apiKey);
+    Q_INVOKABLE QString retrieveOpenAIApiKey();
 
 signals:
     void credentialStored(const QString &key, bool success);
     void credentialRetrieved(const QString &key, const QString &value, bool success);
     void credentialDeleted(const QString &key, bool success);
-    void error(const QString &message);
-
-private slots:
-#if HAVE_QTKEYCHAIN
-    void onJobFinished(QKeychain::Job *job);
-#endif
+    void storageError(const QString &error);
 
 private:
-    void initializeSecureStorage();
-    QString generateEncryptionKey() const;
-    QString encryptData(const QString &data) const;
-    QString decryptData(const QString &encryptedData) const;
-
-    // Fallback storage for when QtKeychain is not available
-    void storeFallback(const QString &key, const QString &value);
-    QString getFallback(const QString &key) const;
-    void deleteFallback(const QString &key);
-
-    static constexpr const char* APP_NAME = "VoiceAILLM";
-    static constexpr const char* SERVICE_NAME = "VoiceAILLM_Credentials";
-    
-    mutable QJsonObject m_fallbackStorage;
-    mutable QString m_fallbackStoragePath;
+    SecureStorage *m_secureStorage;
     bool m_secureStorageAvailable;
-    
-#if HAVE_QTKEYCHAIN
-    mutable std::unique_ptr<QKeychain::ReadPasswordJob> m_readJob;
-    mutable std::unique_ptr<QKeychain::WritePasswordJob> m_writeJob;
-    mutable std::unique_ptr<QKeychain::DeletePasswordJob> m_deleteJob;
-#endif
 }; 

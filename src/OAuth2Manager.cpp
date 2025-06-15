@@ -515,20 +515,20 @@ void OAuth2Manager::loadCredentials(Provider provider)
     SecureStorageManager storage;
     
     if (provider == Provider::WeChat) {
-        m_weChatAppId = storage.getCredential("wechat_app_id");
-        m_weChatAppSecret = storage.getCredential("wechat_app_secret");
-        m_weChatAccessToken = storage.getCredential("wechat_access_token");
-        m_weChatRefreshToken = storage.getCredential("wechat_refresh_token");
+        m_weChatAppId = storage.retrieveCredential("wechat_app_id");
+        m_weChatAppSecret = storage.retrieveCredential("wechat_app_secret");
+        m_weChatAccessToken = storage.retrieveCredential("wechat_access_token");
+        m_weChatRefreshToken = storage.retrieveCredential("wechat_refresh_token");
         
         if (!m_weChatAccessToken.isEmpty()) {
             m_weChatAuthenticated = true;
             emit weChatAuthenticationChanged();
         }
     } else if (provider == Provider::DingTalk) {
-        m_dingTalkAppId = storage.getCredential("dingtalk_app_id");
-        m_dingTalkAppSecret = storage.getCredential("dingtalk_app_secret");
-        m_dingTalkAccessToken = storage.getCredential("dingtalk_access_token");
-        m_dingTalkRefreshToken = storage.getCredential("dingtalk_refresh_token");
+        m_dingTalkAppId = storage.retrieveCredential("dingtalk_app_id");
+        m_dingTalkAppSecret = storage.retrieveCredential("dingtalk_app_secret");
+        m_dingTalkAccessToken = storage.retrieveCredential("dingtalk_access_token");
+        m_dingTalkRefreshToken = storage.retrieveCredential("dingtalk_refresh_token");
         
         if (!m_dingTalkAccessToken.isEmpty()) {
             m_dingTalkAuthenticated = true;

@@ -21,12 +21,11 @@
 // Note: Qt 6.9 does not have native speech recognition
 // We use Qt's cross-platform audio capture + Google Cloud Speech API
 
-class AudioBuffer;
+#include "AudioBuffer.h"
 
 class VoiceRecognitionManager : public QObject
 {
     Q_OBJECT
-    QML_ELEMENT
     Q_PROPERTY(bool isListening READ isListening NOTIFY listeningChanged)
     Q_PROPERTY(bool isRecording READ isRecording NOTIFY recordingChanged)
     Q_PROPERTY(QString recognizedText READ recognizedText NOTIFY recognizedTextChanged)
@@ -192,33 +191,7 @@ private:
     void *m_androidRecognizer; // Android specific handles
     QJniObject m_androidRecognitionIntent;
     QString m_lastAndroidRecognitionResult;
-    class AndroidPermissionManager *m_permissionManager;
-    bool m_audioPermissionGranted;
 #endif
 };
 
-// Custom audio buffer class to capture audio data
-class AudioBuffer : public QIODevice
-{
-    Q_OBJECT
-
-public:
-    explicit AudioBuffer(QObject *parent = nullptr);
-    
-    void startRecording();
-    void stopRecording();
-    QByteArray getRecordedData() const;
-    void clearBuffer();
-
-signals:
-    void audioLevelUpdated(float level);
-
-protected:
-    qint64 readData(char *data, qint64 maxlen) override;
-    qint64 writeData(const char *data, qint64 len) override;
-
-private:
-    QByteArray m_buffer;
-    bool m_isRecording;
-    float calculateAudioLevel(const char *data, qint64 len);
-}; 
+ 

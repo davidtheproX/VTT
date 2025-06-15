@@ -88,6 +88,23 @@ void TTSManager::initialize()
 #elif defined(Q_OS_ANDROID)
         qDebug() << "Using Android TTS (TextToSpeech API) - optimized for Google voices";
         m_tts = new QTextToSpeech(this);
+        
+        // Android TTS debugging
+        QTimer::singleShot(1000, this, [this]() {
+            if (m_tts) {
+                qDebug() << "Android TTS delayed check:";
+                qDebug() << "  TTS State:" << m_tts->state();
+                qDebug() << "  Available Locales:" << m_tts->availableLocales().size();
+                qDebug() << "  Available Voices:" << m_tts->availableVoices().size();
+                
+                if (m_tts->availableVoices().isEmpty()) {
+                    qWarning() << "No Android TTS voices found!";
+                    qWarning() << "Please install Google TTS from Play Store and ensure language packs are downloaded";
+                    qWarning() << "Go to Settings > Language & Input > Text-to-speech output > Google Text-to-speech Engine";
+                    emit error("No TTS voices available. Please install Google TTS and language packs from Android Settings.");
+                }
+            }
+        });
 #elif defined(Q_OS_LINUX)
         qDebug() << "Using Linux TTS (speech-dispatcher/espeak) - cross-platform voices";
         m_tts = new QTextToSpeech(this);
@@ -115,6 +132,8 @@ void TTSManager::initialize()
         emit error("Failed to initialize text-to-speech: " + QString(e.what()));
     }
 }
+
+
 
 void TTSManager::loadAvailableVoices()
 {

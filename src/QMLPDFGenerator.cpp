@@ -294,19 +294,31 @@ QString QMLPDFGenerator::loadQMLTemplate(const QString &templateName)
 {
     qDebug() << "QMLPDFGenerator: Loading template:" << templateName;
     
-    // For debugging, try absolute file path first
-    QString absolutePath = QString("E:/VTT/qml/pdf_templates/%1.qml").arg(templateName);
-    QFile absoluteFile(absolutePath);
+    // Try resource system first (cross-platform)
+    QString resourcePath = QString(":/VoiceAILLM/qml/pdf_templates/%1.qml").arg(templateName);
+    QFile resourceFile(resourcePath);
     
-    if (absoluteFile.open(QIODevice::ReadOnly)) {
-        QString content = QString::fromUtf8(absoluteFile.readAll());
-        qDebug() << "QMLPDFGenerator: Loaded from absolute path:" << absolutePath;
+    if (resourceFile.open(QIODevice::ReadOnly)) {
+        QString content = QString::fromUtf8(resourceFile.readAll());
+        qDebug() << "QMLPDFGenerator: Loaded from resource:" << resourcePath;
         qDebug() << "QMLPDFGenerator: Template content length:" << content.length();
         return content;
     }
     
-    // If no absolute path, try a simple hardcoded QML for testing
-    qDebug() << "QMLPDFGenerator: Absolute path failed, using simple test template";
+    // Try application directory as fallback (cross-platform)
+    QString appDirPath = QCoreApplication::applicationDirPath();
+    QString templatePath = QDir(appDirPath).filePath(QString("qml/pdf_templates/%1.qml").arg(templateName));
+    QFile templateFile(templatePath);
+    
+    if (templateFile.open(QIODevice::ReadOnly)) {
+        QString content = QString::fromUtf8(templateFile.readAll());
+        qDebug() << "QMLPDFGenerator: Loaded from app directory:" << templatePath;
+        qDebug() << "QMLPDFGenerator: Template content length:" << content.length();
+        return content;
+    }
+    
+    // If no template found, use simple hardcoded QML for testing
+    qDebug() << "QMLPDFGenerator: No template found, using simple fallback template";
     
     QString simpleTemplate = R"(
 import QtQuick

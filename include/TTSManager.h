@@ -10,6 +10,11 @@
 #include <QtQmlIntegration>
 #include <memory>
 
+#ifdef Q_OS_ANDROID
+#include <QJniObject>
+#include <QJniEnvironment>
+#endif
+
 class TTSManager : public QObject
 {
     Q_OBJECT
@@ -85,6 +90,8 @@ private:
     bool containsChinese(const QString &text);
     bool findChineseVoice();
 
+
+
     QTextToSpeech *m_tts;
     bool m_isEnabled;
     QStringList m_availableVoices;
@@ -105,4 +112,6 @@ private:
     static const VoicePreset NATURAL_PRESET;
     static const VoicePreset ROBOT_PRESET;
     static const VoicePreset CHINESE_PRESET;
-}; 
+};
+
+ 

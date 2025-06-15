@@ -23,6 +23,8 @@
     <!-- Support different screen sizes -->
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
     
+
+    
     <!-- Application -->
     <application android:hardwareAccelerated="true" 
                  android:name="org.qtproject.qt.android.bindings.QtApplication" 
@@ -55,6 +57,8 @@
                 <data android:mimeType="text/csv" />
                 <data android:mimeType="image/svg+xml" />
             </intent-filter>
+            
+
             
             <!-- Meta-data -->
             <meta-data android:name="android.app.lib_name" android:value="VoiceAILLM"/>

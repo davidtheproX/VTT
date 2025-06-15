@@ -11,16 +11,7 @@ CMake Warning at CMakeLists.txt:135 (message):
     Install Qt WebEngine package for full web browser support
 
 
-CMake Warning at CMakeLists.txt:484 (message):
+CMake Warning at CMakeLists.txt:489 (message):
   Qt Keychain not found - using basic storage (less secure)
 
-
-CMake Warning (dev) at D:/msys64/ucrt64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:802 (message):
-  Tried to call qt6_finalize_target twice on target 'VoiceAILLM'.  Did you
-  forget to specify MANUAL_FINALIZATION to qt6_add_executable,
-  qt6_add_library or qt6_add_plugin?
-Call Stack (most recent call first):
-  D:/msys64/ucrt64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:784:EVAL:1 (qt6_finalize_target)
-  CMakeLists.txt:DEFERRED
-This warning is for project developers.  Use -Wno-dev to suppress it.
 

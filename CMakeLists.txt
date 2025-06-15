@@ -282,6 +282,7 @@ qt_standard_project_setup()
 set(SOURCES 
     main.cpp
     src/VoiceRecognitionManager.cpp
+    src/AudioBuffer.cpp
     src/PlatformSpeechRecognition.cpp
     src/LLMConnectionManager.cpp
     src/ChatManager.cpp
@@ -289,6 +290,7 @@ set(SOURCES
     src/PromptManager.cpp
     src/TTSManager.cpp
     src/SecureStorageManager.cpp
+    src/SecureStorage.cpp
     src/LoggingManager.cpp
     src/OAuth2Manager.cpp
     src/QRCodeGenerator.cpp
@@ -307,6 +309,7 @@ set(HEADERS
     include/PlatformDetection.h
     include/ChatManager.h
     include/VoiceRecognitionManager.h
+    include/AudioBuffer.h
     include/LLMConnectionManager.h
     include/DatabaseManager.h
     include/PromptManager.h
@@ -324,30 +327,28 @@ set(HEADERS
     include/DeviceDiscoveryManager.h
     include/QPing.h
     # Android-specific headers
-    include/AndroidPermissionManager.h
-    include/AndroidKeystoreManager.h
+    include/SecureStorage.h
 )
 
 # Create the executable with platform-specific properties
 if(ANDROID)
-    qt_add_executable(VoiceAILLM ${SOURCES} ${HEADERS})
+    qt_add_executable(VoiceAILLM MANUAL_FINALIZATION ${SOURCES} ${HEADERS})
     set_target_properties(VoiceAILLM PROPERTIES
         QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android"
     )
 elseif(IOS)
-    qt_add_executable(VoiceAILLM ${SOURCES} ${HEADERS})
+    qt_add_executable(VoiceAILLM MANUAL_FINALIZATION ${SOURCES} ${HEADERS})
     set_target_properties(VoiceAILLM PROPERTIES
         BUNDLE TRUE
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/ios/Info.plist"
     )
 elseif(WIN32)
     # Windows executable - console app for debugging, can be changed to WIN32 for release
-    qt_add_executable(VoiceAILLM ${SOURCES} ${HEADERS})
+    qt_add_executable(VoiceAILLM MANUAL_FINALIZATION ${SOURCES} ${HEADERS})
     # Uncomment for release builds:
     # set_target_properties(VoiceAILLM PROPERTIES WIN32_EXECUTABLE TRUE)
 else()
-
-qt_add_executable(VoiceAILLM ${SOURCES} ${HEADERS})
+    qt_add_executable(VoiceAILLM MANUAL_FINALIZATION ${SOURCES} ${HEADERS})
 endif()
 
 # Include directories
@@ -524,8 +525,7 @@ elseif(ANDROID)
     )
     # Add Android-specific sources
     target_sources(VoiceAILLM PRIVATE
-        src/AndroidPermissionManager.cpp
-        src/AndroidKeystoreManager.cpp
+            src/SecureStorage.cpp
     )
     # Android JNI libraries and permissions
     target_link_libraries(VoiceAILLM PRIVATE log)

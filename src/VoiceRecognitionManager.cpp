@@ -12,70 +12,6 @@
 #include <QDir>
 #include <QEventLoop>
 
-// AudioBuffer Implementation
-AudioBuffer::AudioBuffer(QObject *parent)
-    : QIODevice(parent)
-    , m_isRecording(false)
-{
-    open(QIODevice::WriteOnly);
-}
-
-void AudioBuffer::startRecording()
-{
-    m_isRecording = true;
-    m_buffer.clear();
-}
-
-void AudioBuffer::stopRecording()
-{
-    m_isRecording = false;
-}
-
-QByteArray AudioBuffer::getRecordedData() const
-{
-    return m_buffer;
-}
-
-void AudioBuffer::clearBuffer()
-{
-    m_buffer.clear();
-}
-
-qint64 AudioBuffer::readData(char *data, qint64 maxlen)
-{
-    Q_UNUSED(data)
-    Q_UNUSED(maxlen)
-    return 0; // Write-only device
-}
-
-qint64 AudioBuffer::writeData(const char *data, qint64 len)
-{
-    if (m_isRecording) {
-        m_buffer.append(data, len);
-        
-        // Calculate and emit audio level
-        float level = calculateAudioLevel(data, len);
-        emit audioLevelUpdated(level);
-    }
-    return len;
-}
-
-float AudioBuffer::calculateAudioLevel(const char *data, qint64 len)
-{
-    if (len == 0) return 0.0f;
-    
-    const qint16 *samples = reinterpret_cast<const qint16*>(data);
-    qint64 sampleCount = len / sizeof(qint16);
-    
-    qint64 sum = 0;
-    for (qint64 i = 0; i < sampleCount; ++i) {
-        sum += qAbs(samples[i]);
-    }
-    
-    float average = static_cast<float>(sum) / sampleCount;
-    return qMin(average / 32768.0f, 1.0f); // Normalize to 0-1
-}
-
 // VoiceRecognitionManager Implementation
 VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     : QObject(parent)
@@ -97,33 +33,20 @@ VoiceRecognitionManager::VoiceRecognitionManager(QObject *parent)
     , m_audioSampleRate(16000)
     , m_audioChannels(1)
     , m_isConfigured(false)
-    , m_permissionManager(nullptr)
-    , m_audioPermissionGranted(false)
+
 {
 #ifdef PLATFORM_ANDROID
-    // Initialize permission manager for Android
-    m_permissionManager = new AndroidPermissionManager(this);
-    connect(m_permissionManager, &AndroidPermissionManager::audioPermissionChanged,
-            this, &VoiceRecognitionManager::onAudioPermissionChanged);
-    connect(m_permissionManager, &AndroidPermissionManager::permissionDenied,
-            this, &VoiceRecognitionManager::onPermissionDenied);
-    
-    // Check initial permission status
-    m_audioPermissionGranted = m_permissionManager->audioPermissionGranted();
-    qDebug() << "VoiceRecognitionManager: Initial audio permission status:" << m_audioPermissionGranted;
+    // Qt6.9 handles Android permissions automatically
+    qDebug() << "VoiceRecognitionManager: Using Qt6.9 automatic permission handling";
 #else
     // Non-Android platforms don't need runtime permissions
-    m_audioPermissionGranted = true;
+    // Audio permissions handled automatically by Qt6.9 on Android
     qDebug() << "VoiceRecognitionManager: Non-Android platform, audio permission auto-granted";
 #endif
 
-    // Only initialize audio if permissions are granted
-    if (m_audioPermissionGranted) {
-        initializeAudio();
-        loadAvailableMicrophones();
-    } else {
-        qDebug() << "VoiceRecognitionManager: Audio permission not granted, deferring audio initialization";
-    }
+    // Initialize audio (Qt6.9 handles permissions automatically)
+    initializeAudio();
+    loadAvailableMicrophones();
     
     // Initialize network manager for Google Cloud Speech API
     m_networkManager = new QNetworkAccessManager(this);

@@ -203,12 +203,8 @@ void VoiceRecognitionManager::initializeAndroidSpeechRecognition()
     qDebug() << "Initializing Android Speech Recognition with JNI integration";
     
     try {
-        // Check if we have the permission manager
-        if (!m_permissionManager || !m_permissionManager->audioPermissionGranted()) {
-            qWarning() << "Android Speech Recognition: Audio permission not granted";
-            m_useLocalSpeechRecognition = false;
-            return;
-        }
+        // Qt6.9 handles Android permissions automatically via AndroidManifest.xml
+        qDebug() << "Android Speech Recognition: Using Qt6.9 automatic permission handling";
         
         // Get Android context
         QJniObject activity = QJniObject::callStaticObjectMethod(
@@ -317,11 +313,7 @@ QString VoiceRecognitionManager::processWithAndroidSpeechRecognition(const QByte
     }
     
     try {
-        // Check permissions again
-        if (!m_permissionManager || !m_permissionManager->audioPermissionGranted()) {
-            qWarning() << "Audio permission not granted for speech recognition";
-            return QString();
-        }
+        // Qt6.9 handles permissions automatically - no need to check manually
         
         // Start listening using the prepared intent
         m_androidRecognizer.callMethod<void>("startListening",

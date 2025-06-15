@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
                 }
                 
                 // Load API key from secure storage instead of database
-                QString apiKey = secureStorage.getCredential("openai_api_key");
+                QString apiKey = secureStorage.retrieveCredential("openai_api_key");
                 if (!apiKey.isEmpty()) {
                     llmManager.setApiKey(apiKey);
                     logger->infoSecurity("OpenAI API key loaded from secure storage");
@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
             QJsonObject voiceSettings = settings["voice"].toObject();
             
             // Load Google API key from secure storage
-            QString googleApiKey = secureStorage.getCredential("google_speech_api_key");
+            QString googleApiKey = secureStorage.retrieveCredential("google_speech_api_key");
             if (!googleApiKey.isEmpty()) {
                 voiceManager.setGoogleApiKey(googleApiKey);
                 logger->infoSecurity("Google Speech API key loaded from secure storage");
