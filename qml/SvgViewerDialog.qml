@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
-import SvgViewer 1.0
+import VoiceAILLM 1.0
 
 ApplicationWindow {
     id: svgViewerWindow

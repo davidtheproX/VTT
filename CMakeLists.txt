@@ -647,8 +647,8 @@ elseif(ANDROID)
     set_target_properties(VoiceAILLM PROPERTIES
         QT_ANDROID_VERSION_NAME "1.0.0"
         QT_ANDROID_VERSION_CODE "1"
-        QT_ANDROID_MIN_SDK_VERSION "23"
-        QT_ANDROID_TARGET_SDK_VERSION "33"
+        QT_ANDROID_MIN_SDK_VERSION "28"
+        QT_ANDROID_TARGET_SDK_VERSION "35"
         QT_ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android"
         QT_ANDROID_PACKAGE_NAME "com.voiceaillm.app"
         QT_ANDROID_APPLICATION_LABEL "Voice AI LLM"
@@ -668,7 +668,8 @@ elseif(ANDROID)
     message(STATUS "  - Material Design: ENABLED")
     message(STATUS "  - JNI integration: ENABLED")
     message(STATUS "  - Package: com.voiceaillm.app")
-    message(STATUS "  - Target SDK: 33 (Android 13)")
+    message(STATUS "  - Min SDK: 28 (Android 9)")
+    message(STATUS "  - Target SDK: 35 (Android 14)")
 endif()
 
 # Note: Qt 6.9 does not have native speech recognition components

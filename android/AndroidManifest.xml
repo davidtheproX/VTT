@@ -91,5 +91,5 @@
     </application>
     
     <!-- Minimum SDK -->
-    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33"/>
+    <uses-sdk android:minSdkVersion="28" android:targetSdkVersion="35"/>
 </manifest> 

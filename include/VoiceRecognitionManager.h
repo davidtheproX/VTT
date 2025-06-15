@@ -18,6 +18,10 @@
 #include <memory>
 #include <QThread>
 
+#ifdef Q_OS_ANDROID
+#include <QJniObject>
+#endif
+
 // Note: Qt 6.9 does not have native speech recognition
 // We use Qt's cross-platform audio capture + Google Cloud Speech API
 
@@ -188,7 +192,7 @@ private:
 #endif
 
 #ifdef Q_OS_ANDROID
-    void *m_androidRecognizer; // Android specific handles
+    QJniObject m_androidRecognizer; // Android SpeechRecognizer instance
     QJniObject m_androidRecognitionIntent;
     QString m_lastAndroidRecognitionResult;
 #endif

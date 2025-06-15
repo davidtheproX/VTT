@@ -192,7 +192,7 @@ int main(int argc, char *argv[])
         
         // Register QML types
         qmlRegisterType<CSVViewer>("VoiceAILLM", 1, 0, "CSVViewerBackend");
-        qmlRegisterType<SvgHandler>("SvgViewer", 1, 0, "SvgHandler");
+        qmlRegisterType<SvgHandler>("VoiceAILLM", 1, 0, "SvgHandler");
         qmlRegisterModule("QtSvg", 6, 9);
 
         // Load the main QML file

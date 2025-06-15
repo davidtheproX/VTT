@@ -711,6 +711,9 @@ void TTSManager::onStateChanged(QTextToSpeech::State state)
         case QTextToSpeech::Paused:
             qDebug() << "TTS Paused";
             break;
+        case QTextToSpeech::Synthesizing:
+            qDebug() << "TTS Synthesizing";
+            break;
         case QTextToSpeech::Error:
             qDebug() << "TTS Error";
             break;

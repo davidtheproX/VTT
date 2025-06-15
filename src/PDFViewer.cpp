@@ -323,6 +323,11 @@ void PDFViewer::updateStatus()
         qDebug() << "PDFViewer: PDF loaded successfully, pages:" << m_pageCount;
         break;
         
+    case QPdfDocument::Status::Unloading:
+        m_isValid = false;
+        qDebug() << "PDFViewer: PDF unloading";
+        break;
+        
     case QPdfDocument::Status::Error:
         m_isValid = false;
         m_pageCount = 0;

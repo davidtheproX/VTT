@@ -69,7 +69,7 @@ bool VoiceRecognitionManager::isLocalSpeechRecognitionAvailable() const
 #ifdef Q_OS_WIN
     return m_windowsSAPIRecognizer != nullptr;
 #elif defined(Q_OS_ANDROID)
-    return m_androidRecognizer != nullptr;
+    return m_androidRecognizer.isValid();
 #elif defined(Q_OS_IOS)
     return true; // iOS Speech Framework is always available
 #elif defined(Q_OS_LINUX)
