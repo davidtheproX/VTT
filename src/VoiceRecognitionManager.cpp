@@ -84,6 +84,12 @@ VoiceRecognitionManager::~VoiceRecognitionManager()
         m_currentReply->deleteLater();
     }
     
+    // Clean up audio processing thread if it exists
+    if (m_audioProcessingThread && m_audioProcessingThread->isRunning()) {
+        m_audioProcessingThread->quit();
+        m_audioProcessingThread->wait(3000); // Wait max 3 seconds
+    }
+    
     delete m_audioSource;
     delete m_audioInput;
     delete m_captureSession;
