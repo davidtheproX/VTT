@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <manifest package="com.voiceaillm.app" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0.0" android:versionCode="1" android:installLocation="auto">
     
+    <!-- TTS queries section (required for Android 11+) -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+    </queries>
+    
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,6 +20,13 @@
     <!-- Runtime permissions for Android 6.0+ -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    
+    <!-- Package visibility for Android 11+ (API 30+) to discover TTS services -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
     
     <!-- Features -->
     <uses-feature android:name="android.hardware.microphone" android:required="true" />
@@ -45,7 +59,7 @@
                   android:label="Voice AI LLM"
                   android:screenOrientation="unspecified"
                   android:launchMode="singleTop"
-                  android:windowSoftInputMode="adjustResize|stateVisible"
+                  android:windowSoftInputMode="adjustPan|stateHidden"
                   android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

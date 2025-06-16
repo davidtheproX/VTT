@@ -344,7 +344,6 @@ set(SOURCES
     src/ChatManager.cpp
     src/DatabaseManager.cpp
     src/PromptManager.cpp
-    src/TTSManager.cpp
     src/SecureStorageManager.cpp
     src/SecureStorage.cpp
     src/LoggingManager.cpp
@@ -369,7 +368,6 @@ set(HEADERS
     include/LLMConnectionManager.h
     include/DatabaseManager.h
     include/PromptManager.h
-    include/TTSManager.h
     include/SecureStorageManager.h
     include/LoggingManager.h
     include/OAuth2Manager.h
@@ -407,6 +405,36 @@ else()
     qt_add_executable(VoiceAILLM MANUAL_FINALIZATION ${SOURCES} ${HEADERS})
 endif()
 
+# Linux-specific build fix: Remove any conflicting directories that block executable creation
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # Add a pre-build step to clean up any conflicting VoiceAILLM directory/files
+    add_custom_command(TARGET VoiceAILLM PRE_BUILD
+        COMMAND ${CMAKE_COMMAND} -E echo "🐧 Linux Build: Cleaning conflicting files/directories..."
+        # Force remove directory with contents (using shell command for robustness)
+        COMMAND bash -c "if [ -d '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM' ]; then echo 'Removing directory: ${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'; rm -rf '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'; fi"
+        # Also remove any conflicting files
+        COMMAND bash -c "if [ -f '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM' ]; then echo 'Removing file: ${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'; rm -f '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'; fi"
+        COMMAND ${CMAKE_COMMAND} -E echo "✓ Linux Build: Cleanup complete - ready for linking"
+        COMMENT "Linux: Force cleaning conflicting directories/files before linking"
+        VERBATIM
+    )
+    
+    # Also add a post-clean custom target for manual cleanup if needed
+    add_custom_target(linux-clean
+        COMMAND bash -c "echo 'Force cleaning Linux build artifacts...'"
+        COMMAND bash -c "rm -rf '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'"
+        COMMAND bash -c "rm -f '${CMAKE_CURRENT_BINARY_DIR}/VoiceAILLM'"
+        COMMAND bash -c "rm -rf '${CMAKE_CURRENT_BINARY_DIR}/.qt'"
+        COMMAND bash -c "rm -rf '${CMAKE_CURRENT_BINARY_DIR}/qml'"
+        COMMAND bash -c "echo 'Linux cleanup complete'"
+        COMMENT "Manual Linux cleanup target"
+        VERBATIM
+    )
+    
+    message(STATUS "🐧 Linux build optimization: Added robust cleanup for conflicting directories")
+    message(STATUS "🐧 Manual cleanup available with: make linux-clean")
+endif()
+
 # Include directories
 target_include_directories(VoiceAILLM PRIVATE include)
 
@@ -420,11 +448,13 @@ endif()
 qt_add_qml_module(VoiceAILLM
     URI VoiceAILLM
     VERSION 1.0
+    OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/qml_module"
     QML_FILES
         qml/Main.qml
         qml/ChatWindow.qml
         qml/MessageDelegate.qml
         qml/VoiceButton.qml
+        qml/TTSComponent.qml
         qml/SettingsDialog.qml
         qml/PromptManagerDialog.qml
         qml/OAuth2LoginDialog.qml

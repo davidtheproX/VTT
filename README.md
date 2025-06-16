@@ -324,7 +324,7 @@ VTT/
 │   ├── PromptManager.cpp             # AI prompt management
 │   ├── DeviceDiscoveryManager.cpp    # Device discovery and communication
 │   ├── QPing.cpp                     # Cross-platform ping implementation
-│   ├── TTSManager.cpp                # Text-to-speech functionality
+│   ├── # TTSManager.cpp removed - now using Qt's native TextToSpeech
 │   ├── OAuth2Manager.cpp             # OAuth2 authentication
 │   ├── SecureStorageManager.cpp      # Secure credential storage
 │   ├── LoggingManager.cpp            # Application logging
@@ -344,7 +344,7 @@ VTT/
 │   ├── PromptManager.h               # Prompt management interface
 │   ├── DeviceDiscoveryManager.h      # Device discovery interface
 │   ├── QPing.h                       # Ping functionality interface
-│   ├── TTSManager.h                  # Text-to-speech interface
+│   ├── # TTSManager.h removed - now using Qt's native TextToSpeech
 │   ├── OAuth2Manager.h               # OAuth2 interface
 │   ├── SecureStorageManager.h        # Secure storage interface
 │   ├── LoggingManager.h              # Logging interface
@@ -431,7 +431,7 @@ VTT/
 - Category-based organization
 - Import/export capabilities
 
-#### TTSManager
+#### TTS Component (Qt Native TextToSpeech)
 - Text-to-speech functionality
 - Cross-platform TTS engine support
 - Voice selection and configuration

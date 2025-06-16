@@ -10,7 +10,6 @@
 
 class LLMConnectionManager;
 class DatabaseManager;
-class TTSManager;
 
 struct Message {
     enum Role {
@@ -45,7 +44,6 @@ public:
 
     explicit ChatManager(LLMConnectionManager *llmManager, QObject *parent = nullptr);
     void setDatabaseManager(DatabaseManager *dbManager);
-    void setTTSManager(TTSManager *ttsManager);
     ~ChatManager();
 
     // QAbstractListModel interface
@@ -90,7 +88,6 @@ private:
     std::vector<Message> m_messages;
     LLMConnectionManager *m_llmManager;
     DatabaseManager *m_databaseManager;
-    TTSManager *m_ttsManager;
     bool m_isProcessing;
     QString m_currentSystemPrompt;
     QString m_currentStreamingId;

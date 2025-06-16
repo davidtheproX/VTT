@@ -9,17 +9,60 @@ import VoiceAILLM 1.0
 ApplicationWindow {
     id: mainWindow
     title: "Voice AI LLM Assistant"
-    
+
+    // TTS Component using Qt's native TextToSpeech
+    TTSComponent {
+        id: ttsComponent
+        objectName: "ttsComponent"
+
+        // Connect to chat manager to speak AI responses automatically
+        Connections {
+            target: chatManager
+            function onMessageAdded(messageId) {
+                console.log("=== MESSAGE ADDED SIGNAL ===")
+                console.log("Message ID:", messageId)
+                console.log("TTS Enabled:", ttsComponent.isEnabled)
+                console.log("TTS State:", ttsComponent.tts ? ttsComponent.tts.state : "TTS not available")
+                console.log("Chat Manager Message Count:", chatManager.messageCount)
+                
+                // Find the message and speak it if it's from the assistant
+                for (var i = 0; i < chatManager.messageCount; i++) {
+                    var index = chatManager.index(i, 0)
+                    var role = chatManager.data(index, chatManager.roleRole || 257) // RoleRole = 257
+                    var content = chatManager.data(index, chatManager.contentRole || 256) // ContentRole = 256
+                    var msgId = chatManager.data(index, chatManager.idRole || 260) // IdRole = 260
+
+                    console.log("Checking message", i, "- ID:", msgId, "Role:", role, "Content length:", content ? content.length : 0)
+
+                    if (msgId === messageId && role === 1) { // Assistant role = 1
+                        console.log("Found assistant message to speak!")
+                        console.log("Content preview:", content ? content.substring(0, 100) : "No content")
+                        
+                        if (ttsComponent.isEnabled) {
+                            console.log("TTS is enabled, speaking content...")
+                            ttsComponent.speak(content)
+                        } else {
+                            console.log("TTS is DISABLED - message will not be spoken")
+                            console.log("TTS Component state:", ttsComponent.tts ? ttsComponent.tts.state : "No TTS object")
+                        }
+                        break
+                    }
+                }
+                console.log("=== END MESSAGE ADDED ===")
+            }
+        }
+    }
+
     // Material Design configuration
     Material.theme: Qt.platform.os === "android" || Qt.platform.os === "ios" ? Material.Light : Material.System
     Material.accent: Material.Blue
     Material.primary: Material.Blue
     Material.foreground: Material.Grey
-    
+
     // Responsive sizing - mobile-first approach
     property bool isMobile: Qt.platform.os === "android" || Qt.platform.os === "ios"
     property bool isTablet: isMobile && Math.min(width, height) > 600
-    
+
     // Mobile keyboard handling (Android & iOS)
     property bool isAndroid: Qt.platform.os === "android"
     property bool isIOS: Qt.platform.os === "ios"
@@ -27,10 +70,10 @@ ApplicationWindow {
     property bool keyboardVisible: false
     property real keyboardHeight: 0
     property real originalHeight: height
-    
+
     // Mobile touch optimizations
     property bool enableHoverEffects: !isMobile
-    
+
     // Fixed desktop dimensions with mobile fullscreen
     width: isMobile ? (isTablet ? 1024 : 375) : 1200
     height: isMobile ? (isTablet ? 768 : 812) : 800
@@ -38,16 +81,16 @@ ApplicationWindow {
     minimumHeight: isMobile ? 568 : 800
     maximumWidth: isMobile ? Screen.width : 1200
     maximumHeight: isMobile ? Screen.height : 800
-    
+
     visibility: isMobile ? Window.FullScreen : Window.Windowed
     visible: true
-    
+
     // Keyboard detection for mobile platforms (Android & iOS)
     onHeightChanged: {
         if (needsKeyboardHandling && originalHeight > 0) {
             var heightDifference = originalHeight - height;
             var keyboardThreshold = isIOS ? 300 : 200; // iOS keyboard is typically larger
-            
+
             if (heightDifference > keyboardThreshold) {
                 keyboardVisible = true;
                 keyboardHeight = heightDifference;
@@ -57,9 +100,9 @@ ApplicationWindow {
             }
         }
     }
-    
 
-    
+
+
     // Zoom-to-fit scaling with fixed desktop resolution
     property real scaleFactor: {
         if (isMobile) {
@@ -68,7 +111,7 @@ ApplicationWindow {
                 if (isIOS) return isTablet ? 1.1 : 0.9;  // iOS keyboards need different scaling
                 return isTablet ? 1.0 : 0.85;           // Android scaling
             } else {
-                // Platform-specific mobile scaling  
+                // Platform-specific mobile scaling
                 if (isIOS) return isTablet ? 1.3 : 1.1;  // iOS prefers slightly larger UI
                 return isTablet ? 1.2 : 1.0;             // Android scaling
             }
@@ -85,7 +128,7 @@ ApplicationWindow {
     }
     property real baseFontSize: isMobile ? (isTablet ? 16 : 14) : 14
     property real baseFont: baseFontSize * scaleFactor
-    
+
     // Material Design colors with platform adaptation
     property color primaryColor: Material.color(Material.Blue)
     property color secondaryColor: Material.color(Material.Amber)
@@ -96,18 +139,18 @@ ApplicationWindow {
     property color errorColor: Material.color(Material.Red)
     property color successColor: Material.color(Material.Green)
     property color warningColor: Material.color(Material.Orange)
-    
+
     color: backgroundColor
-    
+
     // Platform-adaptive font
     font.family: isMobile ? "Roboto" : (Qt.platform.os === "windows" ? "Segoe UI" : "System")
     font.pixelSize: baseFont
-    
+
     header: ToolBar {
         id: headerBar
         // Dynamic height based on keyboard state
         height: keyboardVisible ? (40 * scaleFactor) : (60 * scaleFactor)
-        
+
         // Smooth height transitions
         Behavior on height {
             NumberAnimation {
@@ -115,10 +158,10 @@ ApplicationWindow {
                 easing.type: Easing.OutQuad
             }
         }
-        
+
         background: Rectangle {
             color: primaryColor
-            
+
             Rectangle {
                 anchors.bottom: parent.bottom
                 width: parent.width
@@ -126,11 +169,11 @@ ApplicationWindow {
                 color: Qt.darker(primaryColor, 1.2)
             }
         }
-        
+
         RowLayout {
             anchors.fill: parent
             anchors.margins: keyboardVisible ? (8 * scaleFactor) : (16 * scaleFactor)
-            
+
             // Adaptive margins based on keyboard state
             Behavior on anchors.margins {
                 NumberAnimation {
@@ -138,14 +181,14 @@ ApplicationWindow {
                     easing.type: Easing.OutQuad
                 }
             }
-            
+
             Text {
                 text: keyboardVisible ? "Voice AI" : "Voice AI LLM Assistant"
                 color: "white"
                 font.pixelSize: keyboardVisible ? (baseFont * 1.2) : (baseFont * 1.4)
                 font.weight: Font.Medium
                 Layout.fillWidth: true
-                
+
                 // Smooth text size transitions
                 Behavior on font.pixelSize {
                     NumberAnimation {
@@ -154,36 +197,36 @@ ApplicationWindow {
                     }
                 }
             }
-            
+
             // Connection status indicator
             Rectangle {
                 width: keyboardVisible ? (8 * scaleFactor) : (12 * scaleFactor)
                 height: keyboardVisible ? (8 * scaleFactor) : (12 * scaleFactor)
                 radius: width / 2
                 color: llmManager.isConnected ? successColor : errorColor
-                
+
                 Behavior on width {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
                 Behavior on height {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
-                
+
                 ToolTip.text: llmManager.isConnected ? "Connected" : "Disconnected"
                 ToolTip.visible: connectionMouseArea.containsMouse && !keyboardVisible
-                
+
                 MouseArea {
                     id: connectionMouseArea
                     anchors.fill: parent
                     hoverEnabled: true
                 }
             }
-            
+
             // Compact toolbar when keyboard is visible
             Row {
                 spacing: keyboardVisible ? (4 * scaleFactor) : (8 * scaleFactor)
                 visible: !keyboardVisible || isTablet
-                
+
                 Behavior on spacing {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
@@ -194,17 +237,17 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: qmlViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: qmlViewerButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                (enableHoverEffects && qmlViewerButton.hovered) ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         Behavior on color {
                             ColorAnimation { duration: 100 }
                         }
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -214,10 +257,10 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: "QML UI Viewer (Qt Design Studio)"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         console.log("QML Viewer button clicked")
                         qmlViewerDialogLoader.openQmlViewer()
@@ -230,27 +273,27 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: commTestButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: commTestButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                (enableHoverEffects && commTestButton.hovered) ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         Behavior on color {
                             ColorAnimation { duration: 100 }
                         }
                     }
-                    
+
                     contentItem: Text {
                         text: "📡"
                         font.pixelSize: 20 * scaleFactor
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                     }
-                    
+
                     ToolTip.text: "Communication Test - Device Discovery"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         console.log("Comm Test button clicked")
                         commTestDialog.open()
@@ -263,17 +306,17 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: svgViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: svgViewerButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                (enableHoverEffects && svgViewerButton.hovered) ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         Behavior on color {
                             ColorAnimation { duration: 100 }
                         }
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -283,10 +326,10 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: "SVG Life Data Viewer"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         console.log("SVG Viewer button clicked")
                         svgViewerDialogLoader.openSvgViewer()
@@ -299,12 +342,12 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: wechatButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: wechatButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                wechatButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         // Authentication indicator
                         Rectangle {
                             width: 8 * scaleFactor
@@ -316,7 +359,7 @@ ApplicationWindow {
                             anchors.margins: 2 * scaleFactor
                         }
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -326,27 +369,27 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? "WeChat (Authenticated)" : "WeChat Login"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         oauth2LoginDialog.currentProvider = "wechat"
                         oauth2LoginDialog.open()
                     }
                 }
-                
+
                 Button {
                     id: dingtalkButton
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: dingtalkButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: dingtalkButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                dingtalkButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         // Authentication indicator
                         Rectangle {
                             width: 8 * scaleFactor
@@ -358,7 +401,7 @@ ApplicationWindow {
                             anchors.margins: 2 * scaleFactor
                         }
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -368,10 +411,10 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? "DingTalk (Authenticated)" : "DingTalk Login"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         oauth2LoginDialog.currentProvider = "dingtalk"
                         oauth2LoginDialog.open()
@@ -384,12 +427,12 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: pdfButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: pdfButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                pdfButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         // Activity indicator
                         Rectangle {
                             width: 8 * scaleFactor
@@ -401,7 +444,7 @@ ApplicationWindow {
                             anchors.margins: 2 * scaleFactor
                         }
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -411,10 +454,10 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: "PDF Tools"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         pdfDialog.open()
                     }
@@ -426,13 +469,13 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: browserButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: browserButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                browserButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
                     }
-                    
+
                     contentItem: Image {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
@@ -442,10 +485,10 @@ ApplicationWindow {
                         sourceSize.height: 24 * scaleFactor
                         smooth: true
                     }
-                    
+
                     ToolTip.text: "Web Browser"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         console.log("Browser button clicked")
                         webBrowser.open()
@@ -458,12 +501,12 @@ ApplicationWindow {
                     width: 36 * scaleFactor
                     height: 36 * scaleFactor
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: csvButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: csvButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                csvButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
-                        
+
                         // Activity indicator
                         Rectangle {
                             width: 8 * scaleFactor
@@ -475,11 +518,11 @@ ApplicationWindow {
                             anchors.margins: 2 * scaleFactor
                         }
                     }
-                    
+
                     contentItem: Item {
                         width: 24 * scaleFactor
                         height: 24 * scaleFactor
-                        
+
                         // Fallback text icon - show "C" for CSV
                         Text {
                             anchors.centerIn: parent
@@ -489,28 +532,28 @@ ApplicationWindow {
                             font.bold: true
                         }
                     }
-                    
+
                     ToolTip.text: "CSV Data Viewer"
                     ToolTip.visible: hovered
-                    
+
                     onClicked: {
                         console.log("CSV button clicked")
                         csvDialog.open()
                     }
                 }
-                
+
                 Button {
                     id: settingsButton
                     text: "⚙"
                     font.pixelSize: baseFont * 1.2
                     flat: true
-                    
+
                     background: Rectangle {
-                        color: settingsButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                        color: settingsButton.pressed ? Qt.darker(primaryColor, 1.3) :
                                settingsButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                         radius: 4
                     }
-                    
+
                     contentItem: Text {
                         text: settingsButton.text
                         color: "white"
@@ -518,22 +561,22 @@ ApplicationWindow {
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
                     }
-                    
+
                     ToolTip.text: "Settings"
                     ToolTip.visible: hovered
-                    
-                    onClicked: settingsDialog.open()
+
+                                        onClicked: settingsDialog.open()
                 }
             }
         }
     }
-    
+
     // Main content with keyboard-aware layout
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: keyboardVisible ? (8 * scaleFactor) : (16 * scaleFactor)
         spacing: keyboardVisible ? (8 * scaleFactor) : (16 * scaleFactor)
-        
+
         // Smooth margin transitions
         Behavior on anchors.margins {
             NumberAnimation {
@@ -541,43 +584,43 @@ ApplicationWindow {
                 easing.type: Easing.OutQuad
             }
         }
-        
+
         Behavior on spacing {
             NumberAnimation {
                 duration: 200
                 easing.type: Easing.OutQuad
             }
         }
-        
+
         // Prompt selector - hide when keyboard is visible on phones
         RowLayout {
             Layout.fillWidth: true
             spacing: 12 * scaleFactor
             visible: !keyboardVisible || isTablet
             Layout.preferredHeight: visible ? implicitHeight : 0
-            
+
             // Smooth visibility transitions
             opacity: visible ? 1.0 : 0.0
             Behavior on opacity {
                 NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
             }
-            
+
             Text {
                 text: "Active Prompt:"
                 color: textColor
                 font.pixelSize: baseFont
                 font.weight: Font.Medium
             }
-            
+
             ComboBox {
                 id: promptComboBox
                 Layout.fillWidth: true
                 Layout.maximumWidth: 300 * scaleFactor
-                
+
                 model: promptManager
                 textRole: "name"
                 valueRole: "promptId"
-                
+
                 currentIndex: {
                     for (let i = 0; i < count; i++) {
                         if (model.data(model.index(i, 0), promptManager.constructor.IsActiveRole)) {
@@ -586,16 +629,16 @@ ApplicationWindow {
                     }
                     return -1;
                 }
-                
+
                 onCurrentValueChanged: {
                     if (currentValue) {
                         promptManager.activatePrompt(currentValue);
                     }
                 }
-                
+
                 delegate: ItemDelegate {
                     width: promptComboBox.width
-                    
+
                     contentItem: Column {
                         Text {
                             text: model.name
@@ -612,28 +655,28 @@ ApplicationWindow {
                             width: parent.width
                         }
                     }
-                    
+
                     background: Rectangle {
                         color: parent.hovered ? Qt.lighter(primaryColor, 1.8) : "transparent"
                     }
                 }
             }
-            
+
             Button {
                 text: "Manage Prompts"
                 flat: true
                 font.pixelSize: baseFont * 0.9
-                
+
                 onClicked: promptManagerDialog.open()
             }
         }
-        
+
         // Chat area with keyboard-aware sizing
         ChatWindow {
             id: chatWindow
             Layout.fillWidth: true
             Layout.fillHeight: true
-            
+
             // Adjust chat window height when keyboard is visible
             Layout.preferredHeight: {
                 if (keyboardVisible && !isTablet) {
@@ -641,10 +684,10 @@ ApplicationWindow {
                 }
                 return -1; // Use Layout.fillHeight default
             }
-            
+
             scaleFactor: mainWindow.scaleFactor
             baseFont: mainWindow.baseFont
-            
+
             // Color properties
             primaryColor: mainWindow.primaryColor
             backgroundColor: mainWindow.backgroundColor
@@ -652,51 +695,51 @@ ApplicationWindow {
             textColor: mainWindow.textColor
             mutedTextColor: mainWindow.mutedTextColor
         }
-        
+
         // Input area with enhanced keyboard handling
         RowLayout {
             Layout.fillWidth: true
             spacing: keyboardVisible ? (8 * scaleFactor) : (12 * scaleFactor)
-            
+
             Behavior on spacing {
                 NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
             }
-            
+
             // Voice input button
             VoiceButton {
                 id: voiceButton
                 Layout.preferredWidth: keyboardVisible ? (40 * scaleFactor) : (50 * scaleFactor)
                 Layout.preferredHeight: keyboardVisible ? (40 * scaleFactor) : (50 * scaleFactor)
-                
+
                 Behavior on Layout.preferredWidth {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
                 Behavior on Layout.preferredHeight {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
-                
+
                 scaleFactor: mainWindow.scaleFactor
                 primaryColor: mainWindow.primaryColor
                 errorColor: mainWindow.errorColor
-                
+
                 isListening: voiceManager.isListening
                 audioLevel: voiceManager.audioLevel
-                
+
                 onClicked: voiceManager.toggleListening()
             }
-            
+
             // Debug button for keyboard testing (only on mobile)
             Button {
                 visible: needsKeyboardHandling
                 Layout.preferredWidth: 40 * scaleFactor
                 Layout.preferredHeight: 40 * scaleFactor
                 text: "⌨"
-                
+
                 background: Rectangle {
                     color: parent.pressed ? "darkgreen" : "green"
                     radius: 8
                 }
-                
+
                 contentItem: Text {
                     text: parent.text
                     color: "white"
@@ -704,43 +747,43 @@ ApplicationWindow {
                     verticalAlignment: Text.AlignVCenter
                     font.pixelSize: 18 * scaleFactor
                 }
-                
+
                 ToolTip.text: "Force show keyboard"
                 ToolTip.visible: hovered
-                
+
                 onClicked: {
                     console.log("Debug: Force keyboard button clicked");
                     forceShowKeyboard();
                 }
             }
-            
+
             // Text input with keyboard optimization
             ScrollView {
                 Layout.fillWidth: true
                 Layout.maximumHeight: keyboardVisible ? (80 * scaleFactor) : (120 * scaleFactor)
-                
+
                 Behavior on Layout.maximumHeight {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
-                
+
                 TextArea {
                     id: textInput
                     placeholderText: keyboardVisible ? "Type message..." : "Type your message or use voice input..."
                     wrapMode: TextArea.Wrap
                     selectByMouse: !isMobile  // Disable selectByMouse on mobile for better touch handling
                     selectByKeyboard: true
-                    
+
                     // Android-specific input properties
                     inputMethodHints: Qt.ImhPreferLowercase | Qt.ImhNoPredictiveText
-                    
+
                     // Ensure text input is focusable and accepts input
                     activeFocusOnTab: true
                     activeFocusOnPress: true
                     focus: false  // Don't auto-focus to prevent unwanted keyboard
-                    
+
                     font.pixelSize: baseFont
                     color: textColor
-                    
+
                     // Enhanced focus and click handling for mobile platforms
                     onActiveFocusChanged: {
                         console.log("TextInput focus changed:", activeFocus);
@@ -756,7 +799,7 @@ ApplicationWindow {
                             });
                         }
                     }
-                    
+
                     // Handle mouse/touch press to ensure focus
                     MouseArea {
                         anchors.fill: parent
@@ -770,18 +813,18 @@ ApplicationWindow {
                             mouse.accepted = false; // Let the TextArea handle the click too
                         }
                     }
-                    
+
                     background: Rectangle {
                         color: surfaceColor
                         border.color: textInput.activeFocus ? primaryColor : Qt.lighter(mutedTextColor, 1.5)
                         border.width: 2
                         radius: keyboardVisible ? (6 * scaleFactor) : (8 * scaleFactor)
-                        
+
                         Behavior on radius {
                             NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                         }
                     }
-                    
+
                     Keys.onPressed: function(event) {
                         if (event.key === Qt.Key_Return && !(event.modifiers & Qt.ShiftModifier)) {
                             event.accepted = true;
@@ -790,38 +833,38 @@ ApplicationWindow {
                     }
                 }
             }
-            
+
             // Send button with keyboard adaptation
             Button {
                 id: sendButton
                 text: keyboardVisible ? "→" : "Send"
                 enabled: textInput.text.trim().length > 0 && !chatManager.isProcessing
-                
+
                 Layout.preferredWidth: keyboardVisible ? (50 * scaleFactor) : (80 * scaleFactor)
                 Layout.preferredHeight: keyboardVisible ? (40 * scaleFactor) : (50 * scaleFactor)
-                
+
                 Behavior on Layout.preferredWidth {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
                 Behavior on Layout.preferredHeight {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
-                
+
                 font.pixelSize: keyboardVisible ? (baseFont * 1.2) : baseFont
                 font.weight: Font.Medium
-                
+
                 background: Rectangle {
-                    color: sendButton.enabled ? 
-                           (sendButton.pressed ? Qt.darker(primaryColor, 1.2) : 
+                    color: sendButton.enabled ?
+                           (sendButton.pressed ? Qt.darker(primaryColor, 1.2) :
                             sendButton.hovered ? Qt.lighter(primaryColor, 1.1) : primaryColor) :
                            Qt.lighter(mutedTextColor, 1.3)
                     radius: keyboardVisible ? (6 * scaleFactor) : (8 * scaleFactor)
-                    
+
                     Behavior on radius {
                         NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                     }
                 }
-                
+
                 contentItem: Text {
                     text: sendButton.text
                     color: sendButton.enabled ? "white" : mutedTextColor
@@ -829,11 +872,11 @@ ApplicationWindow {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                 }
-                
+
                 onClicked: sendMessage()
             }
         }
-        
+
         // Status bar - compact when keyboard is visible
         Rectangle {
             Layout.fillWidth: true
@@ -841,19 +884,19 @@ ApplicationWindow {
             color: Qt.lighter(backgroundColor, 1.05)
             radius: 4 * scaleFactor
             visible: !keyboardVisible || isTablet
-            
+
             Behavior on Layout.preferredHeight {
                 NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
             }
-            
+
             RowLayout {
                 anchors.fill: parent
                 anchors.margins: keyboardVisible ? (4 * scaleFactor) : (8 * scaleFactor)
-                
+
                 Behavior on anchors.margins {
                     NumberAnimation { duration: 200; easing.type: Easing.OutQuad }
                 }
-                
+
                 Text {
                     text: {
                         if (chatManager.isProcessing) return "Processing...";
@@ -864,9 +907,9 @@ ApplicationWindow {
                     font.pixelSize: (baseFont * 0.85)
                     Layout.fillWidth: true
                 }
-                
+
                 Text {
-                    text: `Provider: ${llmManager.currentProvider === 0 ? "OpenAI" : 
+                    text: `Provider: ${llmManager.currentProvider === 0 ? "OpenAI" :
                                     llmManager.currentProvider === 1 ? "LM Studio" : "Ollama"}`
                     color: mutedTextColor
                     font.pixelSize: (baseFont * 0.85)
@@ -874,14 +917,14 @@ ApplicationWindow {
             }
         }
     }
-    
+
     // Settings dialog
     SettingsDialog {
         id: settingsDialog
-        
+
         scaleFactor: mainWindow.scaleFactor
         baseFont: mainWindow.baseFont
-        
+
         // Color properties
         primaryColor: mainWindow.primaryColor
         backgroundColor: mainWindow.backgroundColor
@@ -889,14 +932,14 @@ ApplicationWindow {
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
     }
-    
+
     // Prompt manager dialog
     PromptManagerDialog {
         id: promptManagerDialog
-        
+
         scaleFactor: mainWindow.scaleFactor
         baseFont: mainWindow.baseFont
-        
+
         // Color properties
         primaryColor: mainWindow.primaryColor
         backgroundColor: mainWindow.backgroundColor
@@ -906,14 +949,14 @@ ApplicationWindow {
         successColor: mainWindow.successColor
         errorColor: mainWindow.errorColor
     }
-    
+
     // OAuth2 login dialog
     OAuth2LoginDialog {
         id: oauth2LoginDialog
-        
+
         oauthManager: oauth2Manager
     }
-    
+
     // PDF dialog
     PDFDialog {
         id: pdfDialog
@@ -922,7 +965,7 @@ ApplicationWindow {
     // CSV dialog
     CSVDialog {
         id: csvDialog
-        
+
         // Pass theme colors
         backgroundColor: mainWindow.backgroundColor
         surfaceColor: mainWindow.surfaceColor
@@ -932,11 +975,11 @@ ApplicationWindow {
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
     }
-    
+
     // Communication Test dialog
     CommTestDialog {
         id: commTestDialog
-        
+
         // Pass theme properties
         scaleFactor: mainWindow.scaleFactor
         primaryColor: mainWindow.primaryColor
@@ -948,23 +991,23 @@ ApplicationWindow {
         warningColor: mainWindow.warningColor
         errorColor: mainWindow.errorColor
     }
-    
+
     // Web Browser
     WebBrowser {
         id: webBrowser
-        
+
         // Pass theme properties
         scaleFactor: mainWindow.scaleFactor
         primaryColor: mainWindow.primaryColor
         backgroundColor: mainWindow.backgroundColor
         textColor: mainWindow.textColor
     }
-    
+
     // PDF viewer window
     PDFViewer {
         id: pdfViewerWindow
         visible: false
-        
+
         // Inherit colors from main window
         backgroundColor: mainWindow.backgroundColor
         surfaceColor: mainWindow.surfaceColor
@@ -972,12 +1015,12 @@ ApplicationWindow {
         textColor: mainWindow.textColor
         mutedTextColor: mainWindow.mutedTextColor
     }
-    
+
     // QML Viewer Dialog - loaded only when needed
     Loader {
         id: qmlViewerDialogLoader
         active: false
-        
+
         sourceComponent: Component {
             QmlViewerDialog {
                 onVisibleChanged: {
@@ -990,7 +1033,7 @@ ApplicationWindow {
                 }
             }
         }
-        
+
         function openQmlViewer() {
             active = true;
             if (item) {
@@ -1003,7 +1046,7 @@ ApplicationWindow {
     Loader {
         id: svgViewerDialogLoader
         active: false
-        
+
         sourceComponent: Component {
             SvgViewerDialog {
                 onVisibleChanged: {
@@ -1016,7 +1059,7 @@ ApplicationWindow {
                 }
             }
         }
-        
+
         function openSvgViewer() {
             active = true;
             if (item) {
@@ -1024,7 +1067,7 @@ ApplicationWindow {
             }
         }
     }
-    
+
     // Functions
     function sendMessage() {
         if (textInput.text.trim().length > 0) {
@@ -1032,7 +1075,7 @@ ApplicationWindow {
             textInput.clear();
         }
     }
-    
+
     // Connections
     Connections {
         target: voiceManager
@@ -1040,26 +1083,26 @@ ApplicationWindow {
             textInput.text = text;
             sendMessage();
         }
-        
+
         function onError(errorMessage) {
             console.error("Voice recognition error:", errorMessage);
         }
     }
-    
+
     Connections {
         target: chatManager
         function onError(errorMessage) {
             console.error("Chat error:", errorMessage);
         }
     }
-    
+
     Connections {
         target: llmManager
         function onError(errorMessage) {
             console.error("LLM error:", errorMessage);
         }
     }
-    
+
     Connections {
         target: pdfManager
         function onPdfOpened(filePath) {
@@ -1070,23 +1113,23 @@ ApplicationWindow {
             pdfViewerWindow.requestActivate();
             console.log("*** Main.qml: PDF viewer window shown");
         }
-        
+
         function onPdfClosed() {
             console.log("*** Main.qml: PDF closed, hiding viewer window");
             pdfViewerWindow.close();
         }
-        
+
         function onError(errorMessage) {
             console.error("*** Main.qml: PDF error:", errorMessage);
         }
     }
-    
+
     // Font size change function for settings
     function applyFontSize(newSize) {
         baseFontSize = newSize;
         console.log("Font size changed to:", newSize);
     }
-    
+
     // Functions for keyboard and input management
     function forceShowKeyboard() {
         if (needsKeyboardHandling) {
@@ -1095,7 +1138,7 @@ ApplicationWindow {
             Qt.inputMethod.show();
         }
     }
-    
+
     function hideKeyboard() {
         if (needsKeyboardHandling) {
             console.log("Hiding keyboard");
@@ -1103,7 +1146,7 @@ ApplicationWindow {
             textInput.focus = false;
         }
     }
-    
+
     // Load settings on startup
     Component.onCompleted: {
         // Initialize mobile-specific properties for keyboard handling
@@ -1111,22 +1154,22 @@ ApplicationWindow {
             originalHeight = height;
             console.log("Mobile platform detected - keyboard handling enabled");
         }
-        
+
         show()
         raise()
         requestActivate()
-        
+
         // Set the pdfManager property for PDF dialog
         console.log("*** Setting pdfDialog.pdfManager to:", pdfManager);
         pdfDialog.pdfManager = pdfManager;
-        
+
         if (databaseManager) {
             var settings = databaseManager.getSettings();
             if (settings.interface && settings.interface.fontSize) {
                 applyFontSize(settings.interface.fontSize);
             }
         }
-        
+
         // Setup input method connections for Android
         if (needsKeyboardHandling) {
             Qt.inputMethod.visibleChanged.connect(function() {
@@ -1137,4 +1180,4 @@ ApplicationWindow {
             });
         }
     }
-} 
+}

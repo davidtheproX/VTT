@@ -340,7 +340,7 @@ QString VoiceRecognitionManager::processWithAndroidSpeechRecognition(const QByte
         
     } catch (...) {
         qWarning() << "Exception during Android Speech Recognition processing";
-        return QString();
+    return QString();
     }
 }
 

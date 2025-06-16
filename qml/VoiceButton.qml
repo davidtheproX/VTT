@@ -36,7 +36,7 @@ Button {
             
             // Simplified opacity animation instead of scale to prevent jumping
             Behavior on opacity {
-                NumberAnimation { 
+                NumberAnimation {
                     duration: 300
                     easing.type: Easing.InOutQuad
                 }
@@ -125,14 +125,14 @@ Button {
         } else {
             return pressed ? Qt.darker(primaryColor, 1.2) : 
                    (enableHoverEffects && hovered) ? Qt.lighter(primaryColor, 1.1) : primaryColor;
+            }
         }
-    }
     
     // Smooth color transitions
     Behavior on currentBackgroundColor {
         ColorAnimation { 
-            duration: 150
-            easing.type: Easing.OutQuad
+                duration: 150
+                easing.type: Easing.OutQuad
+            }
         }
-    }
 } 

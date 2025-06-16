@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>Voice AI LLM</string>
+    <key>CFBundleExecutable</key>
+    <string>VoiceAILLM</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.voiceaillm.app</string>
+    <key>CFBundleName</key>
+    <string>VoiceAILLM</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1.0.0</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIRequiresFullScreen</key>
+    <true/>
+    
+    <!-- Background audio capability for TTS -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>audio</string>
+    </array>
+    
+    <!-- Microphone usage description for voice recognition -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Voice AI LLM uses the microphone for voice recognition and voice input features.</string>
+    
+    <!-- Speech recognition usage description -->
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Voice AI LLM uses speech recognition to convert your voice input to text for AI interaction.</string>
+    
+</dict>
+</plist> 

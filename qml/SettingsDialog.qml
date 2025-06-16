@@ -23,7 +23,15 @@ Dialog {
     height: Math.min(650 * scaleFactor, parent.height * 0.9)
     
     // Load settings when dialog opens
-    onOpened: loadSettings()
+    onOpened: {
+        loadSettings();
+        
+        // Refresh TTS voices when dialog opens
+        if (ttsManager) {
+            console.log("Settings dialog opened, refreshing TTS voices...");
+            ttsManager.getCurrentVoices();
+        }
+    }
     
     background: Rectangle {
         color: surfaceColor
@@ -571,7 +579,7 @@ Dialog {
                         
                         onCheckedChanged: {
                             if (ttsManager) {
-                                ttsManager.isEnabled = checked;
+                                ttsManager.setIsEnabled(checked);
                             }
                         }
                     }
@@ -610,17 +618,45 @@ Dialog {
                             ComboBox {
                                 id: voiceCombo
                                 Layout.fillWidth: true
-                                model: ttsManager ? ttsManager.availableVoices : []
+                                model: ttsManager ? ttsManager.voiceNames : []
+                                
                                 currentIndex: {
-                                    if (ttsManager && ttsManager.currentVoice) {
-                                        return Math.max(0, model.indexOf(ttsManager.currentVoice));
+                                    if (ttsManager && ttsManager.currentVoiceName && model.length > 0) {
+                                        console.log("Looking for current voice:", ttsManager.currentVoiceName)
+                                        // Try to find the current voice name in the model
+                                        for (var i = 0; i < model.length; i++) {
+                                            if (model[i].indexOf(ttsManager.currentVoiceName) !== -1) {
+                                                console.log("Found voice at index:", i)
+                                                return i;
+                                            }
+                                        }
+                                        console.log("Current voice not found in model")
                                     }
                                     return 0;
                                 }
                                 
-                                onCurrentTextChanged: {
-                                    if (ttsManager && currentText) {
-                                        ttsManager.currentVoice = currentText;
+                                // Store selected voice but don't apply immediately
+                                property string selectedVoice: currentText
+                                property int selectedVoiceIndex: currentIndex
+                                
+                                onCurrentIndexChanged: {
+                                    selectedVoiceIndex = currentIndex
+                                    console.log("Voice selection changed to index:", currentIndex, "voice:", currentText)
+                                }
+                                
+                                Component.onCompleted: {
+                                    // Force refresh voices when component is created
+                                    if (ttsManager) {
+                                        console.log("Voice ComboBox created, refreshing voices...");
+                                        ttsManager.getCurrentVoices();
+                                        
+                                        // Connect to voice updates signal
+                                        if (ttsManager.voicesUpdated) {
+                                            ttsManager.voicesUpdated.connect(function() {
+                                                console.log("Voices updated signal received");
+                                                model = ttsManager.voiceNames;
+                                            });
+                                        }
                                     }
                                 }
                             }
@@ -651,145 +687,17 @@ Dialog {
                                     if (ttsManager) {
                                         console.log("Refreshing voice list...");
                                         ttsManager.refreshVoices();
+                                        // Force update the ComboBox model
+                                        voiceCombo.model = ttsManager.voiceNames;
                                     }
                                 }
                                 
-                                ToolTip.text: "Refresh voice list from system\n(Click to detect Chinese voices)"
+                                ToolTip.text: "Refresh voice list from system"
                                 ToolTip.visible: hovered
                             }
                         }
                         
-                        RowLayout {
-                            Layout.fillWidth: true
-                            spacing: 8 * scaleFactor
-                            
-                            Text {
-                                text: "Voice Presets:"
-                                color: textColor
-                                font.pixelSize: baseFont
-                                Layout.minimumWidth: 100 * scaleFactor
-                            }
-                            
-                            Button {
-                                text: "🤖 Jarvis"
-                                Layout.preferredWidth: 80 * scaleFactor
-                                font.pixelSize: baseFont * 0.9
-                                
-                                background: Rectangle {
-                                    color: parent.pressed ? Qt.darker(primaryColor, 1.2) :
-                                           parent.hovered ? Qt.lighter(primaryColor, 1.1) : primaryColor
-                                    radius: 6 * scaleFactor
-                                }
-                                
-                                contentItem: Text {
-                                    text: parent.text
-                                    color: "white"
-                                    font: parent.font
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                                
-                                onClicked: {
-                                    if (ttsManager) {
-                                        ttsManager.applyJarvisVoicePreset();
-                                        saveTTSSettings(); // Save settings when preset is applied
-                                    }
-                                }
-                                
-                                ToolTip.text: "Deep AI voice - slow rate, low pitch"
-                                ToolTip.visible: hovered
-                            }
-                            
-                            Button {
-                                text: "🙂 Natural"
-                                Layout.preferredWidth: 80 * scaleFactor
-                                font.pixelSize: baseFont * 0.9
-                                
-                                background: Rectangle {
-                                    color: parent.pressed ? Qt.darker("#4CAF50", 1.2) :
-                                           parent.hovered ? Qt.lighter("#4CAF50", 1.1) : "#4CAF50"
-                                    radius: 6 * scaleFactor
-                                }
-                                
-                                contentItem: Text {
-                                    text: parent.text
-                                    color: "white"
-                                    font: parent.font
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                                
-                                onClicked: {
-                                    if (ttsManager) {
-                                        ttsManager.applyNaturalVoicePreset();
-                                        saveTTSSettings(); // Save settings when preset is applied
-                                    }
-                                }
-                                
-                                ToolTip.text: "Natural human voice - balanced settings"
-                                ToolTip.visible: hovered
-                            }
-                            
-                            Button {
-                                text: "🔧 Robot"
-                                Layout.preferredWidth: 80 * scaleFactor
-                                font.pixelSize: baseFont * 0.9
-                                
-                                background: Rectangle {
-                                    color: parent.pressed ? Qt.darker(mutedTextColor, 1.2) :
-                                           parent.hovered ? Qt.lighter(mutedTextColor, 1.1) : mutedTextColor
-                                    radius: 6 * scaleFactor
-                                }
-                                
-                                contentItem: Text {
-                                    text: parent.text
-                                    color: "white"
-                                    font: parent.font
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                                
-                                onClicked: {
-                                    if (ttsManager) {
-                                        ttsManager.applyRobotVoicePreset();
-                                        saveTTSSettings(); // Save settings when preset is applied
-                                    }
-                                }
-                                
-                                ToolTip.text: "Robotic voice - slow rate, very low pitch"
-                                ToolTip.visible: hovered
-                            }
-                            
-                            Button {
-                                text: "🇨🇳 中文"
-                                Layout.preferredWidth: 80 * scaleFactor
-                                font.pixelSize: baseFont * 0.9
-                                
-                                background: Rectangle {
-                                    color: parent.pressed ? Qt.darker("#FF9800", 1.2) :
-                                           parent.hovered ? Qt.lighter("#FF9800", 1.1) : "#FF9800"
-                                    radius: 6 * scaleFactor
-                                }
-                                
-                                contentItem: Text {
-                                    text: parent.text
-                                    color: "white"
-                                    font: parent.font
-                                    horizontalAlignment: Text.AlignHCenter
-                                    verticalAlignment: Text.AlignVCenter
-                                }
-                                
-                                onClicked: {
-                                    if (ttsManager) {
-                                        ttsManager.applyChineseVoicePreset();
-                                        saveTTSSettings(); // Save settings when preset is applied
-                                    }
-                                }
-                                
-                                ToolTip.text: "Chinese voice - optimized for Simplified Chinese"
-                                ToolTip.visible: hovered
-                            }
-                        }
+
                         
                         GridLayout {
                             Layout.fillWidth: true
@@ -812,7 +720,10 @@ Dialog {
                                 stepSize: 0.1
                                 
                                 onValueChanged: {
-                                    if (ttsManager) ttsManager.rate = value;
+                                    if (ttsManager) {
+                                        console.log("Rate slider changed to:", value);
+                                        ttsManager.rate = value;
+                                    }
                                 }
                             }
                             
@@ -838,7 +749,10 @@ Dialog {
                                 stepSize: 0.1
                                 
                                 onValueChanged: {
-                                    if (ttsManager) ttsManager.pitch = value;
+                                    if (ttsManager) {
+                                        console.log("Pitch slider changed to:", value);
+                                        ttsManager.pitch = value;
+                                    }
                                 }
                             }
                             
@@ -864,7 +778,17 @@ Dialog {
                                 stepSize: 0.05
                                 
                                 onValueChanged: {
-                                    if (ttsManager) ttsManager.volume = value;
+                                    if (ttsManager) {
+                                        console.log("Volume slider changed to:", value);
+                                        ttsManager.volume = value;
+                                        console.log("TTS volume set to:", ttsManager.volume);
+                                    }
+                                }
+                                
+                                onMoved: {
+                                    if (ttsManager) {
+                                        ttsManager.volume = value;
+                                    }
                                 }
                             }
                             
@@ -899,7 +823,27 @@ Dialog {
                                 
                                 onClicked: {
                                     if (ttsManager) {
-                                        ttsManager.speak("Hello! This is a test of the text to speech system. I am your AI assistant and I'm ready to help you. How do I sound?");
+                                        console.log("Test TTS button clicked")
+                                        
+                                        // Apply current settings first
+                                        console.log("Setting rate to:", rateSlider.value)
+                                        console.log("Setting pitch to:", pitchSlider.value)
+                                        console.log("Setting volume to:", volumeSlider.value)
+                                        
+                                        ttsManager.rate = rateSlider.value;
+                                        ttsManager.pitch = pitchSlider.value;
+                                        ttsManager.volume = volumeSlider.value;
+                                        
+                                        // Apply selected voice if one is chosen
+                                        if (voiceCombo.selectedVoiceIndex >= 0 && ttsManager.availableVoices.length > voiceCombo.selectedVoiceIndex) {
+                                            console.log("Setting voice index:", voiceCombo.selectedVoiceIndex)
+                                            var selectedVoice = ttsManager.availableVoices[voiceCombo.selectedVoiceIndex]
+                                            console.log("Setting voice to:", selectedVoice.name)
+                                            ttsManager.setVoice(selectedVoice)
+                                        }
+                                        
+                                        // Test TTS with current settings
+                                        ttsManager.testTTS();
                                     }
                                 }
                             }
@@ -1151,8 +1095,8 @@ Dialog {
         // Load TTS settings
         if (settings.tts) {
             ttsEnabledCheckbox.checked = settings.tts.enabled || false;
-            if (ttsManager) {
-                ttsManager.isEnabled = settings.tts.enabled || false;
+                                    if (ttsManager) {
+                            ttsManager.setIsEnabled(settings.tts.enabled || false);
                 if (settings.tts.voice) ttsManager.currentVoice = settings.tts.voice;
                 if (settings.tts.rate !== undefined) ttsManager.rate = settings.tts.rate;
                 if (settings.tts.pitch !== undefined) ttsManager.pitch = settings.tts.pitch;
@@ -1225,9 +1169,31 @@ Dialog {
             currentSettings.tts = {};
         }
         
+        // Apply current UI values to TTS manager
+        if (ttsManager) {
+            console.log("Applying TTS settings from UI to manager");
+            
+            // Enable/disable TTS
+            ttsManager.setIsEnabled(ttsEnabledCheckbox.checked);
+            
+            // Apply voice, rate, pitch, volume from sliders
+            console.log("Setting TTS parameters:", rateSlider.value, pitchSlider.value, volumeSlider.value);
+            ttsManager.rate = rateSlider.value;
+            ttsManager.pitch = pitchSlider.value;
+            ttsManager.volume = volumeSlider.value;
+            
+            // Apply selected voice using QVoice object
+            if (voiceCombo.selectedVoiceIndex >= 0 && ttsManager.availableVoices.length > voiceCombo.selectedVoiceIndex) {
+                var selectedVoice = ttsManager.availableVoices[voiceCombo.selectedVoiceIndex];
+                console.log("Setting voice to:", selectedVoice.name, "from index:", voiceCombo.selectedVoiceIndex);
+                ttsManager.setVoice(selectedVoice);
+            }
+        }
+        
+        // Save to database
         currentSettings.tts.enabled = ttsEnabledCheckbox.checked;
         if (ttsManager) {
-            currentSettings.tts.voice = ttsManager.currentVoice;
+            currentSettings.tts.voice = ttsManager.currentVoiceName;
             currentSettings.tts.rate = ttsManager.rate;
             currentSettings.tts.pitch = ttsManager.pitch;
             currentSettings.tts.volume = ttsManager.volume;
@@ -1282,7 +1248,7 @@ Dialog {
             },
             tts: {
                 enabled: ttsEnabledCheckbox.checked,
-                voice: ttsManager ? ttsManager.currentVoice : "",
+                voice: ttsManager ? ttsManager.currentVoiceName : "",
                 rate: ttsManager ? ttsManager.rate : 0.0,
                 pitch: ttsManager ? ttsManager.pitch : 0.0,
                 volume: ttsManager ? ttsManager.volume : 1.0
@@ -1296,7 +1262,7 @@ Dialog {
         
         // Apply TTS settings immediately
         if (ttsManager) {
-            ttsManager.isEnabled = settings.tts.enabled;
+            ttsManager.setIsEnabled(settings.tts.enabled);
         }
         
         if (databaseManager.updateSettings(settings)) {

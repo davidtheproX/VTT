@@ -1,7 +1,6 @@
 #include "ChatManager.h"
 #include "LLMConnectionManager.h"
 #include "DatabaseManager.h"
-#include "TTSManager.h"
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
@@ -14,7 +13,6 @@ ChatManager::ChatManager(LLMConnectionManager *llmManager, QObject *parent)
     : QAbstractListModel(parent)
     , m_llmManager(llmManager)
     , m_databaseManager(nullptr)
-    , m_ttsManager(nullptr)
     , m_isProcessing(false)
 {
     // Connect to LLM manager signals
@@ -50,10 +48,7 @@ void ChatManager::setDatabaseManager(DatabaseManager *dbManager)
     m_databaseManager = dbManager;
 }
 
-void ChatManager::setTTSManager(TTSManager *ttsManager)
-{
-    m_ttsManager = ttsManager;
-}
+
 
 int ChatManager::rowCount(const QModelIndex &parent) const
 {
@@ -289,13 +284,7 @@ void ChatManager::handleLLMResponse(const QString &response)
         m_currentStreamingId.clear();
     }
     
-    // Speak the response if TTS is enabled
-    if (m_ttsManager && m_ttsManager->isEnabled()) {
-        qDebug() << "Starting TTS for response";
-        m_ttsManager->speak(response);
-    } else {
-        qDebug() << "TTS not enabled or manager not available";
-    }
+    // TTS functionality now handled directly in QML using Qt's native TextToSpeech
     
     qDebug() << "LLM response handling complete. Total messages:" << m_messages.size();
 }
