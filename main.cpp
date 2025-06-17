@@ -22,6 +22,7 @@
 #include "CSVViewer.h"
 #include "SvgHandler.h"
 #include "DeviceDiscoveryManager.h"
+#include "TTSManager.h"
 
 int main(int argc, char *argv[])
 {
@@ -78,6 +79,9 @@ int main(int argc, char *argv[])
 
         logger->infoGeneral("Initializing device discovery manager");
         DeviceDiscoveryManager deviceDiscoveryManager;
+
+        logger->infoGeneral("Initializing TTS manager");
+        TTSManager ttsManager;
 
         logger->infoGeneral("Initializing chat manager");
         ChatManager chatManager(&llmManager);
@@ -169,6 +173,7 @@ int main(int argc, char *argv[])
         engine.rootContext()->setContextProperty("pdfManager", &pdfManager);
         engine.rootContext()->setContextProperty("csvViewer", &csvViewer);
         engine.rootContext()->setContextProperty("deviceDiscoveryManager", &deviceDiscoveryManager);
+        engine.rootContext()->setContextProperty("ttsManager", &ttsManager);
 
         // Register QML types
         qmlRegisterType<CSVViewer>("VoiceAILLM", 1, 0, "CSVViewerBackend");

@@ -335,7 +335,7 @@ qt_policy(SET QTP0004 NEW)  # Allow qmldir files for extra directories
 qt_standard_project_setup()
 
 # Source files
-set(SOURCES 
+set(SOURCES
     main.cpp
     src/VoiceRecognitionManager.cpp
     src/AudioBuffer.cpp
@@ -357,6 +357,7 @@ set(SOURCES
     src/SvgHandler.cpp
     src/DeviceDiscoveryManager.cpp
     src/QPing.cpp
+    src/TTSManager.cpp
 )
 
 # Header files
@@ -380,6 +381,7 @@ set(HEADERS
     include/SvgHandler.h
     include/DeviceDiscoveryManager.h
     include/QPing.h
+    include/TTSManager.h
     # Android-specific headers
     include/SecureStorage.h
 )

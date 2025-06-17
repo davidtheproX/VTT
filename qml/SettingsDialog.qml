@@ -618,7 +618,7 @@ Dialog {
                             ComboBox {
                                 id: voiceCombo
                                 Layout.fillWidth: true
-                                model: ttsManager ? ttsManager.voiceNames : []
+                                model: ttsManager ? ttsManager.availableVoiceNames : []
                                 
                                 currentIndex: {
                                     if (ttsManager && ttsManager.currentVoiceName && model.length > 0) {
@@ -651,12 +651,10 @@ Dialog {
                                         ttsManager.getCurrentVoices();
                                         
                                         // Connect to voice updates signal
-                                        if (ttsManager.voicesUpdated) {
-                                            ttsManager.voicesUpdated.connect(function() {
-                                                console.log("Voices updated signal received");
-                                                model = ttsManager.voiceNames;
-                                            });
-                                        }
+                                        ttsManager.voicesUpdated.connect(function() {
+                                            console.log("Voices updated signal received");
+                                            model = Qt.binding(function() { return ttsManager.availableVoiceNames; });
+                                        });
                                     }
                                 }
                             }
@@ -688,7 +686,7 @@ Dialog {
                                         console.log("Refreshing voice list...");
                                         ttsManager.refreshVoices();
                                         // Force update the ComboBox model
-                                        voiceCombo.model = ttsManager.voiceNames;
+                                        voiceCombo.model = Qt.binding(function() { return ttsManager.availableVoiceNames; });
                                     }
                                 }
                                 
@@ -871,6 +869,152 @@ Dialog {
                                 onClicked: {
                                     if (ttsManager) ttsManager.stop();
                                 }
+                            }
+                            
+                            Item { Layout.fillWidth: true }
+                        }
+                        
+                        // Multilingual test buttons
+                        Text {
+                            text: "Test Different Languages:"
+                            color: textColor
+                            font.pixelSize: baseFont
+                            font.weight: Font.Medium
+                            Layout.topMargin: 8 * scaleFactor
+                        }
+                        
+                        GridLayout {
+                            Layout.fillWidth: true
+                            columns: 5
+                            columnSpacing: 8 * scaleFactor
+                            rowSpacing: 8 * scaleFactor
+                            
+                            property var languages: [
+                                { code: "en", flag: "🇺🇸", name: "English" },
+                                { code: "zh", flag: "🇨🇳", name: "Chinese" },
+                                { code: "ja", flag: "🇯🇵", name: "Japanese" },
+                                { code: "ko", flag: "🇰🇷", name: "Korean" },
+                                { code: "es", flag: "🇪🇸", name: "Spanish" },
+                                { code: "fr", flag: "🇫🇷", name: "French" },
+                                { code: "de", flag: "🇩🇪", name: "German" },
+                                { code: "it", flag: "🇮🇹", name: "Italian" },
+                                { code: "ru", flag: "🇷🇺", name: "Russian" },
+                                { code: "ar", flag: "🇸🇦", name: "Arabic" }
+                            ]
+                            
+                            Repeater {
+                                model: parent.languages
+                                
+                                Button {
+                                    text: modelData.flag + " " + modelData.code.toUpperCase()
+                                    font.pixelSize: baseFont * 0.8
+                                    Layout.preferredHeight: 30 * scaleFactor
+                                    Layout.fillWidth: true
+                                    
+                                    background: Rectangle {
+                                        color: parent.pressed ? Qt.darker("#2196F3", 1.2) :
+                                               parent.hovered ? Qt.lighter("#2196F3", 1.1) : "#2196F3"
+                                        radius: 4 * scaleFactor
+                                    }
+                                    
+                                    contentItem: Text {
+                                        text: parent.text
+                                        color: "white"
+                                        font: parent.font
+                                        horizontalAlignment: Text.AlignHCenter
+                                        verticalAlignment: Text.AlignVCenter
+                                    }
+                                    
+                                    onClicked: {
+                                        if (ttsManager) {
+                                            console.log("Testing language:", modelData.code, modelData.name);
+                                            
+                                            // Apply current settings first
+                                            ttsManager.rate = rateSlider.value;
+                                            ttsManager.pitch = pitchSlider.value;
+                                            ttsManager.volume = volumeSlider.value;
+                                            
+                                            // Test specific language
+                                            ttsManager.testLanguage(modelData.code);
+                                        }
+                                    }
+                                    
+                                    ToolTip.text: "Test " + modelData.name + " speech"
+                                    ToolTip.visible: hovered
+                                }
+                            }
+                        }
+                        
+                        // Additional test options
+                        RowLayout {
+                            Layout.fillWidth: true
+                            spacing: 8 * scaleFactor
+                            Layout.topMargin: 8 * scaleFactor
+                            
+                            Button {
+                                text: "🌍 Test All Languages"
+                                font.pixelSize: baseFont * 0.9
+                                
+                                background: Rectangle {
+                                    color: parent.pressed ? Qt.darker("#FF9800", 1.2) :
+                                           parent.hovered ? Qt.lighter("#FF9800", 1.1) : "#FF9800"
+                                    radius: 6 * scaleFactor
+                                }
+                                
+                                contentItem: Text {
+                                    text: parent.text
+                                    color: "white"
+                                    font: parent.font
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                
+                                onClicked: {
+                                    if (ttsManager) {
+                                        console.log("Testing all languages in sequence");
+                                        
+                                        // Apply current settings first
+                                        ttsManager.rate = rateSlider.value;
+                                        ttsManager.pitch = pitchSlider.value;
+                                        ttsManager.volume = volumeSlider.value;
+                                        
+                                        // Test all languages
+                                        ttsManager.testMultilingualSpeech();
+                                    }
+                                }
+                                
+                                ToolTip.text: "Test all supported languages in sequence"
+                                ToolTip.visible: hovered
+                            }
+                            
+                            Button {
+                                text: "🔄 Force Refresh All"
+                                font.pixelSize: baseFont * 0.9
+                                
+                                background: Rectangle {
+                                    color: parent.pressed ? Qt.darker("#9C27B0", 1.2) :
+                                           parent.hovered ? Qt.lighter("#9C27B0", 1.1) : "#9C27B0"
+                                    radius: 6 * scaleFactor
+                                }
+                                
+                                contentItem: Text {
+                                    text: parent.text
+                                    color: "white"
+                                    font: parent.font
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                
+                                onClicked: {
+                                    if (ttsManager) {
+                                        console.log("Force refreshing all TTS data");
+                                        ttsManager.forceRefreshAll();
+                                        voiceCombo.model = Qt.binding(function() { return ttsManager.availableVoiceNames; });
+                                    }
+                                }
+                                
+                                ToolTip.text: "Force complete refresh of TTS system"
+                                ToolTip.visible: hovered
                             }
                             
                             Item { Layout.fillWidth: true }

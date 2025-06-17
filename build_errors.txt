@@ -1,0 +1,4 @@
+CMake Warning at CMakeLists.txt:587 (message):
+  Qt Keychain not found - using basic storage (less secure)
+
+
