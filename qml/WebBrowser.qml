@@ -70,7 +70,7 @@ Dialog {
         
         // Test WebView availability
         try {
-            Qt.createQmlObject('import QtWebView 1.0; Item {}', root)
+            Qt.createQmlObject('import QtWebView; Item {}', root)
             webViewAvailable = true
             console.log("✓ QtWebView available")
         } catch (e) {
@@ -79,7 +79,7 @@ Dialog {
         
         // Test WebEngine availability  
         try {
-            Qt.createQmlObject('import QtWebEngine 1.0; Item {}', root)
+            Qt.createQmlObject('import QtWebEngine; Item {}', root)
             webEngineAvailable = true
             console.log("✓ QtWebEngine available")
         } catch (e) {
@@ -339,7 +339,7 @@ Dialog {
                 Component.onCompleted: {
                     console.log("=== Creating WebEngine Component ===")
                     var webEngineQml = `
-                        import QtWebEngine 1.0
+                        import QtWebEngine
                         WebEngineView {
                             anchors.fill: parent
                             
@@ -380,7 +380,7 @@ Dialog {
                 Component.onCompleted: {
                     console.log("=== Creating WebView Component ===")
                     var webViewQml = `
-                        import QtWebView 1.0
+                        import QtWebView
                         WebView {
                             anchors.fill: parent
                             

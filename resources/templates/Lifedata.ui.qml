@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Shapes 1.15
+import QtQuick.Shapes
 
 Rectangle {
     id: lifeDataQml

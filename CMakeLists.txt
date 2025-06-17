@@ -454,7 +454,6 @@ qt_add_qml_module(VoiceAILLM
         qml/ChatWindow.qml
         qml/MessageDelegate.qml
         qml/VoiceButton.qml
-        qml/TTSComponent.qml
         qml/SettingsDialog.qml
         qml/PromptManagerDialog.qml
         qml/OAuth2LoginDialog.qml
