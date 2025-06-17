@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtWebView
 
 Dialog {
     id: root
@@ -376,40 +377,30 @@ Dialog {
         // WebView Component
         Component {
             id: webViewComponent
-            Item {
-                Component.onCompleted: {
-                    console.log("=== Creating WebView Component ===")
-                    var webViewQml = `
-                        import QtWebView
-                        WebView {
-                            anchors.fill: parent
-                            
-                            onLoadingChanged: function(loadRequest) {
-                                console.log("WebView loading changed - Status:", loadRequest.status, "URL:", loadRequest.url)
-                                if (loadRequest.errorString) {
-                                    console.error("WebView load error:", loadRequest.errorString)
-                                }
-                            }
-                            
-                            onUrlChanged: {
-                                console.log("WebView URL changed to:", url)
-                            }
-                            
-                            onLoadProgressChanged: {
-                                console.log("WebView load progress:", loadProgress + "%")
-                            }
-                            
-                            onTitleChanged: {
-                                console.log("WebView title changed:", title)
-                            }
-                        }
-                    `
-                    try {
-                        var webView = Qt.createQmlObject(webViewQml, this)
-                        console.log("✓ WebView component created successfully")
-                    } catch (e) {
-                        console.error("✗ Failed to create WebView component:", e.message)
+            WebView {
+                anchors.fill: parent
+                
+                onLoadingChanged: function(loadRequest) {
+                    console.log("WebView loading changed - Status:", loadRequest.status, "URL:", loadRequest.url)
+                    if (loadRequest.errorString) {
+                        console.error("WebView load error:", loadRequest.errorString)
                     }
+                }
+                
+                onUrlChanged: {
+                    console.log("WebView URL changed to:", url)
+                }
+                
+                onLoadProgressChanged: {
+                    console.log("WebView load progress:", loadProgress + "%")
+                }
+                
+                onTitleChanged: {
+                    console.log("WebView title changed:", title)
+                }
+                
+                Component.onCompleted: {
+                    console.log("✓ WebView component created successfully")
                 }
             }
         }

@@ -37,5 +37,35 @@
     <key>NSSpeechRecognitionUsageDescription</key>
     <string>Voice AI LLM uses speech recognition to convert your voice input to text for AI interaction.</string>
     
+    <!-- Network usage descriptions for WebView -->
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>Voice AI LLM needs network access for web browsing and AI services.</string>
+    
+    <!-- Camera usage description (for web content) -->
+    <key>NSCameraUsageDescription</key>
+    <string>Voice AI LLM may access camera for web-based features.</string>
+    
+    <!-- Location usage description (for web content) -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Voice AI LLM may access location for web-based features.</string>
+    
+    <!-- Support all interface orientations -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    
+    <!-- Allow arbitrary loads for WebView (adjust as needed for security) -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSAllowsLocalNetworking</key>
+        <true/>
+    </dict>
+    
 </dict>
 </plist> 

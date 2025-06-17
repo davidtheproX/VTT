@@ -11,6 +11,7 @@
     <!-- Permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
@@ -52,7 +53,8 @@
                  android:allowBackup="true"
                  android:fullBackupContent="false"
                  android:requestLegacyExternalStorage="true"
-                 android:preserveLegacyExternalStorage="true">
+                 android:preserveLegacyExternalStorage="true"
+                 android:usesCleartextTraffic="true">
         
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
                   android:name="org.qtproject.qt.android.bindings.QtActivity"
@@ -83,6 +85,10 @@
             <meta-data android:name="android.app.background_running" android:value="false"/>
             <meta-data android:name="android.app.auto_screen_scale_factor" android:value="true"/>
             <meta-data android:name="android.app.extract_android_style" android:value="minimal"/>
+            
+            <!-- WebView configuration -->
+            <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
+            <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="false"/>
             
             <!-- TTS configuration -->
             <meta-data android:name="android.speech.tts.enabled" android:value="true"/>
