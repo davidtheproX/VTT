@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 3D cube representation -->
+  <path d="M12 2L22 8V16L12 22L2 16V8L12 2Z" stroke="white" stroke-width="1.5" fill="none"/>
+  <path d="M12 2V12" stroke="white" stroke-width="1.5"/>
+  <path d="M2 8L12 12L22 8" stroke="white" stroke-width="1.5"/>
+  <path d="M2 16L12 22L22 16" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  <!-- Robot arm indication -->
+  <circle cx="8" cy="10" r="1" fill="white" opacity="0.8"/>
+  <circle cx="16" cy="10" r="1" fill="white" opacity="0.8"/>
+  <path d="M8 10L16 10" stroke="white" stroke-width="1" opacity="0.8"/>
+  <path d="M12 10L12 14" stroke="white" stroke-width="1" opacity="0.8"/>
+  <circle cx="12" cy="14" r="0.5" fill="white" opacity="0.8"/>
+</svg> 

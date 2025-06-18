@@ -8,6 +8,14 @@
 #include <QTextToSpeech>
 #include <QVoice>
 
+// Windows console allocation for debugging
+#ifdef Q_OS_WIN
+#include <Windows.h>
+#include <iostream>
+#include <io.h>
+#include <fcntl.h>
+#endif
+
 // Manager includes
 #include "VoiceRecognitionManager.h"
 #include "LLMConnectionManager.h"
@@ -27,6 +35,25 @@
 int main(int argc, char *argv[])
 {
     try {
+#ifdef Q_OS_WIN
+        // Allocate a console window for debugging output on Windows
+        if (AllocConsole()) {
+            freopen_s((FILE**)stdout, "CONOUT$", "w", stdout);
+            freopen_s((FILE**)stderr, "CONOUT$", "w", stderr);
+            freopen_s((FILE**)stdin, "CONIN$", "r", stdin);
+            
+            // Make cout, wcout, cin, wcin, wcerr, cerr, wclog and clog
+            // point to console as well
+            std::ios::sync_with_stdio(true);
+            
+            // Set console title
+            SetConsoleTitle(L"VoiceAILLM Debug Console");
+            
+            std::cout << "Debug console allocated for VoiceAILLM" << std::endl;
+            std::cout << "Console output will appear here" << std::endl;
+        }
+#endif
+
         // Initialize QtWebView before creating QGuiApplication (required by Qt WebView)
         QtWebView::initialize();
 

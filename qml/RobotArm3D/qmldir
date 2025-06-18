@@ -1,0 +1,5 @@
+module RobotArm3D
+RoboticArm3D 1.0 RoboticArm3D.qml
+LabeledSlider3D 1.0 LabeledSlider3D.qml
+Toggle3D 1.0 Toggle3D.qml
+RobotArmScene 1.0 RobotArmScene.qml 

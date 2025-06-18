@@ -141,7 +141,7 @@ ApplicationWindow {
                 
                 onClicked: {
                     console.log("Comm Test button clicked")
-                    commTestDialog.open()
+                    commTestDialogLoader.openCommTest()
                 }
             }
 
@@ -215,8 +215,7 @@ ApplicationWindow {
                 ToolTip.visible: hovered
                 
                 onClicked: {
-                    oauth2LoginDialog.currentProvider = "wechat"
-                    oauth2LoginDialog.open()
+                    oauth2LoginDialogLoader.openOAuth2Login("wechat")
                 }
             }
 
@@ -257,8 +256,39 @@ ApplicationWindow {
                 ToolTip.visible: hovered
 
                 onClicked: {
-                    oauth2LoginDialog.currentProvider = "dingtalk"
-                    oauth2LoginDialog.open()
+                    oauth2LoginDialogLoader.openOAuth2Login("dingtalk")
+                }
+            }
+
+            // 3D Robot Arm Button
+            Button {
+                id: robotArm3DButton
+                width: 36 * scaleFactor
+                height: 36 * scaleFactor
+                flat: true
+
+                background: Rectangle {
+                    color: robotArm3DButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                           robotArm3DButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+
+                contentItem: Image {
+                    width: 24 * scaleFactor
+                    height: 24 * scaleFactor
+                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/3d-viewer.svg"
+                    fillMode: Image.PreserveAspectFit
+                    sourceSize.width: 24 * scaleFactor
+                    sourceSize.height: 24 * scaleFactor
+                    smooth: true
+                }
+
+                ToolTip.text: "3D Robot Arm Demo"
+                ToolTip.visible: hovered
+
+                onClicked: {
+                    console.log("3D Robot Arm button clicked")
+                    robotArm3DLoader.open3DRobotArm()
                 }
             }
 
@@ -300,7 +330,7 @@ ApplicationWindow {
                 ToolTip.visible: hovered
 
                 onClicked: {
-                    pdfDialog.open()
+                    pdfDialogLoader.openPdfDialog()
                 }
             }
 
@@ -332,7 +362,7 @@ ApplicationWindow {
 
                 onClicked: {
                     console.log("Browser button clicked")
-                    webBrowser.open()
+                    webBrowserLoader.openWebBrowser()
                 }
             }
 
@@ -379,7 +409,7 @@ ApplicationWindow {
 
                 onClicked: {
                     console.log("CSV button clicked")
-                    csvDialog.open()
+                    csvDialogLoader.openCsvDialog()
                 }
             }
 
@@ -406,7 +436,7 @@ ApplicationWindow {
                 ToolTip.text: "Settings"
                 ToolTip.visible: hovered
 
-                onClicked: settingsDialog.open()
+                onClicked: settingsDialogLoader.openSettings()
             }
         }
     }
@@ -621,102 +651,315 @@ ApplicationWindow {
         }
     }
 
-    // Settings dialog
-    SettingsDialog {
-        id: settingsDialog
+    // =============================================================================
+    // DYNAMIC MODULE LOADERS - Load only when needed, unload when closed
+    // =============================================================================
 
-        scaleFactor: mainWindow.scaleFactor
-        baseFont: mainWindow.baseFont
+    // Settings Dialog Loader
+    Loader {
+        id: settingsDialogLoader
+        active: false
 
-        // Color properties
-        primaryColor: mainWindow.primaryColor
-        backgroundColor: mainWindow.backgroundColor
-        surfaceColor: mainWindow.surfaceColor
-        textColor: mainWindow.textColor
-        mutedTextColor: mainWindow.mutedTextColor
+        sourceComponent: Component {
+            SettingsDialog {
+                scaleFactor: mainWindow.scaleFactor
+                baseFont: mainWindow.baseFont
+                primaryColor: mainWindow.primaryColor
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+
+                onClosed: {
+                    Qt.callLater(function() {
+                        settingsDialogLoader.active = false;
+                        console.log("Settings module unloaded");
+                    });
+                }
+            }
+        }
+
+        function openSettings() {
+            console.log("Loading Settings module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
     }
 
-    // Prompt manager dialog
-    PromptManagerDialog {
-        id: promptManagerDialog
+    // Prompt Manager Dialog Loader
+    Loader {
+        id: promptManagerDialogLoader
+        active: false
 
-        scaleFactor: mainWindow.scaleFactor
-        baseFont: mainWindow.baseFont
+        sourceComponent: Component {
+            PromptManagerDialog {
+                scaleFactor: mainWindow.scaleFactor
+                baseFont: mainWindow.baseFont
+                primaryColor: mainWindow.primaryColor
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+                successColor: mainWindow.successColor
+                errorColor: mainWindow.errorColor
 
-        // Color properties
-        primaryColor: mainWindow.primaryColor
-        backgroundColor: mainWindow.backgroundColor
-        surfaceColor: mainWindow.surfaceColor
-        textColor: mainWindow.textColor
-        mutedTextColor: mainWindow.mutedTextColor
-        successColor: mainWindow.successColor
-        errorColor: mainWindow.errorColor
+                onVisibleChanged: {
+                    if (!visible) {
+                        Qt.callLater(function() {
+                            promptManagerDialogLoader.active = false;
+                            console.log("Prompt Manager module unloaded");
+                        });
+                    }
+                }
+            }
+        }
+
+        function openPromptManager() {
+            console.log("Loading Prompt Manager module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
     }
 
-    // OAuth2 login dialog
-    OAuth2LoginDialog {
-        id: oauth2LoginDialog
+    // OAuth2 Login Dialog Loader
+    Loader {
+        id: oauth2LoginDialogLoader
+        active: false
 
-        oauthManager: oauth2Manager
+        sourceComponent: Component {
+            OAuth2LoginDialog {
+                oauthManager: oauth2Manager
+
+                onVisibleChanged: {
+                    if (!visible) {
+                        Qt.callLater(function() {
+                            oauth2LoginDialogLoader.active = false;
+                            console.log("OAuth2 Login module unloaded");
+                        });
+                    }
+                }
+            }
+        }
+
+        function openOAuth2Login(provider) {
+            console.log("Loading OAuth2 Login module for provider:", provider);
+            active = true;
+            if (item) {
+                item.currentProvider = provider;
+                item.open();
+            }
+        }
     }
 
-    // PDF dialog
-    PDFDialog {
-        id: pdfDialog
+    // PDF Dialog Loader
+    Loader {
+        id: pdfDialogLoader
+        active: false
+
+        sourceComponent: Component {
+            PDFDialog {
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                primaryColor: mainWindow.primaryColor
+                successColor: mainWindow.successColor
+                errorColor: mainWindow.errorColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+                
+                Component.onCompleted: {
+                    // Set the pdfManager when the dialog is created
+                    pdfManager = mainWindow.pdfManager;
+                }
+
+                onClosed: {
+                    Qt.callLater(function() {
+                        pdfDialogLoader.active = false;
+                        console.log("PDF Dialog module unloaded");
+                    });
+                }
+            }
+        }
+
+        function openPdfDialog() {
+            console.log("Loading PDF Dialog module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
     }
 
-    // CSV dialog
-    CSVDialog {
-        id: csvDialog
+    // CSV Dialog Loader
+    Loader {
+        id: csvDialogLoader
+        active: false
 
-        // Pass theme colors
-        backgroundColor: mainWindow.backgroundColor
-        surfaceColor: mainWindow.surfaceColor
-        primaryColor: mainWindow.primaryColor
-        successColor: mainWindow.successColor
-        errorColor: mainWindow.errorColor
-        textColor: mainWindow.textColor
-        mutedTextColor: mainWindow.mutedTextColor
+        sourceComponent: Component {
+            CSVDialog {
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                primaryColor: mainWindow.primaryColor
+                successColor: mainWindow.successColor
+                errorColor: mainWindow.errorColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+
+                onClosed: {
+                    Qt.callLater(function() {
+                        csvDialogLoader.active = false;
+                        console.log("CSV Dialog module unloaded");
+                    });
+                }
+            }
+        }
+
+        function openCsvDialog() {
+            console.log("Loading CSV Dialog module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
     }
 
-    // Communication Test dialog
-    CommTestDialog {
-        id: commTestDialog
+    // 3D Robot Arm Loader
+    Loader {
+        id: robotArm3DLoader
+        active: false
 
-        // Pass theme properties
-        scaleFactor: mainWindow.scaleFactor
-        primaryColor: mainWindow.primaryColor
-        backgroundColor: mainWindow.backgroundColor
-        surfaceColor: mainWindow.surfaceColor
-        textColor: mainWindow.textColor
-        mutedTextColor: mainWindow.mutedTextColor
-        successColor: mainWindow.successColor
-        warningColor: mainWindow.warningColor
-        errorColor: mainWindow.errorColor
+        sourceComponent: Component {
+            RobotArm3DLoader {
+                onClose: {
+                    Qt.callLater(function() {
+                        robotArm3DLoader.active = false;
+                        console.log("3D Robot Arm module unloaded");
+                    });
+                }
+            }
+        }
+
+        function open3DRobotArm() {
+            console.log("Loading 3D Robot Arm module...");
+            active = true;
+            if (item) {
+                item.show3D = true;
+            }
+        }
     }
 
-    // Web Browser
-    WebBrowser {
-        id: webBrowser
+    // Communication Test Dialog Loader
+    Loader {
+        id: commTestDialogLoader
+        active: false
 
-        // Pass theme properties
-        scaleFactor: mainWindow.scaleFactor
-        primaryColor: mainWindow.primaryColor
-        backgroundColor: mainWindow.backgroundColor
-        textColor: mainWindow.textColor
+        sourceComponent: Component {
+            CommTestDialog {
+                scaleFactor: mainWindow.scaleFactor
+                primaryColor: mainWindow.primaryColor
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+                successColor: mainWindow.successColor
+                warningColor: mainWindow.warningColor
+                errorColor: mainWindow.errorColor
+
+                onVisibleChanged: {
+                    if (!visible) {
+                        Qt.callLater(function() {
+                            commTestDialogLoader.active = false;
+                            console.log("Communication Test module unloaded");
+                        });
+                    }
+                }
+            }
+        }
+
+        function openCommTest() {
+            console.log("Loading Communication Test module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
     }
 
-    // PDF viewer window
-    PDFViewer {
-        id: pdfViewerWindow
-        visible: false
+    // Web Browser Loader
+    Loader {
+        id: webBrowserLoader
+        active: false
 
-        // Inherit colors from main window
-        backgroundColor: mainWindow.backgroundColor
-        surfaceColor: mainWindow.surfaceColor
-        primaryColor: mainWindow.primaryColor
-        textColor: mainWindow.textColor
-        mutedTextColor: mainWindow.mutedTextColor
+        sourceComponent: Component {
+            WebBrowser {
+                scaleFactor: mainWindow.scaleFactor
+                primaryColor: mainWindow.primaryColor
+                backgroundColor: mainWindow.backgroundColor
+                textColor: mainWindow.textColor
+
+                onVisibleChanged: {
+                    if (!visible) {
+                        Qt.callLater(function() {
+                            webBrowserLoader.active = false;
+                            console.log("Web Browser module unloaded");
+                        });
+                    }
+                }
+            }
+        }
+
+        function openWebBrowser() {
+            console.log("Loading Web Browser module...");
+            active = true;
+            if (item) {
+                item.open();
+            }
+        }
+    }
+
+    // PDF Viewer Loader
+    Loader {
+        id: pdfViewerLoader
+        active: false
+
+        sourceComponent: Component {
+            PDFViewer {
+                backgroundColor: mainWindow.backgroundColor
+                surfaceColor: mainWindow.surfaceColor
+                primaryColor: mainWindow.primaryColor
+                textColor: mainWindow.textColor
+                mutedTextColor: mainWindow.mutedTextColor
+
+                onVisibleChanged: {
+                    if (!visible) {
+                        Qt.callLater(function() {
+                            pdfViewerLoader.active = false;
+                            console.log("PDF Viewer module unloaded");
+                        });
+                    }
+                }
+            }
+        }
+
+        function openPdfViewer(filePath) {
+            console.log("Loading PDF Viewer module for:", filePath);
+            active = true;
+            if (item) {
+                item.loadPDF(filePath);
+                item.show();
+                item.raise();
+                item.requestActivate();
+            }
+        }
+
+        function closePdfViewer() {
+            if (item) {
+                item.close();
+            }
+        }
     }
 
     // QML Viewer Dialog - loaded only when needed
@@ -810,16 +1053,13 @@ ApplicationWindow {
         target: pdfManager
         function onPdfOpened(filePath) {
             console.log("*** Main.qml: onPdfOpened signal received! FilePath:", filePath);
-            pdfViewerWindow.loadPDF(filePath);
-            pdfViewerWindow.show();
-            pdfViewerWindow.raise();
-            pdfViewerWindow.requestActivate();
-            console.log("*** Main.qml: PDF viewer window shown");
+            pdfViewerLoader.openPdfViewer(filePath);
+            console.log("*** Main.qml: PDF viewer module loaded");
         }
 
         function onPdfClosed() {
             console.log("*** Main.qml: PDF closed, hiding viewer window");
-            pdfViewerWindow.close();
+            pdfViewerLoader.closePdfViewer();
         }
 
         function onError(errorMessage) {
@@ -835,13 +1075,16 @@ ApplicationWindow {
 
     // Load settings on startup
     Component.onCompleted: {
+        console.log("=== VOICE AI LLM STARTED WITH DYNAMIC MODULE LOADING ===");
+        console.log("Core chat system loaded. All other modules will load on-demand.");
+        console.log("Available modules: Settings, PDF, CSV, 3D Robot Arm, Web Browser, OAuth2");
+        
         show()
         raise()
         requestActivate()
 
-        // Set the pdfManager property for PDF dialog
-        console.log("*** Setting pdfDialog.pdfManager to:", pdfManager);
-        pdfDialog.pdfManager = pdfManager;
+        // PDF manager will be set when PDF dialog is loaded dynamically
+        console.log("*** PDF manager available for dynamic loading:", pdfManager);
 
         if (databaseManager) {
             var settings = databaseManager.getSettings();

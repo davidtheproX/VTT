@@ -2,29 +2,43 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
+import QtQuick.Window
 
-Dialog {
+ApplicationWindow {
     id: csvDialog
     title: "CSV Data Viewer & Charts"
-    width: parent ? parent.width * 0.95 : 1200
-    height: parent ? parent.height * 0.95 : 800
-    anchors.centerIn: parent
-    modal: true
+    modality: Qt.ApplicationModal
+    flags: Qt.Dialog | Qt.WindowCloseButtonHint
+    
+    width: 1200
+    height: 800
+    minimumWidth: 1000
+    minimumHeight: 600
+    
+    // Center on screen
+    x: (Screen.width - width) / 2
+    y: (Screen.height - height) / 2
+    
+    visible: false
     
     // Theme properties
-    property color backgroundColor: parent ? parent.backgroundColor : "#FAFAFA"
-    property color surfaceColor: parent ? parent.surfaceColor : "#FFFFFF"
-    property color primaryColor: parent ? parent.primaryColor : "#2196F3"
-    property color successColor: parent ? parent.successColor : "#4CAF50"
-    property color errorColor: parent ? parent.errorColor : "#F44336"
-    property color textColor: parent ? parent.textColor : "#212121"
-    property color mutedTextColor: parent ? parent.mutedTextColor : "#757575"
+    property color backgroundColor: "#FAFAFA"
+    property color surfaceColor: "#FFFFFF"
+    property color primaryColor: "#2196F3"
+    property color successColor: "#4CAF50"
+    property color errorColor: "#F44336"
+    property color textColor: "#212121"
+    property color mutedTextColor: "#757575"
     
     // Data properties for CSV files
     property var csvHeaders: []
     property var numericColumns: []
     property var visibleSeries: ({})
-    property var seriesColors: ["#FF4444", "#44FF44", "#4444FF", "#FFAA44", "#AA44FF", "#44AAFF"]
+    property var seriesColors: [
+        "#FF4444", "#44FF44", "#4444FF", "#FFAA44", "#AA44FF", "#44AAFF",
+        "#FF8844", "#44FF88", "#8844FF", "#FFFF44", "#FF44AA", "#44FFAA",
+        "#FF6644", "#66FF44", "#4466FF", "#AAFF44"
+    ]
     property int currentRow: 0
     property bool csvLoaded: false
     property bool playMode: false
@@ -39,20 +53,59 @@ Dialog {
     property var dataSeriesA: []
     property var dataSeriesB: []
     property var dataSeriesC: []
+    property var dataSeriesD: []
+    property var dataSeriesE: []
+    property var dataSeriesF: []
+    property var dataSeriesG: []
+    property var dataSeriesH: []
+    property var dataSeriesI: []
+    property var dataSeriesJ: []
+    property var dataSeriesK: []
+    property var dataSeriesL: []
+    property var dataSeriesM: []
+    property var dataSeriesN: []
+    property var dataSeriesO: []
+    property var dataSeriesP: []
     property int sampleSize: 60
     property int currentIndex: 0
     property bool isRunning: false
     property real currentValueA: 0
     property real currentValueB: 0
     property real currentValueC: 0
+    property real currentValueD: 0
+    property real currentValueE: 0
+    property real currentValueF: 0
+    property real currentValueG: 0
+    property real currentValueH: 0
+    property real currentValueI: 0
+    property real currentValueJ: 0
+    property real currentValueK: 0
+    property real currentValueL: 0
+    property real currentValueM: 0
+    property real currentValueN: 0
+    property real currentValueO: 0
+    property real currentValueP: 0
     
-    background: Rectangle {
-        color: backgroundColor
-        radius: 8
-        border.color: Qt.lighter(backgroundColor, 1.2)
-        border.width: 1
+    signal closed()
+    
+    function open() {
+        visible = true
+        raise()
+        requestActivate()
     }
     
+    function close() {
+        visible = false
+        closed()
+    }
+    
+    onClosing: function(close) {
+        close.accepted = true
+        closed()
+    }
+    
+    color: backgroundColor
+
     // File dialog for CSV loading
     FileDialog {
         id: fileDialog
@@ -63,7 +116,7 @@ Dialog {
             csvViewer.loadFile(selectedFile)
         }
     }
-    
+
     Connections {
         target: csvViewer
         function onFileLoaded() {
@@ -74,7 +127,7 @@ Dialog {
             statusText.text = "Error: " + message
         }
     }
-    
+
     function loadCSVData() {
         var summary = csvViewer.getDataSummary()
         csvHeaders = summary.headers
@@ -126,12 +179,12 @@ Dialog {
         currentRow = 0
         updateChart()
     }
-    
+
     function updateChart() {
         if (!csvLoaded || numericColumns.length === 0) return
         chartCanvas.requestPaint()
     }
-    
+
     function getChartData() {
         if (!csvLoaded) return []
         
@@ -167,19 +220,9 @@ Dialog {
     }
 
     // Header
-    header: ToolBar {
+    header: Rectangle {
         height: 50
-        background: Rectangle {
-            color: primaryColor
-            radius: 8
-            Rectangle {
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                height: parent.radius
-                color: parent.color
-            }
-        }
+        color: primaryColor
         
         RowLayout {
             anchors.fill: parent
@@ -197,11 +240,13 @@ Dialog {
                 text: "✕"
                 flat: true
                 font.pixelSize: 16
+                
                 background: Rectangle {
                     color: parent.pressed ? Qt.darker(primaryColor, 1.3) : 
                            parent.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
                     radius: 4
                 }
+                
                 contentItem: Text {
                     text: parent.text
                     color: "white"
@@ -209,11 +254,12 @@ Dialog {
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                 }
+                
                 onClicked: csvDialog.close()
             }
         }
     }
-    
+
     // Main content
     RowLayout {
         anchors.fill: parent
@@ -278,19 +324,6 @@ Dialog {
                             Layout.fillWidth: true
                             font.pixelSize: 10
                             enabled: csvLoaded
-                            
-                            background: Rectangle {
-                                color: playMode ? (isRunning ? "#FFA500" : successColor) : primaryColor
-                                radius: 4
-                            }
-                            
-                            contentItem: Text {
-                                text: parent.text
-                                color: "white"
-                                font: parent.font
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignVCenter
-                            }
                             
                             onClicked: {
                                 if (!playMode) {
@@ -500,19 +533,6 @@ Dialog {
                             checkable: true
                             checked: isRunning
                             
-                            background: Rectangle {
-                                color: parent.checked ? successColor : primaryColor
-                                radius: 4
-                            }
-                            
-                            contentItem: Text {
-                                text: parent.text
-                                color: "white"
-                                font: parent.font
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignVCenter
-                            }
-                            
                             onClicked: {
                                 if (!csvLoaded) {
                                     isRunning = !isRunning
@@ -520,79 +540,44 @@ Dialog {
                             }
                         }
                         
-                        // Current values for demo mode
-                        Column {
-                            spacing: 8
+                        // Current values for demo mode - showing first 8 series
+                        ScrollView {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 120
                             visible: !csvLoaded
                             
-                            // Alpha Value (Red)
-                            Row {
-                                spacing: 5
-                                Text {
-                                    text: "Alpha:"
-                                    font.pixelSize: 9
-                                    color: textColor
-                                    width: 45
-                                }
-                                Rectangle {
-                                    width: 60
-                                    height: 20
-                                    color: "#FFCCCC"
-                                    border.color: "#888888"
-                                    border.width: 1
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: currentValueA.toFixed(2)
-                                        font.pixelSize: 9
-                                        color: textColor
-                                    }
-                                }
-                            }
-                            
-                            // Beta Value (Green)
-                            Row {
-                                spacing: 5
-                                Text {
-                                    text: "Beta:"
-                                    font.pixelSize: 9
-                                    color: textColor
-                                    width: 45
-                                }
-                                Rectangle {
-                                    width: 60
-                                    height: 20
-                                    color: "#CCFFCC"
-                                    border.color: "#888888"
-                                    border.width: 1
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: currentValueB.toFixed(2)
-                                        font.pixelSize: 9
-                                        color: textColor
-                                    }
-                                }
-                            }
-                            
-                            // Gamma Value (Blue)
-                            Row {
-                                spacing: 5
-                                Text {
-                                    text: "Gamma:"
-                                    font.pixelSize: 9
-                                    color: textColor
-                                    width: 45
-                                }
-                                Rectangle {
-                                    width: 60
-                                    height: 20
-                                    color: "#CCCCFF"
-                                    border.color: "#888888"
-                                    border.width: 1
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: currentValueC.toFixed(2)
-                                        font.pixelSize: 9
-                                        color: textColor
+                            Column {
+                                spacing: 4
+                                width: parent.width
+                                
+                                property var seriesNames: ["Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta"]
+                                property var currentValues: [currentValueA, currentValueB, currentValueC, currentValueD, 
+                                                           currentValueE, currentValueF, currentValueG, currentValueH]
+                                
+                                Repeater {
+                                    model: 8
+                                    
+                                    Row {
+                                        spacing: 5
+                                        Text {
+                                            text: parent.parent.seriesNames[index] + ":"
+                                            font.pixelSize: 8
+                                            color: textColor
+                                            width: 40
+                                        }
+                                        Rectangle {
+                                            width: 50
+                                            height: 15
+                                            color: Qt.lighter(seriesColors[index], 1.7)
+                                            border.color: seriesColors[index]
+                                            border.width: 1
+                                            Text {
+                                                anchors.centerIn: parent
+                                                text: parent.parent.parent.currentValues[index] ? parent.parent.parent.currentValues[index].toFixed(1) : "0.0"
+                                                font.pixelSize: 8
+                                                color: textColor
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -897,65 +882,53 @@ Dialog {
                             ctx.lineTo(margin + chartWidth, margin + chartHeight)
                             ctx.stroke()
                             
-                            // Draw legend
+                            // Draw legend in two columns
                             var legendY = margin + 10
-                            ctx.font = "12px Arial"
+                            var legendX1 = margin + 10
+                            var legendX2 = margin + chartWidth / 2 + 10
+                            ctx.font = "10px Arial"
                             
-                            // Alpha series (Red)
-                            ctx.fillStyle = "#FF4444"
-                            ctx.fillRect(margin + 10, legendY, 15, 3)
-                            ctx.fillStyle = "#333333"
-                            ctx.fillText("Alpha Software", margin + 30, legendY + 10)
+                            var seriesNames = [
+                                "Alpha Software", "Beta Hardware", "Gamma Services", "Delta Analytics",
+                                "Epsilon Network", "Zeta Security", "Eta Database", "Theta AI/ML",
+                                "Iota IoT Sensors", "Kappa Blockchain", "Lambda Serverless", "Mu DevOps",
+                                "Nu Monitoring", "Xi Automation", "Omicron Cloud", "Pi Performance"
+                            ]
                             
-                            // Beta series (Green)
-                            legendY += 20
-                            ctx.fillStyle = "#44FF44"
-                            ctx.fillRect(margin + 10, legendY, 15, 3)
-                            ctx.fillStyle = "#333333"
-                            ctx.fillText("Beta Hardware", margin + 30, legendY + 10)
+                            for (var s = 0; s < 16; s++) {
+                                var xPos = (s < 8) ? legendX1 : legendX2
+                                var yPos = legendY + (s % 8) * 12
+                                
+                                ctx.fillStyle = seriesColors[s]
+                                ctx.fillRect(xPos, yPos, 12, 2)
+                                ctx.fillStyle = "#333333"
+                                ctx.fillText(seriesNames[s], xPos + 16, yPos + 8)
+                            }
                             
-                            // Gamma series (Blue)
-                            legendY += 20
-                            ctx.fillStyle = "#4444FF"
-                            ctx.fillRect(margin + 10, legendY, 15, 3)
-                            ctx.fillStyle = "#333333"
-                            ctx.fillText("Gamma Services", margin + 30, legendY + 10)
-                            
-                            // Draw data lines
+                            // Draw data lines for all 16 series
                             if (dataSeriesA.length > 0) {
-                                // Alpha series
-                                ctx.strokeStyle = "#FF4444"
-                                ctx.lineWidth = 2
-                                ctx.beginPath()
-                                for (var i = 0; i < dataSeriesA.length; i++) {
-                                    var x = margin + (i / (sampleSize - 1)) * chartWidth
-                                    var y = margin + chartHeight - ((dataSeriesA[i] - minY) / yRange) * chartHeight
-                                    if (i === 0) ctx.moveTo(x, y)
-                                    else ctx.lineTo(x, y)
-                                }
-                                ctx.stroke()
+                                var allSeries = [
+                                    dataSeriesA, dataSeriesB, dataSeriesC, dataSeriesD,
+                                    dataSeriesE, dataSeriesF, dataSeriesG, dataSeriesH,
+                                    dataSeriesI, dataSeriesJ, dataSeriesK, dataSeriesL,
+                                    dataSeriesM, dataSeriesN, dataSeriesO, dataSeriesP
+                                ]
                                 
-                                // Beta series
-                                ctx.strokeStyle = "#44FF44"
-                                ctx.beginPath()
-                                for (var i = 0; i < dataSeriesB.length; i++) {
-                                    var x = margin + (i / (sampleSize - 1)) * chartWidth
-                                    var y = margin + chartHeight - ((dataSeriesB[i] - minY) / yRange) * chartHeight
-                                    if (i === 0) ctx.moveTo(x, y)
-                                    else ctx.lineTo(x, y)
+                                for (var seriesIdx = 0; seriesIdx < allSeries.length; seriesIdx++) {
+                                    var series = allSeries[seriesIdx]
+                                    if (series.length > 0) {
+                                        ctx.strokeStyle = seriesColors[seriesIdx]
+                                        ctx.lineWidth = 1.5
+                                        ctx.beginPath()
+                                        for (var i = 0; i < series.length; i++) {
+                                            var x = margin + (i / (sampleSize - 1)) * chartWidth
+                                            var y = margin + chartHeight - ((series[i] - minY) / yRange) * chartHeight
+                                            if (i === 0) ctx.moveTo(x, y)
+                                            else ctx.lineTo(x, y)
+                                        }
+                                        ctx.stroke()
+                                    }
                                 }
-                                ctx.stroke()
-                                
-                                // Gamma series
-                                ctx.strokeStyle = "#4444FF"
-                                ctx.beginPath()
-                                for (var i = 0; i < dataSeriesC.length; i++) {
-                                    var x = margin + (i / (sampleSize - 1)) * chartWidth
-                                    var y = margin + chartHeight - ((dataSeriesC[i] - minY) / yRange) * chartHeight
-                                    if (i === 0) ctx.moveTo(x, y)
-                                    else ctx.lineTo(x, y)
-                                }
-                                ctx.stroke()
                             }
                         }
                     }
@@ -967,7 +940,7 @@ Dialog {
     // Timer for real-time updates
     Timer {
         id: updateTimer
-        interval: 250
+        interval: 1
         running: isRunning || (playMode && isRunning)
         repeat: true
         onTriggered: {
@@ -984,26 +957,78 @@ Dialog {
                 currentIndex++
                 var p = currentIndex * 0.1
                 
-                // Generate data using ChartDirector formulas
+                // Generate data using ChartDirector formulas with variations
                 var dataA = 20 + Math.cos(p * 129241) * 10 + 1 / (Math.cos(p) * Math.cos(p) + 0.01)
                 var dataB = 150 + 100 * Math.sin(p / 27.7) * Math.sin(p / 10.1)
                 var dataC = 150 + 100 * Math.cos(p / 6.7) * Math.cos(p / 11.9)
+                var dataD = 80 + 60 * Math.sin(p / 15.3) * Math.cos(p / 8.2)
+                var dataE = 120 + 80 * Math.cos(p / 12.4) * Math.sin(p / 20.1)
+                var dataF = 90 + 70 * Math.sin(p / 18.7) + 20 * Math.cos(p * 3.1)
+                var dataG = 160 + 90 * Math.cos(p / 9.8) * Math.cos(p / 14.3)
+                var dataH = 110 + 85 * Math.sin(p / 22.5) * Math.sin(p / 7.9)
+                var dataI = 140 + 95 * Math.cos(p / 16.2) + 15 * Math.sin(p * 2.4)
+                var dataJ = 75 + 65 * Math.sin(p / 11.7) * Math.cos(p / 19.8)
+                var dataK = 185 + 110 * Math.cos(p / 13.9) * Math.sin(p / 6.4)
+                var dataL = 95 + 75 * Math.sin(p / 21.3) + 25 * Math.cos(p * 1.8)
+                var dataM = 130 + 88 * Math.cos(p / 8.6) * Math.cos(p / 17.2)
+                var dataN = 105 + 78 * Math.sin(p / 14.8) * Math.sin(p / 9.5)
+                var dataO = 170 + 100 * Math.cos(p / 10.4) + 30 * Math.sin(p * 2.9)
+                var dataP = 85 + 68 * Math.sin(p / 24.1) * Math.cos(p / 5.7)
                 
                 // Update current values
                 currentValueA = dataA
                 currentValueB = dataB
                 currentValueC = dataC
+                currentValueD = dataD
+                currentValueE = dataE
+                currentValueF = dataF
+                currentValueG = dataG
+                currentValueH = dataH
+                currentValueI = dataI
+                currentValueJ = dataJ
+                currentValueK = dataK
+                currentValueL = dataL
+                currentValueM = dataM
+                currentValueN = dataN
+                currentValueO = dataO
+                currentValueP = dataP
                 
                 // Add to series
                 dataSeriesA.push(dataA)
                 dataSeriesB.push(dataB)
                 dataSeriesC.push(dataC)
+                dataSeriesD.push(dataD)
+                dataSeriesE.push(dataE)
+                dataSeriesF.push(dataF)
+                dataSeriesG.push(dataG)
+                dataSeriesH.push(dataH)
+                dataSeriesI.push(dataI)
+                dataSeriesJ.push(dataJ)
+                dataSeriesK.push(dataK)
+                dataSeriesL.push(dataL)
+                dataSeriesM.push(dataM)
+                dataSeriesN.push(dataN)
+                dataSeriesO.push(dataO)
+                dataSeriesP.push(dataP)
                 
                 // Keep only recent samples
                 if (dataSeriesA.length > sampleSize) {
                     dataSeriesA.shift()
                     dataSeriesB.shift()
                     dataSeriesC.shift()
+                    dataSeriesD.shift()
+                    dataSeriesE.shift()
+                    dataSeriesF.shift()
+                    dataSeriesG.shift()
+                    dataSeriesH.shift()
+                    dataSeriesI.shift()
+                    dataSeriesJ.shift()
+                    dataSeriesK.shift()
+                    dataSeriesL.shift()
+                    dataSeriesM.shift()
+                    dataSeriesN.shift()
+                    dataSeriesO.shift()
+                    dataSeriesP.shift()
                 }
                 
                 chartCanvas.requestPaint()

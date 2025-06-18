@@ -86,6 +86,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     Gui 
     Qml 
     Quick 
+    Quick3D
     QuickControls2 
     Network 
     NetworkAuth
@@ -99,6 +100,31 @@ find_package(Qt6 REQUIRED COMPONENTS
     Svg
     Charts
 )
+
+# Find additional Qt6 Quick3D components
+find_package(Qt6 QUIET COMPONENTS 
+    Quick3DRuntimeRender
+    Quick3DUtils
+)
+
+# Check Qt6 Quick3D availability
+if(TARGET Qt6::Quick3D)
+    message(STATUS "✓ Qt6 Quick3D found - 3D rendering support enabled")
+    set(HAVE_QUICK3D TRUE)
+    add_compile_definitions(HAVE_QUICK3D=1)
+    
+    # List all available Quick3D components
+    if(TARGET Qt6::Quick3DRuntimeRender)
+        message(STATUS "  ✓ Quick3DRuntimeRender available")
+    endif()
+    if(TARGET Qt6::Quick3DUtils)
+        message(STATUS "  ✓ Quick3DUtils available")
+    endif()
+else()
+    message(WARNING "✗ Qt6 Quick3D not found - 3D rendering disabled")
+    set(HAVE_QUICK3D FALSE)
+    add_compile_definitions(HAVE_QUICK3D=0)
+endif()
 
 # Find optional WebChannel component (not currently used in codebase)
 find_package(Qt6 QUIET COMPONENTS WebChannel)
@@ -476,6 +502,13 @@ qt_add_qml_module(VoiceAILLM
         qml/SvgHandler.qml
         qml/CommTestDialog.qml
         qml/PermissionDialog.qml
+        qml/RobotArm3DDialog.qml
+        qml/RobotArm3DLoader.qml
+        qml/RobotArm3D/RoboticArm3D.qml
+        qml/RobotArm3D/LabeledSlider3D.qml
+        qml/RobotArm3D/Toggle3D.qml
+        qml/RobotArm3D/RobotArmScene.qml
+        qml/RobotArm3D/qmldir
         qml/pdf_templates/diagnostic_template.qml
     RESOURCES
         data/voiceaillm.db
@@ -487,6 +520,20 @@ qt_add_qml_module(VoiceAILLM
         resources/icons/browser.svg
         resources/icons/qml-viewer.svg
         resources/icons/svg-viewer.svg
+        resources/icons/3d-viewer.svg
+        content/3d/meshes/arm.mesh
+        content/3d/meshes/base.mesh
+        content/3d/meshes/forearm.mesh
+        content/3d/meshes/hand.mesh
+        content/3d/meshes/hand_grab_b.mesh
+        content/3d/meshes/hand_grab_b_hinge_1.mesh
+        content/3d/meshes/hand_grab_b_hinge_2.mesh
+        content/3d/meshes/hand_grab_t.mesh
+        content/3d/meshes/hand_grab_t_hinge_1.mesh
+        content/3d/meshes/hand_grab_t_hinge_2.mesh
+        content/3d/meshes/hand_hinge.mesh
+        content/3d/meshes/root.mesh
+        content/3d/maps/qt.png
         resources/templates/diagnostic_template.html
         resources/templates/diagnostic_example.json
         resources/templates/LifeData.svg
@@ -513,6 +560,24 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::Svg
     Qt6::Charts
 )
+
+# Link Qt6 Quick3D conditionally if available
+if(HAVE_QUICK3D AND TARGET Qt6::Quick3D)
+    target_link_libraries(VoiceAILLM PRIVATE Qt6::Quick3D)
+    message(STATUS "✓ Linked Qt6::Quick3D")
+    
+    # Link additional Quick3D components if available
+    if(TARGET Qt6::Quick3DRuntimeRender)
+        target_link_libraries(VoiceAILLM PRIVATE Qt6::Quick3DRuntimeRender)
+        message(STATUS "✓ Linked Qt6::Quick3DRuntimeRender")
+    endif()
+    if(TARGET Qt6::Quick3DUtils)
+        target_link_libraries(VoiceAILLM PRIVATE Qt6::Quick3DUtils)
+        message(STATUS "✓ Linked Qt6::Quick3DUtils")
+    endif()
+else()
+    message(WARNING "✗ Qt6::Quick3D not linked - 3D features disabled")
+endif()
 
 # Link WebChannel conditionally if available
 if(HAVE_WEBCHANNEL AND TARGET Qt6::WebChannel)

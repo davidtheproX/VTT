@@ -2,16 +2,96 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Dialogs
+import QtQuick.Window
 
-Dialog {
+ApplicationWindow {
     id: pdfDialog
     title: "PDF Tools"
-    width: Math.min(600, parent.width * 0.9)
-    height: Math.min(700, parent.height * 0.9)
-    anchors.centerIn: parent
-    modal: true
+    modality: Qt.ApplicationModal
+    flags: Qt.Dialog | Qt.WindowCloseButtonHint
+    
+    width: 600
+    height: 700
+    minimumWidth: 500
+    minimumHeight: 600
+    
+    // Center on screen
+    x: (Screen.width - width) / 2
+    y: (Screen.height - height) / 2
+    
+    visible: false
     
     property var pdfManager
+    
+    // Theme properties - inherited from Main.qml
+    property color backgroundColor: "#FAFAFA"
+    property color surfaceColor: "#FFFFFF"
+    property color primaryColor: "#2196F3"
+    property color successColor: "#4CAF50"
+    property color errorColor: "#F44336"
+    property color textColor: "#212121"
+    property color mutedTextColor: "#757575"
+    
+    signal closed()
+    
+    function open() {
+        visible = true
+        raise()
+        requestActivate()
+    }
+    
+    function close() {
+        visible = false
+        closed()
+    }
+    
+    onClosing: function(close) {
+        close.accepted = true
+        closed()
+    }
+    
+    color: backgroundColor
+    
+    // Header
+    header: Rectangle {
+        height: 50
+        color: primaryColor
+        
+        RowLayout {
+            anchors.fill: parent
+            anchors.margins: 12
+            
+            Text {
+                text: "PDF Tools"
+                color: "white"
+                font.pixelSize: 16
+                font.bold: true
+                Layout.fillWidth: true
+            }
+            
+            Button {
+                text: "✕"
+                flat: true
+                font.pixelSize: 16
+                
+                background: Rectangle {
+                    color: parent.pressed ? Qt.darker(primaryColor, 1.3) : 
+                           parent.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                    radius: 4
+                }
+                
+                contentItem: Text {
+                    text: parent.text
+                    color: "white"
+                    font: parent.font
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+                
+                onClicked: pdfDialog.close()
+            }
+        }
+    }
     
     // File dialog for PDF selection
     FileDialog {
@@ -58,22 +138,6 @@ Dialog {
         onRejected: {
             console.log("FileDialog rejected/cancelled");
         }
-    }
-    
-    // Theme properties - inherited from Main.qml
-    property color backgroundColor: parent ? parent.backgroundColor : "#FAFAFA"
-    property color surfaceColor: parent ? parent.surfaceColor : "#FFFFFF"
-    property color primaryColor: parent ? parent.primaryColor : "#2196F3"
-    property color successColor: parent ? parent.successColor : "#4CAF50"
-    property color errorColor: parent ? parent.errorColor : "#F44336"
-    property color textColor: parent ? parent.textColor : "#212121"
-    property color mutedTextColor: parent ? parent.mutedTextColor : "#757575"
-    
-    background: Rectangle {
-        color: backgroundColor
-        radius: 8
-        border.color: Qt.lighter(backgroundColor, 1.2)
-        border.width: 1
     }
     
     ScrollView {
@@ -158,22 +222,6 @@ Dialog {
                             text: "Validate JSON"
                             enabled: jsonInput.text.trim().length > 0
                             
-                            background: Rectangle {
-                                color: parent.enabled ? 
-                                       (parent.pressed ? Qt.darker(mutedTextColor, 1.2) : 
-                                        parent.hovered ? Qt.lighter(mutedTextColor, 1.1) : mutedTextColor) :
-                                       Qt.lighter(mutedTextColor, 1.5)
-                                radius: 4
-                            }
-                            
-                            contentItem: Text {
-                                text: parent.text
-                                color: parent.enabled ? "white" : Qt.darker(mutedTextColor, 1.3)
-                                font: parent.font
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignVCenter
-                            }
-                            
                             onClicked: {
                                 if (pdfManager) {
                                     var isValid = pdfManager.isValidJson(jsonInput.text);
@@ -195,22 +243,6 @@ Dialog {
                         text: pdfManager && pdfManager.isGenerating ? "Generating..." : "Generate PDF"
                         enabled: jsonInput.text.trim().length > 0 && !(pdfManager && pdfManager.isGenerating)
                         Layout.fillWidth: true
-                        
-                        background: Rectangle {
-                            color: parent.enabled ? 
-                                   (parent.pressed ? Qt.darker(primaryColor, 1.2) : 
-                                    parent.hovered ? Qt.lighter(primaryColor, 1.1) : primaryColor) :
-                                   Qt.lighter(mutedTextColor, 1.3)
-                            radius: 4
-                        }
-                        
-                        contentItem: Text {
-                            text: parent.text
-                            color: parent.enabled ? "white" : mutedTextColor
-                            font: parent.font
-                            horizontalAlignment: Text.AlignHCenter
-                            verticalAlignment: Text.AlignVCenter
-                        }
                         
                         onClicked: {
                             if (pdfManager) {

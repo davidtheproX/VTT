@@ -377,30 +377,30 @@ Dialog {
         // WebView Component
         Component {
             id: webViewComponent
-            WebView {
-                anchors.fill: parent
-                
-                onLoadingChanged: function(loadRequest) {
-                    console.log("WebView loading changed - Status:", loadRequest.status, "URL:", loadRequest.url)
-                    if (loadRequest.errorString) {
-                        console.error("WebView load error:", loadRequest.errorString)
-                    }
-                }
-                
-                onUrlChanged: {
-                    console.log("WebView URL changed to:", url)
-                }
-                
-                onLoadProgressChanged: {
-                    console.log("WebView load progress:", loadProgress + "%")
-                }
-                
-                onTitleChanged: {
-                    console.log("WebView title changed:", title)
-                }
+                        WebView {
+                            anchors.fill: parent
+                            
+                            onLoadingChanged: function(loadRequest) {
+                                console.log("WebView loading changed - Status:", loadRequest.status, "URL:", loadRequest.url)
+                                if (loadRequest.errorString) {
+                                    console.error("WebView load error:", loadRequest.errorString)
+                                }
+                            }
+                            
+                            onUrlChanged: {
+                                console.log("WebView URL changed to:", url)
+                            }
+                            
+                            onLoadProgressChanged: {
+                                console.log("WebView load progress:", loadProgress + "%")
+                            }
+                            
+                            onTitleChanged: {
+                                console.log("WebView title changed:", title)
+                            }
                 
                 Component.onCompleted: {
-                    console.log("✓ WebView component created successfully")
+                        console.log("✓ WebView component created successfully")
                 }
             }
         }

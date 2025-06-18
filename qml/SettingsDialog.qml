@@ -1,12 +1,24 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Window
 
-Dialog {
+ApplicationWindow {
     id: settingsDialog
     title: "Settings"
-    modal: true
-    anchors.centerIn: parent
+    modality: Qt.ApplicationModal
+    flags: Qt.Dialog | Qt.WindowCloseButtonHint
+    
+    width: 700
+    height: 650
+    minimumWidth: 600
+    minimumHeight: 500
+    
+    // Center on screen
+    x: (Screen.width - width) / 2
+    y: (Screen.height - height) / 2
+    
+    visible: false
     
     // Scaling properties (will be set from Main.qml)
     property real scaleFactor: 1.0
@@ -19,12 +31,13 @@ Dialog {
     property color textColor: "#212121"
     property color mutedTextColor: "#757575"
     
-    width: Math.min(700 * scaleFactor, parent.width * 0.9)
-    height: Math.min(650 * scaleFactor, parent.height * 0.9)
+    signal closed()
     
-    // Load settings when dialog opens
-    onOpened: {
-        loadSettings();
+    function open() {
+        visible = true
+        raise()
+        requestActivate()
+        loadSettings()
         
         // Refresh TTS voices when dialog opens
         if (ttsManager) {
@@ -33,59 +46,43 @@ Dialog {
         }
     }
     
-    background: Rectangle {
-        color: surfaceColor
-        radius: 12 * scaleFactor
-        border.color: Qt.lighter(mutedTextColor, 1.8)
-        border.width: 1
-        
-        // Drop shadow effect
-        Rectangle {
-            anchors.fill: parent
-            anchors.margins: -4
-            color: "transparent"
-            border.color: Qt.rgba(0, 0, 0, 0.1)
-            border.width: 1
-            radius: parent.radius + 2
-            z: -1
-        }
+    function close() {
+        visible = false
+        closed()
     }
     
+    onClosing: function(close) {
+        close.accepted = true
+        closed()
+    }
+    
+    color: backgroundColor
+    
     header: Rectangle {
-        height: 60 * scaleFactor
+        height: 60
         color: primaryColor
-        radius: 12 * scaleFactor
-        
-        // Only round top corners
-        Rectangle {
-            anchors.bottom: parent.bottom
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: parent.radius
-            color: parent.color
-        }
         
         RowLayout {
             anchors.fill: parent
-            anchors.margins: 20 * scaleFactor
+            anchors.margins: 16
             
             Text {
-                text: settingsDialog.title
+                text: "Settings"
                 color: "white"
-                font.pixelSize: baseFont * 1.3
-                font.weight: Font.Medium
+                font.pixelSize: 18
+                font.bold: true
                 Layout.fillWidth: true
             }
             
             Button {
                 text: "✕"
                 flat: true
-                font.pixelSize: baseFont * 1.2
+                font.pixelSize: 16
                 
                 background: Rectangle {
                     color: parent.pressed ? Qt.darker(primaryColor, 1.3) :
                            parent.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4 * scaleFactor
+                    radius: 4
                 }
                 
                 contentItem: Text {
@@ -101,9 +98,9 @@ Dialog {
         }
     }
     
-    contentItem: ScrollView {
+    ScrollView {
         anchors.fill: parent
-        anchors.margins: 20 * scaleFactor
+        anchors.margins: 20
         
         clip: true
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
@@ -651,10 +648,10 @@ Dialog {
                                         ttsManager.getCurrentVoices();
                                         
                                         // Connect to voice updates signal
-                                        ttsManager.voicesUpdated.connect(function() {
-                                            console.log("Voices updated signal received");
+                                            ttsManager.voicesUpdated.connect(function() {
+                                                console.log("Voices updated signal received");
                                             model = Qt.binding(function() { return ttsManager.availableVoiceNames; });
-                                        });
+                                            });
                                     }
                                 }
                             }
