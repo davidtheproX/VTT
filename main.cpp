@@ -8,12 +8,17 @@
 #include <QTextToSpeech>
 #include <QVoice>
 
-// Windows console allocation for debugging
+// Windows console allocation for debugging (disabled by default)
+// Uncomment the following line to enable debug console on Windows
+// #define WIN_DEBUG_CONSOLE
+
+#ifdef WIN_DEBUG_CONSOLE
 #ifdef Q_OS_WIN
 #include <Windows.h>
 #include <iostream>
 #include <io.h>
 #include <fcntl.h>
+#endif
 #endif
 
 // Manager includes
@@ -35,6 +40,7 @@
 int main(int argc, char *argv[])
 {
     try {
+#ifdef WIN_DEBUG_CONSOLE
 #ifdef Q_OS_WIN
         // Allocate a console window for debugging output on Windows
         if (AllocConsole()) {
@@ -52,6 +58,7 @@ int main(int argc, char *argv[])
             std::cout << "Debug console allocated for VoiceAILLM" << std::endl;
             std::cout << "Console output will appear here" << std::endl;
         }
+#endif
 #endif
 
         // Initialize QtWebView before creating QGuiApplication (required by Qt WebView)
