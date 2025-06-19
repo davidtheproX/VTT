@@ -147,7 +147,7 @@ void PDFManager::generatePdfFromJsonQML(const QString &jsonData, const QString &
     }
     
     QJsonObject jsonObj = doc.object();
-    generatePdfFromTemplateQML("diagnostic_template", jsonObj, outputPath);
+    generatePdfFromTemplateQML("Lifedata", jsonObj, outputPath);
 }
 
 void PDFManager::generatePdfFromTemplateQML(const QString &templateName, const QJsonObject &data, const QString &outputPath)

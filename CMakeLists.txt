@@ -518,9 +518,8 @@ qt_add_qml_module(VoiceAILLM
         qml/RobotArm3D/LabeledSlider3D.qml
         qml/RobotArm3D/Toggle3D.qml
         qml/RobotArm3D/RobotArmScene.qml
-        qml/RobotArm3D/qmldir
-        qml/pdf_templates/diagnostic_template.qml
     RESOURCES
+        qml/RobotArm3D/qmldir
         data/voiceaillm.db
         resources/icons/microphone.svg
         resources/icons/settings.svg

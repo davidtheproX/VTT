@@ -294,20 +294,51 @@ QString QMLPDFGenerator::loadQMLTemplate(const QString &templateName)
 {
     qDebug() << "QMLPDFGenerator: Loading template:" << templateName;
     
-    // Try resource system first (cross-platform)
-    QString resourcePath = QString(":/VoiceAILLM/qml/pdf_templates/%1.qml").arg(templateName);
-    QFile resourceFile(resourcePath);
+    // Try multiple resource paths (cross-platform)
+    QStringList possiblePaths = {
+        QString(":/VoiceAILLM/resources/templates/%1.ui.qml").arg(templateName),
+        QString(":/resources/templates/%1.ui.qml").arg(templateName),
+        QString(":/templates/%1.ui.qml").arg(templateName),
+        QString(":/%1.ui.qml").arg(templateName),
+        QString(":/qt/qml/VoiceAILLM/resources/templates/%1.ui.qml").arg(templateName),
+        QString(":/VoiceAILLM/resources/templates/%1.qml").arg(templateName),
+        QString(":/resources/templates/%1.qml").arg(templateName),
+        QString(":/templates/%1.qml").arg(templateName),
+        QString(":/%1.qml").arg(templateName)
+    };
     
-    if (resourceFile.open(QIODevice::ReadOnly)) {
-        QString content = QString::fromUtf8(resourceFile.readAll());
-        qDebug() << "QMLPDFGenerator: Loaded from resource:" << resourcePath;
-        qDebug() << "QMLPDFGenerator: Template content length:" << content.length();
-        return content;
+    // First, let's list what resources are actually available
+    QDir resourceDir(":/");
+    qDebug() << "QMLPDFGenerator: Available resources in /:";
+    for (const QString &entry : resourceDir.entryList()) {
+        qDebug() << "  - " << entry;
+    }
+    
+    QDir voiceResourceDir(":/VoiceAILLM");
+    if (voiceResourceDir.exists()) {
+        qDebug() << "QMLPDFGenerator: Available resources in /VoiceAILLM:";
+        for (const QString &entry : voiceResourceDir.entryList()) {
+            qDebug() << "  - " << entry;
+        }
+    }
+    
+    for (const QString &resourcePath : possiblePaths) {
+        QFile resourceFile(resourcePath);
+        qDebug() << "QMLPDFGenerator: Trying path:" << resourcePath;
+        
+        if (resourceFile.open(QIODevice::ReadOnly)) {
+            QString content = QString::fromUtf8(resourceFile.readAll());
+            qDebug() << "QMLPDFGenerator: SUCCESS! Loaded from resource:" << resourcePath;
+            qDebug() << "QMLPDFGenerator: Template content length:" << content.length();
+            return content;
+        } else {
+            qDebug() << "QMLPDFGenerator: Failed to open:" << resourcePath;
+        }
     }
     
     // Try application directory as fallback (cross-platform)
     QString appDirPath = QCoreApplication::applicationDirPath();
-    QString templatePath = QDir(appDirPath).filePath(QString("qml/pdf_templates/%1.qml").arg(templateName));
+    QString templatePath = QDir(appDirPath).filePath(QString("resources/templates/%1.ui.qml").arg(templateName));
     QFile templateFile(templatePath);
     
     if (templateFile.open(QIODevice::ReadOnly)) {
