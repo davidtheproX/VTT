@@ -99,6 +99,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     PrintSupport
     Svg
     Charts
+    Graphs
     WebView
 )
 
@@ -381,6 +382,7 @@ set(SOURCES
     src/QMLPDFGenerator.cpp
     src/PDFViewer.cpp
     src/CSVViewer.cpp
+    src/NextGenCSVViewer.cpp
     src/SvgHandler.cpp
     src/DeviceDiscoveryManager.cpp
     src/QPing.cpp
@@ -405,6 +407,7 @@ set(HEADERS
     include/QMLPDFGenerator.h
     include/PDFViewer.h
     include/CSVViewer.h
+    include/NextGenCSVViewer.h
     include/SvgHandler.h
     include/DeviceDiscoveryManager.h
     include/QPing.h
@@ -491,6 +494,9 @@ qt_add_qml_module(VoiceAILLM
         qml/CSVDialog.qml
         qml/CSVViewer.qml
         qml/CSVViewerComponent.qml
+        qml/NextGenCSVViewer.qml
+        qml/NextGenCSVViewerComponent.qml
+        qml/NextGenInteractiveChart.qml
         qml/InteractiveChart.qml
         qml/DataSeriesControl.qml
         qml/SeriesDelegate.qml
@@ -522,6 +528,8 @@ qt_add_qml_module(VoiceAILLM
         resources/icons/qml-viewer.svg
         resources/icons/svg-viewer.svg
         resources/icons/3d-viewer.svg
+
+        resources/icons/nextgen-csv.svg
         content/3d/meshes/arm.mesh
         content/3d/meshes/base.mesh
         content/3d/meshes/forearm.mesh
@@ -560,6 +568,7 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::PrintSupport
     Qt6::Svg
     Qt6::Charts
+    Qt6::Graphs
     Qt6::WebView
 )
 

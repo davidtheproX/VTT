@@ -7,7 +7,7 @@
 #include <QtWebView/QtWebView>
 #include <QTextToSpeech>
 #include <QVoice>
-
+#define WIN_DEBUG_CONSOLE
 // Windows console allocation for debugging (disabled by default)
 // Uncomment the following line to enable debug console on Windows
 // #define WIN_DEBUG_CONSOLE
@@ -36,6 +36,7 @@
 #include "SvgHandler.h"
 #include "DeviceDiscoveryManager.h"
 #include "TTSManager.h"
+#include "NextGenCSVViewer.h"
 
 int main(int argc, char *argv[])
 {
@@ -110,6 +111,9 @@ int main(int argc, char *argv[])
 
         logger->infoGeneral("Initializing CSV viewer");
         CSVViewer csvViewer;
+
+        logger->infoGeneral("Initializing NextGen CSV viewer");
+        NextGenCSVViewer nextGenCsvViewer;
 
         logger->infoGeneral("Initializing device discovery manager");
         DeviceDiscoveryManager deviceDiscoveryManager;
@@ -206,11 +210,13 @@ int main(int argc, char *argv[])
         engine.rootContext()->setContextProperty("oauth2Manager", &oauth2Manager);
         engine.rootContext()->setContextProperty("pdfManager", &pdfManager);
         engine.rootContext()->setContextProperty("csvViewer", &csvViewer);
+        engine.rootContext()->setContextProperty("nextGenCsvViewer", &nextGenCsvViewer);
         engine.rootContext()->setContextProperty("deviceDiscoveryManager", &deviceDiscoveryManager);
         engine.rootContext()->setContextProperty("ttsManager", &ttsManager);
 
         // Register QML types
         qmlRegisterType<CSVViewer>("VoiceAILLM", 1, 0, "CSVViewerBackend");
+        qmlRegisterType<NextGenCSVViewer>("VoiceAILLM", 1, 0, "NextGenCSVViewerBackend");
         qmlRegisterType<SvgHandler>("VoiceAILLM", 1, 0, "SvgHandler");
         qmlRegisterModule("QtSvg", 6, 9);
 

@@ -8,21 +8,21 @@ import VoiceAILLM 1.0
 ApplicationWindow {
     id: mainWindow
     title: "Voice AI LLM Assistant"
-    
+
     // Base size 1280x800 with scaling support
     width: 1280
     height: 800
     minimumWidth: 800
     minimumHeight: 600
-    
+
     visibility: Window.Windowed
     visible: true
-    
+
     // High DPI scaling support
     property real scaleFactor: Math.min(width / 1280, height / 800)
     property real baseFontSize: 14  // Can be changed by settings
     property real baseFont: baseFontSize * scaleFactor
-    
+
     // Color scheme
     property color primaryColor: "#2196F3"
     property color secondaryColor: "#FFC107"
@@ -33,9 +33,9 @@ ApplicationWindow {
     property color errorColor: "#F44336"
     property color successColor: "#4CAF50"
     property color warningColor: "#FF9800"
-    
+
     color: backgroundColor
-    
+
     // Global font settings
     font.family: "Segoe UI, Roboto, Arial, sans-serif"
     font.pixelSize: baseFont
@@ -43,10 +43,10 @@ ApplicationWindow {
     header: ToolBar {
         id: headerBar
         height: 60 * scaleFactor
-        
+
         background: Rectangle {
             color: primaryColor
-            
+
             Rectangle {
                 anchors.bottom: parent.bottom
                 width: parent.width
@@ -54,11 +54,11 @@ ApplicationWindow {
                 color: Qt.darker(primaryColor, 1.2)
             }
         }
-        
+
         RowLayout {
             anchors.fill: parent
             anchors.margins: 16 * scaleFactor
-            
+
             Text {
                 text: "Voice AI LLM Assistant"
                 color: "white"
@@ -73,189 +73,189 @@ ApplicationWindow {
                 height: 12 * scaleFactor
                 radius: width / 2
                 color: llmManager.isConnected ? successColor : errorColor
-                
+
                 ToolTip.text: llmManager.isConnected ? "Connected" : "Disconnected"
                 ToolTip.visible: connectionMouseArea.containsMouse
-                
+
                 MouseArea {
                     id: connectionMouseArea
                     anchors.fill: parent
                     hoverEnabled: true
                 }
-            }
-            
-            // QML Viewer Button
-            Button {
-                id: qmlViewerButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-                
-                background: Rectangle {
-                    color: qmlViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                }
+
+                // QML Viewer Button
+                Button {
+                    id: qmlViewerButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
+
+                    background: Rectangle {
+                        color: qmlViewerButton.pressed ? Qt.darker(primaryColor, 1.3) :
                            qmlViewerButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-                }
-                
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/qml-viewer.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
-                
-                ToolTip.text: "QML UI Viewer (Qt Design Studio)"
-                ToolTip.visible: hovered
-                
-                onClicked: {
-                    console.log("QML Viewer button clicked")
-                    qmlViewerDialogLoader.openQmlViewer()
-                }
-            }
+                        radius: 4
+                    }
 
-            // Comm Test Button
-            Button {
-                id: commTestButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-                
-                background: Rectangle {
-                    color: commTestButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/qml-viewer.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: "QML UI Viewer (Qt Design Studio)"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("QML Viewer button clicked")
+                        qmlViewerDialogLoader.openQmlViewer()
+                    }
+                }
+
+                // Comm Test Button
+                Button {
+                    id: commTestButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
+
+                    background: Rectangle {
+                        color: commTestButton.pressed ? Qt.darker(primaryColor, 1.3) :
                            commTestButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-                }
-                
-                contentItem: Text {
-                    text: "📡"
-                    font.pixelSize: 20 * scaleFactor
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-                
-                ToolTip.text: "Communication Test - Device Discovery"
-                ToolTip.visible: hovered
-                
-                onClicked: {
-                    console.log("Comm Test button clicked")
+                        radius: 4
+                    }
+
+                    contentItem: Text {
+                        text: "📡"
+                        font.pixelSize: 20 * scaleFactor
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+
+                    ToolTip.text: "Communication Test - Device Discovery"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("Comm Test button clicked")
                     commTestDialogLoader.openCommTest()
+                    }
                 }
-            }
 
-            // SVG Viewer Button
-            Button {
-                id: svgViewerButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-                
-                background: Rectangle {
-                    color: svgViewerButton.pressed ? Qt.darker(primaryColor, 1.3) : 
+                // SVG Viewer Button
+                Button {
+                    id: svgViewerButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
+
+                    background: Rectangle {
+                        color: svgViewerButton.pressed ? Qt.darker(primaryColor, 1.3) :
                            svgViewerButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-                }
-                
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/svg-viewer.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
-                
-                ToolTip.text: "SVG Life Data Viewer"
-                ToolTip.visible: hovered
-                
-                onClicked: {
-                    console.log("SVG Viewer button clicked")
-                    svgViewerDialogLoader.openSvgViewer()
-                }
-            }
+                        radius: 4
+                    }
 
-            // OAuth2 Login buttons
-            Button {
-                id: wechatButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-                
-                background: Rectangle {
-                    color: wechatButton.pressed ? Qt.darker(primaryColor, 1.3) : 
-                           wechatButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-                    
-                    // Authentication indicator
-                    Rectangle {
-                        width: 8 * scaleFactor
-                        height: 8 * scaleFactor
-                        radius: width / 2
-                        color: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? successColor : "transparent"
-                        anchors.top: parent.top
-                        anchors.right: parent.right
-                        anchors.margins: 2 * scaleFactor
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/svg-viewer.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: "SVG Life Data Viewer"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("SVG Viewer button clicked")
+                        svgViewerDialogLoader.openSvgViewer()
                     }
                 }
-                
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
-                
-                ToolTip.text: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? "WeChat (Authenticated)" : "WeChat Login"
-                ToolTip.visible: hovered
-                
-                onClicked: {
+
+                // OAuth2 Login buttons
+                Button {
+                    id: wechatButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
+
+                    background: Rectangle {
+                        color: wechatButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               wechatButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
+
+                        // Authentication indicator
+                        Rectangle {
+                            width: 8 * scaleFactor
+                            height: 8 * scaleFactor
+                            radius: width / 2
+                            color: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? successColor : "transparent"
+                            anchors.top: parent.top
+                            anchors.right: parent.right
+                            anchors.margins: 2 * scaleFactor
+                        }
+                    }
+
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/wechat.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: oauth2Manager && oauth2Manager.isWeChatAuthenticated ? "WeChat (Authenticated)" : "WeChat Login"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
                     oauth2LoginDialogLoader.openOAuth2Login("wechat")
-                }
-            }
-
-            Button {
-                id: dingtalkButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-
-                background: Rectangle {
-                    color: dingtalkButton.pressed ? Qt.darker(primaryColor, 1.3) :
-                           dingtalkButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-
-                    // Authentication indicator
-                    Rectangle {
-                        width: 8 * scaleFactor
-                        height: 8 * scaleFactor
-                        radius: width / 2
-                        color: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? successColor : "transparent"
-                        anchors.top: parent.top
-                        anchors.right: parent.right
-                        anchors.margins: 2 * scaleFactor
                     }
                 }
 
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
+                Button {
+                    id: dingtalkButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
 
-                ToolTip.text: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? "DingTalk (Authenticated)" : "DingTalk Login"
-                ToolTip.visible: hovered
+                    background: Rectangle {
+                        color: dingtalkButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               dingtalkButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
 
-                onClicked: {
+                        // Authentication indicator
+                        Rectangle {
+                            width: 8 * scaleFactor
+                            height: 8 * scaleFactor
+                            radius: width / 2
+                            color: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? successColor : "transparent"
+                            anchors.top: parent.top
+                            anchors.right: parent.right
+                            anchors.margins: 2 * scaleFactor
+                        }
+                    }
+
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/dingtalk.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: oauth2Manager && oauth2Manager.isDingTalkAuthenticated ? "DingTalk (Authenticated)" : "DingTalk Login"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
                     oauth2LoginDialogLoader.openOAuth2Login("dingtalk")
                 }
             }
@@ -289,152 +289,205 @@ ApplicationWindow {
                 onClicked: {
                     console.log("3D Robot Arm button clicked")
                     robotArm3DLoader.open3DRobotArm()
-                }
-            }
-
-            // PDF Manager Button
-            Button {
-                id: pdfButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-
-                background: Rectangle {
-                    color: pdfButton.pressed ? Qt.darker(primaryColor, 1.3) :
-                           pdfButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-
-                    // Activity indicator
-                    Rectangle {
-                        width: 8 * scaleFactor
-                        height: 8 * scaleFactor
-                        radius: width / 2
-                        color: pdfManager && (pdfManager.isGenerating || pdfManager.isViewerOpen) ? successColor : "transparent"
-                        anchors.top: parent.top
-                        anchors.right: parent.right
-                        anchors.margins: 2 * scaleFactor
                     }
                 }
 
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/pdf.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
+                // PDF Manager Button
+                Button {
+                    id: pdfButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
 
-                ToolTip.text: "PDF Tools"
-                ToolTip.visible: hovered
+                    background: Rectangle {
+                        color: pdfButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               pdfButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
 
-                onClicked: {
+                        // Activity indicator
+                        Rectangle {
+                            width: 8 * scaleFactor
+                            height: 8 * scaleFactor
+                            radius: width / 2
+                            color: pdfManager && (pdfManager.isGenerating || pdfManager.isViewerOpen) ? successColor : "transparent"
+                            anchors.top: parent.top
+                            anchors.right: parent.right
+                            anchors.margins: 2 * scaleFactor
+                        }
+                    }
+
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/pdf.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: "PDF Tools"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
                     pdfDialogLoader.openPdfDialog()
-                }
-            }
-
-            // Web Browser Button
-            Button {
-                id: browserButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-
-                background: Rectangle {
-                    color: browserButton.pressed ? Qt.darker(primaryColor, 1.3) :
-                           browserButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
+                    }
                 }
 
-                contentItem: Image {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
-                    source: "qrc:/qt/qml/VoiceAILLM/resources/icons/browser.svg"
-                    fillMode: Image.PreserveAspectFit
-                    sourceSize.width: 24 * scaleFactor
-                    sourceSize.height: 24 * scaleFactor
-                    smooth: true
-                }
+                // Web Browser Button
+                Button {
+                    id: browserButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
 
-                ToolTip.text: "Web Browser"
-                ToolTip.visible: hovered
+                    background: Rectangle {
+                        color: browserButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               browserButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
+                    }
 
-                onClicked: {
-                    console.log("Browser button clicked")
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/browser.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+                    }
+
+                    ToolTip.text: "Web Browser"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("Browser button clicked")
                     webBrowserLoader.openWebBrowser()
-                }
-            }
-
-            // CSV Viewer Button
-            Button {
-                id: csvButton
-                width: 36 * scaleFactor
-                height: 36 * scaleFactor
-                flat: true
-
-                background: Rectangle {
-                    color: csvButton.pressed ? Qt.darker(primaryColor, 1.3) :
-                           csvButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-
-                    // Activity indicator
-                    Rectangle {
-                        width: 8 * scaleFactor
-                        height: 8 * scaleFactor
-                        radius: width / 2
-                        color: csvViewer && csvViewer.isFileLoaded ? successColor : "transparent"
-                        anchors.top: parent.top
-                        anchors.right: parent.right
-                        anchors.margins: 2 * scaleFactor
                     }
                 }
 
-                contentItem: Item {
-                    width: 24 * scaleFactor
-                    height: 24 * scaleFactor
+                // CSV Viewer Button (Legacy - QtCharts)
+                Button {
+                    id: csvButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
 
-                    // Fallback text icon - show "C" for CSV
-                    Text {
-                        anchors.centerIn: parent
-                        text: "C"
-                        color: "#4CAF50"
-                        font.pixelSize: 16 * scaleFactor
-                        font.bold: true
+                    background: Rectangle {
+                        color: csvButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               csvButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
+
+                        // Activity indicator
+                        Rectangle {
+                            width: 8 * scaleFactor
+                            height: 8 * scaleFactor
+                            radius: width / 2
+                            color: csvViewer && csvViewer.isFileLoaded ? successColor : "transparent"
+                            anchors.top: parent.top
+                            anchors.right: parent.right
+                            anchors.margins: 2 * scaleFactor
+                        }
+                    }
+
+                    contentItem: Item {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+
+                        // Fallback text icon - show "oC" for legacy CSV
+                        Text {
+                            anchors.centerIn: parent
+                            text: "oC"
+                            color: "#FF9800"
+                            font.pixelSize: 12 * scaleFactor
+                            font.bold: true
+                        }
+                    }
+
+                    ToolTip.text: "CSV Data Viewer (Legacy - QtCharts)"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("CSV button clicked (Legacy)")
+                        csvDialogLoader.openCsvDialog()
                     }
                 }
 
-                ToolTip.text: "CSV Data Viewer"
-                ToolTip.visible: hovered
+                // NextGen CSV Viewer Button (QtGraphs)
+                Button {
+                    id: nextGenCsvButton
+                    width: 36 * scaleFactor
+                    height: 36 * scaleFactor
+                    flat: true
 
-                onClicked: {
-                    console.log("CSV button clicked")
-                    csvDialogLoader.openCsvDialog()
+                    background: Rectangle {
+                        color: nextGenCsvButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               nextGenCsvButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
+
+                        // Activity indicator
+                        Rectangle {
+                            width: 8 * scaleFactor
+                            height: 8 * scaleFactor
+                            radius: width / 2
+                            color: nextGenCsvViewerLoader.active ? successColor : "transparent"
+                            anchors.top: parent.top
+                            anchors.right: parent.right
+                            anchors.margins: 2 * scaleFactor
+                        }
+                    }
+
+                    contentItem: Image {
+                        width: 24 * scaleFactor
+                        height: 24 * scaleFactor
+                        source: "qrc:/qt/qml/VoiceAILLM/resources/icons/nextgen-csv.svg"
+                        fillMode: Image.PreserveAspectFit
+                        sourceSize.width: 24 * scaleFactor
+                        sourceSize.height: 24 * scaleFactor
+                        smooth: true
+
+                        // Fallback text when icon not loaded
+                        Text {
+                            anchors.centerIn: parent
+                            text: "nC"
+                            color: "#4CAF50"
+                            font.pixelSize: 12 * scaleFactor
+                            font.bold: true
+                            visible: parent.status !== Image.Ready
+                        }
+                    }
+
+                    ToolTip.text: "NextGen CSV Data Viewer (QtGraphs)"
+                    ToolTip.visible: hovered
+
+                    onClicked: {
+                        console.log("NextGen CSV button clicked")
+                        nextGenCsvViewerLoader.openNextGenCsvViewer()
+                    }
                 }
-            }
 
-            Button {
-                id: settingsButton
-                text: "⚙"
-                font.pixelSize: baseFont * 1.2
-                flat: true
+                Button {
+                    id: settingsButton
+                    text: "⚙"
+                    font.pixelSize: baseFont * 1.2
+                    flat: true
 
-                background: Rectangle {
-                    color: settingsButton.pressed ? Qt.darker(primaryColor, 1.3) :
-                           settingsButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
-                    radius: 4
-                }
+                    background: Rectangle {
+                        color: settingsButton.pressed ? Qt.darker(primaryColor, 1.3) :
+                               settingsButton.hovered ? Qt.darker(primaryColor, 1.1) : "transparent"
+                        radius: 4
+                    }
 
-                contentItem: Text {
-                    text: settingsButton.text
-                    color: "white"
-                    font: settingsButton.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
+                    contentItem: Text {
+                        text: settingsButton.text
+                        color: "white"
+                        font: settingsButton.font
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
 
-                ToolTip.text: "Settings"
-                ToolTip.visible: hovered
+                    ToolTip.text: "Settings"
+                    ToolTip.visible: hovered
 
                 onClicked: settingsDialogLoader.openSettings()
             }
@@ -662,13 +715,13 @@ ApplicationWindow {
 
         sourceComponent: Component {
             SettingsDialog {
-                scaleFactor: mainWindow.scaleFactor
-                baseFont: mainWindow.baseFont
-                primaryColor: mainWindow.primaryColor
-                backgroundColor: mainWindow.backgroundColor
-                surfaceColor: mainWindow.surfaceColor
-                textColor: mainWindow.textColor
-                mutedTextColor: mainWindow.mutedTextColor
+        scaleFactor: mainWindow.scaleFactor
+        baseFont: mainWindow.baseFont
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
 
                 onClosed: {
                     Qt.callLater(function() {
@@ -695,15 +748,15 @@ ApplicationWindow {
 
         sourceComponent: Component {
             PromptManagerDialog {
-                scaleFactor: mainWindow.scaleFactor
-                baseFont: mainWindow.baseFont
-                primaryColor: mainWindow.primaryColor
-                backgroundColor: mainWindow.backgroundColor
-                surfaceColor: mainWindow.surfaceColor
-                textColor: mainWindow.textColor
-                mutedTextColor: mainWindow.mutedTextColor
-                successColor: mainWindow.successColor
-                errorColor: mainWindow.errorColor
+        scaleFactor: mainWindow.scaleFactor
+        baseFont: mainWindow.baseFont
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
+        successColor: mainWindow.successColor
+        errorColor: mainWindow.errorColor
 
                 onVisibleChanged: {
                     if (!visible) {
@@ -732,7 +785,7 @@ ApplicationWindow {
 
         sourceComponent: Component {
             OAuth2LoginDialog {
-                oauthManager: oauth2Manager
+        oauthManager: oauth2Manager
 
                 onVisibleChanged: {
                     if (!visible) {
@@ -761,7 +814,7 @@ ApplicationWindow {
         active: false
 
         sourceComponent: Component {
-            PDFDialog {
+    PDFDialog {
                 backgroundColor: mainWindow.backgroundColor
                 surfaceColor: mainWindow.surfaceColor
                 primaryColor: mainWindow.primaryColor
@@ -793,20 +846,20 @@ ApplicationWindow {
         }
     }
 
-    // CSV Dialog Loader
+    // CSV Dialog Loader (Legacy - QtCharts)
     Loader {
         id: csvDialogLoader
         active: false
 
         sourceComponent: Component {
             CSVDialog {
-                backgroundColor: mainWindow.backgroundColor
-                surfaceColor: mainWindow.surfaceColor
-                primaryColor: mainWindow.primaryColor
-                successColor: mainWindow.successColor
-                errorColor: mainWindow.errorColor
-                textColor: mainWindow.textColor
-                mutedTextColor: mainWindow.mutedTextColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        primaryColor: mainWindow.primaryColor
+        successColor: mainWindow.successColor
+        errorColor: mainWindow.errorColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
 
                 onClosed: {
                     Qt.callLater(function() {
@@ -818,10 +871,38 @@ ApplicationWindow {
         }
 
         function openCsvDialog() {
-            console.log("Loading CSV Dialog module...");
+            console.log("Loading CSV Dialog module (Legacy)...");
             active = true;
             if (item) {
                 item.open();
+            }
+        }
+    }
+
+    // NextGen CSV Viewer Loader (QtGraphs)
+    Loader {
+        id: nextGenCsvViewerLoader
+        active: false
+        source: active ? "qrc:/qt/qml/VoiceAILLM/qml/NextGenCSVViewer.qml" : ""
+
+        function openNextGenCsvViewer() {
+            console.log("Loading NextGen CSV Viewer module (QtGraphs)...");
+            active = true;
+            if (item) {
+                item.show();
+                item.raise();
+                item.requestActivate();
+            }
+        }
+
+        onLoaded: {
+            if (item) {
+                item.onClosed.connect(function() {
+                    Qt.callLater(function() {
+                        nextGenCsvViewerLoader.active = false;
+                        console.log("NextGen CSV Viewer module unloaded");
+                    });
+                });
             }
         }
     }
@@ -858,15 +939,15 @@ ApplicationWindow {
 
         sourceComponent: Component {
             CommTestDialog {
-                scaleFactor: mainWindow.scaleFactor
-                primaryColor: mainWindow.primaryColor
-                backgroundColor: mainWindow.backgroundColor
-                surfaceColor: mainWindow.surfaceColor
-                textColor: mainWindow.textColor
-                mutedTextColor: mainWindow.mutedTextColor
-                successColor: mainWindow.successColor
-                warningColor: mainWindow.warningColor
-                errorColor: mainWindow.errorColor
+        scaleFactor: mainWindow.scaleFactor
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
+        successColor: mainWindow.successColor
+        warningColor: mainWindow.warningColor
+        errorColor: mainWindow.errorColor
 
                 onVisibleChanged: {
                     if (!visible) {
@@ -895,10 +976,10 @@ ApplicationWindow {
 
         sourceComponent: Component {
             WebBrowser {
-                scaleFactor: mainWindow.scaleFactor
-                primaryColor: mainWindow.primaryColor
-                backgroundColor: mainWindow.backgroundColor
-                textColor: mainWindow.textColor
+        scaleFactor: mainWindow.scaleFactor
+        primaryColor: mainWindow.primaryColor
+        backgroundColor: mainWindow.backgroundColor
+        textColor: mainWindow.textColor
 
                 onVisibleChanged: {
                     if (!visible) {
@@ -927,11 +1008,11 @@ ApplicationWindow {
 
         sourceComponent: Component {
             PDFViewer {
-                backgroundColor: mainWindow.backgroundColor
-                surfaceColor: mainWindow.surfaceColor
-                primaryColor: mainWindow.primaryColor
-                textColor: mainWindow.textColor
-                mutedTextColor: mainWindow.mutedTextColor
+        backgroundColor: mainWindow.backgroundColor
+        surfaceColor: mainWindow.surfaceColor
+        primaryColor: mainWindow.primaryColor
+        textColor: mainWindow.textColor
+        mutedTextColor: mainWindow.mutedTextColor
 
                 onVisibleChanged: {
                     if (!visible) {
@@ -1078,7 +1159,7 @@ ApplicationWindow {
         console.log("=== VOICE AI LLM STARTED WITH DYNAMIC MODULE LOADING ===");
         console.log("Core chat system loaded. All other modules will load on-demand.");
         console.log("Available modules: Settings, PDF, CSV, 3D Robot Arm, Web Browser, OAuth2");
-        
+
         show()
         raise()
         requestActivate()

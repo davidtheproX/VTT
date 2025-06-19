@@ -105,7 +105,7 @@ ApplicationWindow {
     }
     
     color: backgroundColor
-
+    
     // File dialog for CSV loading
     FileDialog {
         id: fileDialog
@@ -116,7 +116,7 @@ ApplicationWindow {
             csvViewer.loadFile(selectedFile)
         }
     }
-
+    
     Connections {
         target: csvViewer
         function onFileLoaded() {
@@ -127,7 +127,7 @@ ApplicationWindow {
             statusText.text = "Error: " + message
         }
     }
-
+    
     function loadCSVData() {
         var summary = csvViewer.getDataSummary()
         csvHeaders = summary.headers
@@ -179,12 +179,12 @@ ApplicationWindow {
         currentRow = 0
         updateChart()
     }
-
+    
     function updateChart() {
         if (!csvLoaded || numericColumns.length === 0) return
         chartCanvas.requestPaint()
     }
-
+    
     function getChartData() {
         if (!csvLoaded) return []
         
@@ -222,7 +222,7 @@ ApplicationWindow {
     // Header
     header: Rectangle {
         height: 50
-        color: primaryColor
+            color: primaryColor
         
         RowLayout {
             anchors.fill: parent
@@ -259,7 +259,7 @@ ApplicationWindow {
             }
         }
     }
-
+    
     // Main content
     RowLayout {
         anchors.fill: parent
@@ -557,28 +557,28 @@ ApplicationWindow {
                                 Repeater {
                                     model: 8
                                     
-                                    Row {
-                                        spacing: 5
-                                        Text {
+                            Row {
+                                spacing: 5
+                                Text {
                                             text: parent.parent.seriesNames[index] + ":"
                                             font.pixelSize: 8
-                                            color: textColor
+                                    color: textColor
                                             width: 40
-                                        }
-                                        Rectangle {
+                                }
+                                Rectangle {
                                             width: 50
                                             height: 15
                                             color: Qt.lighter(seriesColors[index], 1.7)
                                             border.color: seriesColors[index]
-                                            border.width: 1
-                                            Text {
-                                                anchors.centerIn: parent
+                                    border.width: 1
+                                    Text {
+                                        anchors.centerIn: parent
                                                 text: parent.parent.parent.currentValues[index] ? parent.parent.parent.currentValues[index].toFixed(1) : "0.0"
                                                 font.pixelSize: 8
-                                                color: textColor
-                                            }
-                                        }
+                                        color: textColor
                                     }
+                                }
+                            }
                                 }
                             }
                         }
@@ -901,7 +901,7 @@ ApplicationWindow {
                                 
                                 ctx.fillStyle = seriesColors[s]
                                 ctx.fillRect(xPos, yPos, 12, 2)
-                                ctx.fillStyle = "#333333"
+                            ctx.fillStyle = "#333333"
                                 ctx.fillText(seriesNames[s], xPos + 16, yPos + 8)
                             }
                             
@@ -919,14 +919,14 @@ ApplicationWindow {
                                     if (series.length > 0) {
                                         ctx.strokeStyle = seriesColors[seriesIdx]
                                         ctx.lineWidth = 1.5
-                                        ctx.beginPath()
+                                ctx.beginPath()
                                         for (var i = 0; i < series.length; i++) {
-                                            var x = margin + (i / (sampleSize - 1)) * chartWidth
+                                    var x = margin + (i / (sampleSize - 1)) * chartWidth
                                             var y = margin + chartHeight - ((series[i] - minY) / yRange) * chartHeight
-                                            if (i === 0) ctx.moveTo(x, y)
-                                            else ctx.lineTo(x, y)
-                                        }
-                                        ctx.stroke()
+                                    if (i === 0) ctx.moveTo(x, y)
+                                    else ctx.lineTo(x, y)
+                                }
+                                ctx.stroke()
                                     }
                                 }
                             }
