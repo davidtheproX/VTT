@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Viewer - HTML5 Demo</title>
+    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Left Panel - Data Controls */
+        .left-panel {
+            width: 300px;
+            min-width: 250px;
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            padding: 16px;
+        }
+
+        .panel-section {
+            margin-bottom: 24px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        .panel-section h3 {
+            margin-bottom: 12px;
+            color: #2196F3;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            background: #2196F3;
+            color: white;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .toolbar h1 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .toolbar-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Buttons */
+        .btn {
+            background: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background: #1976D2;
+        }
+
+        .btn.secondary {
+            background: #FF9800;
+        }
+
+        .btn.secondary:hover {
+            background: #F57C00;
+        }
+
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* File Input */
+        .file-input-container {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            flex: 1;
+            padding: 16px;
+            position: relative;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Data Series Controls */
+        .series-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .series-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .series-checkbox {
+            margin-right: 12px;
+        }
+
+        .series-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 12px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+        }
+
+        .series-name {
+            flex: 1;
+            font-size: 14px;
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Status Info */
+        .status-info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .status-info .filename {
+            font-weight: 500;
+            color: #333;
+            word-break: break-all;
+        }
+
+        /* Loading Overlay */
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2196F3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Chart Controls */
+        .chart-controls {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 8px;
+            z-index: 100;
+        }
+
+        .chart-controls .btn {
+            padding: 6px 12px;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border: 1px solid #ddd;
+        }
+
+        .chart-controls .btn:hover {
+            background: white;
+        }
+
+        /* Error Message */
+        .error-message {
+            background: #f44336;
+            color: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            display: none;
+        }
+
+        /* Demo Data Section */
+        .demo-section {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 16px;
+        }
+
+        .demo-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Animation Controls */
+        .animation-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .animation-settings {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .animation-status {
+            font-size: 12px;
+            color: #666;
+            padding: 8px;
+            background: #f8f8f8;
+            border-radius: 4px;
+        }
+
+        #speed-slider {
+            flex: 1;
+            margin: 0 8px;
+        }
+
+        #speed-value {
+            min-width: 30px;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .left-panel {
+                width: 100%;
+                max-height: 300px;
+            }
+            
+            .toolbar h1 {
+                font-size: 16px;
+            }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1200px) {
+            .left-panel {
+                width: 280px;
+                min-width: 220px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .left-panel {
+                width: 250px;
+                min-width: 200px;
+            }
+            
+            .panel-section {
+                padding: 12px;
+                margin-bottom: 16px;
+            }
+            
+            .toolbar {
+                padding: 10px 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: 100vh;
+            }
+            
+            .left-panel {
+                width: 100%;
+                height: auto;
+                max-height: 40vh;
+                min-height: 200px;
+                position: relative;
+                overflow-y: auto;
+                flex-shrink: 0;
+            }
+            
+            .main-content {
+                flex: 1;
+                min-height: 0;
+            }
+            
+            .chart-container {
+                padding: 8px;
+            }
+            
+            .toolbar h1 {
+                font-size: 16px;
+            }
+            
+            .toolbar-actions {
+                flex-wrap: wrap;
+            }
+            
+            .panel-section {
+                margin-bottom: 12px;
+                padding: 8px;
+            }
+            
+            .filter-row {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .demo-buttons {
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            
+            .left-panel {
+                max-height: 35vh;
+                padding: 8px;
+            }
+            
+            .toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                padding: 8px;
+            }
+            
+            .toolbar-actions {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            
+            .btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            .panel-section h3 {
+                font-size: 14px;
+            }
+            
+            .chart-controls {
+                position: static;
+                margin-bottom: 8px;
+                flex-wrap: wrap;
+            }
+            
+            .series-item {
+                padding: 6px 0;
+            }
+            
+            .series-name {
+                font-size: 12px;
+            }
+        }
+
+        /* Ensure chart container is always properly sized */
+        .chart-wrapper canvas {
+            max-width: 100% !important;
+            max-height: 100% !important;
+        }
+
+        /* Better scrollbar styling for smaller screens */
+        @media (max-width: 768px) {
+            .left-panel::-webkit-scrollbar {
+                width: 4px;
+            }
+            
+            .left-panel::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            .left-panel::-webkit-scrollbar-thumb {
+                background: #c1c1c1;
+                border-radius: 2px;
+            }
+            
+            .series-list::-webkit-scrollbar {
+                width: 4px;
+            }
+            
+            .series-list::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            .series-list::-webkit-scrollbar-thumb {
+                background: #c1c1c1;
+                border-radius: 2px;
+            }
+        }
+
+        /* Landscape orientation on mobile devices */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .container {
+                flex-direction: row;
+            }
+            
+            .left-panel {
+                width: 30%;
+                min-width: 200px;
+                max-width: 300px;
+                max-height: 100vh;
+                height: 100vh;
+            }
+            
+            .main-content {
+                flex: 1;
+                height: 100vh;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .left-panel {
+                padding: 4px;
+            }
+            
+            .panel-section {
+                padding: 6px;
+                margin-bottom: 8px;
+            }
+            
+            .btn {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+            
+            .toolbar {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel - Data Controls -->
+        <div class="left-panel">
+            <!-- File Information -->
+            <div class="panel-section">
+                <h3>File Information</h3>
+                <div class="status-info">
+                    <div class="filename" id="filename">No file loaded</div>
+                    <div id="file-stats"></div>
+                </div>
+                <div class="error-message" id="error-message"></div>
+            </div>
+
+            <!-- File Loading -->
+            <div class="panel-section">
+                <h3>Load CSV File</h3>
+                <div class="file-input-container">
+                    <input type="file" id="csv-file" class="file-input" accept=".csv,.txt" />
+                    <label for="csv-file" class="btn">
+                        <span class="material-icons">upload_file</span>
+                        Choose File
+                    </label>
+                </div>
+            </div>
+
+            <!-- Demo Data -->
+            <div class="panel-section demo-section">
+                <h3>Demo Data</h3>
+                <div class="demo-buttons">
+                    <button class="btn secondary" onclick="loadDemoData('automotive')">
+                        <span class="material-icons">directions_car</span>
+                        Automotive Data
+                    </button>
+                    <button class="btn secondary" onclick="loadDemoData('sensor')">
+                        <span class="material-icons">sensors</span>
+                        Sensor Data
+                    </button>
+                    <button class="btn secondary" onclick="loadDemoData('financial')">
+                        <span class="material-icons">trending_up</span>
+                        Financial Data
+                    </button>
+                    <button class="btn" onclick="startRealTimeDemo()">
+                        <span class="material-icons">trending_up</span>
+                        Real-Time 16 Series
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live Data Animation -->
+            <div class="panel-section">
+                <h3>Live Data Animation</h3>
+                <div class="animation-controls">
+                    <button class="btn" id="play-btn" onclick="toggleAnimation()" disabled>
+                        <span class="material-icons">play_arrow</span>
+                        Play
+                    </button>
+                    <button class="btn secondary" onclick="resetAnimation()" disabled id="reset-anim-btn">
+                        <span class="material-icons">restart_alt</span>
+                        Reset
+                    </button>
+                </div>
+                <div class="animation-settings">
+                    <div class="filter-row">
+                        <label>Speed:</label>
+                        <input type="range" id="speed-slider" min="1" max="100" value="50" 
+                               oninput="updateAnimationSpeed(this.value)">
+                        <span id="speed-value">50</span>
+                    </div>
+                    <div class="filter-row">
+                        <label>Window Size:</label>
+                        <input type="number" id="window-size" value="50" min="10" max="200"
+                               onchange="updateWindowSize(this.value)">
+                    </div>
+                    <div class="animation-status">
+                        <div>Progress: <span id="animation-progress">0%</span></div>
+                        <div>Time: <span id="animation-time">0.0s</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Series Control -->
+            <div class="panel-section">
+                <h3>Data Series</h3>
+                <div class="series-list" id="series-list">
+                    <div style="color: #666; font-style: italic;">Load a CSV file to see data series</div>
+                </div>
+            </div>
+
+            <!-- Data Filtering -->
+            <div class="panel-section">
+                <h3>Data Filtering</h3>
+                <div class="filter-controls">
+                    <div class="filter-row">
+                        <label>Min X:</label>
+                        <input type="number" class="filter-input" id="min-x" placeholder="Min value">
+                    </div>
+                    <div class="filter-row">
+                        <label>Max X:</label>
+                        <input type="number" class="filter-input" id="max-x" placeholder="Max value">
+                    </div>
+                    <div class="filter-row">
+                        <button class="btn" onclick="applyFilter()">Apply Filter</button>
+                        <button class="btn secondary" onclick="clearFilter()">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <h1>CSV Data Viewer</h1>
+                <div class="toolbar-actions">
+                    <button class="btn" onclick="resetChart()" disabled id="reset-btn">
+                        <span class="material-icons">refresh</span>
+                        Reset
+                    </button>
+                    <button class="btn" onclick="exportChart()" disabled id="export-btn">
+                        <span class="material-icons">download</span>
+                        Export
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chart Area -->
+            <div class="chart-container">
+                <div class="chart-wrapper">
+                    <canvas id="main-chart"></canvas>
+                    
+                    <!-- Chart Controls -->
+                    <div class="chart-controls">
+                        <button class="btn" onclick="toggleFullscreen()">
+                            <span class="material-icons">fullscreen</span>
+                        </button>
+                    </div>
+                    
+                    <!-- Loading Overlay -->
+                    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let csvData = [];
+        let headers = [];
+        let chart = null;
+        let originalData = null;
+        let seriesVisibility = {};
+        let seriesColors = {};
+        
+        // Animation variables
+        let animationId = null;
+        let isAnimating = false;
+        let animationIndex = 0;
+        let animationSpeed = 50;
+        let windowSize = 50;
+        let animationData = null;
+        let animationStartTime = null;
+        
+        // Real-time demo variables (16 series like Qt version)
+        let realTimeMode = false;
+        let realTimeInterval = null;
+        let currentIndex = 0;
+        let sampleSize = 60;
+        let dataSeries = {
+            A: [], B: [], C: [], D: [], E: [], F: [], G: [], H: [],
+            I: [], J: [], K: [], L: [], M: [], N: [], O: [], P: []
+        };
+        
+        const seriesNames = [
+            "Alpha Software", "Beta Hardware", "Gamma Services", "Delta Analytics",
+            "Epsilon Network", "Zeta Security", "Eta Database", "Theta AI/ML",
+            "Iota IoT Sensors", "Kappa Blockchain", "Lambda Serverless", "Mu DevOps",
+            "Nu Monitoring", "Xi Automation", "Omicron Cloud", "Pi Performance"
+        ];
+        
+        const seriesColors16 = [
+            "#FF4444", "#44FF44", "#4444FF", "#FFAA44", "#AA44FF", "#44AAFF",
+            "#FF8844", "#44FF88", "#8844FF", "#FFFF44", "#FF44AA", "#44FFAA",
+            "#FF6644", "#66FF44", "#4466FF", "#AAFF44"
+        ];
+
+        // Chart.js configuration
+        const chartConfig = {
+            type: 'line',
+            data: {
+                datasets: []
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'CSV Data Visualization'
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true,
+                            },
+                            pinch: {
+                                enabled: true
+                            },
+                            mode: 'xy',
+                        },
+                        pan: {
+                            enabled: true,
+                            mode: 'xy',
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        position: 'bottom',
+                        title: {
+                            display: true,
+                            text: 'X Axis'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Y Axis'
+                        }
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'index'
+                }
+            }
+        };
+
+        // Initialize chart
+        function initChart() {
+            const ctx = document.getElementById('main-chart').getContext('2d');
+            chart = new Chart(ctx, chartConfig);
+        }
+
+        // File input handler
+        document.getElementById('csv-file').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                loadCSVFile(file);
+            }
+        });
+
+        // Load CSV file
+        function loadCSVFile(file) {
+            showLoading(true);
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                try {
+                    parseCSVData(e.target.result, file.name);
+                } catch (error) {
+                    showError('Failed to parse CSV file: ' + error.message);
+                } finally {
+                    showLoading(false);
+                }
+            };
+            
+            reader.onerror = function() {
+                showError('Failed to read file');
+                showLoading(false);
+            };
+            
+            reader.readAsText(file);
+        }
+
+        // Parse CSV data
+        function parseCSVData(csvText, filename) {
+            const lines = csvText.split('\n').map(line => line.trim()).filter(line => line);
+            
+            if (lines.length === 0) {
+                throw new Error('Empty file');
+            }
+
+            // Find data start line (skip metadata in automotive files)
+            let dataStartLine = findDataStartLine(lines);
+            
+            // Parse headers
+            const headerLine = lines[dataStartLine - 1] || lines[0];
+            headers = parseCSVLine(headerLine);
+            
+            // Parse data
+            csvData = [];
+            for (let i = dataStartLine; i < lines.length; i++) {
+                const line = lines[i];
+                if (line) {
+                    const values = parseCSVLine(line);
+                    const row = {};
+                    
+                    for (let j = 0; j < Math.min(values.length, headers.length); j++) {
+                        const value = values[j];
+                        // Try to parse as number
+                        const numValue = parseFloat(value);
+                        row[headers[j]] = isNaN(numValue) ? value : numValue;
+                    }
+                    csvData.push(row);
+                }
+            }
+
+            // Update UI
+            updateFileInfo(filename, csvData.length, headers.length);
+            createDataSeries();
+            enableControls(true);
+            hideError();
+        }
+
+        // Find data start line (automotive format support)
+        function findDataStartLine(lines) {
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                
+                // Skip metadata lines
+                if (line.startsWith('VIN ') || line.startsWith('Model ') || 
+                    line.startsWith('Log ') || line.startsWith('IIDControl ')) {
+                    continue;
+                }
+                
+                // Look for lines with quotes and commas (actual data)
+                if (line.includes('"') && line.includes(',')) {
+                    const parts = parseCSVLine(line);
+                    let hasNumericData = false;
+                    for (const part of parts) {
+                        if (!isNaN(parseFloat(part)) && part !== '') {
+                            hasNumericData = true;
+                            break;
+                        }
+                    }
+                    if (hasNumericData) {
+                        return i;
+                    }
+                }
+            }
+            
+            // Fallback: find line with most commas
+            let maxCommas = 0;
+            let bestLine = 0;
+            
+            for (let i = 0; i < Math.min(lines.length, 20); i++) {
+                const commas = (lines[i].match(/,/g) || []).length;
+                if (commas > maxCommas) {
+                    maxCommas = commas;
+                    bestLine = i;
+                }
+            }
+            
+            return Math.max(bestLine, 1);
+        }
+
+        // Parse CSV line (handles quotes and commas)
+        function parseCSVLine(line) {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            
+            for (let i = 0; i < line.length; i++) {
+                const char = line[i];
+                
+                if (char === '"') {
+                    inQuotes = !inQuotes;
+                } else if (char === ',' && !inQuotes) {
+                    result.push(current.trim());
+                    current = '';
+                } else {
+                    current += char;
+                }
+            }
+            
+            result.push(current.trim());
+            return result.map(val => val.replace(/^"(.*)"$/, '$1')); // Remove quotes
+        }
+
+        // Create data series for visualization
+        function createDataSeries() {
+            if (csvData.length === 0 || headers.length === 0) return;
+
+            // Find numeric columns
+            const numericColumns = [];
+            for (const header of headers) {
+                if (header && typeof csvData[0][header] === 'number') {
+                    numericColumns.push(header);
+                }
+            }
+
+            // Use first column as X axis if it's numeric, otherwise use row index
+            const xColumn = numericColumns[0] || null;
+            const yColumns = xColumn ? numericColumns.slice(1) : numericColumns;
+
+            // Prepare datasets
+            const datasets = [];
+            const colors = generateColors(yColumns.length);
+            
+            yColumns.forEach((column, index) => {
+                const color = colors[index];
+                seriesColors[column] = color;
+                seriesVisibility[column] = true;
+                
+                const data = csvData.map((row, rowIndex) => ({
+                    x: xColumn ? row[xColumn] : rowIndex,
+                    y: row[column]
+                })).filter(point => point.y !== undefined && point.y !== null);
+                
+                datasets.push({
+                    label: column,
+                    data: data,
+                    borderColor: color,
+                    backgroundColor: color + '20',
+                    fill: false,
+                    tension: 0.1
+                });
+            });
+
+            // Update chart
+            chart.data.datasets = datasets;
+            originalData = JSON.parse(JSON.stringify(datasets));
+            
+            // Update axis labels
+            chart.options.scales.x.title.text = xColumn || 'Row Index';
+            chart.options.scales.y.title.text = 'Values';
+            
+            chart.update();
+
+            // Update series list
+            updateSeriesList(yColumns);
+        }
+
+        // Update series list in UI
+        function updateSeriesList(series) {
+            const seriesList = document.getElementById('series-list');
+            seriesList.innerHTML = '';
+            
+            series.forEach(seriesName => {
+                const item = document.createElement('div');
+                item.className = 'series-item';
+                
+                item.innerHTML = `
+                    <input type="checkbox" class="series-checkbox" 
+                           checked onchange="toggleSeries('${seriesName}', this.checked)">
+                    <div class="series-color" style="background-color: ${seriesColors[seriesName]}" 
+                         onclick="changeSeriesColor('${seriesName}')"></div>
+                    <span class="series-name">${seriesName}</span>
+                `;
+                
+                seriesList.appendChild(item);
+            });
+        }
+
+        // Toggle series visibility
+        function toggleSeries(seriesName, visible) {
+            seriesVisibility[seriesName] = visible;
+            
+            chart.data.datasets.forEach(dataset => {
+                if (dataset.label === seriesName) {
+                    dataset.hidden = !visible;
+                }
+            });
+            
+            chart.update();
+        }
+
+        // Change series color
+        function changeSeriesColor(seriesName) {
+            const newColor = prompt('Enter new color (hex, rgb, or color name):', seriesColors[seriesName]);
+            if (newColor) {
+                seriesColors[seriesName] = newColor;
+                
+                chart.data.datasets.forEach(dataset => {
+                    if (dataset.label === seriesName) {
+                        dataset.borderColor = newColor;
+                        dataset.backgroundColor = newColor + '20';
+                    }
+                });
+                
+                chart.update();
+                updateSeriesList(Object.keys(seriesColors));
+            }
+        }
+
+        // Apply data filter
+        function applyFilter() {
+            const minX = parseFloat(document.getElementById('min-x').value);
+            const maxX = parseFloat(document.getElementById('max-x').value);
+            
+            if (isNaN(minX) && isNaN(maxX)) return;
+            
+            chart.data.datasets.forEach((dataset, index) => {
+                const originalDataset = originalData[index];
+                dataset.data = originalDataset.data.filter(point => {
+                    if (!isNaN(minX) && point.x < minX) return false;
+                    if (!isNaN(maxX) && point.x > maxX) return false;
+                    return true;
+                });
+            });
+            
+            chart.update();
+        }
+
+        // Clear filter
+        function clearFilter() {
+            document.getElementById('min-x').value = '';
+            document.getElementById('max-x').value = '';
+            
+            if (originalData) {
+                chart.data.datasets = JSON.parse(JSON.stringify(originalData));
+                chart.update();
+            }
+        }
+
+        // Reset chart zoom and data
+        function resetChart() {
+            chart.resetZoom();
+            clearFilter();
+        }
+
+        // Export chart
+        function exportChart() {
+            const link = document.createElement('a');
+            link.download = 'chart.png';
+            link.href = chart.toBase64Image();
+            link.click();
+        }
+
+        // Toggle fullscreen
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Load demo data
+        function loadDemoData(type) {
+            showLoading(true);
+            
+            let demoData, filename;
+            
+            switch (type) {
+                case 'automotive':
+                    filename = 'automotive_demo.csv';
+                    demoData = generateAutomotiveData();
+                    break;
+                case 'sensor':
+                    filename = 'sensor_demo.csv';
+                    demoData = generateSensorData();
+                    break;
+                case 'financial':
+                    filename = 'financial_demo.csv';
+                    demoData = generateFinancialData();
+                    break;
+            }
+            
+            setTimeout(() => {
+                try {
+                    parseCSVData(demoData, filename);
+                } catch (error) {
+                    showError('Failed to load demo data: ' + error.message);
+                } finally {
+                    showLoading(false);
+                }
+            }, 500);
+        }
+
+        // Generate automotive demo data
+        function generateAutomotiveData() {
+            let csv = 'Time,Engine_RPM,Vehicle_Speed,Engine_Temp,Fuel_Level,Throttle_Position\n';
+            
+            for (let i = 0; i < 1000; i++) {
+                const time = i * 0.1;
+                const rpm = 800 + Math.sin(time * 0.1) * 200 + Math.random() * 100;
+                const speed = Math.max(0, Math.sin(time * 0.05) * 60 + Math.random() * 10);
+                const temp = 85 + Math.sin(time * 0.02) * 5 + Math.random() * 2;
+                const fuel = Math.max(0, 100 - time * 0.1 + Math.random() * 2);
+                const throttle = Math.max(0, Math.min(100, Math.sin(time * 0.08) * 50 + 50 + Math.random() * 10));
+                
+                csv += `${time.toFixed(1)},${rpm.toFixed(1)},${speed.toFixed(1)},${temp.toFixed(1)},${fuel.toFixed(1)},${throttle.toFixed(1)}\n`;
+            }
+            
+            return csv;
+        }
+
+        // Generate sensor demo data
+        function generateSensorData() {
+            let csv = 'Timestamp,Temperature,Humidity,Pressure,Light_Level\n';
+            
+            for (let i = 0; i < 500; i++) {
+                const time = i * 60; // seconds
+                const temp = 20 + Math.sin(time * 0.001) * 5 + Math.random() * 2;
+                const humidity = 50 + Math.sin(time * 0.0008) * 20 + Math.random() * 5;
+                const pressure = 1013 + Math.sin(time * 0.0005) * 10 + Math.random() * 2;
+                const light = Math.max(0, Math.sin(time * 0.0002) * 500 + 500 + Math.random() * 100);
+                
+                csv += `${time},${temp.toFixed(2)},${humidity.toFixed(1)},${pressure.toFixed(1)},${light.toFixed(0)}\n`;
+            }
+            
+            return csv;
+        }
+
+        // Generate financial demo data
+        function generateFinancialData() {
+            let csv = 'Date,Stock_Price,Volume,Moving_Average,RSI\n';
+            
+            let price = 100;
+            const prices = [];
+            
+            for (let i = 0; i < 250; i++) {
+                const change = (Math.random() - 0.5) * 4;
+                price = Math.max(50, price + change);
+                prices.push(price);
+                
+                const volume = Math.floor(Math.random() * 1000000) + 500000;
+                const ma = prices.length >= 20 ? prices.slice(-20).reduce((a, b) => a + b) / 20 : price;
+                const rsi = 30 + Math.random() * 40; // Simplified RSI
+                
+                csv += `${i},${price.toFixed(2)},${volume},${ma.toFixed(2)},${rsi.toFixed(1)}\n`;
+            }
+            
+            return csv;
+        }
+
+        // Generate colors for series
+        function generateColors(count) {
+            const colors = [
+                '#2196F3', '#FF9800', '#4CAF50', '#F44336', '#9C27B0',
+                '#00BCD4', '#FFEB3B', '#795548', '#607D8B', '#FF5722'
+            ];
+            
+            const result = [];
+            for (let i = 0; i < count; i++) {
+                result.push(colors[i % colors.length]);
+            }
+            return result;
+        }
+
+        // Utility functions
+        function showLoading(show) {
+            document.getElementById('loading-overlay').style.display = show ? 'flex' : 'none';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('error-message').style.display = 'none';
+        }
+
+        function updateFileInfo(filename, rows, columns) {
+            document.getElementById('filename').textContent = filename;
+            document.getElementById('file-stats').textContent = `${rows} rows, ${columns} columns`;
+        }
+
+        function enableControls(enabled) {
+            document.getElementById('reset-btn').disabled = !enabled;
+            document.getElementById('export-btn').disabled = !enabled;
+            document.getElementById('play-btn').disabled = !enabled;
+            document.getElementById('reset-anim-btn').disabled = !enabled;
+        }
+
+        // Animation Functions
+        function toggleAnimation() {
+            if (isAnimating) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        }
+
+        function startAnimation() {
+            if (!csvData || csvData.length === 0) {
+                showError('No data loaded for animation');
+                return;
+            }
+
+            isAnimating = true;
+            animationStartTime = Date.now();
+            
+            // Prepare animation data if not already done
+            if (!animationData) {
+                prepareAnimationData();
+            }
+            
+            // Reset if at end
+            if (animationIndex >= csvData.length - windowSize) {
+                animationIndex = 0;
+            }
+            
+            updatePlayButton();
+            animate();
+        }
+
+        function stopAnimation() {
+            isAnimating = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            updatePlayButton();
+        }
+
+        function resetAnimation() {
+            stopAnimation();
+            animationIndex = 0;
+            updateAnimationStatus();
+            
+            // Reset chart to show all data
+            if (originalData) {
+                chart.data.datasets = JSON.parse(JSON.stringify(originalData));
+                chart.update('none');
+            }
+        }
+
+        function prepareAnimationData() {
+            if (!csvData || csvData.length === 0) return;
+            
+            // Store original data for animation
+            animationData = JSON.parse(JSON.stringify(csvData));
+        }
+
+        function animate() {
+            if (!isAnimating) return;
+            
+            // Calculate delay based on speed (1-100 scale)
+            const delay = 101 - animationSpeed; // Invert so higher = faster
+            
+            // Update chart with windowed data
+            updateAnimatedChart();
+            
+            // Update progress
+            updateAnimationStatus();
+            
+            // Move to next frame
+            animationIndex++;
+            
+            // Check if animation complete
+            if (animationIndex >= csvData.length - windowSize) {
+                stopAnimation();
+                return;
+            }
+            
+            // Schedule next frame
+            animationId = setTimeout(() => {
+                if (isAnimating) {
+                    requestAnimationFrame(animate);
+                }
+            }, delay);
+        }
+
+        function updateAnimatedChart() {
+            if (!chart || !csvData) return;
+            
+            // Calculate window bounds
+            const startIndex = animationIndex;
+            const endIndex = Math.min(animationIndex + windowSize, csvData.length);
+            
+            // Find numeric columns (same logic as createDataSeries)
+            const numericColumns = [];
+            for (const header of headers) {
+                if (header && typeof csvData[0][header] === 'number') {
+                    numericColumns.push(header);
+                }
+            }
+            
+            const xColumn = numericColumns[0] || null;
+            const yColumns = xColumn ? numericColumns.slice(1) : numericColumns;
+            
+            // Update each dataset with windowed data
+            chart.data.datasets.forEach((dataset, datasetIndex) => {
+                if (datasetIndex < yColumns.length) {
+                    const column = yColumns[datasetIndex];
+                    const windowData = [];
+                    
+                    for (let i = startIndex; i < endIndex; i++) {
+                        if (csvData[i]) {
+                            windowData.push({
+                                x: xColumn ? csvData[i][xColumn] : i,
+                                y: csvData[i][column]
+                            });
+                        }
+                    }
+                    
+                    dataset.data = windowData;
+                }
+            });
+            
+            // Update chart smoothly
+            chart.update('none'); // No animation for smooth real-time feel
+        }
+
+        function updateAnimationSpeed(value) {
+            animationSpeed = parseInt(value);
+            document.getElementById('speed-value').textContent = value;
+        }
+
+        function updateWindowSize(value) {
+            windowSize = parseInt(value);
+            if (isAnimating) {
+                // Restart animation with new window size
+                stopAnimation();
+                startAnimation();
+            }
+        }
+
+        function updatePlayButton() {
+            const playBtn = document.getElementById('play-btn');
+            const icon = playBtn.querySelector('.material-icons');
+            
+            if (isAnimating) {
+                icon.textContent = 'pause';
+                playBtn.innerHTML = '<span class="material-icons">pause</span>Pause';
+            } else {
+                icon.textContent = 'play_arrow';
+                playBtn.innerHTML = '<span class="material-icons">play_arrow</span>Play';
+            }
+        }
+
+        function updateAnimationStatus() {
+            const progress = csvData.length > 0 ? (animationIndex / (csvData.length - windowSize) * 100) : 0;
+            const currentTime = animationStartTime ? (Date.now() - animationStartTime) / 1000 : 0;
+            
+            document.getElementById('animation-progress').textContent = Math.round(progress) + '%';
+            document.getElementById('animation-time').textContent = currentTime.toFixed(1) + 's';
+        }
+
+        // Enhanced createDataSeries to support animation
+        function createDataSeries() {
+            if (csvData.length === 0 || headers.length === 0) return;
+
+            // Find numeric columns
+            const numericColumns = [];
+            for (const header of headers) {
+                if (header && typeof csvData[0][header] === 'number') {
+                    numericColumns.push(header);
+                }
+            }
+
+            // Use first column as X axis if it's numeric, otherwise use row index
+            const xColumn = numericColumns[0] || null;
+            const yColumns = xColumn ? numericColumns.slice(1) : numericColumns;
+
+            // Prepare datasets
+            const datasets = [];
+            const colors = generateColors(yColumns.length);
+            
+            yColumns.forEach((column, index) => {
+                const color = colors[index];
+                seriesColors[column] = color;
+                seriesVisibility[column] = true;
+                
+                const data = csvData.map((row, rowIndex) => ({
+                    x: xColumn ? row[xColumn] : rowIndex,
+                    y: row[column]
+                })).filter(point => point.y !== undefined && point.y !== null);
+                
+                datasets.push({
+                    label: column,
+                    data: data,
+                    borderColor: color,
+                    backgroundColor: color + '20',
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 1, // Smaller points for better animation performance
+                    pointHoverRadius: 3
+                });
+            });
+
+            // Update chart
+            chart.data.datasets = datasets;
+            originalData = JSON.parse(JSON.stringify(datasets));
+            
+            // Update axis labels
+            chart.options.scales.x.title.text = xColumn || 'Row Index';
+            chart.options.scales.y.title.text = 'Values';
+            
+            chart.update();
+
+            // Update series list
+            updateSeriesList(yColumns);
+            
+            // Prepare animation data
+            prepareAnimationData();
+            
+            // Reset animation state
+            animationIndex = 0;
+            updateAnimationStatus();
+        }
+
+        // Enhanced demo data generators with more data points for better animation
+        function generateAutomotiveData() {
+            let csv = 'Time,Engine_RPM,Vehicle_Speed,Engine_Temp,Fuel_Level,Throttle_Position\n';
+            
+            for (let i = 0; i < 2000; i++) { // More data points for longer animation
+                const time = i * 0.1;
+                const rpm = 800 + Math.sin(time * 0.1) * 200 + Math.sin(time * 0.03) * 100 + Math.random() * 50;
+                const speed = Math.max(0, Math.sin(time * 0.05) * 60 + Math.sin(time * 0.02) * 20 + Math.random() * 5);
+                const temp = 85 + Math.sin(time * 0.02) * 5 + Math.sin(time * 0.007) * 3 + Math.random() * 2;
+                const fuel = Math.max(0, 100 - time * 0.05 + Math.sin(time * 0.01) * 10 + Math.random() * 2);
+                const throttle = Math.max(0, Math.min(100, Math.sin(time * 0.08) * 50 + 50 + Math.sin(time * 0.03) * 20 + Math.random() * 10));
+                
+                csv += `${time.toFixed(1)},${rpm.toFixed(1)},${speed.toFixed(1)},${temp.toFixed(1)},${fuel.toFixed(1)},${throttle.toFixed(1)}\n`;
+            }
+            
+            return csv;
+        }
+
+        function generateSensorData() {
+            let csv = 'Timestamp,Temperature,Humidity,Pressure,Light_Level\n';
+            
+            for (let i = 0; i < 1000; i++) { // More data points
+                const time = i * 60; // seconds
+                const temp = 20 + Math.sin(time * 0.001) * 5 + Math.sin(time * 0.0003) * 3 + Math.random() * 2;
+                const humidity = 50 + Math.sin(time * 0.0008) * 20 + Math.sin(time * 0.0002) * 10 + Math.random() * 5;
+                const pressure = 1013 + Math.sin(time * 0.0005) * 10 + Math.sin(time * 0.0001) * 5 + Math.random() * 2;
+                const light = Math.max(0, Math.sin(time * 0.0002) * 500 + 500 + Math.sin(time * 0.00005) * 200 + Math.random() * 100);
+                
+                csv += `${time},${temp.toFixed(2)},${humidity.toFixed(1)},${pressure.toFixed(1)},${light.toFixed(0)}\n`;
+            }
+            
+            return csv;
+        }
+
+        function generateFinancialData() {
+            let csv = 'Date,Stock_Price,Volume,Moving_Average,RSI\n';
+            
+            let price = 100;
+            const prices = [];
+            
+            for (let i = 0; i < 500; i++) { // More data points
+                const change = (Math.random() - 0.5) * 4 + Math.sin(i * 0.1) * 0.5;
+                price = Math.max(50, price + change);
+                prices.push(price);
+                
+                const volume = Math.floor(Math.random() * 1000000) + 500000 + Math.sin(i * 0.05) * 200000;
+                const ma = prices.length >= 20 ? prices.slice(-20).reduce((a, b) => a + b) / 20 : price;
+                const rsi = 30 + Math.random() * 40 + Math.sin(i * 0.03) * 10; // More dynamic RSI
+                
+                csv += `${i},${price.toFixed(2)},${Math.round(volume)},${ma.toFixed(2)},${rsi.toFixed(1)}\n`;
+            }
+            
+            return csv;
+        }
+
+        // Real-Time 16 Series Demo (matching Qt implementation exactly)
+        function startRealTimeDemo() {
+            // Stop any existing animation
+            if (isAnimating) {
+                stopAnimation();
+            }
+            
+            // Clear existing data
+            csvData = [];
+            headers = [];
+            originalData = null;
+            
+            // Initialize real-time mode
+            realTimeMode = true;
+            currentIndex = 0;
+            
+            // Reset all data series
+            Object.keys(dataSeries).forEach(key => {
+                dataSeries[key] = [];
+            });
+            
+            // Set up chart for real-time display
+            setupRealTimeChart();
+            
+            // Start real-time updates with 1ms interval (like Qt version)
+            if (realTimeInterval) {
+                clearInterval(realTimeInterval);
+            }
+            
+            realTimeInterval = setInterval(updateRealTimeData, 1);
+            
+            // Update UI
+            updateFileInfo('Real-Time Demo (16 Series)', 'Live Data', '16 series');
+            enableControls(false); // Disable regular controls during real-time demo
+            
+            // Add stop button to toolbar
+            addStopButton();
+        }
+        
+        function setupRealTimeChart() {
+            // Clear chart
+            chart.data.datasets = [];
+            
+            // Create 16 datasets with exact Qt colors and names
+            const datasets = [];
+            const seriesKeys = Object.keys(dataSeries);
+            
+            for (let i = 0; i < 16; i++) {
+                datasets.push({
+                    label: seriesNames[i],
+                    data: [],
+                    borderColor: seriesColors16[i],
+                    backgroundColor: seriesColors16[i] + '20',
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 0, // No points for better performance
+                    pointHoverRadius: 3,
+                    borderWidth: 1.5
+                });
+            }
+            
+            chart.data.datasets = datasets;
+            
+            // Update axis labels
+            chart.options.scales.x.title.text = 'Time';
+            chart.options.scales.y.title.text = 'Value';
+            chart.options.scales.y.min = 0;
+            chart.options.scales.y.max = 300;
+            
+            chart.update('none');
+            
+            // Update series list
+            updateRealTimeSeriesList();
+        }
+        
+        function updateRealTimeData() {
+            currentIndex++;
+            const p = currentIndex * 0.1;
+            
+            // Generate data using exact Qt formulas
+            const dataA = 20 + Math.cos(p * 129241) * 10 + 1 / (Math.cos(p) * Math.cos(p) + 0.01);
+            const dataB = 150 + 100 * Math.sin(p / 27.7) * Math.sin(p / 10.1);
+            const dataC = 150 + 100 * Math.cos(p / 6.7) * Math.cos(p / 11.9);
+            const dataD = 80 + 60 * Math.sin(p / 15.3) * Math.cos(p / 8.2);
+            const dataE = 120 + 80 * Math.cos(p / 12.4) * Math.sin(p / 20.1);
+            const dataF = 90 + 70 * Math.sin(p / 18.7) + 20 * Math.cos(p * 3.1);
+            const dataG = 160 + 90 * Math.cos(p / 9.8) * Math.cos(p / 14.3);
+            const dataH = 110 + 85 * Math.sin(p / 22.5) * Math.sin(p / 7.9);
+            const dataI = 140 + 95 * Math.cos(p / 16.2) + 15 * Math.sin(p * 2.4);
+            const dataJ = 75 + 65 * Math.sin(p / 11.7) * Math.cos(p / 19.8);
+            const dataK = 185 + 110 * Math.cos(p / 13.9) * Math.sin(p / 6.4);
+            const dataL = 95 + 75 * Math.sin(p / 21.3) + 25 * Math.cos(p * 1.8);
+            const dataM = 130 + 88 * Math.cos(p / 8.6) * Math.cos(p / 17.2);
+            const dataN = 105 + 78 * Math.sin(p / 14.8) * Math.sin(p / 9.5);
+            const dataO = 170 + 100 * Math.cos(p / 10.4) + 30 * Math.sin(p * 2.9);
+            const dataP = 85 + 68 * Math.sin(p / 24.1) * Math.cos(p / 5.7);
+            
+            // Store new values
+            const newValues = [dataA, dataB, dataC, dataD, dataE, dataF, dataG, dataH,
+                             dataI, dataJ, dataK, dataL, dataM, dataN, dataO, dataP];
+            
+            const seriesKeys = Object.keys(dataSeries);
+            
+            // Add to series and maintain sliding window
+            for (let i = 0; i < 16; i++) {
+                const key = seriesKeys[i];
+                dataSeries[key].push({
+                    x: currentIndex,
+                    y: newValues[i]
+                });
+                
+                // Keep only recent samples (sliding window of 60 like Qt)
+                if (dataSeries[key].length > sampleSize) {
+                    dataSeries[key].shift();
+                }
+                
+                // Update chart dataset
+                if (chart.data.datasets[i]) {
+                    chart.data.datasets[i].data = [...dataSeries[key]];
+                }
+            }
+            
+            // Update chart with no animation for smooth real-time feel
+            chart.update('none');
+        }
+        
+        function stopRealTimeDemo() {
+            realTimeMode = false;
+            
+            if (realTimeInterval) {
+                clearInterval(realTimeInterval);
+                realTimeInterval = null;
+            }
+            
+            enableControls(true);
+            removeStopButton();
+            
+            // Reset status
+            updateFileInfo('Real-Time Demo Stopped', '', '');
+        }
+        
+        function updateRealTimeSeriesList() {
+            const seriesList = document.getElementById('series-list');
+            seriesList.innerHTML = '';
+            
+            for (let i = 0; i < 16; i++) {
+                const item = document.createElement('div');
+                item.className = 'series-item';
+                
+                item.innerHTML = `
+                    <input type="checkbox" class="series-checkbox" 
+                           checked onchange="toggleRealTimeSeries(${i}, this.checked)">
+                    <div class="series-color" style="background-color: ${seriesColors16[i]}" 
+                         onclick="changeRealTimeSeriesColor(${i})"></div>
+                    <span class="series-name">${seriesNames[i]}</span>
+                `;
+                
+                seriesList.appendChild(item);
+            }
+        }
+        
+        function toggleRealTimeSeries(index, visible) {
+            if (chart.data.datasets[index]) {
+                chart.data.datasets[index].hidden = !visible;
+                chart.update('none');
+            }
+        }
+        
+        function changeRealTimeSeriesColor(index) {
+            const newColor = prompt('Enter new color (hex, rgb, or color name):', seriesColors16[index]);
+            if (newColor && chart.data.datasets[index]) {
+                seriesColors16[index] = newColor;
+                chart.data.datasets[index].borderColor = newColor;
+                chart.data.datasets[index].backgroundColor = newColor + '20';
+                chart.update('none');
+                updateRealTimeSeriesList();
+            }
+        }
+        
+        function addStopButton() {
+            const toolbar = document.querySelector('.toolbar-actions');
+            
+            // Remove existing stop button if any
+            const existingStop = document.getElementById('stop-realtime-btn');
+            if (existingStop) {
+                existingStop.remove();
+            }
+            
+            const stopBtn = document.createElement('button');
+            stopBtn.id = 'stop-realtime-btn';
+            stopBtn.className = 'btn';
+            stopBtn.style.background = '#F44336';
+            stopBtn.innerHTML = '<span class="material-icons">stop</span>Stop';
+            stopBtn.onclick = stopRealTimeDemo;
+            
+            toolbar.insertBefore(stopBtn, toolbar.firstChild);
+        }
+        
+        function removeStopButton() {
+            const stopBtn = document.getElementById('stop-realtime-btn');
+            if (stopBtn) {
+                stopBtn.remove();
+            }
+        }
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', function() {
+            initChart();
+            
+            // Register Chart.js zoom plugin
+            Chart.register(window['chartjs-plugin-zoom']);
+        });
+    </script>
+</body>
+</html> 
