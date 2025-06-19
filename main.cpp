@@ -37,10 +37,23 @@
 #include "DeviceDiscoveryManager.h"
 #include "TTSManager.h"
 #include "NextGenCSVViewer.h"
+#include "GraphicsOptimizer.h"
 
 int main(int argc, char *argv[])
 {
     try {
+        // ============================================================
+        // PRE-APPLICATION SETUP
+        // ============================================================
+        // Check for debug flags before creating Qt application
+        bool enableGraphicsDebug = false;
+        for (int i = 1; i < argc; ++i) {
+            if (QString(argv[i]) == "--debug" || QString(argv[i]) == "--graphics-debug") {
+                enableGraphicsDebug = true;
+                break;
+            }
+        }
+        
 #ifdef WIN_DEBUG_CONSOLE
 #ifdef Q_OS_WIN
         // Allocate a console window for debugging output on Windows
@@ -68,7 +81,43 @@ int main(int argc, char *argv[])
         // Enable high DPI scaling support before creating QGuiApplication
         QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
 
+        // ============================================================
+        // GRAPHICS API SELECTION - BEFORE QGuiApplication CREATION
+        // ============================================================
+        // Enable graphics diagnostics if debug flag is present
+        if (enableGraphicsDebug) {
+            GraphicsOptimizer::enableGraphicsDiagnostics();
+        }
+        
+        // Select graphics API based on platform before creating QGuiApplication
+        auto selectedBackend = GraphicsOptimizer::selectOptimalGraphicsApi();
+        auto qtApi = GraphicsOptimizer::backendToQtApi(selectedBackend);
+        QQuickWindow::setGraphicsApi(qtApi);
+        
         QGuiApplication app(argc, argv);
+        
+        // ============================================================
+        // GRAPHICS OPTIMIZATION VERIFICATION - AFTER QGuiApplication
+        // ============================================================
+        // Now verify the graphics selection worked properly
+        auto graphicsInfo = GraphicsOptimizer::verifyGraphicsBackend(selectedBackend);
+        
+        // Log the graphics decision for diagnostics
+        qDebug() << "=== Graphics Backend Optimization Results ===";
+        qDebug() << "Selected backend:" << graphicsInfo.backendName;
+        qDebug() << "Hardware accelerated:" << graphicsInfo.hardwareAccelerated;
+        if (!graphicsInfo.errorMessage.isEmpty()) {
+            qWarning() << "Graphics warning:" << graphicsInfo.errorMessage;
+        }
+        qDebug() << "============================================";
+
+#ifdef WIN_DEBUG_CONSOLE
+#ifdef Q_OS_WIN
+        if (enableGraphicsDebug) {
+            std::cout << "Graphics backend: " << graphicsInfo.backendName.toStdString() << std::endl;
+        }
+#endif
+#endif
 
         app.setApplicationName("Voice AI LLM");
         app.setOrganizationName("VoiceAILLM");

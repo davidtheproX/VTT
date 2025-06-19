@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Basic
 import QtQuick.Layouts
 
 Dialog {
@@ -858,5 +859,31 @@ Dialog {
     // Update lists when dialog opens
     onOpened: {
         updateDeviceLists()
+    }
+    
+    // Stop discovery when dialog closes
+    onClosed: {
+        if (deviceDiscoveryManager) {
+            console.log("CommTestDialog closing - stopping all device discovery processes...")
+            deviceDiscoveryManager.stopDiscovery()
+            // Force disconnect any connected devices
+            deviceDiscoveryManager.disconnectSerialDevice()
+            deviceDiscoveryManager.disconnectNetworkDevice()
+            // Clear all devices to prevent any lingering processes
+            deviceDiscoveryManager.clearDevices()
+        }
+    }
+    
+    // Also handle when visibility changes (as backup)
+    onVisibleChanged: {
+        if (!visible && deviceDiscoveryManager) {
+            console.log("CommTestDialog hidden - stopping all device discovery processes...")
+            deviceDiscoveryManager.stopDiscovery()
+            // Force disconnect any connected devices
+            deviceDiscoveryManager.disconnectSerialDevice()
+            deviceDiscoveryManager.disconnectNetworkDevice()
+            // Clear all devices to prevent any lingering processes
+            deviceDiscoveryManager.clearDevices()
+        }
     }
 } 

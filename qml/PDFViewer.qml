@@ -9,6 +9,12 @@ ApplicationWindow {
     title: "PDF Viewer"
     width: 800
     height: 600
+    modality: Qt.NonModal
+    flags: Qt.Dialog | Qt.WindowStaysOnTopHint | Qt.WindowCloseButtonHint
+    
+    // Center on screen
+    x: (Screen.width - width) / 2
+    y: (Screen.height - height) / 2
     
     property string pdfFilePath: ""
     property color backgroundColor: "#2b2b2b"
@@ -18,18 +24,24 @@ ApplicationWindow {
     property color mutedTextColor: "#bbbbbb"
     
     // PDF status tracking
-    property bool pdfLoaded: pdfDocument.status === PdfDocument.Ready
+    property bool pdfLoaded: pdfDocument.status === 2 // PdfDocument.Ready = 2
     property real zoomFactor: 1.0
+    
+    onPdfLoadedChanged: {
+        console.log("pdfLoaded changed to:", pdfLoaded, "- status:", pdfDocument.status);
+    }
     
     // PDF Document
     PdfDocument {
         id: pdfDocument
         source: pdfFilePath ? "file:///" + pdfFilePath : ""
         
-        onStatusChanged: {
+        onStatusChanged: function(status) {
             console.log("PDF Document status changed:", status);
             if (status === PdfDocument.Ready) {
                 console.log("PDF loaded successfully. Page count:", pageCount);
+                console.log("pdfLoaded property:", pdfLoaded);
+                console.log("Current zoom factor:", zoomFactor);
             } else if (status === PdfDocument.Error) {
                 console.log("PDF load failed:", error);
             }
@@ -41,9 +53,25 @@ ApplicationWindow {
         console.log("*** PDFViewer.loadPDF called with:", filePath);
         pdfFilePath = filePath;
         console.log("*** PDFViewer.pdfFilePath set to:", pdfFilePath);
+        
+        // Ensure the window is properly activated and brought to front
+        Qt.callLater(function() {
+            show();
+            raise();
+            requestActivate();
+        });
     }
     
     color: backgroundColor
+    
+    onVisibleChanged: {
+        if (visible) {
+            Qt.callLater(function() {
+                raise();
+                requestActivate();
+            });
+        }
+    }
     
     header: ToolBar {
         background: Rectangle {
@@ -72,8 +100,10 @@ ApplicationWindow {
                 text: "Zoom In"
                 enabled: pdfLoaded
                 onClicked: {
+                    console.log("Zoom In clicked, current factor:", zoomFactor);
                     zoomFactor = Math.min(zoomFactor * 1.2, 3.0);
                     pdfMultiPageView.renderScale = zoomFactor;
+                    console.log("New zoom factor:", zoomFactor);
                 }
             }
             
@@ -87,8 +117,10 @@ ApplicationWindow {
                 text: "Zoom Out"
                 enabled: pdfLoaded
                 onClicked: {
+                    console.log("Zoom Out clicked, current factor:", zoomFactor);
                     zoomFactor = Math.max(zoomFactor / 1.2, 0.5);
                     pdfMultiPageView.renderScale = zoomFactor;
+                    console.log("New zoom factor:", zoomFactor);
                 }
             }
             
@@ -96,8 +128,10 @@ ApplicationWindow {
                 text: "Reset Zoom"
                 enabled: pdfLoaded
                 onClicked: {
+                    console.log("Reset Zoom clicked");
                     zoomFactor = 1.0;
                     pdfMultiPageView.renderScale = zoomFactor;
+                    console.log("Zoom reset to:", zoomFactor);
                 }
             }
             
@@ -105,14 +139,30 @@ ApplicationWindow {
                 text: "Fit Width"
                 enabled: pdfLoaded
                 onClicked: {
-                    pdfMultiPageView.renderScale = pdfMultiPageView.width / pdfDocument.pagePointSize(pdfMultiPageView.currentPage).width * 72;
-                    zoomFactor = pdfMultiPageView.renderScale;
+                    console.log("Fit Width clicked");
+                    try {
+                        if (pdfDocument.pageCount > 0) {
+                            var pageSize = pdfDocument.pagePointSize(pdfMultiPageView.currentPage);
+                            var scale = pdfMultiPageView.width / pageSize.width;
+                            zoomFactor = scale;
+                            pdfMultiPageView.renderScale = zoomFactor;
+                            console.log("Fit width scale:", zoomFactor);
+                        }
+                    } catch (e) {
+                        console.log("Fit Width error:", e);
+                        // Fallback to a reasonable width fit
+                        zoomFactor = 1.0;
+                        pdfMultiPageView.renderScale = zoomFactor;
+                    }
                 }
             }
             
             Button {
                 text: "Close"
-                onClicked: pdfViewerWindow.close()
+                onClicked: {
+                    console.log("Close button clicked");
+                    pdfViewerWindow.close();
+                }
             }
         }
     }
@@ -134,6 +184,8 @@ ApplicationWindow {
             
             Component.onCompleted: {
                 console.log("PdfMultiPageView initialized");
+                console.log("Initial renderScale:", renderScale);
+                console.log("Initial zoomFactor:", zoomFactor);
             }
             
             onCurrentPageChanged: {

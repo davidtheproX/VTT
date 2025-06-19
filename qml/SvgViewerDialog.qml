@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import QtQuick.Window
 import VoiceAILLM 1.0
@@ -15,7 +16,6 @@ ApplicationWindow {
     minimumHeight: 600
     
     visibility: Window.Windowed
-    visible: false
     
     // Center on screen when opened
     Component.onCompleted: {

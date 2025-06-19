@@ -412,7 +412,7 @@ void QMLPDFGenerator::populateTemplateWithData(QQuickItem *item, const QJsonObje
         for (const auto &system : systemsArray) {
             systemsList.append(system.toObject().toVariantMap());
         }
-        item->setProperty("systemsList", systemsList);
+        item->setProperty("systems", systemsList);
     }
     
     if (data.contains("fault_systems")) {
@@ -421,7 +421,7 @@ void QMLPDFGenerator::populateTemplateWithData(QQuickItem *item, const QJsonObje
         for (const auto &faultSystem : faultSystemsArray) {
             faultSystemsList.append(faultSystem.toObject().toVariantMap());
         }
-        item->setProperty("faultSystemsList", faultSystemsList);
+        item->setProperty("fault_systems", faultSystemsList);
     }
     
     if (data.contains("system_details")) {
@@ -430,12 +430,12 @@ void QMLPDFGenerator::populateTemplateWithData(QQuickItem *item, const QJsonObje
         for (const auto &systemDetail : systemDetailsArray) {
             systemDetailsList.append(systemDetail.toObject().toVariantMap());
         }
-        item->setProperty("systemDetailsList", systemDetailsList);
+        item->setProperty("system_details", systemDetailsList);
     }
     
     if (data.contains("battery_test")) {
         QVariantMap batteryTestData = data["battery_test"].toObject().toVariantMap();
-        item->setProperty("batteryTestData", batteryTestData);
+        item->setProperty("battery_test", batteryTestData);
     }
     
     qDebug() << "QMLPDFGenerator: Template populated with data";

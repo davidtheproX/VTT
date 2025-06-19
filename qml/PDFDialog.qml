@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import QtQuick.Dialogs
 import QtQuick.Window
@@ -7,7 +8,7 @@ import QtQuick.Window
 ApplicationWindow {
     id: pdfDialog
     title: "PDF Tools"
-    modality: Qt.ApplicationModal
+    modality: Qt.NonModal
     flags: Qt.Dialog | Qt.WindowCloseButtonHint
     
     width: 600
@@ -21,7 +22,7 @@ ApplicationWindow {
     
     visible: false
     
-    property var pdfManager
+    property var pdfManagerInstance
     
     // Theme properties - inherited from Main.qml
     property color backgroundColor: "#FAFAFA"
@@ -116,7 +117,7 @@ ApplicationWindow {
             
             console.log("Final filePath:", filePath);
             
-            if (pdfManager && filePath) {
+            if (pdfManagerInstance && filePath) {
                 // Convert URL to local path if needed
                 var filePathStr = filePath.toString();
                 if (filePathStr.startsWith("file:///")) {
@@ -127,11 +128,11 @@ ApplicationWindow {
                         // No additional changes needed
                     }
                 }
-                console.log("Calling pdfManager.openPdfFile with:", filePathStr);
-                pdfManager.openPdfFile(filePathStr);
+                console.log("Calling pdfManagerInstance.openPdfFile with:", filePathStr);
+                pdfManagerInstance.openPdfFile(filePathStr);
             } else {
-                console.log("No file selected or pdfManager not available");
-                console.log("pdfManager:", pdfManager);
+                console.log("No file selected or pdfManagerInstance not available");
+                console.log("pdfManagerInstance:", pdfManagerInstance);
                 console.log("filePath:", filePath);
             }
         }
@@ -240,13 +241,13 @@ ApplicationWindow {
                     }
                     
                     Button {
-                        text: pdfManager && pdfManager.isGenerating ? "Generating..." : "Generate PDF"
-                        enabled: jsonInput.text.trim().length > 0 && !(pdfManager && pdfManager.isGenerating)
+                        text: pdfManagerInstance && pdfManagerInstance.isGenerating ? "Generating..." : "Generate PDF"
+                        enabled: jsonInput.text.trim().length > 0 && !(pdfManagerInstance && pdfManagerInstance.isGenerating)
                         Layout.fillWidth: true
                         
                         onClicked: {
-                            if (pdfManager) {
-                                pdfManager.generatePdfFromJson(jsonInput.text);
+                            if (pdfManagerInstance) {
+                                pdfManagerInstance.generatePdfFromJson(jsonInput.text);
                             }
                         }
                     }
@@ -263,8 +264,8 @@ ApplicationWindow {
                     }
                     
                     Button {
-                        text: pdfManager && pdfManager.isGenerating ? "Generating QML PDF..." : "Generate QML PDF"
-                        enabled: jsonInput.text.trim().length > 0 && !(pdfManager && pdfManager.isGenerating)
+                        text: pdfManagerInstance && pdfManagerInstance.isGenerating ? "Generating QML PDF..." : "Generate QML PDF"
+                        enabled: jsonInput.text.trim().length > 0 && !(pdfManagerInstance && pdfManagerInstance.isGenerating)
                         Layout.fillWidth: true
                         
                         background: Rectangle {
@@ -284,8 +285,8 @@ ApplicationWindow {
                         }
                         
                         onClicked: {
-                            if (pdfManager && pdfManager.generatePdfFromJsonQML) {
-                                pdfManager.generatePdfFromJsonQML(jsonInput.text);
+                            if (pdfManagerInstance && pdfManagerInstance.generatePdfFromJsonQML) {
+                                pdfManagerInstance.generatePdfFromJsonQML(jsonInput.text);
                             }
                         }
                     }
@@ -351,7 +352,12 @@ ApplicationWindow {
                         
                         Button {
                             text: "View Last Generated"
-                            enabled: pdfManager && pdfManager.currentPdfPath.length > 0
+                            enabled: {
+                                if (!pdfManagerInstance) return false;
+                                if (!pdfManagerInstance.currentPdfPath) return false;
+                                if (typeof pdfManagerInstance.currentPdfPath !== 'string') return false;
+                                return pdfManagerInstance.currentPdfPath.length > 0;
+                            }
                             Layout.fillWidth: true
                             
                             background: Rectangle {
@@ -371,8 +377,8 @@ ApplicationWindow {
                             }
                             
                             onClicked: {
-                                if (pdfManager && pdfManager.currentPdfPath) {
-                                    pdfManager.openPdfFile(pdfManager.currentPdfPath);
+                                if (pdfManagerInstance && pdfManagerInstance.currentPdfPath) {
+                                    pdfManagerInstance.openPdfFile(pdfManagerInstance.currentPdfPath);
                                 }
                             }
                         }
@@ -400,11 +406,11 @@ ApplicationWindow {
                             
                             Text {
                                 text: {
-                                    if (!pdfManager) return "PDF Manager not available";
-                                    if (pdfManager.isGenerating) return "Generating PDF...";
-                                    if (pdfManager.isViewerOpen) return "PDF Viewer is open";
-                                    if (pdfManager.currentPdfPath.length > 0) 
-                                        return "Last generated: " + pdfManager.currentPdfPath.split('/').pop();
+                                    if (!pdfManagerInstance) return "PDF Manager not available";
+                                    if (pdfManagerInstance.isGenerating) return "Generating PDF...";
+                                    if (pdfManagerInstance.isViewerOpen) return "PDF Viewer is open";
+                                    if (pdfManagerInstance.currentPdfPath && (typeof pdfManagerInstance.currentPdfPath === 'string') && pdfManagerInstance.currentPdfPath.length > 0) 
+                                        return "Last generated: " + pdfManagerInstance.currentPdfPath.split('/').pop();
                                     return "Ready";
                                 }
                                 color: mutedTextColor
@@ -549,11 +555,12 @@ ApplicationWindow {
     
     // Connections for PDF Manager signals
     Connections {
-        target: pdfManager
+        target: pdfManagerInstance
+        ignoreUnknownSignals: true
         
         function onPdfGenerated(filePath, success) {
             if (success) {
-                validationStatus.text = "✓ PDF generated successfully: " + filePath.split('/').pop();
+                validationStatus.text = "✓ PDF generated successfully: " + (filePath ? filePath.split('/').pop() : "");
                 validationStatus.color = successColor;
             } else {
                 validationStatus.text = "✗ PDF generation failed";
@@ -562,12 +569,12 @@ ApplicationWindow {
         }
         
         function onPdfGenerationFailed(error) {
-            validationStatus.text = "✗ Error: " + error;
+            validationStatus.text = "✗ Error: " + (error || "Unknown error");
             validationStatus.color = errorColor;
         }
         
         function onError(message) {
-            validationStatus.text = "✗ " + message;
+            validationStatus.text = "✗ " + (message || "Unknown error");
             validationStatus.color = errorColor;
         }
     }

@@ -84,6 +84,7 @@ endif()
 find_package(Qt6 REQUIRED COMPONENTS 
     Core 
     Gui 
+    GuiPrivate  # Required for QRhi and graphics backend optimization
     Qml 
     Quick 
     Quick3D
@@ -365,6 +366,7 @@ qt_standard_project_setup()
 # Source files
 set(SOURCES
     main.cpp
+    src/GraphicsOptimizer.cpp
     src/VoiceRecognitionManager.cpp
     src/AudioBuffer.cpp
     src/PlatformSpeechRecognition.cpp
@@ -392,6 +394,7 @@ set(SOURCES
 # Header files
 set(HEADERS
     include/PlatformDetection.h
+    include/GraphicsOptimizer.h
     include/ChatManager.h
     include/VoiceRecognitionManager.h
     include/AudioBuffer.h
@@ -553,6 +556,7 @@ qt_add_qml_module(VoiceAILLM
 target_link_libraries(VoiceAILLM PRIVATE
     Qt6::Core
     Qt6::Gui
+    Qt6::GuiPrivate  # Required for QRhi graphics backend optimization
     Qt6::Qml
     Qt6::QmlIntegration
     Qt6::Quick

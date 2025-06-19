@@ -366,7 +366,7 @@ ApplicationWindow {
                     Button {
                         text: "Full Screen"
                         flat: true
-                        onClicked: chartFullScreenDialog.open()
+                        onClicked: chartFullScreenDialog.show()
                     }
 
                     Button {
@@ -389,16 +389,8 @@ ApplicationWindow {
                             }
                         }
                         
-                        // Add property change monitoring
-                        Connections {
-                            target: nextGenCsvViewer
-                            function onRealTimeDemoActiveChanged() {
-                                if (debugMode) {
-                                    console.log("Demo state changed to:", nextGenCsvViewer.isRealTimeDemoActive)
-                                    console.log("Button text should now be:", nextGenCsvViewer.isRealTimeDemoActive ? "Stop Demo" : "Start Demo")
-                                }
-                            }
-                        }
+                        // Property change monitoring - using Qt.binding for automatic updates
+                        // Note: Connections not needed since button text uses direct property binding
                     }
                 }
 

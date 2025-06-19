@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Controls.Basic
 import QtQuick.Layouts
 import QtQuick.Window
 import QtSvg
@@ -594,8 +595,8 @@ ApplicationWindow {
             spacing: 12 * scaleFactor
 
             // Voice input button
-            VoiceButton {
-                id: voiceButton
+                VoiceButton {
+        id: voiceButton
                 Layout.preferredWidth: 50 * scaleFactor
                 Layout.preferredHeight: 50 * scaleFactor
 
@@ -815,6 +816,8 @@ ApplicationWindow {
 
         sourceComponent: Component {
     PDFDialog {
+                // Pass pdfManager directly as a property during creation
+                pdfManagerInstance: pdfManager
                 backgroundColor: mainWindow.backgroundColor
                 surfaceColor: mainWindow.surfaceColor
                 primaryColor: mainWindow.primaryColor
@@ -822,11 +825,6 @@ ApplicationWindow {
                 errorColor: mainWindow.errorColor
                 textColor: mainWindow.textColor
                 mutedTextColor: mainWindow.mutedTextColor
-                
-                Component.onCompleted: {
-                    // Set the pdfManager when the dialog is created
-                    pdfManager = mainWindow.pdfManager;
-                }
 
                 onClosed: {
                     Qt.callLater(function() {
@@ -1031,8 +1029,12 @@ ApplicationWindow {
             if (item) {
                 item.loadPDF(filePath);
                 item.show();
-                item.raise();
-                item.requestActivate();
+                // Use Qt.callLater to ensure proper window ordering
+                Qt.callLater(function() {
+                    item.raise();
+                    item.requestActivate();
+                    item.show(); // Show again to ensure it's visible
+                });
             }
         }
 
@@ -1064,7 +1066,7 @@ ApplicationWindow {
         function openQmlViewer() {
             active = true;
             if (item) {
-                item.visible = true;
+                item.show();
             }
         }
     }
@@ -1090,7 +1092,7 @@ ApplicationWindow {
         function openSvgViewer() {
             active = true;
             if (item) {
-                item.visible = true;
+                item.show();
             }
         }
     }
