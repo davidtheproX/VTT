@@ -49,6 +49,14 @@
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>Voice AI LLM may access location for web-based features.</string>
     
+    <!-- Photo library access for WebView -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Voice AI LLM may access photo library for web-based file uploads.</string>
+    
+    <!-- Media capture permissions for WebView -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Voice AI LLM may access microphone for web-based features and voice recognition.</string>
+    
     <!-- Support all interface orientations -->
     <key>UISupportedInterfaceOrientations</key>
     <array>

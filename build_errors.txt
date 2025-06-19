@@ -8,10 +8,10 @@ CMake Warning at D:/msys64/ucrt64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:3429 (mess
 Call Stack (most recent call first):
   D:/msys64/ucrt64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:916 (qt6_target_qml_sources)
   D:/msys64/ucrt64/lib/cmake/Qt6Qml/Qt6QmlMacros.cmake:1252 (qt6_add_qml_module)
-  CMakeLists.txt:476 (qt_add_qml_module)
+  CMakeLists.txt:477 (qt_add_qml_module)
 
 
-CMake Warning at CMakeLists.txt:652 (message):
+CMake Warning at CMakeLists.txt:654 (message):
   Qt Keychain not found - using basic storage (less secure)
 
 

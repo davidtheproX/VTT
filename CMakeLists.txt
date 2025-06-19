@@ -99,6 +99,7 @@ find_package(Qt6 REQUIRED COMPONENTS
     PrintSupport
     Svg
     Charts
+    WebView
 )
 
 # Find additional Qt6 Quick3D components
@@ -559,6 +560,7 @@ target_link_libraries(VoiceAILLM PRIVATE
     Qt6::PrintSupport
     Qt6::Svg
     Qt6::Charts
+    Qt6::WebView
 )
 
 # Link Qt6 Quick3D conditionally if available
