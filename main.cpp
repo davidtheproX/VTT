@@ -111,14 +111,6 @@ int main(int argc, char *argv[])
         }
         qDebug() << "============================================";
 
-#ifdef WIN_DEBUG_CONSOLE
-#ifdef Q_OS_WIN
-        if (enableGraphicsDebug) {
-            std::cout << "Graphics backend: " << graphicsInfo.backendName.toStdString() << std::endl;
-        }
-#endif
-#endif
-
         app.setApplicationName("Voice AI LLM");
         app.setOrganizationName("VoiceAILLM");
         app.setApplicationDisplayName("Voice AI LLM Assistant");
@@ -270,17 +262,11 @@ int main(int argc, char *argv[])
         qmlRegisterModule("QtSvg", 6, 9);
 
         // Load the main QML file
-
-#ifdef Q_OS_ANDROID
-        QUrl url(QStringLiteral("qrc:/qt/qml/VoiceAILLM/qml/Main.qml"));
-        if (!QFile::exists(":qt/qml/VoiceAILLM/qml/Main.qml")) {
-            url = QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + "/../qml/Main.qml");
-#else
         QUrl url(QStringLiteral("qrc:/VoiceAILLM/qml/Main.qml"));
         if (!QFile::exists(":/VoiceAILLM/qml/Main.qml")) {
             url = QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + "/../qml/Main.qml");
-#endif
         }
+
         QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                          &app, [url](QObject *obj, const QUrl &objUrl) {
                              if (!obj && url == objUrl) {

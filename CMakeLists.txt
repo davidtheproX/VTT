@@ -551,6 +551,12 @@ qt_add_qml_module(VoiceAILLM
         resources/templates/Lifedata.ui.qml
 )
 
+# Add Qt resources, Define virtual resource paths
+qt_add_resources(${PROJECT_NAME} "resources" PREFIX "/"
+    FILES
+        qml/VoiceAILLM_qml.qrc
+    )
+
 # Link Qt libraries
 target_link_libraries(VoiceAILLM PRIVATE
     Qt6::Core
