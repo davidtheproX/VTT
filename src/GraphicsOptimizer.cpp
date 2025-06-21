@@ -26,7 +26,7 @@
 #include <private/qrhimetal_p.h>
 #endif
 
-#ifdef QT_FEATURE_vulkan
+#if QT_CONFIG(vulkan)
 #include <private/qrhivulkan_p.h>
 #endif
 
@@ -285,7 +285,7 @@ GraphicsOptimizer::GraphicsInfo GraphicsOptimizer::optimizeGraphicsBackend()
 
 bool GraphicsOptimizer::probeVulkan()
 {
-#ifdef QT_FEATURE_vulkan
+#if QT_CONFIG(vulkan)
     try {
         QRhiVulkanInitParams initParams;
         initParams.inst = nullptr; // Will be created automatically

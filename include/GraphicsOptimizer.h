@@ -12,7 +12,7 @@
 class QRhi;
 class QRhiInitParams;
 
-#ifdef QT_FEATURE_vulkan
+#if QT_CONFIG(vulkan)
 #include <QVulkanInstance>
 #endif
 

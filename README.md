@@ -198,14 +198,21 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK/build/cmake/android.toolchain.cmake
 make -j$(nproc)
 ```
 
-#### iOS
+#### MacOS
+
+> Requires Xcode(latest) and Qt for MacOS
+
+1. Convert PDFManager.cpp to PDFManager.mm and modify CMakeLists.txt
+
+2. Find your Qt env path and replace `~/Qt/6.9.1/macos/bin/qt-cmake` in the following command
+
 ```bash
-# Requires Xcode and Qt for iOS
-mkdir build && cd build
-cmake .. -DCMAKE_TOOLCHAIN_FILE=/path/to/qt6/ios/lib/cmake/Qt6/qt.toolchain.cmake \
-         -DCMAKE_PREFIX_PATH=/path/to/qt6/ios
-make -j$(nproc)
+~/Qt/6.9.1/macos/bin/qt-cmake ./ -GXcode
 ```
+
+3. open .xcodeproj file to build it
+
+4. Use Xcode to build it
 
 #### HarmonyOS
 **Note**: HarmonyOS support is currently limited to basic platform detection. Full HarmonyOS development requires:
